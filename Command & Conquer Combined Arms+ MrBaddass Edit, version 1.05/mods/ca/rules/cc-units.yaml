@@ -1,0 +1,4863 @@
+# CC-specific base classes (from Crimson Conflict defaults.yaml)
+^TheBigOne:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2536, -2024
+			BottomRight: 2536, 2024
+
+^ScienceBuilding:
+	Inherits: ^Building
+	SpawnActorsOnSellCA:
+		ActorTypes: e1,e1,e1,e1,tecn,tecn2,tecn,tecn2,tecn3,tecn,tecn,tecn2,tecn,tecn3,e6,e6,e6,e6,e6
+	SpawnActorOnDeath@1:
+		Actor: e1
+		Probability: 5
+	SpawnActorOnDeath@2:
+		Actor: tecn
+		Probability: 10
+
+SBAG.gdi:
+	Inherits: SBAG
+	RenderSprites:
+		Image: SBAG
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 10
+		Prerequisites: ~Disabled
+		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+
+BARRACKS:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Infantry Production
+	Buildable:
+		Description: Infantry Production
+		
+BARRACKSTD:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Infantry Production
+	Buildable:
+		Description: Infantry Production
+		
+TECHCENTER:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Tech Center
+	Buildable:
+		Description: Tech Center
+
+BONEYARD:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Boneworks
+	Buildable:
+		Description: Boneworks
+
+ACID:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Acid Pool
+	Buildable:
+		Description: Acid pool
+
+RIBCAGE:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Ribs
+	Buildable:
+		Description: Ribs
+
+RADAR:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Radar
+	Buildable:
+		Description: Radar
+
+AWEP:
+	Inherits: ^BuildingTD
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,48
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
+		Type: Rectangle
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 512
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: barr, ~structures.ra
+		IconPalette: chrometd
+		Description: Produces Explosives.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Weapons Factory
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda, glastrikers, glaexp, fangs, eyesdoom, circle, m.b, s.korea, n.korea, rameus
+		Prerequisite: vehicles.any
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, kazakhstan, impjap, china, israel, m.b, s.korea
+		Prerequisite: vehicles.allies
+	ProvidesPrerequisite@td:
+		Factions: gdi, talon, zocom, nod, marked, blackh
+		Prerequisite: vehicles.td
+	ProvidesPrerequisite@alliesvanilla:
+		Factions: allies
+		Prerequisite: vehicles.alliesvanilla
+	ProvidesPrerequisite@england:
+		Factions: england
+		Prerequisite: vehicles.england
+	ProvidesPrerequisite@france:
+		Factions: france
+		Prerequisite: vehicles.france
+	ProvidesPrerequisite@germany:
+		Factions: germany
+		Prerequisite: vehicles.germany
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, n.korea, rameus
+		Prerequisite: vehicles.soviet
+	ProvidesPrerequisite@sovietvanilla:
+		Factions: soviet
+		Prerequisite: vehicles.sovietvanilla
+	ProvidesPrerequisite@russia:
+		Factions: russia
+		Prerequisite: vehicles.russia
+	ProvidesPrerequisite@ukraine:
+		Factions: ukraine
+		Prerequisite: vehicles.ukraine
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, zocom, talon
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@talon:
+		Factions: talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocom:
+		Factions: zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@nod:
+		Factions: nod, blackh, marked
+		Prerequisite: vehicles.nod
+	ProvidesPrerequisite@blackh:
+		Factions: blackh
+		Prerequisite: vehicles.blackh
+	ProvidesPrerequisite@marked:
+		Factions: marked
+		Prerequisite: vehicles.marked	
+	ProvidesPrerequisite@alliedstructure:
+		RequiresPrerequisites: structures.allies
+		Prerequisite: vehicles.allies
+	ProvidesPrerequisite@alliedvanillastructure:
+		RequiresPrerequisites: structures.alliesvanilla
+		Prerequisite: vehicles.alliesvanilla
+	ProvidesPrerequisite@englishstructure:
+		RequiresPrerequisites: structures.england
+		Prerequisite: vehicles.england
+	ProvidesPrerequisite@frenchstructure:
+		RequiresPrerequisites: structures.france
+		Prerequisite: vehicles.france
+	ProvidesPrerequisite@germanstructure:
+		RequiresPrerequisites: structures.germany
+		Prerequisite: vehicles.germany
+	ProvidesPrerequisite@sovietstructure:
+		RequiresPrerequisites: structures.soviet
+		Prerequisite: vehicles.soviet
+	ProvidesPrerequisite@sovietvanillastructure:
+		RequiresPrerequisites: structures.sovietvanilla
+		Prerequisite: vehicles.sovietvanilla
+	ProvidesPrerequisite@russianstructure:
+		RequiresPrerequisites: structures.russia
+		Prerequisite: vehicles.russia
+	ProvidesPrerequisite@ukrainianstructure:
+		RequiresPrerequisites: structures.ukraine
+		Prerequisite: vehicles.ukraine
+	ProvidesPrerequisite@gdistructure:
+		RequiresPrerequisites: structures.gdi
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@gdivanillastructure:
+		RequiresPrerequisites: structures.gdivanilla
+		Prerequisite: vehicles.gdivanilla
+	ProvidesPrerequisite@talonstructure:
+		RequiresPrerequisites: structures.talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocomstructure:
+		RequiresPrerequisites: structures.zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@nodvanillastructure:
+		RequiresPrerequisites: structures.nodvanilla
+		Prerequisite: vehicles.nodvanilla
+	ProvidesPrerequisite@nodstructure:
+		RequiresPrerequisites: structures.nod
+		Prerequisite: vehicles.nod
+	ProvidesPrerequisite@blackhstructure:
+		RequiresPrerequisites: structures.blackh
+		Prerequisite: vehicles.blackh
+	ProvidesPrerequisite@markedstructure:
+		RequiresPrerequisites: structures.marked
+		Prerequisite: vehicles.marked
+	ProvidesPrerequisite@nodarty:
+		Factions: nod, blackh, marked
+		Prerequisite: vehicles.arty
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -341,-341,0
+		ExitCell: 0,2
+	Production:
+		Produces: 
+		PauseOnCondition: forceshield || invulnerability
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SabInfiltrate, SpyInfiltrate
+	Power:
+		Amount: -30
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	ProvidesPrerequisite@buildingname:
+ASTRIP:
+	Inherits: ^BuildingTD
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,-512,256, 0,-1451,384, 0,512,128, 0,1536,85
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
+	RenderSprites:
+		PlayerPalette: playertd
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: ~Disabled
+		IconPalette: chrometd
+		Description: Provides a dropzone\nfor vehicle reinforcements
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Airstrip
+	Building:
+		Footprint: XXXX xxxx ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 220000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		RequiresCondition: !build-incomplete
+	RallyPoint:
+		Offset: 4,2
+	Exit@1:
+		SpawnOffset: -1024,0,0
+		ExitCell: 3,1
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda
+		Prerequisite: vehicles.any
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, kazakhstan, impjap, china, israel
+		Prerequisite: vehicles.allies
+	ProvidesPrerequisite@td:
+		Factions: gdi, talon, zocom, nod, marked, blackh
+		Prerequisite: vehicles.td
+	ProvidesPrerequisite@alliesvanilla:
+		Factions: allies
+		Prerequisite: vehicles.alliesvanilla
+	ProvidesPrerequisite@england:
+		Factions: england
+		Prerequisite: vehicles.england
+	ProvidesPrerequisite@france:
+		Factions: france
+		Prerequisite: vehicles.france
+	ProvidesPrerequisite@germany:
+		Factions: germany
+		Prerequisite: vehicles.germany
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine
+		Prerequisite: vehicles.soviet
+	ProvidesPrerequisite@sovietvanilla:
+		Factions: soviet
+		Prerequisite: vehicles.sovietvanilla
+	ProvidesPrerequisite@russia:
+		Factions: russia
+		Prerequisite: vehicles.russia
+	ProvidesPrerequisite@ukraine:
+		Factions: ukraine
+		Prerequisite: vehicles.ukraine
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, talon, zocom
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@talon:
+		Factions: talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocom:
+		Factions: zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@nod:
+		Factions: nod, blackh, marked
+		Prerequisite: vehicles.nod
+	ProvidesPrerequisite@blackh:
+		Factions: blackh
+		Prerequisite: vehicles.blackh
+	ProvidesPrerequisite@marked:
+		Factions: marked
+		Prerequisite: vehicles.marked	
+	ProvidesPrerequisite@alliedstructure:
+		RequiresPrerequisites: structures.allies
+		Prerequisite: vehicles.allies
+	ProvidesPrerequisite@alliedvanillastructure:
+		RequiresPrerequisites: structures.alliesvanilla
+		Prerequisite: vehicles.alliesvanilla
+	ProvidesPrerequisite@englishstructure:
+		RequiresPrerequisites: structures.england
+		Prerequisite: vehicles.england
+	ProvidesPrerequisite@frenchstructure:
+		RequiresPrerequisites: structures.france
+		Prerequisite: vehicles.france
+	ProvidesPrerequisite@germanstructure:
+		RequiresPrerequisites: structures.germany
+		Prerequisite: vehicles.germany
+	ProvidesPrerequisite@sovietstructure:
+		RequiresPrerequisites: structures.soviet
+		Prerequisite: vehicles.soviet
+	ProvidesPrerequisite@sovietvanillastructure:
+		RequiresPrerequisites: structures.sovietvanilla
+		Prerequisite: vehicles.sovietvanilla
+	ProvidesPrerequisite@russianstructure:
+		RequiresPrerequisites: structures.russia
+		Prerequisite: vehicles.russia
+	ProvidesPrerequisite@ukrainianstructure:
+		RequiresPrerequisites: structures.ukraine
+		Prerequisite: vehicles.ukraine	
+	ProvidesPrerequisite@gdivanillastructure:
+		RequiresPrerequisites: structures.gdivanilla
+		Prerequisite: vehicles.gdivanilla
+	ProvidesPrerequisite@talonstructure:
+		RequiresPrerequisites: structures.talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocomstructure:
+		RequiresPrerequisites: structures.zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@nodvanillastructure:
+		RequiresPrerequisites: structures.nodvanilla
+		Prerequisite: vehicles.nodvanilla
+	ProvidesPrerequisite@blackhstructure:
+		RequiresPrerequisites: structures.blackh
+		Prerequisite: vehicles.blackh
+	ProvidesPrerequisite@markedstructure:
+		RequiresPrerequisites: structures.marked
+		Prerequisite: vehicles.marked
+	ProvidesPrerequisite@nodarty:
+		Factions: nod, blackh, marked
+		Prerequisite: vehicles.arty
+	ParatroopersPower@airdrop:
+		OrderName: nodairdrop
+		SquadSize: 3
+		UnitType: c17
+		Prerequisites: astrip
+		Icon: airdropicon
+		ChargeInterval: 13500
+		Description: Air Drop
+		LongDesc: Cargo Planes air drop tanks anywhere on the map.
+		DropItems: ltnk, ltnk, ltnk
+		SelectTargetSpeechNotification: SelectTarget
+		AllowImpassableCells: false
+		EndChargeSpeechNotification: ReinforceAva
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: lrairdropicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SabInfiltrate, SpyInfiltrate
+	Power:
+		Amount: -30
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	ProvidesPrerequisite@buildingname:
+HPAD2:
+	Inherits: ^BuildingTD
+	Inherits@shape: ^2x2Shape
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 768,-512,0, 768,512,0, -281,-512,0, -630,512,0
+	RenderSprites:
+		PlayerPalette: playertd
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 120
+		Prerequisites: ~Disabled
+		IconPalette: chrometd
+		Description: Produces and reloads\nhelicopters.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Helipad
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 80000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+		ExitCell: 0,0
+		MoveIntoWorld: false
+		Facing: 224
+	RallyPoint:
+	Production:
+		Produces: AircraftSQ, Plane, Helicopter
+		PauseOnCondition: forceshield || invulnerability
+	Reservable:
+	WithBuildingBib:
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	Power:
+		Amount: -10
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, zocom, talon
+		Prerequisite: aircraft.gdi
+	ProvidesPrerequisite@gdistructure:
+		RequiresPrerequisites: structures.gdi
+		Prerequisite: aircraft.gdi
+	ProvidesPrerequisite@nod:
+		Factions: nod, marked, blackh
+		Prerequisite: aircraft.nod
+	ProvidesPrerequisite@nodstructure:
+		RequiresPrerequisites: structures.nod
+		Prerequisite: aircraft.nod
+	ProvidesPrerequisite@blackh:
+		Factions: blackh
+		Prerequisite: aircraft.blackh
+	ProvidesPrerequisite@blackhstructure:
+		RequiresPrerequisites: structures.nod
+		Prerequisite: aircraft.blackh
+	ProvidesPrerequisite@all:
+		Factions: allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda, gdi, talon, zocom, nod, blackh, marked
+		Prerequisite: aircraft.all
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	WithResupplyAnimation:
+		RequiresCondition: !build-incomplete
+	SpawnActorPower@GDIDropzone:
+		Actor: FLARE.dropzone
+		Prerequisites: ~radar.gdi
+		LifeTime: 250
+		OrderName: dropzone
+		Icon: orcaca
+		IconPalette: chrometd
+		ChargeInterval: 9000
+		Description: Reinforcements
+		LongDesc: An Orca Carryall drops reinforcements\nat the target location.
+		EndChargeSpeechNotification: ReinforceAva
+		LaunchSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+
+PROC2:
+	Inherits: ^BuildingTD
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	RenderSprites:
+		PlayerPalette: playertd
+		FactionImages:
+			nod: nodproc
+			blackh: nodproc
+			marked: nodproc
+			legion: nodproc
+			shadow: nodproc
+			fangs: nodproc
+			eyesdoom: nodproc
+			circle: nodproc
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: meatweap
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: ~Disabled
+		Queue: BuildingSQ, BuildingMQ
+		IconPalette: chrometd
+		Description: Processes raw Tiberium, Ore and Gems\ninto useable resources
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 90000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, TheifInfiltrate
+	Refinery:
+		DockAngle: 112
+		DockOffset: 0,2
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+	GrantConditionOnBotOwner@brutal:
+		Condition: brutalbotplayer
+		Bots: rush
+	GrantConditionOnBotOwner@normal:
+		Condition: normalbotplayer
+		Bots: normal
+	CashTrickler@brutal:
+		Interval: 500
+		Amount: 100
+		ShowTicks: False
+		RequiresCondition: brutalbotplayer
+	CashTrickler@normal:
+		Interval: 500
+		Amount: 50
+		ShowTicks: False
+		RequiresCondition: normalbotplayer
+	DrawLineToTarget:
+	Selectable:
+		Bounds: 72,56,0,12
+		DecorationBounds: 73,72
+	CustomSellValue:
+		Value: 5300
+	InfiltrateForCash:
+		Types: TheifInfiltrate
+		Percentage: 50
+		Notification: CreditsStolen
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: playertd
+	FreeActor:
+		Actor: HARV2
+		SpawnOffset: 1,2
+		Facing: 64
+	WithResourceLevelOverlay:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+
+SILO2:
+	Inherits: ^BuildingTD
+	Inherits@shape: ^2x1Shape
+	Valued:
+		Cost: 500
+	CashTrickler:
+		Interval: 120
+		Amount: 25
+	Tooltip:
+		Name: Fund Geneorator
+	Buildable:
+		BuildPaletteOrder: 35
+		Prerequisites: atek, ~techlevel.infonly
+		Queue: DefenseSQ, DefenseMQ
+		IconPalette: chrometd
+		Description: Produces additional funds. limit, 1
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 30000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: true
+	RenderSprites:
+		PlayerPalette: playertd
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack
+	WithResourceLevelSpriteBody:
+		Sequence: stages
+	Power:
+		Amount: -15
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 49,30
+	Explodes:
+		Weapon: SmallBuildingExplode
+		EmptyWeapon: SmallBuildingExplode
+
+GUN2:
+	Inherits: ^DefenseTD
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		PlayerPalette: playertd
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Turret
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: ~Disabled
+		Queue: DefenseSQ, DefenseMQ
+		IconPalette: chrometd
+		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+	Building:
+	Health:
+		HP: 40000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: TurretGunTD
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: emppowerdown
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 3c0
+	Power:
+		Amount: -40
+	ClassicFacingBodyOrientation:
+		UseClassicFacingFudge: True
+
+RIBS:
+	Inherits: ^Building
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@factname:
+		Prerequisite: ribs
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,512,128, 420,-598,213
+		Type: Rectangle
+			TopLeft: -1024, -384
+			BottomRight: 1024, 1024
+	RenderSprites:
+		Image: ribs
+		PlayerPalette: player
+		IconPalette: playertd
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 20
+		Prerequisites: anypower, ~structures.nod
+		Description: Assembles Infantry Class Units.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Spawning Pit
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 40000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -42,810,0
+		ExitCell: 1,2
+		ProductionTypes: Soldier, InfantrySQ
+	Exit@2:
+		RequiresCondition: !being-captured
+		SpawnOffset: -725,640,0
+		ExitCell: 0,2
+		ProductionTypes: Soldier, InfantrySQ
+	Production:
+		Produces: InfantrySQ, Cyborg, Soldier, ParadropInfantry
+		PauseOnCondition: forceshield || invulnerability
+	GrantExternalConditionToProduced:
+		Condition: produced
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	ProvidesPrerequisite@nod:
+		Factions: nod, blackh, marked
+		Prerequisite: infantry.nod
+	ProvidesPrerequisite@nodvanilla:
+		Factions: nod
+		Prerequisite: infantry.nodvanilla
+	ProvidesPrerequisite@blackh:
+		Factions: blackh
+		Prerequisite: infantry.blackh
+	ProvidesPrerequisite@marked:
+		Factions: marked
+		Prerequisite: infantry.marked
+	ProvidesPrerequisite@nodstructure:
+		RequiresPrerequisites: structures.nod
+		Prerequisite: infantry.nod
+	ProvidesPrerequisite@nodvanillastructure:
+		RequiresPrerequisites: structures.nodvanilla
+		Prerequisite: infantry.nodvanilla
+	ProvidesPrerequisite@blackhstructure:
+		RequiresPrerequisites: structures.blackh
+		Prerequisite: infantry.blackh
+	ProvidesPrerequisite@markedstructure:
+		RequiresPrerequisites: structures.marked
+		Prerequisite: infantry.marked
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate, SabInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+EYESAT:
+	Inherits: ^Building
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: eyedar
+		PlayerPalette: player
+		IconPalette: player
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDownOrForceDisable
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,100
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildLimit: 1
+		BuildPaletteOrder: 90
+		Prerequisites: ~structures.nod, ~anypower
+		Description: Advanced Headquarters Building\nProvides an overview of the battlefield.\nCan detect all cloaked units within a 30 tile radius.\nRequires power to operate.
+	Valued:
+		Cost: 1800
+	BaseProvider:
+		PauseOnCondition: being-captured
+		Range: 25c0
+	Tooltip:
+		Name: All Seeing Eye
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Production:
+		Produces: BuildingSQ, DefenseSQ
+		PauseOnCondition: forceshield || invulnerability
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate, SabInfiltrate
+	Health:
+		HP: 500000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 32c0
+		RequiresCondition: !disabled
+		RevealGeneratedShroud: False
+	RevealsShroud@Offline:
+		Range: 10c0
+		RequiresCondition: disabled
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+		RequiresCondition: !disabled 
+	WithBuildingBib:
+	ProvidesRadar:
+		RequiresCondition: !jammed && !disabled
+	InfiltrateForExploration:
+		Types: SpyInfiltrate, SabInfiltrate
+	DetectCloaked:
+		Range: 30c0
+		RequiresCondition: !disabled
+	RenderDetectionCircle:
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@radar:
+		Prerequisite: radar
+	ProvidesPrerequisite@nodrad:
+		Factions: nod, marked, blackh, fangs, eyesdoom, circle
+		Prerequisite: radar.nod
+	ProvidesPrerequisite@gdirad:
+		Factions: gdi, zocom, talon, glastrikers, glaexp
+		Prerequisite: radar.gdi
+	ProvidesPrerequisite@buildingname:
+	ExternalCondition@JAMMED:
+		Condition: jammed
+	ProvidesPrerequisite@cnc:
+		Factions: gdi, talon, zocom, nod, blackh, marked, glastrikers, glaexp, fangs, eyesdoom, circle
+		Prerequisite: structures.td
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, talon, zocom, glastrikers, glaexp
+		Prerequisite: structures.gdi
+	ProvidesPrerequisite@nod:
+		Factions: nod, blackh, marked, fangs, eyesdoom, circle
+		Prerequisite: structures.nod
+	ProvidesPrerequisite@ai:
+		Prerequisite: botplayer
+		RequiresCondition: normalbotplayer || brutalbotplayer
+
+LAIR:
+	Inherits: ^BuildingTD
+	CashTrickler:
+		Interval: 120
+		Amount: 10
+		ShowTicks: False
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	RenderSprites:
+		PlayerPalette: playertd
+		Image: meatweap
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Meat Lair
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: ~structures.nod, anypower
+		Queue: BuildingSQ, BuildingMQ
+		IconPalette: chrometd
+		Description: Enables The Harvest Of Flesh.
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 90000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack
+	DrawLineToTarget:
+	Selectable:
+		Bounds: 72,56,0,12
+		DecorationBounds: 73,72
+	CustomSellValue:
+		Value: 400
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: playertd
+	Power:
+		Amount: -30
+	FreeActor:
+		Actor: HARV2
+		SpawnOffset: 1,2
+		Facing: 64
+	Refinery:
+		DockAngle: 112
+		DockOffset: 0,2
+		IsDragRequired: True
+		DragOffset: -554,512,0
+		DragLength: 12
+		TickRate: 15
+
+TURBINE:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,72
+	Building:
+		Footprint: XXXX xxxx ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	ProvidesPrerequisite:
+		Prerequisite: structures.nod
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 1
+		Prerequisites: ~structures.nod
+		Description: Generates medium levels of power.
+	RenderSprites:
+		PlayerPalette: player
+		Image: turb
+	Health:
+		HP: 35000
+	Power:
+		Amount: 200
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Large turbine
+
+MAW:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,100
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,812,0
+	ProvidesPrerequisite@nod:
+		Factions: nod, marked, blackh, fangs, eyesdoom, circle
+		Prerequisite: aircraft.nod
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.nod, ~anypower,
+		Description: Produces Flying Mutants.
+	RenderSprites:
+		PlayerPalette: player
+		Image: themaw
+	Health:
+		HP: 35000
+	Power:
+		Amount: -25
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Exit@1:
+		RequiresCondition: !being-captured
+		ExitCell: 4,1
+		Facing: 192
+		SpawnOffset: 133,-128,-60
+	RallyPoint:
+	Production:
+		Produces: AircraftSQ, Plane, Helicopter
+		PauseOnCondition: forceshield || invulnerability
+	Reservable:
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Maw
+	ProvidesPrerequisite@buildingname:
+		Prerequisite: maw
+
+portal:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		PlayerPalette: player
+		Image: portal
+	Selectable:
+		Bounds: 72,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: ~techlevel.low, ~structures.nod
+		Description: Produces Large Mutants.
+	ProvidesPrerequisite@buildingname:
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Portal
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 133,-128,-160
+		ExitCell: 3,3
+	Production:
+		Produces: VehicleSQ, ParadropVehicle
+		PauseOnCondition: forceshield
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda, fangs, eyesdoom, circle
+		Prerequisite: vehicles.nod
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+		TargetableOffsets: 768,0,0, 768,-1024,0, 768,1024,0
+		Type: Rectangle
+			TopLeft: -1536, -1152
+			BottomRight: 1536, 598
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+PEEL:
+	Inherits: ^Building
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,512,128, 420,-598,213
+		Type: Rectangle
+			TopLeft: -1024, -384
+			BottomRight: 1024, 1024
+	RenderSprites:
+		Image: fleshpeeler
+		PlayerPalette: player
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 20
+		Prerequisites: ~structures.nod, anypower
+		Description: Disembowels Human Bodies For Harvest.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Eviscerator
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 40000
+	SeedsResource:
+		ResourceType: Tiberium
+		Interval: 65
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	Power:
+		Amount: -25
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+TOOG:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: toothturret
+		PlayerPalette: player
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 90
+		Prerequisites: structures.nod, ~boneyard
+		Description: Base defense.\n  Strong vs Small groups of ground forces\n  Weak vs Air
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Teeth Turret
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 24,32,0,-4
+	SelectionDecorations:
+	Health:
+		HP: 43210
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 224
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: TurretDart
+		MuzzleSequence: muzzle
+		LocalOffset: 520,100,450, 520,-150,450
+		PauseOnCondition: disabled || emppowerdown
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled || emppowerdown
+	WithMuzzleOverlay:
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Power:
+		Amount: -40
+	ClassicFacingBodyOrientation:
+		UseClassicFacingFudge: True
+
+BWORK:
+	Inherits: ^Building
+	Inherits@shape: ^2x1Shape
+	ProvidesPrerequisite@boneyard:
+		Prerequisite: boneyard
+	RenderSprites:
+		Image: boneworks
+		PlayerPalette: player
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Boneworks
+	Buildable:
+		BuildPaletteOrder: 35
+		Prerequisites: structures.nod, ~ribs
+		Queue: BuildingSQ, BuildingMQ
+		IconPalette: chrome
+		Description: Allows for bone baised units.
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	GivesBuildableArea:
+	Health:
+		HP: 30000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack
+	WithSpriteBody:
+	Power:
+		Amount: -15
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 49,30
+	Explodes:
+		Weapon: SmallBuildingExplode
+		EmptyWeapon: SmallBuildingExplode
+
+POOL:
+	Inherits: ^Building
+	Inherits@shape: ^2x1Shape
+	ProvidesPrerequisite@acid:
+		Prerequisite: acid
+	RenderSprites:
+		Image: pool
+		PlayerPalette: player
+	Valued:
+		Cost: 355
+	Tooltip:
+		Name: Acid Pool
+	Buildable:
+		BuildPaletteOrder: 35
+		Prerequisites: structures.nod, ~ribs
+		Queue: BuildingSQ, BuildingMQ
+		IconPalette: chrome
+		Description: Allows for acid baised units.
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	GivesBuildableArea:
+	Health:
+		HP: 30000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack
+	WithSpriteBody:
+	Power:
+		Amount: -25
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 49,30
+	Explodes:
+		Weapon: ChemballLauncher
+		EmptyWeapon: ChemballLauncher
+
+sandcastle:
+	Inherits: ^DefenseTD
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: glatower
+		PlayerPalette: player
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 50
+		Prerequisites: ~structures.gdi
+		IconPalette: chrometd
+		Description: Powerful defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Guard Tower
+	Building:
+	Health:
+		HP: 20000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Armament@PRIMARY:
+		Weapon: glasniper
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: AK47
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	AutoTarget:
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 7c0
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 255
+	Power:
+		Amount: -0
+
+stingerpit:
+	Inherits: ^DefenseTD
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: camonet
+		PlayerPalette: player
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 50
+		Prerequisites: ~structures.gdi
+		IconPalette: chrometd
+		Description: Powerful defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Stinger Site
+	Building:
+	Health:
+		HP: 22000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Armament@PRIMARY:
+		Weapon: Stinger
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: StingerAA
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	AutoTarget:
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 7c0
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 255
+	Power:
+		Amount: -0
+
+afstingerpit:
+	Inherits: ^DefenseTD
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: camonet
+		PlayerPalette: player
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 50
+		Prerequisites: ~structures.africa
+		IconPalette: chrometd
+		Description: Powerful defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Stinger Site
+	Building:
+	Health:
+		HP: 22000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Armament@PRIMARY:
+		Weapon: Stinger
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: StingerAA
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	AutoTarget:
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 7c0
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 255
+	Power:
+		Amount: -0
+
+GTENT:
+	Inherits: ^Building
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: glatent
+		PlayerPalette: player
+	Selectable:
+		Bounds: 48,48
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 20
+		Prerequisites: ~structures.gdi
+		Description: Trains infantry.
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Tent Barracks
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 42000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -42,810,0
+		ExitCell: 1,2
+		ProductionTypes: Soldier, InfantrySQ
+	Exit@2:
+		RequiresCondition: !being-captured
+		SpawnOffset: -725,640,0
+		ExitCell: 0,2
+		ProductionTypes: Soldier, InfantrySQ
+	Production:
+		Produces: InfantrySQ, Cyborg, Soldier, ParadropInfantry
+		PauseOnCondition: forceshield || invulnerability
+	GrantExternalConditionToProduced:
+		Condition: produced
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	ProvidesPrerequisite@barrackstd:
+		Prerequisite: barrackstd
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, talon, zocom, glastrikers, glaexp
+		Prerequisite: infantry.gdi
+	ProvidesPrerequisite@gdivanilla:
+		Factions: gdi
+		Prerequisite: infantry.gdivanilla
+	ProvidesPrerequisite@talon:
+		Factions: talon
+		Prerequisite: infantry.talon
+	ProvidesPrerequisite@zocom:
+		Factions: zocom
+		Prerequisite: infantry.zocom
+	ProvidesPrerequisite@gdistructure:
+		RequiresPrerequisites: structures.gdi
+		Prerequisite: infantry.gdi
+	ProvidesPrerequisite@gdivanillastructure:
+		RequiresPrerequisites: structures.gdivanilla
+		Prerequisite: infantry.gdivanilla
+	ProvidesPrerequisite@talonstructure:
+		RequiresPrerequisites: structures.talon
+		Prerequisite: infantry.talon
+	ProvidesPrerequisite@zocomstructure:
+		RequiresPrerequisites: structures.zocom
+		Prerequisite: infantry.zocom
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate, SabInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+ARMSDEALER:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: ~techlevel.low, ~structures.gdi
+		Description: Produces vehicles.
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Arms Dealer
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 213,-128,0
+		ExitCell: 1,2
+	Production:
+		Produces: VehicleSQ, ParadropVehicle
+		PauseOnCondition: forceshield
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda, glastrikers, glaexp
+		Prerequisite: vehicles.any
+	ProvidesPrerequisite@td:
+		Factions: gdi, talon, zocom, nod, marked, blackh, glastrikers, glaexp
+		Prerequisite: vehicles.td
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, zocom, talon, glastrikers, glaexp
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@talon:
+		Factions: talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocom:
+		Factions: zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@gdistructure:
+		RequiresPrerequisites: structures.gdi
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@gdivanillastructure:
+		RequiresPrerequisites: structures.gdivanilla
+		Prerequisite: vehicles.gdivanilla
+	ProvidesPrerequisite@talonstructure:
+		RequiresPrerequisites: structures.talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocomstructure:
+		RequiresPrerequisites: structures.zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@nodvanillastructure:
+		RequiresPrerequisites: structures.nodvanilla
+		Prerequisite: vehicles.nodvanilla
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SabInfiltrate, SpyInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+stache:
+	Inherits: ^Building
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 60 
+		Prerequisites: ~structures.gdi, ~techlevel.infonly
+		Description: Sells Ore and Gems\nFor credits.
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Supply Stash
+	Building:
+		Footprint: _X_ xxx X== ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 72,50,0,4
+		DecorationBounds: 72,70,0,-2
+	SelectionDecorations:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
+	Health:
+		HP: 75000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Refinery:
+		DockAngle: 64
+		DockOffset: 2,2
+	GrantConditionOnBotOwner@brutal:
+		Condition: brutalbotplayer
+		Bots: rush
+	GrantConditionOnBotOwner@normal:
+		Condition: normalbotplayer
+		Bots: normal
+	CashTrickler@brutal:
+		Interval: 500
+		Amount: 100
+		ShowTicks: False
+		RequiresCondition: brutalbotplayer
+	CashTrickler@normal:
+		Interval: 500
+		Amount: 50
+		ShowTicks: False
+		RequiresCondition: normalbotplayer
+	DrawLineToTarget:
+	CustomSellValue:
+		Value: 300
+	FreeActor:
+		Actor: harv
+		SpawnOffset: 1,2
+		Facing: 64
+	InfiltrateForCash:
+		Percentage: 50
+		Types: ThiefInfiltrate
+		Notification: CreditsStolen
+	WithBuildingBib:
+	Power:
+		Amount: 0
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 598
+	HitShape@TOP:
+		TargetableOffsets: 1680,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	HitShape@BOTTOMLEFT:
+		TargetableOffsets: -1260,-1024,0
+		Type: Rectangle
+			TopLeft: -1536, 598
+			BottomRight: -512, 1280
+
+AFARMSDEALER:
+	Inherits: ^Building
+	RenderSprites:
+		Image: armsdealer
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: ~techlevel.low, ~structures.africa, anypower
+		Description: Produces vehicles.
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Arms Dealer
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: build-top
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 213,-128,0
+		ExitCell: 1,2
+	Production:
+		Produces: VehicleSQ, ParadropVehicle
+		PauseOnCondition: forceshield
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda
+		Prerequisite: vehicles.any
+	ProvidesPrerequisite@td:
+		Factions: gdi, talon, zocom, nod, marked, blackh
+		Prerequisite: vehicles.td
+	ProvidesPrerequisite@gdi:
+		Factions: gdi, zocom, talon
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@talon:
+		Factions: talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocom:
+		Factions: zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@gdistructure:
+		RequiresPrerequisites: structures.gdi
+		Prerequisite: vehicles.gdi
+	ProvidesPrerequisite@gdivanillastructure:
+		RequiresPrerequisites: structures.gdivanilla
+		Prerequisite: vehicles.gdivanilla
+	ProvidesPrerequisite@talonstructure:
+		RequiresPrerequisites: structures.talon
+		Prerequisite: vehicles.talon
+	ProvidesPrerequisite@zocomstructure:
+		RequiresPrerequisites: structures.zocom
+		Prerequisite: vehicles.zocom		
+	ProvidesPrerequisite@chad:
+		RequiresPrerequisites: structures.africa
+		Prerequisite: vehicles.chad
+	ProvidesPrerequisite@nodvanillastructure:
+		RequiresPrerequisites: structures.africa
+		Prerequisite: vehicles.v
+	ProvidesPrerequisite@africa:
+		RequiresPrerequisites: structures.africa
+		Prerequisite: vehicles.africa
+	ProvidesPrerequisite@chad:
+		RequiresPrerequisites: structures.chad
+		Prerequisite: vehicles.chad
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SabInfiltrate, SpyInfiltrate
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+AFPOWER:
+	Inherits: ^Building
+	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
+	Inherits@shape: ^2x2Shape
+	HitShape:
+		TargetableOffsets: 630,299,0
+	RenderSprites:
+		Image: afpower
+		PlayerPalette: player
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 10
+		Prerequisites: ~structures.africa
+		IconPalette: chrometd
+		Description: Provides power for other structures.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: African Power Plant
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 10000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: playertd
+	Power:
+		Amount: 150
+		RequiresCondition: !disabled || !forceshield
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate, PowerInfiltrate
+	ScalePowerWithHealth:
+	ProvidesPrerequisite@buildingname:
+	InfiltrateForPowerOutage:
+		Types: SpyInfiltrate, PowerInfiltrate
+
+MECHLAB:
+	Inherits: ARMSDEALER
+	ProvidesPrerequisite@impjap:
+		RequiresPrerequisites: structures.impjap
+		Prerequisite: vehicles.impjap
+	Power:
+		Amount: -50
+	Tooltip:
+		Name: Mech Lab
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 80
+		Prerequisites: ~techlevel.low, ~structures.impjap, anypower
+		Description: Produces vehicles, and mechs.
+
+GEMINE:
+	Inherits: ^Building
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,512,128, 420,-598,213
+		Type: Rectangle
+			TopLeft: -1024, -384
+			BottomRight: 1024, 1024
+	RenderSprites:
+		Image: digga
+		PlayerPalette: player
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildLimit: 1
+		BuildPaletteOrder: 20
+		Prerequisites: ~structures.angola, anypower
+		Description: Gems spawn by the top left corner of structure.
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Gem Mine
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 10000
+	SeedsResource:
+		ResourceType: Gems
+		Interval: 75
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
+APROC:
+	RenderSprites:
+		Image: proc
+	Inherits: ^Building
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 62 
+		Prerequisites: anypower, ~structures.africa, ~techlevel.infonly
+		Description: Refines Ore and Gems\ninto credits.
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Ore Refinery
+	Building:
+		Footprint: _X_ xxx X== ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 72,50,0,4
+		DecorationBounds: 72,70,0,-2
+	SelectionDecorations:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, ThiefInfiltrate
+	Health:
+		HP: 90000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Refinery:
+		DockAngle: 64
+		DockOffset: 1,2
+	GrantConditionOnBotOwner@brutal:
+		Condition: brutalbotplayer
+		Bots: rush
+	GrantConditionOnBotOwner@normal:
+		Condition: normalbotplayer
+		Bots: normal
+	CashTrickler@brutal:
+		Interval: 500
+		Amount: 100
+		ShowTicks: False
+		RequiresCondition: brutalbotplayer
+	CashTrickler@normal:
+		Interval: 500
+		Amount: 50
+		ShowTicks: False
+		RequiresCondition: normalbotplayer
+	DrawLineToTarget:
+	CustomSellValue:
+		Value: 300
+	FreeActor:
+		Actor: HARV
+		SpawnOffset: 1,2
+		Facing: 64
+	InfiltrateForCash:
+		Percentage: 50
+		Types: ThiefInfiltrate
+		Notification: CreditsStolen
+	WithBuildingBib:
+	WithIdleOverlay@TOP:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-top
+	Power:
+		Amount: -30
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 598
+	HitShape@TOP:
+		TargetableOffsets: 1680,0,0
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	HitShape@BOTTOMLEFT:
+		TargetableOffsets: -1260,-1024,0
+		Type: Rectangle
+			TopLeft: -1536, 598
+			BottomRight: -512, 1280
+
+RAFTFACT:
+	Inherits: ^Building
+	Selectable:
+		Bounds: 72,48
+	RenderSprites:
+		PlayerPalette: playernavy
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 40
+		Prerequisites: anypower, ~structures.africa
+		Description: Produces and repairs\nships and transports.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: African Naval Yard
+	Targetable:
+		TargetTypes: Ground, Water, Structure, WaterStructure, C4, DetonateAttack, SpyInfiltrate
+	Building:
+		Footprint: XXX xxx XXX
+		Dimensions: 3,3
+		TerrainTypes: Water
+	RequiresBuildableArea:
+		Adjacent: 8
+	Health:
+		HP: 18000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -1024,1024,0
+		Facing: 160
+		ExitCell: 0,2
+		ProductionTypes: Boat, ShipSQ
+	Exit@2:
+		RequiresCondition: !being-captured
+		SpawnOffset: 1024,1024,0
+		Facing: 224
+		ExitCell: 2,2
+		ProductionTypes: Boat, ShipSQ
+	Production:
+		Produces: ShipSQ, Boat, Submarine
+		PauseOnCondition: forceshield || invulnerability
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	RepairsUnits:
+		HpPerStep: 1000
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	RallyPoint:
+	Power:
+		Amount: -30
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 10c0
+	RenderDetectionCircle:
+	ProvidesPrerequisite@africa:
+		Factions: chad, angola, uganda
+		Prerequisite: ships.africa
+	ProvidesPrerequisite@buildingname:
+	MapEditorData:
+		ExcludeTilesets: INTERIOR
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	HitShape:
+		TargetableOffsets: 768,0,0, 768,-1024,0, 768,1024,0
+		Type: Rectangle
+			TopLeft: -1536, -1152
+			BottomRight: 1536, 598
+	HitShape@BOTTOM:
+		TargetableOffsets: -768,0,0
+		Type: Rectangle
+			TopLeft: -512, 598
+			BottomRight: 512, 1110
+
+worldcenter:
+	Inherits: ^Building
+	Inherits@shape: ^3x2Shape
+	Selectable:
+		Bounds: 72,48
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
+		Type: Rectangle
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 512
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildLimit: 1
+		BuildPaletteOrder: 80
+		Prerequisites: anypower, ~structures.israel
+		IconPalette: chrome
+		Description: Sources funds from world wide operatives
+	Valued:
+		Cost: 3000
+	CashTrickler:
+		Interval: 185
+		Amount: 500
+	Tooltip:
+		Name: Center for World Affairs
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	WithBuildingBib:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SabInfiltrate, SpyInfiltrate
+	Power:
+		Amount: -100
+
+SKDSTORM:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Scud Storm
+	Building:
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 40
+		Prerequisites: glatech, ~structures.gdi
+		Description: Static defense with a fireport for\na garrisoned soldier.\nCan detect cloaked units.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+	Valued:
+		Cost: 4500
+	CustomSellValue:
+		Value: 2000
+	Health:
+		HP: 80000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: true
+	Turreted:
+		TurnSpeed: 255
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	Armament:
+		Weapon: SCUDV3
+		LocalOffset: 0,0,86
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	RenderRangeCircle:
+		FallbackRange: 6c0
+	Power:
+		Amount: -150
+	DetectCloaked:
+		Range: 6c0
+	WithMuzzleOverlay:
+
+TUNNEL:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Tunnel
+	Building:
+	Buildable:
+		Queue: DefenseSQ, DefenseMQ
+		BuildPaletteOrder: 50
+		Prerequisites: ~structures.gdi
+		Description: Camouflaged static defense with a Medic\nfor a wounded soldier.\nCan detect cloaked units.\n  Strong vs the Unprepaired\n  Weak vs being observed
+	Valued:
+		Cost: 500
+	CustomSellValue:
+		Value: 50
+	Health:
+		HP: 80000
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	Armor:
+		Type: Heavy
+	FreeActor:
+		Actor: E3
+		SpawnOffset: 1,2
+		Facing: 64
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	Cloak:
+		InitialDelay: 125
+		CloakDelay: 60
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Turreted:
+		TurnSpeed: 255
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 6c0
+	RenderRangeCircle:
+		FallbackRange: 6c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 15
+		PipCount: 15
+	Armament:
+		Weapon: Heal
+		LocalOffset: 456,0,86
+		MuzzleSequence: muzzle
+	AttackTurreted:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: -0
+	WithMuzzleOverlay:
+
+GLATECH:
+	Inherits: ^ScienceBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrForceDisabled
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 140
+		Prerequisites: ~structures.gdi
+		Description: Provides advanced technologies.\n
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: GLA Tech Center
+	ProvidesPrerequisite:
+		Prerequisite: glatech
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+	WithBuildingBib:
+	Power:
+		Amount: -0
+	ProvidesPrerequisite@buildingname:
+
+soul:
+	Inherits: ^Building
+	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
+	Inherits@shape: ^2x2Shape
+	HitShape:
+		TargetableOffsets: 630,299,0
+	RenderSprites:
+		PlayerPalette: player
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 10
+		Prerequisites: radar.nod, ~structures.nod
+		IconPalette: chrome
+		Description: Provides ludicrous power for other structures.\n Generates funds
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Human Soul Battery
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 16500
+	Armor:
+		Type: Wood
+	CashTrickler:
+		Interval: 120
+		Amount: 10
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: playertd
+	Power:
+		Amount: 500
+		RequiresCondition: !disabled || !forceshield
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate, PowerInfiltrate
+	ScalePowerWithHealth:
+	ProvidesPrerequisite@buildingname:
+	InfiltrateForPowerOutage:
+		Types: SpyInfiltrate, PowerInfiltrate
+
+TANKS:
+	Inherits: ^Building
+	Inherits@POWER_OUTAGE: ^DisabledByPowerOutage
+	Inherits@shape: ^2x2Shape
+	HitShape:
+		TargetableOffsets: 630,299,0
+	RenderSprites:
+		PlayerPalette: player
+	Buildable:
+		Queue: BuildingSQ, BuildingMQ
+		BuildPaletteOrder: 15
+		Prerequisites: anypower, ~structures.china
+		IconPalette: chrome
+		Description: Provides accsess to cheap fire units.\n exploads
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Napalm Storage Tanks
+	ProvidesPrerequisite:
+		Prerequisite: Petroliumjelly
+	Building:
+		Footprint: xX xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 10500
+	Explodes:
+		Weapon: BadIdea
+		EmptyWeapon: BadIdea
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: playertd
+	Power:
+		Amount: -25
+		RequiresCondition: !disabled || !forceshield
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	ProvidesPrerequisite@buildingname:
+
+ARTY.nodnofac:
+	Inherits: ARTY
+	RenderSprites:
+		Image: artynod
+		PlayerPalette: playertd
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 70
+		IconPalette: chrometd
+		Prerequisites: hq, ~vehicles.nod, ~techlevel.medium, ~!techlevel.funits
+		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+	Armament:
+		Weapon: 155mmTD
+		PauseOnCondition: emppowerdown
+
+DTRK.nosw:
+	Inherits: DTRK
+	RenderSprites:
+		Image: DTRK
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 199
+		Prerequisites: techcenter, ~techlevel.high, ~!techlevel.superw
+		Description: Truck with actively armed nuclear\nexplosives. Has very weak armor.
+	Valued:
+		Cost: 2500
+
+MTNK.nod:
+	Inherits: MTNK
+	RenderSprites:
+		PlayerPalette: playertd
+		Image: MTNKnod
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 70
+		IconPalette: chrometd
+		Prerequisites: ~veh.gdi.stolen, ~vehicles.nod, ~techlevel.medium
+		Description: Nod Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: Battle Tank
+		GenericName: Tank
+
+HARV2:
+	Inherits: ^VehicleTD
+	RenderSprites:
+		PlayerPalette: playertd
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Harvester
+		GenericName: Harvester
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: ~vehicles.nod
+		Queue: VehicleSQ, VehicleMQ
+		IconPalette: chrometd
+		Description: Collects Gore for processing.\n  Unarmed
+	Selectable:
+		Priority: 7
+		DecorationBounds: 36,36
+	Harvester:
+		Capacity: 10
+		Resources: Tiberium
+		BaleUnloadDelay: 1
+		SearchFromProcRadius: 30
+		SearchFromOrderRadius: 15
+		EmptyCondition: no-ore
+	Mobile:
+		Speed: 115
+		Locomotor: heavywheeled
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	SpawnActorOnDeath:
+		Actor: HARV2.Husk
+	WithHarvestAnimation:
+	Explodes:
+		RequiresCondition: !no-ore
+		Weapon: OreExplosion
+	SelectionDecorations:
+
+TITAN:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: hibagon
+		PlayerPalette: player
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 25
+		IconPalette: chrometd
+		Prerequisites: ~Disabled
+		Description: Tough Prototype Battle-Mech.\nMaximum 1 can be built.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+	Valued:
+		Cost: 1000
+	Selectable:
+		Bounds: 30,40,0,0
+	Tooltip:
+		Name: Hibagon
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 61
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Passenger:
+		CargoType: Vehicle
+		PipType: Red
+		Weight: 3
+		Voice: Move
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithAttackAnimation:
+		Sequence: shoot
+	WithMoveAnimation:
+		MoveSequence: run
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament@PRIMARY:
+		Weapon: HibTusk
+		LocalOffset: 630,260,100
+		PauseOnCondition: emppowerdown
+	AttackFrontal:
+		PauseOnCondition: emppowerdown
+		Armaments: primary, secondary, tertiary
+		Voice: Attack
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 100
+	Voiced:
+		VoiceSet: TitanVoice
+	Carryable:
+		LocalOffset: 0,0,277
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+HIBAGON:
+	Inherits: TITAN
+	RenderSprites:
+		Image: hibagon
+		PlayerPalette: player
+	WithSpriteTurret:
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	Turreted:
+		TurnSpeed: 5
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 25
+		IconPalette: chrometd
+		Prerequisites: ~vehicles.impjap, ~techlevel.high
+		Description: Tough Prototype Battle-Mech.\nMaximum 1 can be built.\n  Strong vs Infantry, Tanks\n  Weak vs Aircraft
+
+
+HMLRS:
+	Inherits: ^VehicleTD
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hover MLRS
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 130
+		Prerequisites: hq, ~vehicles.talon, ~techlevel.medium, ~techlevel.funits
+		Queue: VehicleSQ, VehicleMQ
+		IconPalette: chrometd
+		Description: Prototype Hover Multiple Launch Rocket System.\nLong-range guided artillery.\n  Strong vs Infantry, Vehicles and Buildings
+	Mobile:
+		Speed: 100
+		Locomotor: hover
+	LeavesTrails:
+		Image: twake
+		Palette: effect
+		TerrainTypes: Water
+		TrailWhileStationary: true
+		StationaryInterval: 18
+		MovingInterval: 6
+	Health:
+		HP: 16000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -200,0,0
+	Hovers:
+		OffsetModifier: 35
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Armament@PRIMARY:
+		Weapon: 227mmH
+		LocalOffset: 213,128,0, 213,-128,0
+		LocalYaw: 100, -100
+		PauseOnCondition: emppowerdown
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: 227mmAAH
+		LocalOffset: 213,-128,0, 213,128,0
+		LocalYaw: 100, -100
+		PauseOnCondition: emppowerdown
+	AutoTarget:
+		ScanRadius: 10
+	AttackTurreted:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+		PauseOnCondition: emppowerdown
+	WithSpriteTurret:
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+		
+TANKD:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 55
+		Prerequisites: ~vehicles.germany, dome, ~techlevel.medium, ~techlevel.funits
+		Description: German Tank Destroyer\n  Strong vs Armor\n  Weak vs Infantry, Aircraft
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Tank Destroyer
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 61
+		TurnSpeed: 4
+		Voice: Move
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 2
+		Offset: -80,0,-20
+	Armament:
+		Weapon: 183mm
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 868,0,250
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+		Voice: Attack
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: TANKD.Husk
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: TDestVoice
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	Selectable:
+		DecorationBounds: 28,28
+
+SLUG:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: slugbeast
+		PlayerPalette: playernavy
+	Voiced:
+		VoiceSet: Mutantvoice
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildPaletteOrder: 13
+		Prerequisites: ~infantry.nod
+		Description: Quickly Captures buildings.\n Moves very slowly.\n Stong vs Infantry.\n   weak vs air, vehicles
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Leech
+	Selectable:
+		Priority: 6
+	RepairsBridges:
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 50
+	Health:
+		HP: 11000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 40
+		TurnSpeed: 1
+		Locomotor: heavywheeled
+	RevealsShroud:
+		Range: 2c1
+
+TEETHER:
+	Inherits: TITAN
+	RenderSprites:
+		Image: meatwalker
+		PlayerPalette: player
+	Valued:
+		Cost: 500
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 191
+		IconPalette: player
+		Prerequisites: ~vehicles.nod, ~boneyard
+		Description: Shoots its teeth out at enemys\n  Strong vs Light vehicles, Buildings\n  Weak vs Tanks, Infantry
+	Armor:
+		Type: None
+	Explodes:
+		Weapon: LargeMeatExplosion
+	Mobile:
+		Speed: 55
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Armament@PRIMARY:
+		Weapon: LargeDart
+		LocalOffset: 630,260,100
+		PauseOnCondition: emppowerdown
+	Voiced:
+		VoiceSet: MutantVoice2
+
+AMY:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: chunky
+		PlayerPalette: playernavy
+		Scale: 0.9
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Selectable:
+		Bounds: 54, 24
+	Targetable:
+		RequiresCondition: !parachute
+		TargetTypes: Ground, Vehicle
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 120
+		Prerequisites: ~vehicles.nod, ~portal
+		Description: General-purpose infantry.\n  Strong vs All\n  Can be rammed with vehicles.
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 600
+	Mobile:
+		Speed: 81
+	Tooltip:
+		Name: Amygdala Crab
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armor:
+		Type: None
+	Armament@PRIMARY:
+		Weapon: SonicZap
+		FireDelay: 0
+		LocalOffset: -120,0,150
+		PauseOnCondition: emppowerdown
+	Armament@SECONDARY:
+		Weapon: SonicZapVisual
+		Name: secondary
+		FireDelay: 0
+		LocalOffset: -120,0,150
+		PauseOnCondition: emppowerdown
+	WithInfantryBody:
+		DefaultAttackSequence: bite
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+DEATHCLAW:
+	Inherits: TITAN
+	RenderSprites:
+		Image: deathclaw
+		PlayerPalette: player
+	WithDamageOverlay:
+		Image: largebleed
+	Valued:
+		Cost: 600
+	Wanders:
+		MinMoveDelay: 150
+		MaxMoveDelay: 950
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 19
+		IconPalette: player
+		Prerequisites: ~vehicles.nod, ~portal
+		Description: Dominates at close range\n  Strong vs slow vehicles and unsuspecting targets\n  Weak vs Fire, large groups
+	Health:
+		HP: 35000
+	Armor:
+		Type: Light, None
+	Explodes:
+		Weapon: LargeMeatExplosion
+	Tooltip:
+		Name: Ravager
+	Mobile:
+		Speed: 135
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Armament@PRIMARY:
+		Weapon: ClawofDeath
+	Voiced:
+		VoiceSet: MutantVoice2
+
+LIVTNK:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: livingtnk
+		PlayerPalette: player
+	WithDamageOverlay:
+		Image: largebleed
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 60
+		Prerequisites: ~vehicles.nod, ~acid
+		Description: Allied Main Battle Tank.\n  Strong vs Buildings, Armor\n  Weak vs Infantry, Aircraft
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Living Tank
+		GenericName: Living Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 18000
+	Armor:
+		Type: Light, None
+	Mobile:
+		Speed: 65
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 8
+	Armament:
+		Weapon: Spew
+		Recoil: 58
+		RecoilRecovery: 18
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: 2TNK.Husk
+	SelectionDecorations:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+	Selectable:
+		DecorationBounds: 28,28
+	Voiced:
+		VoiceSet: MutantVoice2
+
+TEETHERAA:
+	Inherits: TITAN
+	Tooltip:
+		Name: Pectineus Walker
+		GenericName: Living Tank
+	RenderSprites:
+		Image: emptylegs
+		PlayerPalette: player
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light, None
+	Valued:
+		Cost: 500
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	Turreted:
+		TurnSpeed: 5
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 191
+		IconPalette: player
+		Prerequisites: ~vehicles.nod
+		Description: Has a rocketpod where its mouth should be\n  Strong vs Light vehicles, Air\n  Weak vs Tanks, Infantry
+	Explodes:
+		Weapon: LargeMeatExplosion
+	Mobile:
+		Speed: 85
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Armament@PRIMARY:
+		Weapon: pectineuspod
+		LocalOffset: 630,260,100
+		PauseOnCondition: emppowerdown
+	Voiced:
+		VoiceSet: MutantVoice2
+
+SCPSHP:
+	Inherits: APC
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildLimit: 1
+		BuildPaletteOrder: 40
+		Prerequisites: ~vehicles.chad
+		Description: Tough transport.\n  can produce vehicles, unarmed
+	Valued:
+		Cost: 2150
+	Selectable:
+		Bounds: 72, 72
+	Tooltip:
+		Name: Mobile War Factory
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: M60mg
+		MuzzleSequence: muzzle
+		LocalOffset: 128,0,43
+		PauseOnCondition: emppowerdown
+	Health:
+		HP: 90000
+	RallyPoint:
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: 213,-128,0
+		ExitCell: 1,2
+	Production:
+		Produces: VehicleSQ, ParadropVehicle
+		PauseOnCondition: forceshield
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite@any:
+		Factions: gdi, talon, zocom, nod, marked, blackh, allies, england, france, germany, soviet, russia, ukraine, kazakhstan, impjap, china, israel, chad, angola, uganda, glastrikers, glaexp, fangs, eyesdoom, circle, m.b, s.korea, n.korea, rameus
+		Prerequisite: vehicles.any
+	ProvidesPrerequisite@africa:
+		Factions: chad, uganda, angola
+		Prerequisite: vehicles.africa
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 56
+		RequiresCondition: !notmobile && !being-captured
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Cargo:
+		Types: Infantry, Vehicle
+		MaxWeight: 4
+		PipCount: 4
+		LoadingCondition: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+IFV2:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RenderSprites:
+		PlayerPalette: player
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 40
+		IconPalette: chrome
+		Prerequisites: ~vehicles.africa, ~techlevel.low
+		Description: Fast, light tank.\n  Strong vs Vehicles, Infantry\n  Weak vs Tanks, Air
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Grenade IFV
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 26000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: lighttracked
+		Speed: 111
+	Targetable:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !onwater && !parachute
+	WithFacingSpriteBody:
+		RequiresCondition: !onwater
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 3
+	Armament:
+		Weapon: grenadegun
+		Recoil: 55
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown || parachute
+	AttackTurreted:
+		PauseOnCondition: emppowerdown || parachute
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+truckplatform:
+	Inherits: ^Tank
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RenderSprites:
+		PlayerPalette: player
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 40
+		IconPalette: chrome
+		Prerequisites: ~vehicles.africa, ~techlevel.low
+		Description: The least complex fighting vehicle.\n  Strong vs Vehicles, Tanks, Air\n  Weak vs Tanks, Infantry
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Gun Technical
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 26000
+	Armor:
+		Type: Light
+	Mobile:
+		Locomotor: lighttracked
+		Speed: 111
+	Targetable:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !onwater && !parachute
+	WithFacingSpriteBody:
+		RequiresCondition: !onwater
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 5
+	Armament@PRIMARY:
+		Weapon: RedEye
+		LocalOffset: 0,0,555
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: Dragon
+		LocalOffset: 0,0,555
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 1
+		PipCount: 0
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 50
+		Count: 1
+	AttackTurreted:
+		PauseOnCondition: parachute
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+TECHNICAL2:
+	Inherits: truckplatform
+	Tooltip:
+		Name: RPG Technical
+	RenderSprites:
+		Image: truckplatform
+		PlayerPalette: player
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 45
+		IconPalette: chrome
+		Prerequisites: ~vehicles.gdi, ~techlevel.low
+		Description: The least complex fighting vehicle.\n  Strong vs Vehicles, Tanks, Air\n  Weak vs Tanks, Infantry
+
+TECHNICAL:
+	Inherits: truckplatform
+	RenderSprites:
+		Image: technical
+		PlayerPalette: player
+	Valued:
+		Cost: 300
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 20
+		IconPalette: chrome
+		Prerequisites: ~vehicles.gdi, ~techlevel.low
+		Description: The least complex fighting vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Tanks, Air
+	Armament@PRIMARY:
+		Weapon: AK47
+		LocalOffset: 0,0,555
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: AK47
+		LocalOffset: 0,0,555
+
+SMECHNOD:
+	Inherits: ^Vehicle
+	RenderSprites:
+		PlayerPalette: player
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildPaletteOrder: 25
+		IconPalette: chrometd
+		Prerequisites: ~vehicles.impjap
+		Description: Flimsy Prototype Battle-Mech.\n armed with flamethrower and machinegun.\n  Strong vs Infantry, Monsters\n  Weak vs Aircraft, Tanks
+	Valued:
+		Cost: 700
+	Selectable:
+		Bounds: 20,20,0,0
+	Tooltip:
+		Name: Onibi
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: light
+	Mobile:
+		Speed: 55
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Passenger:
+		CargoType: Vehicle
+		PipType: Red
+		Weight: 3
+		Voice: Move
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithAttackAnimation:
+		Sequence: shoot
+	WithMoveAnimation:
+		MoveSequence: run
+	RevealsShroud:
+		Range: 6c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament@PRIMARY:
+		Weapon: Fireballsprayer
+		LocalOffset: 0,0,0
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: M60mg
+		LocalOffset: 0,0,0
+	AttackFrontal:
+		PauseOnCondition: emppowerdown
+		Armaments: primary, secondary, tertiary
+		Voice: Attack
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 100
+	Voiced:
+		VoiceSet: TitanVoice
+	Carryable:
+		LocalOffset: 0,0,277
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+CHINDRONE:
+	Inherits: ^Soldier
+	RenderSprites:
+		PlayerPalette: player
+		Scale: 1.2
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Selectable:
+		Bounds: 30, 24
+	Targetable:
+		RequiresCondition: !parachute
+		TargetTypes: Ground, Vehicle
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 1
+		BuildDurationModifier: -50
+		Prerequisites: ~aircraft.drone
+		Description: General-purpose swarm unit cost 5 energy.\n  Strong vs infanty\n  weak vs machineguns, explosives, air.
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 100
+	Mobile:
+		Speed: 95
+		Locomotor: hoverswarm
+	Tooltip:
+		Name: Drone
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 3500
+	Armor:
+		Type: None, Light
+	Hovers:
+		OffsetModifier: 45
+	Armament@PRIMARY:
+		Weapon: DronePistol
+		FireDelay: 1
+		LocalOffset: 0,0,0
+		PauseOnCondition: emppowerdown
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	Power:
+		Amount: -5
+
+FCHINDRONE:
+	Inherits: ^Soldier
+	RenderSprites:
+		PlayerPalette: player
+		Scale: 1.4
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Selectable:
+		Bounds: 30, 24
+	Targetable:
+		RequiresCondition: !parachute
+		TargetTypes: Ground, Vehicle
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 1
+		BuildDurationModifier: -50
+		Prerequisites: ~aircraft.drone
+		Description: General-purpose swarm unit cost 10 energy.\n  Strong vs infanty, buildings, monsters\n  weak vs machineguns, explosives, air.
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 110
+	Mobile:
+		Speed: 90
+		Locomotor: hoverswarm
+	Tooltip:
+		Name: Flamthrower Drone
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 3000
+	Armor:
+		Type: None, Light
+	Hovers:
+		OffsetModifier: 45
+	Armament@PRIMARY:
+		Weapon: Flamer
+		FireDelay: 1
+		LocalOffset: 0,0,0
+		PauseOnCondition: emppowerdown
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	Power:
+		Amount: -10
+
+GREATONE:
+	Inherits: TITAN
+	Inherits: ^TheBigOne
+	RenderSprites:
+		Image: greatone
+		PlayerPalette: player
+	WithDamageOverlay:
+		Image: largebleed
+	Valued:
+		Cost: 16000
+	Buildable:
+		Queue: VehicleSQ, VehicleMQ
+		BuildDurationModifier: 10
+		BuildPaletteOrder: 2
+		IconPalette: player
+		Prerequisites: ~vehicles.nod, ~portal
+		Description: Dominates.\n  Strong vs anything on the land\n  Weak vs Air
+	Health:
+		HP: 999999
+	Armor:
+		Type: Light, None
+	Explodes:
+		Weapon: LargeMeatExplosion
+	Tooltip:
+		Name: Baphomet
+	Mobile:
+		Speed: 95
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Armament@PRIMARY:
+		Weapon: GreatballLauncher
+	Voiced:
+		VoiceSet: MassiveMutantVoice
+
+
+RoidDOG:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Dog
+		BuildPaletteOrder: 50
+		Prerequisites: ~kenn, ~barr
+		Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	RenderSprites:
+		Image: DOG
+		Scale: .9
+		PlayerPalette: player
+	WithDeathAnimation:
+		DeathSequencePalette: player
+		DeathTypes:
+			DefaultDeath: 1
+			BulletDeath: 2
+			SmallExplosionDeath: 3
+			ExplosionDeath: 4
+			FireDeath: 5
+			ElectricityDeath: 6
+			PoisonDeath: 7
+			ChronoDeath: 8
+			ToxinDeath: 9
+			ToxicDeath: 10
+		CrushedSequence: die-crushed
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Roided Attack Dog
+		GenericName: Roided Dog
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 12,17,-1,-4
+		DecorationBounds: 12,17,-1,-4
+	SelectionDecorations:
+	Health:
+		HP: 9000
+	Mobile:
+		Speed: 120
+		Voice: Move
+		RequiresCondition: !attack-cooldown && !eating
+	Guard:
+		Voice: Move
+	Passenger:
+		Voice: Move
+	RevealsShroud:
+		Range: 5c512
+	Armament:
+		Weapon: Roid
+		ReloadingCondition: attack-cooldown
+	AttackLeap:
+		Voice: Attack
+		PauseOnCondition: attacking || attack-cooldown
+	AttackMove:
+		Voice: Move
+	GrantConditionOnAttack:
+		Condition: eating
+		RevokeDelay: 25
+	GrantConditionWhileAiming:
+		Condition: run
+	AutoTarget:
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+	Targetable:
+		TargetTypes: Ground, Infantry, 
+	WithInfantryBody:
+		MoveSequence: walk
+		StandSequences: stand
+		DefaultAttackSequence: eat
+		RequiresCondition: !run
+	WithInfantryBody@RUN:
+		MoveSequence: run
+		RequiresCondition: run
+	SpeedMultiplier:
+		Modifier: 170
+		RequiresCondition: run
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Thief
+	Voiced:
+		VoiceSet: DogVoice
+
+SG:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: N1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~tent
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: Shotgunner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5000
+	Armament@PRIMARY:
+		Weapon: Shotgun
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+E12:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: e1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~barr
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Advanced Rifleman
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6000
+	Armament@PRIMARY:
+		Weapon: AdvancedM1Carbine
+	Armament@SECONDARY:
+		Weapon: GrenadeAbility
+	Armament@TERTIARY:
+		Weapon: M1AA
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SCOUT:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: boris
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~tent
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: Scout
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 15c0
+	Health:
+		HP: 4000
+	Armament@PRIMARY:
+		Weapon: Pistol
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SG2:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: N1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~barr
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Advanced Shotgunner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6000
+	Armament@PRIMARY:
+		Weapon: AdvancedShotgun
+	Armament@SECONDARY:
+		Weapon: GrenadeAbility
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+CE4:
+	Inherits: E4
+	RenderSprites:
+		Image: E4
+	ProducibleWithLevel:
+		Prerequisites: Petroliumjelly
+		InitialLevels: 1
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 70
+		Prerequisites: ~Petroliumjelly
+		Description: Advanced anti-structure unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+	Valued:
+		Cost: 160
+
+MEDI.gdi:
+	Inherits: MEDI
+	RenderSprites:
+		Image: MEDI
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: ~pyle, ~infantry.gdi, ~!hosp, ~techlevel.infonly
+		Description: Heals nearby infantry.\n  Unarmed
+
+MECH.nod:
+	Inherits: MECH
+	RenderSprites:
+		Image: MECH
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 100
+		Prerequisites: ~rep, ~infantry.nod, ~techlevel.medium
+		Description: Repairs nearby vehicles and restores\nhusks to working condition by capturing them.\n  Unarmed
+
+SHOK.nod:
+	Inherits: SHOK
+	RenderSprites:
+		Image: SHOK
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 130
+		Prerequisites: ~inf.soviet.stolen, ~infantry.nod, ~tmpl, ~techlevel.high
+		Description: Elite infantry with portable tesla coils.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		
+N5R2:
+	Inherits: N5
+	RenderSprites:
+		Image: N5
+	ProducibleWithLevel:
+		Prerequisites: techlevel.infonly
+		InitialLevels: 2
+
+SNIPER:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 55
+		Prerequisites: ~disabled
+		Description: Special marksman infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n Special Ability: Stealth
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Sniper
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 8c0
+	Armament@PRIMARY:
+		Weapon: sniper
+	Mobile:
+		Speed: 51
+		Locomotor: foot
+		Voice: Move
+	Cloak:
+		InitialDelay: 200
+		CloakDelay: 200
+		CloakedCondition: hidden
+		Palette: cloakTD
+		IsPlayerPalette: true
+		CloakTypes: Cloak, Thief
+		RequiresCondition: !cloak-force-disabled
+		UncloakOn: Unload, Infiltrate, Demolish, Dock, Move
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	WithDecoration@hidden:
+		Image: pips
+		Sequence: pip-hidden
+		Palette: temptd
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		RequiresCondition: hidden
+	SpeedMultiplier:
+		Modifier: 90
+		RequiresCondition: hidden
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		StandSequences: stand, stand2
+	Passenger:
+		PipType: Red
+		Voice: Move
+	Guard:
+		Voice: Move
+	Voiced:
+		VoiceSet: SniperVoice
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+BORIS:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 120
+		Prerequisites: ~Disabled
+		BuildLimit: 1
+		Description: Elite commando infantry. Armed with C4.\nCan detect cloaked units.\n Maximum 1 can be trained.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft\n  Special Ability: Destroy Building with C4
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Boris
+	Health:
+		HP: 11000
+	Mobile:
+		Speed: 71
+		Voice: Move
+	Guard:
+		Voice: Move
+	RevealsShroud:
+		Range: 6c0
+	Passenger:
+		PipType: Red
+		Voice: Move
+	AttackFrontal:
+		Voice: Attack
+	Armament@PRIMARY
+		Name: secondary
+		Weapon: akm
+	Demolition:
+		Voice: Demolish
+	AutoTarget:
+	WithInfantryBody:
+		AttackSequences:
+			primary: shoot-laser
+			secondary: shoot
+		StandSequences: stand
+	VoiceAnnouncement:
+		Voice: Build
+	AnnounceOnKill:
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Thief
+	Voiced:
+		VoiceSet: BorisVoice
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+MORT:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: ~awep, ~barr
+		Description: Infantry armed with a Mortar.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Mortarman
+	Mobile:
+		Speed: 30
+	Health:
+		HP: 5000
+	Armament@PRIMARY:
+		Weapon: Mortar
+		LocalOffset: 0,0,155
+		FireDelay: 15
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: throw
+	Explodes:
+		Weapon: VisualExplodeChem
+		EmptyWeapon: VisualExplodeChem
+		Chance: 50
+		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath, FireDeath, ElectricityDeath
+	WithDeathAnimation:
+		DeathSequencePalette: playertd
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+MORT.Tech:
+	Inherits: MORT
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: ~awep, ~barr, ~infantry.kazakhstan
+		Description: More efficent mortar Infantry.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+	Armament@PRIMARY:
+		Weapon: KazakhMortar
+		LocalOffset: 0,0,155
+		FireDelay: 12
+	Tooltip:
+		Name: Kazakh Mortarman
+	Mobile:
+		Speed: 35
+	RenderSprites:
+		Image: Mort
+
+MEDI.Tech:
+	Inherits: MEDI
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: ~hosp, ~barracks
+		Description: Heals nearby infantry.\n  Unarmed
+	Valued:
+		Cost: 350
+	RenderSprites:
+		Image: MEDI
+		
+ZOM:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: zombie
+		PlayerPalette: playernavy
+		Scale: 0.8
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 1
+		Prerequisites: ~ribs
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 65
+	Mobile:
+		Speed: 61
+	Tooltip:
+		Name: Zombie
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armament@PRIMARY:
+		Weapon: Claw
+	Wanders:
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+		WanderMoveRadius: 1
+	WithInfantryBody:
+		DefaultAttackSequence: bite
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+FZOM:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: zombie
+		PlayerPalette: playernavy
+		Scale: 0.8
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 2
+		Prerequisites: ~ribs
+		Description: A Faster Zombie with less health than it's counterpart
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 95
+	Mobile:
+		Speed: 82
+	Tooltip:
+		Name: Fast Zombie
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armament@PRIMARY:
+		Weapon: Claw
+	WithInfantryBody:
+		DefaultAttackSequence: bite
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+BABYTEETHER:
+	Inherits: TEETHER
+	RenderSprites:
+		Image: meatwalker
+		PlayerPalette: player
+		Scale: 0.5
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 3
+		Prerequisites: ~ribs, boneyard
+		Description: General-purpose infantry.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, fire
+	Selectable:
+		Class: E1
+		Bounds: 20,20,0,2
+	Valued:
+		Cost: 200
+	Mobile:
+		Speed: 48
+		Voice: Move
+		AlwaysConsiderTurnAsMove: true
+	Tooltip:
+		Name: TEETHER
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 14100
+	Armament@PRIMARY:
+		Weapon: Toothgun
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	Voiced:
+		VoiceSet: MutantVoice
+
+HUNT:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: zombie
+		PlayerPalette: playernavy
+		Scale: 0.9
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 57
+		Prerequisites: ~ribs
+		Description: Elite Soldier unit.\n does not wander.\n  good vs Infanty, light vehicles.\n  weak vs Air
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ViceVoice
+	Valued:
+		Cost: 250
+	Mobile:
+		Speed: 120
+	Tooltip:
+		Name: Nightmare Zombie
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Cloak:
+		InitialDelay: 15
+		CloakDelay: 111
+		UncloakOn: Attack
+	Health:
+		HP: 10000
+	Armament@PRIMARY:
+		Weapon: Claw
+	Armament@SECONDARY:
+		Weapon: Claw
+	WithInfantryBody:
+		DefaultAttackSequence: bite
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SAD:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RenderSprites:
+		Image: C2
+		PlayerPalette: playernavy
+	Disguise:
+		DisguisedCondition: disguise
+	WithDisguisingInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2
+		StandSequences: stand,stand2
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~infantry.talon
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Suicide Bomber
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5000
+	Explodes:
+		Weapon: bombvest
+		EmptyWeapon: bombvest
+		DamageSource: Killer
+	AttackFrontal:
+		FacingTolerance: 128
+	Armament@PRIMARY:
+		Weapon: DemoTruckTargeting
+	GrantConditionOnAttack:
+		Condition: triggered
+	GrantConditionOnDeploy:
+		DeployedCondition: triggered
+	KillsSelf:
+		RequiresCondition: invulnerability || triggered
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3,idle4
+	AttackFrontal:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+N64:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: e1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~infantry.gdi, ~techlevel.infonly
+		IconPalette: chrometd
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft 
+	Valued:
+		Cost: 25
+	Tooltip:
+		Name: Rebel
+	CaptureManager:
+	Health:
+		HP: 3500
+	Armament@PRIMARY:
+		Weapon: AK47
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3,idle4
+		DefaultAttackSequence: shoot
+	WithDeathAnimation:
+		DeathSequencePalette: playertd
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+ASG:
+	Inherits: SG
+	RenderSprites:
+		Image: N1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~pyle, ~infantry.africa
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+
+AE1:
+	Inherits: E1
+	RenderSprites:
+		Image: N1
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~pyle, ~infantry.africa
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+
+AE3:
+	Inherits: E3
+	RenderSprites:
+		Image: N3
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: pyle, infantry.africa
+
+UGANDO:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: InfantrySQ, InfantryMQ
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~infantry.uganda
+		IconPalette: chrometd
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles \n Armed with AK-47 and grenades
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Ugandan Commando
+	Health:
+		HP: 7500
+	Armament@PRIMARY:
+		Weapon: AK47
+	Armament@SECONDARY:
+		Weapon: Grenade
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3,idle4
+		DefaultAttackSequence: shoot
+	WithDeathAnimation:
+		DeathSequencePalette: playertd
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+FROG:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 51
+		Prerequisites: ~afld ~techlevel.medium, ~techlevel.funits
+		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Infantry\n  Weak vs Aircraft
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Frogfoot Attack Plane
+	Health:
+		HP: 9000
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: FrogBomb
+		LocalOffset: 256,-213,0
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		AttackTurnDelay: 70
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitudeRange: 2560
+		InitialFacing: 192
+		TurnSpeed: 4
+		Speed: 195
+		RepulsionSpeed: 40
+		TakeoffSounds: migtoff1.aud
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	AmmoPool:
+		Ammo: 4
+		PipCount: 4
+		AmmoCondition: ammo
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: FROG.Husk
+	Selectable:
+		DecorationBounds: 30,28,0,2
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+	Rearmable:
+		RearmActors: afld, afld.gdi
+
+HELI.all:
+	Inherits: HELI
+	RenderSprites:
+		Image: heli
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 40
+		Prerequisites: ~disabled
+		BuildDurationModifier: 50
+		Description: Helicopter gunship armed\nwith multi-purpose missiles.\n  Strong vs Buildings, Vehicles, Aircraft\n  Weak vs Infantry
+
+rah66:
+	Inherits: ^HelicopterTD
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	RenderSprites:
+		PlayerPalette: playertd
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 40
+		IconPalette: chrometd
+		Prerequisites: tmpl, ~aircraft.nod, ~techlevel.high
+		Description: Stealth Helicopter armed\nwith chemical rockets.\n  Strong vs Vehicles, Infantry.\n  Weak vs AA
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Comanche
+	Health:
+		HP: 11000
+	RevealsShroud:
+		Range: 12c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 10c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: Rah66AG
+		LocalOffset: 0,-213,-85, 0,213,-85
+		PauseOnCondition: !ammo
+	Armament@SECONDARY:
+		Weapon: HellfireAA
+		LocalOffset: 0,213,-85, 0,-213,-85
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		LandWhenIdle: false
+		AltitudeVelocity: 0c100
+		TurnSpeed: 4
+		Speed: 141
+	Cloak@NORMAL:
+		InitialDelay: 100
+		CloakDelay: 200
+		CloakSound: trans1.aud
+		UncloakSound: appear1.aud
+		Palette: cloakTD
+		IsPlayerPalette: true
+		RequiresCondition: !cloak-force-disabled && airborne && !invisibility
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithIdleOverlay@ROTORAIR:
+		Offset: 10,0,80
+		Sequence: rotor
+		RequiresCondition: airborne
+		Palette: player
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 10,0,80
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+		Palette: player
+	AmmoPool:
+		Ammo: 8
+		PipCount: 4
+		AmmoCondition: ammo
+		ReloadCount: 2
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: rah66.Husk
+	Selectable:
+		DecorationBounds: 36,28
+	Rearmable:
+		RearmActors: hpad, hpad2
+
+KIROV:
+	Inherits: ^Helicopter
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 55
+		BuildLimit: 1
+		Prerequisites: ~afld, ~aircraft.soviet, ~techlevel.high
+		Description: Heavily Armoured Airship, equipped with\nBombs.\nMaximum 1 can be built.\n  Strong vs Structures.\n  Weak vs Anti Aircraft
+	Valued:
+		Cost: 2800
+	Tooltip:
+		Name: Kirov Airship
+	Health:
+		HP: 120000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: AirshipParaBomb
+		LocalOffset: -20,0,0
+	Armament@SECONDARY:
+		Weapon: AirshipParaBombS
+		LocalOffset: -20,0,0
+	AttackFrontal:
+		Voice: Attack
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitudeRange: 4c0
+		LandWhenIdle: false
+		AbortOnResupply: false
+		InitialFacing: 192
+		TurnSpeed: 3
+		Speed: 50
+		TakeoffSounds:
+		LandingSounds:
+		Voice: Move
+		AltitudeVelocity: 0c50
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: AttackAnything
+		ScanRadius: 10
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: kirov.Husk
+	WithIdleOverlay@ROTOR1AIR:
+		Offset: -180,597,250
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTOR1GROUND:
+		Offset: -180,597,250
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithIdleOverlay@ROTOR2AIR:
+		Offset: -180,-597,250
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTOR2GROUND:
+		Offset: -180,-597,250
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	Selectable:
+		Bounds: 36,28,0,2
+		DecorationBounds: 40,29,0,1
+	Voiced:
+		VoiceSet: KirovVoice
+	Explodes:
+		Weapon: KirovExplode
+		RequiresCondition: !airborne
+		
+ORCACA:
+	Inherits: ^HelicopterTD
+	RenderSprites:
+		PlayerPalette: playertd
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Orca Carryall
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: ~hpad2, rep, ~aircraft.gdi, ~techlevel.high
+		IconPalette: chrometd
+		Description: Fast VTOL Vehicle Transporter.\n  Unarmed
+	Aircraft:
+		AltitudeVelocity: 0c100
+		TurnSpeed: 4
+		Speed: 160
+		TakeoffSounds: orcaup1.aud
+		LandingSounds: orcadwn1.aud
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems,Tiberium,BlueTiberium
+		Repulsable: True
+		LandWhenIdle: false
+		IdleTurnSpeed: 1
+		Voice: Move
+	Carryall:
+		LoadingDelay: 10
+		UnloadingDelay: 15
+		LocalOffset: 0, 0, -128
+		Voice: Action
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	SpawnActorOnDeath:
+		Actor: ORCACA.Husk
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 30,24
+	Voiced:
+		VoiceSet: CarryAllVoice
+		
+ORCACA.reinforce:
+	Inherits: ORCACA
+	RenderSprites:
+		Image: orcaca
+		PlayerPalette: playertd
+	Carryall:
+		LoadingDelay: 10
+		UnloadingDelay: 15
+		LocalOffset: 0, 0, -128
+		Voice: Action
+		DropRange: 30c0
+	Aircraft:
+		AltitudeVelocity: 0c100
+		IdealSeparation: 0c256
+		TurnSpeed: 4
+		Speed: 160
+		TakeoffSounds: orcaup1.aud
+		LandingSounds: orcadwn1.aud
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems,Tiberium,BlueTiberium
+		Repulsable: True
+		LandWhenIdle: false
+		IdleTurnSpeed: 1
+		Voice: Move
+	SelectionDecorations:
+		RenderSelectionBars: False
+	RejectsOrders:
+	Interactable:
+	
+TERROR:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RenderSprites:
+		Image: skyterror
+		PlayerPalette: player
+		Scale: 0.6
+	EjectOnDeath:
+		PilotActor: ZOM
+		SuccessRate: 25
+		EjectOnGround: true
+		EjectInAir: false
+		AllowUnsuitableCell: true
+		ChuteSound: chute1.aud
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 30
+		Prerequisites: ~aircraft.nod, ~boneyard
+		Description: Attack Plane armed with\npowerful teeth guns.\n  Strong vs Infantry, Light armor\n  Weak vs AA, Aircraft
+	Valued:
+		Cost: 300
+	Voiced:
+		VoiceSet: MirageVoice
+	Tooltip:
+		Name: Sky Terror
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6000
+	RevealsShroud:
+		Range: 11c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 9c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: Toothcarbine
+		LocalOffset: 0,-1,0, 0,1,0
+		LocalYaw: 64, -64
+		PauseOnCondition: emppowerdown
+	Armament@SECONDARY:
+		Weapon: teethCarAA
+		LocalOffset: 0,-1,0, 0,1,0
+		LocalYaw: 80, -80
+		PauseOnCondition: emppowerdown
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitudeRange: 2560
+		InitialFacing: 192
+		TurnSpeed: 2
+		Speed: 108
+		RepulsionSpeed: 40
+	AutoTarget:
+		InitialStance: AttackAnything
+		InitialStanceAI: HoldFire
+	SelectionDecorations:
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: ZOM
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+	Selectable:
+		DecorationBounds: 30,28,0,2
+
+MOM:
+	Inherits: ^Helicopter
+	RenderSprites:
+		PlayerPalette: player
+		Scale: 1.1
+		Image: mother
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 55
+		BuildLimit: 1
+		Prerequisites: ~aircraft.nod, ~boneyard, ~acid
+		Description: Heavily Armoured Airship, equipped with\nBombs.\nMaximum 1 can be built.\n  Strong vs Structures, infanty.\n  Weak vs Anti Aircraft, Aircraft
+	Valued:
+		Cost: 10000
+	Tooltip:
+		Name: Mother Airship
+	Turreted:
+		TurnSpeed: 7
+		Offset: 379,0,8
+	Armament@PRIMARY:
+		Weapon: MotherDart
+		LocalOffset: 0,-100,0, 0,100,0
+		LocalYaw: 64, -64
+		PauseOnCondition: emppowerdown
+	Armament@SECONDARY:
+		Weapon: motherballLauncher
+		LocalOffset: 0,-1,0, 0,1,0
+		LocalYaw: 80, -80
+		PauseOnCondition: emppowerdown
+	Armament@TERTIARY:
+		Weapon: Stingermother
+		LocalOffset: 0,-100,0, 0,100,0
+		LocalYaw: 64, -64
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	SelectionDecorations:
+	WithSpriteTurret:
+	Health:
+		HP: 180000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	AttackFrontal:
+		Voice: Attack
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitudeRange: 4c0
+		LandWhenIdle: false
+		AbortOnResupply: false
+		InitialFacing: 192
+		TurnSpeed: 3
+		Speed: 30
+		TakeoffSounds:
+		LandingSounds:
+		Voice: Move
+		AltitudeVelocity: 0c50
+	AutoTarget:
+		InitialStance: AttackAnything
+		InitialStanceAI: AttackAnything
+		ScanRadius: 30
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: kirov.Husk
+	Selectable:
+		Bounds: 46,38,0,4
+		DecorationBounds: 40,29,0,1
+	Voiced:
+		VoiceSet: MassiveMutantVoice
+	Explodes:
+		Weapon: LargeMeatExplosion
+		RequiresCondition: !airborne
+
+WASP:
+	Inherits: ^Helicopter
+	RenderSprites:
+		PlayerPalette: player
+		Scale: .9
+		Image: wasp
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: AircraftSQ, AircraftMQ
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 55
+		Prerequisites: ~aircraft.nod, ~acid
+		Description: Powerful bomber unit, equipped with\nacid vomit.\n  Strong vs slow ground units.\n  Weak vs Anti Aircraft
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Tuskfly
+	Turreted:
+		TurnSpeed: 7
+		Offset: 379,0,8
+	Armament@PRIMARY:
+		Weapon: ChemballLauncher
+		LocalOffset: 0,-1,0, 0,1,0
+		LocalYaw: 64, -64
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	SelectionDecorations:
+	WithSpriteTurret:
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light, None
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	AttackFrontal:
+		Voice: Attack
+	AttackAircraft:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitudeRange: 4c0
+		LandWhenIdle: false
+		AbortOnResupply: false
+		InitialFacing: 192
+		TurnSpeed: 3
+		Speed: 45
+		TakeoffSounds:
+		LandingSounds:
+		Voice: Move
+		AltitudeVelocity: 0c50
+	AutoTarget:
+		InitialStance: AttackAnything
+		InitialStanceAI: AttackAnything
+		ScanRadius: 30
+	SelectionDecorations:
+	SpawnActorOnDeath:
+		Actor: kirov.Husk
+	Selectable:
+		Bounds: 46,38,0,4
+		DecorationBounds: 40,29,0,1
+	Voiced:
+		VoiceSet: MutantVoice2
+	Explodes:
+		Weapon: LargeMeatExplosion
+		RequiresCondition: !airborne
+
+ICBMSUB:
+	Inherits: ^Ship
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	RenderSprites:
+		PlayerPalette: playernavy
+	Buildable:
+		Queue: ShipSQ, ShipMQ
+		BuildAtProductionType: Submarine
+		BuildPaletteOrder: 30
+		Prerequisites: ~spen.nod, tmpl, ~ships.nod, ~techlevel.high
+		Description: Submerged unit armed with\nlong range missiles.\nCan detect other submarines.\n  Strong vs Aircraft, Ground Units\n  Weak vs Naval units\n  Special Ability: Submerge
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: ICBM Submarine
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 3
+		Speed: 40
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 5c0
+	Targetable:
+		TargetTypes: Ground, Water, Ship, Submarine, Repair
+		RequiresCondition: !underwater
+	Targetable@UNDERWATER:
+		TargetTypes: Underwater, Submarine
+		RequiresCondition: underwater
+	Cloak:
+		CloakTypes: Underwater
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Heal
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakSound: subshow1.aud
+		UncloakSound: subshow1.aud
+		CloakedCondition: underwater
+		Palette: submerged
+		PauseOnCondition: cloak-force-disabled || invisibility
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Armament@primary:
+		Weapon: HonestJohnSub
+		LocalOffset: 350,-151,0, 350,151,0
+		FireDelay: 1
+		PauseOnCondition: emppowerdown
+	Armament@secondary:
+		Weapon: HonestJohnSub
+		LocalOffset: 350,-151,0, 350,151,0
+		FireDelay: 10
+		PauseOnCondition: emppowerdown
+	AttackFrontal:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+		PauseOnCondition: emppowerdown
+	SelectionDecorations:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Explodes:
+		Weapon: UnitExplodeSubmarine
+		EmptyWeapon: UnitExplodeSubmarine
+	Selectable:
+		DecorationBounds: 44,44
+
+RAFT:
+	Inherits: ^Ship
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	RenderSprites:
+		PlayerPalette: playernavy
+		Scale: 1.1
+	Buildable:
+		Queue: ShipSQ, ShipMQ
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 20
+		Prerequisites: ~ships.africa, ~techlevel.low
+		Description: Light scout & support ship.\nCan detect submarines.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: African Warship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5000
+	Armor:
+		Type: light
+	Mobile:
+		TurnSpeed: 2
+		Speed: 68
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 7
+		Offset: 5,0,0
+	Armament@PRIMARY:
+		Weapon: Dragon
+		LocalOffset: 0,0,48
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: RedEye
+		MuzzleSequence: muzzle
+		PauseOnCondition: emppowerdown
+	AttackTurreted:
+		PauseOnCondition: emppowerdown
+	WithMuzzleOverlay:
+	SelectionDecorations:
+	WithSpriteTurret:
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 4c0
+	RenderDetectionCircle:
+	Selectable:
+		DecorationBounds: 36,36
+
+# Shellmap actor definitions
+
+4tnk.flam:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Apocalypse Tank (Flame)
+	Health:
+		HP: 15000
+	Armor:
+		Type: Heavy
+
+4tnk.tsla:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Apocalypse Tank (Tesla)
+	Health:
+		HP: 15000
+	Armor:
+		Type: Heavy
+
+behe:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Behemoth
+	Health:
+		HP: 20000
+	Armor:
+		Type: Heavy
+
+carr:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Aircraft Carrier
+	Health:
+		HP: 20000
+	Armor:
+		Type: Heavy
+
+doggie:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: dog
+		PlayerPalette: player
+	Tooltip:
+		Name: Dog
+	Health:
+		HP: 1800
+	Armor:
+		Type: None
+
+mnest:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Missile Nest
+	Health:
+		HP: 12000
+	Armor:
+		Type: Heavy
+
+n1new:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: n1
+	Tooltip:
+		Name: GDI Rifleman
+	Health:
+		HP: 2500
+	Armor:
+		Type: None
+
+pred:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 4tnk
+	Tooltip:
+		Name: Predator Tank
+	Health:
+		HP: 12000
+	Armor:
+		Type: Heavy
+
+# ==================== RAMEUS CONFEDERATION UNITS ====================
+
+RAMEUSSUB:
+	Inherits: ^Ship
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	RenderSprites:
+		Image: icbmsub
+		PlayerPalette: playernavy
+	Buildable:
+		Queue: ShipSQ, ShipMQ
+		BuildAtProductionType: Submarine
+		BuildPaletteOrder: 31
+		Prerequisites: spen, ~ships.rameus, ~techlevel.high
+		Description: Phantom submarine armed with\ntwo ICBM missiles.\nUndetectable by any unit when submerged.\n  Strong vs Ground Units, Aircraft\n  Special Ability: Submerge
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Phantom Submarine
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 3
+		Speed: 40
+	RevealsShroud:
+		Range: 8c0
+		RevealGeneratedShroud: False
+	Targetable:
+		TargetTypes: Ground, Water, Ship, Submarine, Repair
+		RequiresCondition: !underwater
+	Targetable@UNDERWATER:
+		TargetTypes: Underwater, Submarine
+		RequiresCondition: underwater
+	Cloak:
+		CloakTypes: PhantomUW
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Heal
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakSound: subshow1.aud
+		UncloakSound: subshow1.aud
+		CloakedCondition: underwater
+		Palette: submerged
+		PauseOnCondition: cloak-force-disabled || invisibility
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Armament@primary:
+		Weapon: HonestJohnSub
+		LocalOffset: 350,-151,0
+		FireDelay: 1
+		PauseOnCondition: emppowerdown
+	Armament@secondary:
+		Weapon: HonestJohnSub
+		LocalOffset: 350,151,0
+		FireDelay: 10
+		PauseOnCondition: emppowerdown
+	AttackFrontal:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+		PauseOnCondition: emppowerdown
+	SelectionDecorations:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	Explodes:
+		Weapon: UnitExplodeSubmarine
+		EmptyWeapon: UnitExplodeSubmarine
+	Selectable:
+		DecorationBounds: 44,44

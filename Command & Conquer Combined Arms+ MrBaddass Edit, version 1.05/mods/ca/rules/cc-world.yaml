@@ -1,0 +1,344 @@
+# Crimson Conflict factions and world additions
+# Adds Kazakhstan, Chad, Imperial Japan, China, Israel, Angola, Uganda factions
+
+^BaseWorld:
+	Locomotor@HOVERSWARM:
+		Name: hoverswarm
+		SharesCell: true
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 100
+			Road: 100
+			Bridge: 100
+			Ore: 100
+			Gems: 100
+			Tiberium: 100
+			BlueTiberium: 90
+			Beach: 100
+			Water: 100
+	Faction@kazakhstan:
+		Name: Kazakhstan
+		InternalName: kazakhstan
+		Side: Crimson Conflict
+		Description: Kazakhstan: Soviet Remnant Forces\n Cold War-era Soviet technology with unique units.
+	Faction@chad:
+		Name: Chad
+		InternalName: chad
+		Side: Crimson Conflict
+		Description: Chad: African Ground Forces\n Light infantry and fast vehicles.
+	Faction@impjap:
+		Name: Imperial Japan
+		InternalName: impjap
+		Side: Crimson Conflict
+		Description: Imperial Japan: Aggressive Expansion\n Unique naval and air power.
+	Faction@china:
+		Name: China
+		InternalName: china
+		Side: Crimson Conflict
+		Description: China: Mass Mobilization\n Large infantry forces and heavy artillery.
+	Faction@israel:
+		Name: Israel
+		InternalName: israel
+		Side: Crimson Conflict
+		Description: Israel: Advanced Technology\n Highly trained forces with advanced equipment.
+	Faction@angola:
+		Name: Angola
+		InternalName: angola
+		Side: Crimson Conflict
+		Description: Angola: Guerrilla Warfare\n Hit-and-run tactics with light forces.
+	Faction@uganda:
+		Name: Uganda
+		InternalName: uganda
+		Side: Crimson Conflict
+		Description: Uganda: Jungle Fighters\n Infantry specialists in rough terrain.
+	Faction@africa:
+		Name: Africa
+		InternalName: africa
+		Side: Crimson Conflict
+		Selectable: False
+	Faction@randomafrica:
+		Name: Africa
+		InternalName: RandomAfrica
+		RandomFactionMembers: chad, angola, uganda
+		Side: Crimson Conflict
+		Description: Random African Faction\nA random African faction will be chosen when the game starts.
+	Faction@glastrikers:
+		Name: GLA Strikers
+		InternalName: glastrikers
+		Side: Crimson Conflict
+		Description: GLA Strikers: Aggressive assault tactics.\n Units: Truck Bomb, Suicide Bomber
+	Faction@glaexp:
+		Name: GLA Expansionists
+		InternalName: glaexp
+		Side: Crimson Conflict
+		Description: GLA Expansionists: Territory control via tunnels and garrisons.
+	Faction@fangs:
+		Name: Fangs of Doom
+		InternalName: fangs
+		Side: Crimson Conflict
+		Description: Fangs of Doom: Heavy flame and artillery.\n Special Unit: Howitzer
+	Faction@eyesdoom:
+		Name: Eyes of Doom
+		InternalName: eyesdoom
+		Side: Crimson Conflict
+		Description: Eyes of Doom: Chemical warfare and toxin weaponry.\n Special Unit: Toxin Truck
+	Faction@m.b:
+		Name: Molatovs
+		InternalName: m.b
+		Side: Crimson Conflict
+		Description: Molatov Brigade: Allied mercenary forces.\n Veteran operatives with a unique arsenal.
+	Faction@s.korea:
+		Name: South Korea
+		InternalName: s.korea
+		Side: Crimson Conflict
+		Description: South Korea: Allied Far East Forces.\n Advanced technology with elite infantry.
+	Faction@n.korea:
+		Name: North Korea
+		InternalName: n.korea
+		Side: Crimson Conflict
+		Description: North Korea: Soviet Rogue State.\n Heavy armor and unconventional tactics.
+	Faction@rameus:
+		Name: Rameus Confederation
+		InternalName: rameus
+		Side: Crimson Conflict
+		Description: Rameus Confederation: Soviet breakaway state.\n Disciplined forces with experimental weaponry.
+	Faction@circle:
+		Name: ICC
+		InternalName: circle
+		Side: Crimson Conflict
+		Description: ICC: Nod Splinter Faction.\n Shadow operations and terror tactics.
+	Faction@foreman:
+		Name: Foreman 371
+		InternalName: foreman
+		Side: Crimson Conflict
+		Description: Foreman 371: Scrin Advance Force.\n Alien technology and overwhelming firepower.
+
+World:
+	StartingUnits@mcvonly_cc:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: kazakhstan, chad, impjap, china, israel, angola, uganda
+		BaseActor: mcv
+	StartingUnits@light_cc_allies:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@light_cc_africa:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_cc_allies:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_cc_africa:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_gla:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: glastrikers, glaexp
+		BaseActor: amcv
+	StartingUnits@light_gla:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: glastrikers, glaexp
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_gla:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: glastrikers, glaexp
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_doom:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: fangs, eyesdoom
+		BaseActor: amcv
+	StartingUnits@light_doom:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: fangs, eyesdoom
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_doom:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: fangs, eyesdoom
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_cc_allies:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_cc_africa:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_gla:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: glastrikers, glaexp
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_doom:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: fangs, eyesdoom
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_mb:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: m.b, s.korea
+		BaseActor: mcv
+	StartingUnits@light_mb:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: m.b, s.korea
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_mb:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: m.b, s.korea
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_mb:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: m.b, s.korea
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_nk:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: n.korea, rameus
+		BaseActor: mcv
+	StartingUnits@light_nk:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: n.korea, rameus
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_nk:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: n.korea, rameus
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_nk:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: n.korea, rameus
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_circle:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: circle
+		BaseActor: amcv
+	StartingUnits@light_circle:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: circle
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_circle:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: circle
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_circle:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: circle
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly_foreman:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: foreman
+		BaseActor: smcv
+	StartingUnits@light_foreman:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: foreman
+		BaseActor: smcv
+		SupportActors: s1,s1,s3,s3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavy_foreman:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: foreman
+		BaseActor: smcv
+		SupportActors: s1,s1,s3,s3,s4,s4
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavy_foreman:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: foreman
+		BaseActor: smcv
+		SupportActors: s1,s1,s3,s3,s4,s4
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5

@@ -1,0 +1,1449 @@
+# MW Kingdom Infantry Sequences
+
+e1new:
+	Defaults:
+		Filename: newe1.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 211
+		Length: 21
+	idle2:
+		Tick: 100
+		Start: 190
+		Length: 22
+	die1:
+		Start: 130
+		Length: 16
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ne1icon.shp
+		Offset: 0, 10, 0
+
+e2new:
+	Defaults:
+		Filename: e2new.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 195
+		Length: 12
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 16
+	die1:
+		Start: 131
+		Length: 16
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ne3icon.shp
+		Offset: 0, 10, 0
+
+e3new:
+	Defaults:
+		Filename: e3new.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: e3news.shp
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 190
+		Length: 22
+	idle2:
+		Tick: 100
+		Start: 210
+		Length: 17
+	die1:
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ne1icon.shp
+		Offset: 0, 10, 0
+
+e4new:
+	Defaults:
+		Filename: e4newv2.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 190
+		Length: 35
+	idle2:
+		Tick: 100
+		Start: 224
+		Length: 21
+	die1:
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ne2icon.shp
+		Offset: 0, 10, 0
+
+e4newv2:
+	Defaults:
+		Filename: e4newv2.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 190
+		Length: 35
+	idle2:
+		Tick: 100
+		Start: 224
+		Length: 21
+	die1:
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ne2icon.shp
+		Offset: 0, 10, 0
+
+rmbonew:
+	Defaults:
+		Filename: rmbonew.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 190
+		Length: 13
+	idle2:
+		Tick: 100
+		Start: 203
+		Length: 13
+	die1:
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 179
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Start: 242
+		Offset: 0,6
+		Facings: 8
+		Length: 7
+		Tick: 100
+		ZOffset: 512
+	icon:
+		Filename: nemboicon.shp
+		Offset: 0, 10, 0
+
+newcomm:
+	Defaults:
+		Filename: newcomm.shp
+	stand:
+		Start: 122
+		Facings: 8
+	move:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 40
+		Start: 66
+		Length: 56
+	idle:
+		Start: 122
+		Facings: 8
+	die1:
+		Start: 131
+		Length: 16
+		Tick: 80
+	die2:
+		Filename: splatterdead.shp
+		Length: *
+		Tick: 80
+	die3:
+		Start: 163
+		Length: 15
+		Tick: 80
+	die4:
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed:
+		Filename: newe1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5:
+		Filename: burningman.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: juggicon.shp
+		Offset: 0, 10, 0
+	empty:
+		Filename: sulm4.shp
+		Tick: 1000
+		Start: 0
+
+koenig:
+	Defaults:
+		Filename: koenig.shp
+	make:
+		Start: 176
+		Length: 13
+		Tick: 80
+	stand-dead:
+		Start: 172
+	idle:
+		Start: 122
+		Facings: 8
+	stand:
+		Start: 122
+		Facings: 8
+	move:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 190
+		Length: 22
+	idle2:
+		Tick: 100
+		Start: 210
+		Length: 17
+	die1:
+		Start: 132
+		Length: 16
+		Tick: 80
+	die2:
+		Start: 132
+		Length: 16
+		Tick: 80
+	die3:
+		Start: 132
+		Length: 16
+		Tick: 80
+	die4:
+		Start: 132
+		Length: 16
+		Tick: 80
+	die-crushed:
+		Start: 132
+		Length: 16
+		Tick: 80
+	icon:
+		Filename: koenigicon.shp
+		Offset: 0, 10, 0
+
+# MW Kingdom Cavalry Sequences
+
+ross2:
+	Defaults:
+		Filename: ross2.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: ross2s.shp
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nmcavicon.shp
+		Offset: 0, 10, 0
+
+kingross:
+	Defaults:
+		Filename: kingross.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shoot2:
+		Tick: 100
+		Start: 262
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: koenigicon.shp
+		Offset: 0, 10, 0
+
+ross5:
+	Defaults:
+		Filename: ross5.shp
+		Offset: 0,-10,0
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	stab:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shoot:
+		Tick: 100
+		Start: 259
+		Length: 14
+		Facings: 8
+	shootground:
+		Tick: 100
+		Start: 373
+		Length: 14
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 146
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 202
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 131
+		Length: 15
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+		Offset: 0,0,0
+	icon:
+		Filename: nhcavicon.shp
+		Offset: 0, 10, 0
+
+ross4b:
+	Defaults:
+		Filename: ross4b.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 205
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 205
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nflailicon.shp
+		Offset: 0, 10, 0
+
+ross1:
+	Defaults:
+		Filename: ross1.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nlcavicon.shp
+		Offset: 0, 10, 0
+
+ross3:
+	Defaults:
+		Filename: ross3.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nftankicon.shp
+		Offset: 0, 10, 0
+
+ross4:
+	Defaults:
+		Filename: ross4.shp
+		Offset: 0,4,0
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 238
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 238
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nspearicon.shp
+		Offset: 0, 10, 0
+
+ross4c:
+	Defaults:
+		Filename: ross4c.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: ross4cs.shp
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2:
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorserider.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nsabericon.shp
+		Offset: 0, 10, 0
+
+emptyhorse:
+	Defaults:
+		Filename: emptyhorse.shp
+	stand:
+		Start: 122
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1:
+		Start: 122
+		Facings: 8
+	idle2:
+		Start: 122
+		Facings: 8
+	die1:
+		Start: 132
+		Length: 18
+		Tick: 80
+	die2:
+		Filename: burninghorse.shp
+		Start: 76
+		Length: 14
+		Tick: 80
+	icon:
+		Filename: nsabericon.shp
+		Offset: 0, 10, 0
+
+burninghorse:
+	Defaults:
+		Filename: burninghorse.shp
+	stand:
+		Start: 66
+		Facings: 8
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	die1:
+		Start: 76
+		Length: 14
+		Tick: 80
+	die2:
+		Start: 76
+		Length: 14
+		Tick: 80
+	icon:
+		Filename: koenigicon.shp
+		Offset: 0, 10, 0
+
+# MW Kingdom Building Sequences
+
+newfact:
+	Defaults:
+	idle:
+		Filename: kingfact0.shp
+		Start: 0
+		Offset: 0,-11
+	damaged-idle:
+		Filename: kingfact0.shp
+		Start: 1
+		Offset: 0,-11
+	dead:
+		Filename: newfact.shp
+		Start: 2
+		Tick: 800
+	make:
+		Filename: kingfact0make.shp
+		Length: *
+		Tick: 120
+		Offset: 0,-15
+	active:
+		Filename: newfact2.shp
+		Length: *
+		Tick: 120
+		Offset: 0,-11
+	icon:
+		Filename: keepicon.shp
+	bib:
+		Filename: mwbib2.tem.shp
+		Length: *
+
+nukenew:
+	idle:
+		Filename: nukenew.shp
+		Start: 0
+	damaged-idle:
+		Filename: nukenew.shp
+		Start: 1
+	dead:
+		Filename: nukenew.shp
+		Start: 2
+		Tick: 800
+	make:
+		Filename: nukenewmake.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nukenewicon.shp
+	bib:
+		Filename: bib3.tem.shp
+		Length: *
+
+nuk2new:
+	idle:
+		Filename: nuk2new.shp
+		Start: 0
+	damaged-idle:
+		Filename: nuk2new.shp
+		Start: 1
+	dead:
+		Filename: nuk2new.shp
+		Start: 2
+		Tick: 800
+	make:
+		Filename: nuk2newmake.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: nuk2newicon.shp
+	bib:
+		Filename: mwbib3.tem.shp
+		Length: *
+
+nukxl:
+	Defaults:
+		Filename: nukxl.shp
+	idle:
+		Filename: nukxl.shp
+		Start: 6
+		Offset: 0,-12
+	damaged-idle:
+		Filename: nukxl.shp
+		Start: 7
+		Offset: 0,-12
+	dead:
+		Filename: nukxl.shp
+		Start: 8
+		Tick: 800
+		Offset: 0,-12
+	make:
+		Length: 6
+		Tick: 80
+		Offset: 0,-12
+	icon:
+		Filename: nukxlicon.shp
+	bib:
+		Filename: mwbib2.tem.shp
+		Length: *
+
+windmill:
+	idle:
+		Filename: windmill.shp
+		Length: 20
+		Tick: 100
+		Offset: 0,-5
+	damaged-idle:
+		Filename: windmilld.shp
+		Start: 0
+		Length: 20
+		Tick: 100
+		Offset: 0,-5
+	dead:
+		Filename: windmill.shp
+		Tick: 800
+		Start: 21
+		Offset: 0,-5
+	make:
+		Filename: windmillmake.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-5
+	icon:
+		Filename: winmillicon.shp
+	bib:
+		Filename: bib3.tem.shp
+		Length: *
+
+barrnew:
+	idle:
+		Filename: barrnew.shp
+		Length: 30
+		Tick: 100
+	damaged-idle:
+		Filename: barrnew.shp
+		Start: 30
+	dead:
+		Filename: barrnew.shp
+		Start: 31
+		Tick: 800
+	make:
+		Filename: barrnewmake.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: barracksicon.shp
+	bib:
+		Filename: mwbib3.tem.shp
+		Length: *
+
+stall:
+	idle:
+		Filename: stall.shp
+	damaged-idle:
+		Filename: stall.shp
+		Start: 1
+	dead:
+		Filename: stall.shp
+		Start: 2
+		Tick: 800
+	make:
+		Filename: stallmake.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: stallicon.shp
+	bib:
+		Filename: mwbib2.tem.shp
+		Length: *
+
+gdifix:
+	Defaults:
+		Filename: gdifix.shp
+	idle:
+		Filename: gdifix.shp
+		Start: 31
+		Length: 7
+		Tick: 300
+		Offset: 0,-12
+	damaged-idle:
+		Filename: gdifix.shp
+		Start: 38
+		Length: 7
+		Tick: 300
+		Offset: 0,-12
+	dead:
+		Filename: gdifix.shp
+		Tick: 800
+		Start: 45
+		Offset: 0,-12
+	make:
+		Length: 32
+		Tick: 80
+		Offset: 0,-12
+	icon:
+		Filename: workshopicon.shp
+	bib:
+		Filename: bib2.tem.shp
+		Length: *
+
+obs:
+	idle:
+		Filename: obs.shp
+		Tick: 100
+	active:
+		Filename: obs.shp
+		Length: *
+		Tick: 100
+	damaged-active:
+		Filename: obsd.shp
+		Length: 36
+		Tick: 100
+	damaged-idle:
+		Filename: obsd.shp
+		Tick: 100
+	dead:
+		Filename: obsd.shp
+		Start: 35
+		Tick: 800
+	make:
+		Filename: obsmake.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: obsicon.shp
+	bib:
+		Filename: mwbib3.tem.shp
+		Length: *
+
+castle2:
+	Defaults:
+	idle:
+		Filename: castle2.shp
+		Offset: 0,-12,0
+	damaged-idle:
+		Filename: castle2.shp
+		Offset: 0,-12,0
+		Start: 1
+	dead:
+		Filename: castle2.shp
+		Offset: 0,-12,0
+		Start: 2
+		Tick: 800
+	make:
+		Filename: castle2make.shp
+		Offset: 0,-12,0
+		Length: *
+		Tick: 80
+	active:
+		Filename: castle2anim.shp
+		Offset: 0,-12,0
+		Length: *
+		Tick: 80
+	damaged-active:
+		Filename: castle2animdamaged.shp
+		Offset: 0,-12,0
+		Length: *
+		Tick: 80
+	icon:
+		Filename: castle2icon.shp
+	bib:
+		Filename: mwbib2.tem.shp
+		Length: *
+
+# MW Kingdom Siege Sequences
+
+siege1:
+	Defaults:
+		Filename: siege1.shp
+	stand:
+		Start: 0
+		Facings: 32
+	run:
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	die1:
+		Start: 345
+		Length: 10
+		Tick: 80
+	icon:
+		Filename: nballistaicon.shp
+
+siege2:
+	Defaults:
+		Filename: siege2.shp
+	stand:
+		Start: 0
+		Facings: 32
+	run:
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot:
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	die1:
+		Start: 313
+		Length: 10
+		Tick: 80
+	icon:
+		Filename: ncatapulticon.shp
+
+sgtw:
+	Defaults:
+		Filename: sgtw.shp
+	stand:
+		Start: 63
+		Facings: 32
+	idle:
+		Start: 63
+		Facings: 32
+	run:
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 36
+		Facings: 32
+	top:
+		Start: 97
+		Facings: 32
+		ZOffset: 1024
+	turretidle:
+		Start: 97
+		Facings: 32
+	turretanim:
+		Start: 97
+		Facings: 32
+	die1:
+		Start: 63
+		Facings: 32
+	icon:
+		Filename: nsiegetowericon.shp
+
+bara:
+	Defaults:
+		Filename: bara.shp
+	stand:
+		Start: 0
+		Facings: 32
+	run:
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 88
+		Length: 7
+		Facings: 32
+		Tick: 80
+	die1:
+		Start: 313
+		Length: 10
+		Tick: 80
+	icon:
+		Filename: nbaramicon.shp
+
+# MW Kingdom Defense Sequences
+
+gtwnew:
+	Defaults:
+		Filename: gtwnew.shp
+	idle:
+		Filename: gtwnew.shp
+		Start: 11
+		Offset: 0,-12
+	damaged-idle:
+		Filename: gtwnew.shp
+		Start: 12
+		Offset: 0,-12
+	dead:
+		Filename: gtwnew.shp
+		Start: 15
+		Offset: 0,-12
+	make:
+		Length: 10
+		Tick: 80
+		Offset: 0,-12
+	icon:
+		Filename: gtwnewicon.shp
+	idle-overlay:
+		ZOffset: 1024
+		Start: 13
+		Offset: 0,-12
+	bib:
+		Filename: mbGTWR.tem.shp
+		Length: *
+		Offset: 0,-2
+
+gtairwnew:
+	Defaults:
+		Filename: gtairwnew.shp
+	idle:
+		Filename: gtairwnew.shp
+		Start: 23
+		Offset: 0,-12,0
+	damaged-idle:
+		Filename: gtairwnew.shp
+		Start: 24
+		Offset: 0,-12,0
+	dead:
+		Filename: gtairwnew.shp
+		Start: 25
+		Offset: 0,-12,0
+	make:
+		Length: 23
+		Tick: 80
+		Offset: 0,-12,0
+	icon:
+		Filename: aaballicon.shp
+	bib:
+		Filename: mbSILO.tem.shp
+		Length: *
+
+tribu:
+	Defaults:
+		Filename: tribu.shp
+	turretanim:
+		Facings: 32
+		Length: 9
+		Start: 32
+		Tick: 80
+		Offset: 0,-18,0
+	damaged-idle:
+		Filename: tribu.shp
+		Facings: 32
+		Offset: 0,-18,0
+	idle:
+		Filename: tribu.shp
+		Facings: 32
+		Offset: 0,-18,0
+	dead:
+		Filename: tribudead.shp
+		Tick: 800
+	make:
+		Filename: tribumake.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-18,0
+	icon:
+		Filename: tribuicon.shp
+	bib:
+		Filename: mbGTWR.tem.shp
+		Length: *
+		Offset: 0,-2
+
+batowgun:
+	Defaults:
+		Filename: batowgun.shp
+	turretanim:
+		Facings: 32
+		ZOffset: 512
+		Length: 7
+		Start: 32
+		Tick: 80
+		Offset: 0,-16,0
+	damaged-idle:
+		Filename: batowgun.shp
+		Offset: 0,-16,0
+		Facings: 32
+		ZOffset: 512
+	idle:
+		Filename: batowgun.shp
+		Offset: 0,-16,0
+		Facings: 32
+		ZOffset: 512
+	overlay:
+		Filename: batowbase.shp
+		Offset: 0,-12,0
+	damaged-idle-overlay:
+		Filename: batowbase.shp
+		Start: 1
+		Offset: 0,-12,0
+	dead:
+		Filename: batowbase.shp
+		Start: 2
+		Tick: 800
+		Offset: 0,-12,0
+	make:
+		Filename: batowbasemake.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-12,0
+	icon:
+		Filename: batoicon.shp
+	bib:
+		Filename: mbGTWR.tem.shp
+		Length: *
+		Offset: 0,-2
+
+gunnew:
+	Defaults:
+	idle:
+		Filename: cannontower.shp
+		Facings: 32
+	damaged-idle:
+		Filename: cannontower.shp
+		Start: 33
+		Facings: 32
+	dead:
+		Filename: cannontower.shp
+		Start: 33
+		Facings: 32
+	make:
+		Filename: cannontowermake.shp
+		Length: 10
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: cannontowericon.shp
+	bib:
+		Filename: mbGUN.tem.shp
+		Length: *
+		Offset: -1,-1
+
+cstlwll:
+	Defaults:
+	idle:
+		Filename: cstlwll.shp
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle:
+		Filename: cstlwll.shp
+		Start: 34
+		Length: 16
+		Offset: 0,-12,0
+	icon:
+		Filename: cstlwllicon.shp
+	bib:
+		Filename: mbGTWR.tem.shp
+		Length: *
+		Offset: 0,-2
+
+wdwll:
+	Defaults:
+	idle:
+		Filename: wdwll.shp
+		Length: 16
+	damaged-idle:
+		Filename: wdwll.shp
+		Start: 34
+		Length: 16
+	icon:
+		Filename: wdwllicon.shp
+
+# MW Projectile Sequences (used by weapons)
+
+e4arrow:
+	idle:
+		Filename: arrow.shp
+		Length: *
+		ZOffset: 1023
+
+spear:
+	idle:
+		Filename: arrow.shp
+		Length: *
+		ZOffset: 1023
+
+firearrow:
+	idle:
+		Filename: arrow.shp
+		Length: *
+		ZOffset: 1023
+
+siegearrow:
+	idle:
+		Filename: arrow.shp
+		Length: *
+		ZOffset: 1023
+
+siegeboulder:
+	idle:
+		Filename: boulder.shp
+		Length: *
+		ZOffset: 1023
+
+flamespit:
+	idle:
+		Filename: arrow.shp
+		Length: *
+		ZOffset: 1023
+
+cannonboulder:
+	idle:
+		Filename: cannonboulder.shp
+		Length: *
+		ZOffset: 1023
+
+splatterdead:
+	Defaults:
+		Filename: splatterdead.shp
+	idle:
+		Length: *
+		Tick: 80
+
+burningman:
+	Defaults:
+		Filename: burningman.shp
+	idle:
+		Length: *
+		Tick: 80
+
+burninghorserider:
+	Defaults:
+		Filename: burninghorserider.shp
+	idle:
+		Length: *
+		Tick: 80

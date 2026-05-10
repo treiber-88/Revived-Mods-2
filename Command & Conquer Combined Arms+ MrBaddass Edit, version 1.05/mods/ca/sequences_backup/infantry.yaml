@@ -1,0 +1,6764 @@
+yryurix:
+	Defaults:
+		Filename: yryurix.shp
+	Inherits: ^RA2ArmedInfantry
+	Inherits: ^CommonDeaths
+	idle:
+		Filename: yryurix.shp
+		Start: 56
+	idle1:
+		Filename: yryurix.shp
+		Start: 56
+	idle2:
+		Filename: yryurix.shp
+		Start: 71
+	shoot:
+		Filename: yryurix.shp
+		Length: 2
+		Tick: 140
+		Facings: 8
+	deploy:
+		Filename: yryurix.shp
+		Start: 265
+		Length: 7
+	deployed:
+		Filename: yryurix.shp
+		Start: 272
+		Length: 2
+	undeploy:
+		Filename: yryurix.shp
+		Start: 274
+		Length: 6
+	cheer:
+		Filename: yryurix.shp
+		Start: 280
+	muzzle:
+		Filename: yryurix.shp
+		Length: *
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die-melting:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ra2yurixicon.shp
+
+ra2shk:
+	Defaults:
+		Filename: ra2shk.shp
+	Inherits: ^RA2ArmedInfantry
+	Inherits: ^CommonDeaths
+	run:
+		Tick: 120
+	paradrop:
+		Start: 292
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die-melting:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	icon:
+		Filename: ra2shkicon.shp
+
+^RA2BasicInfantry:
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	walk:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 120
+	idle2:
+		Start: 71
+		Length: 15
+		Tick: 120
+	cheer:
+		Start: 245
+		Length: 8
+		Tick: 120
+	paradrop:
+
+ra2cleg:
+	Defaults:
+		Filename: ra2cleg.shp
+	Inherits: ^CommonDeaths
+	Inherits: ^RA2BasicInfantry
+	run:
+		Start: 117
+	shoot:
+		Start: 68
+		Length: 6
+		Facings: 8
+	idle1:
+		Start: 8
+	idle2:
+		Start: 23
+	paradrop:
+		Start: 116
+	cheer:
+		Start: 165
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die6:
+		Start: 0
+		Length: 13
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: ra2clegicon.shp
+
+^RA2Infantry:
+	Inherits@1: ^RA2BasicInfantry
+	Inherits@2: ^RA2ProneInfantry
+
+^RA2ArmedInfantry:
+	Inherits: ^RA2Infantry
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 80
+	liedown:
+		Start: 260
+	standup:
+		Start: 276
+	cheer:
+		Start: 293
+
+sakura:
+	Defaults:
+		Filename: sakura.shp
+	Inherits: ^CommonDeaths
+	Inherits: ^RA2ArmedInfantry
+	run:
+		Tick: 120
+	shoot:
+		Start: 204
+	prone-shoot:
+		Start: 252
+	paradrop:
+		Start: 300
+	cheer:
+		Start: 196
+	die1:
+		Start: 139
+		Length: 8
+	die2:
+		Start: 147
+		Length: 8
+	die3:
+		Start: 155
+		Length: 8
+	die4:
+		Start: 163
+		Length: 12
+	die5:
+		Start: 175
+		Length: 18
+	die7:
+		Start: 139
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: sakuraicon.shp
+
+^RA2ProneInfantry:
+	liedown:
+		Start: 212
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 228
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Frames: 86, 92, 98, 104, 110, 116, 122, 128
+		Facings: 8
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		Tick: 100
+
+yuri:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: yuri.shp
+		Facings: 8
+	run:
+		Filename: yuri.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle:
+		Filename: yuri.shp
+		Start: 120
+		Length: 19
+		Tick: 120
+	shoot:
+		Filename: yuria.shp
+		Length: 2
+		Tick: 140
+		Facings: 8
+	deployed:
+		Filename: yurib.shp
+		Length: 9
+		Tick: 160
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	die1:
+		Filename: yuri.shp
+		Start: 139
+		Length: 8
+	die2:
+		Filename: yuri.shp
+		Start: 147
+		Length: 8
+	die3:
+		Filename: yuri.shp
+		Start: 155
+		Length: 8
+	die4:
+		Filename: yuri.shp
+		Start: 163
+		Length: 12
+	die5:
+		Filename: yuri.shp
+		Start: 175
+		Length: 18
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die7:
+		Filename: yuri.shp
+		Start: 139
+		Length: 8
+	prone-stand:
+		Filename: yuri.shp
+		Start: 72
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: yuri.shp
+		Start: 72
+		Length: 4
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Filename: yuric.shp
+		Length: 2
+		Tick: 140
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: yuriicon.shp
+
+molotovyuri:
+	Defaults:
+		Filename: molotovyuri.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Start: 128
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Start: 192
+		Length: 10
+		Facings: 8
+	idle1:
+		Start: 274
+		Length: 12
+		Tick: 120
+	idle2:
+		Start: 289
+		Length: 14
+		Tick: 120
+	# Shot
+	die1:
+		Start: 397
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Start: 406
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 414
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 422
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 0
+		Length: 13
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die-crushed:
+		Filename: e3rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: molotovdanicon.shp
+
+brut:
+	Defaults:
+		Filename: brut.shp
+		Offset: 0, -5
+	stand:
+		Filename: brut.shp
+		Facings: 8
+	run:
+		Filename: brut.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 160
+	bash:
+		Filename: brut.shp
+		Start: 40
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Filename: brut.shp
+		Start: 88
+		Length: 9
+		Tick: 100
+	idle2:
+		Filename: brut.shp
+		Start: 97
+		Length: 9
+		Tick: 100
+	make:
+		Filename: brut.shp
+		Start: 156
+		Length: 14
+		Tick: 80
+	die1:
+		Filename: brut.shp
+		Start: 106
+		Length: 8
+		Tick: 100
+	die2:
+		Filename: brut.shp
+		Start: 114
+		Length: 9
+		Tick: 100
+	die5:
+		Filename: brut.shp
+		Start: 144
+		Length: 12
+		Tick: 80
+	die6:
+		Filename: brut.shp
+		Start: 131
+		Length: 13
+		Tick: 40
+	die8:
+		Filename: chronozapTD.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Alpha
+	die10:
+		Filename: brut.shp
+		Start: 123
+		Length: 8
+		Tick: 100
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: bruticon.shp
+		Offset: 0, 0
+
+u3:
+	Defaults:
+		Filename: u3.shp
+	Inherits: ^RA2ArmedInfantry
+	Inherits: ^CommonDeaths
+	wake:
+		Filename: wake-infantry.shp
+		Start: 1
+		Length: *
+		Tick: 150
+		Offset: 0, -4
+	run:
+		Tick: 120
+	swim-stand:
+		Start: 340
+		Facings: 8
+		Length: 6
+		Tick: 160
+	swim-idle1:
+		Start: 484
+		Length: 15
+		Tick: 160
+	swim-idle2:
+		Start: 499
+		Length: 15
+		Tick: 160
+	swim-run:
+		Start: 388
+		Facings: 8
+		Length: 6
+		Tick: 120
+	swim-die1:
+		Start: 512
+		Length: 22
+	swim-die2:
+		Start: 534
+		Length: 20
+	swim-shoot:
+		Start: 436
+		Length: 6
+		Facings: 8
+		Tick: 80
+	cheer:
+		Start: 603
+	swim-cheer:
+		Start: 611
+		Length: 8
+		Tick: 120
+	paradrop:
+		Start: 602
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: u3icon.shp
+
+u3old:
+	Defaults:
+		Filename: u3old.shp
+	Inherits: ^CommonDeaths
+	Inherits: ^RA2ArmedInfantry
+	run:
+		Tick: 120
+	swim-stand:
+		Start: 340
+		Facings: 8
+		Length: 6
+		Tick: 160
+	swim-idle1:
+		Start: 484
+		Length: 15
+		Tick: 160
+	swim-idle2:
+		Start: 499
+		Length: 15
+		Tick: 160
+	swim-run:
+		Start: 388
+		Facings: 8
+		Length: 6
+		Tick: 120
+	swim-die1:
+		Start: 512
+		Length: 22
+	swim-die2:
+		Start: 534
+		Length: 20
+	swim-shoot:
+		Start: 436
+		Length: 6
+		Facings: 8
+		Tick: 80
+	cheer:
+		Start: 603
+	swim-cheer:
+		Start: 611
+		Length: 8
+		Tick: 120
+	paradrop:
+		Start: 602
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: u3icon.shp
+
+
+ant:
+	stand:
+		Filename: ant1.shp
+		Facings: 8
+	idle:
+		Filename: ant1.shp
+		Facings: 8
+	idle1:
+		Filename: ant1.shp
+		Facings: 8
+	idle2:
+		Filename: ant1.shp
+		Facings: 8
+	run:
+		Filename: ant1.shp
+		Start: 8
+		Length: 8
+		Facings: 8
+	bite:
+		Filename: ant1.shp
+		Start: 72
+		Length: 4
+		Facings: 8
+	die:
+		Filename: antdie.shp
+		Start: 0
+		Length: 8
+		Tick: 300
+	die-crushed:
+		Filename: ant1.shp
+		Start: 104
+		Length: 8
+		Tick: 400
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: giantanticon.shp
+
+doggie:
+	Defaults:
+		Filename: doggie.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 119
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 127
+	shoot:
+		Start: 56
+		Length: 4
+		Facings: 8
+		ShadowStart: 175
+	laydown:
+		Start: 88
+		Length: 2
+		ShadowStart: 207
+	hide:
+		Start: 90
+		ShadowStart: 209
+	idle1:
+		Start: 91
+		Length: 8
+		ShadowStart: 210
+	idle2:
+		Start: 91
+		Length: 8
+		ShadowStart: 210
+	idle3:
+		Start: 88
+		Length: 2
+		ShadowStart: 207
+	idle4:
+		Start: 90
+		ShadowStart: 209
+	die1:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die-crushed:
+		Start: 105
+		Length: 4
+		ShadowStart: 224
+		Tick: 800
+		ZOffset: -511
+	die-melting:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: doggieicon.shp
+
+
+crab:
+	Defaults:
+		Filename: crab.shp
+	stand:
+		Facings: -8
+		ShadowStart: 156
+	die:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+	run:
+		Start: 8
+		Length: 8
+		Facings: -8
+		ShadowStart: 164
+	idle1:
+		Start: 73
+		Length: 12
+		ShadowStart: 229
+	idle2:
+		Start: 85
+		Length: 18
+		ShadowStart: 241
+	bite:
+		Start: 103
+		Length: 5
+		Facings: -8
+		ShadowStart: 259
+	die:
+		Start: 152
+		Length: 5
+	die1:
+		Start: 152
+		Length: 5
+	die2:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die3:
+		Filename: frag1.shp
+		Length: *
+	die4:
+		Start: 99
+		Length: 10
+		ShadowStart: 218
+	die5:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	die6:
+		Filename: frag1.shp
+		Length: *
+	die-crushed:
+		Start: 105
+		Length: 4
+		ShadowStart: 224
+		Tick: 800
+		ZOffset: -511
+	die-melting:
+		Start: 109
+		Length: 10
+		ShadowStart: 228
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: crabicon.shp
+
+^CommonDeaths:
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+grens:
+	Defaults:
+		Filename: grens.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 120
+	shoot:
+		Start: 64
+		Length: 16
+		Facings: 8
+	parachute:
+		Start: 505
+	idle1:
+		Start: 384
+		Length: 14
+		Tick: 120
+	idle2:
+		Start: 399
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 416
+		Length: 8
+	die2:
+		Start: 424
+		Length: 8
+	die3:
+		Start: 432
+		Length: 8
+	die4:
+		Start: 440
+		Length: 12
+	die5:
+		Start: 452
+		Length: 18
+	die6:
+		Filename: electro.tem
+		Length: *
+	die-crushed:
+		Filename: corpse1.tem
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	prone-stand:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 120
+	prone-shoot:
+		Start: 256
+		Length: 16
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: grenlicon.shp
+
+gren:
+	Defaults:
+		Filename: gren.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 120
+	shoot:
+		Start: 64
+		Length: 16
+		Facings: 8
+	parachute:
+		Start: 505
+	idle1:
+		Start: 384
+		Length: 14
+		Tick: 120
+	idle2:
+		Start: 399
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 416
+		Length: 8
+	die2:
+		Start: 424
+		Length: 8
+	die3:
+		Start: 432
+		Length: 8
+	die4:
+		Start: 440
+		Length: 12
+	die5:
+		Start: 452
+		Length: 18
+	die6:
+		Filename: electro.tem
+		Length: *
+	die-crushed:
+		Filename: corpse1.tem
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	prone-stand:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 120
+	prone-shoot:
+		Start: 256
+		Length: 16
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: gdigrenlicon.shp
+
+bh:
+	Defaults:
+		Filename: bh.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: bh.shp
+		Facings: 8
+	stand2:
+		Filename: bh.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: bh.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: bh.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	liedown:
+		Filename: bh.shp
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: bh.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: bh.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: bh.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: bh.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: bh.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: bh.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: bh.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: bh.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: bh.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: bh.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: bh.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: bh.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: bh.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: bh.shp
+		Start: 494
+		Length: 10
+		Tick: 80
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 1,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 1,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: bhicon.shp
+
+blackhands:
+	Defaults:
+		Filename: blackhands.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 1,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 1,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 120
+	shoot:
+		Start: 64
+		Length: 16
+		Facings: 8
+	prone-stand:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 120
+	liedown:
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Start: 384
+		Length: 14
+		Tick: 120
+	idle2:
+		Start: 399
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 416
+		Length: 8
+	die2:
+		Start: 424
+		Length: 8
+	die3:
+		Start: 432
+		Length: 8
+	die4:
+		Start: 440
+		Length: 12
+	die5:
+		Start: 452
+		Length: 18
+	die9:
+		Filename: poisonTD.shp
+		AddExtension: True
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die11:
+		Filename: frozen.shp
+		Length: *
+		Tick: 80
+	die6:
+		Filename: electro.tem
+		Length: *
+            WINTER: TEMPERAT
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+            WINTER: TEMPERAT
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: blackhandsicon.shp
+
+cabal:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: cabal.shp
+		Facings: 8
+	stand2:
+		Filename: cabal.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: cabal.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: cabal.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	liedown:
+		Filename: cabal.shp
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: cabal.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: cabal.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: cabal.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: cabal.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: cabal.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: cabal.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: cabal.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: cabal.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: cabal.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: cabal.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: cabal.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: cabal.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: cabal.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: cabal.shp
+		Start: 494
+		Length: 10
+		Tick: 80
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: cabalicon.shp
+
+sbh:
+	Defaults:
+		Filename: sbh.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	stand3:
+		Start: 128
+		Length: 16
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	standup-0:
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 192
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 256
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 288
+		Length: 8
+	die2:
+		Start: 296
+		Length: 8
+	die3:
+		Start: 304
+		Length: 8
+	die4:
+		Start: 312
+		Length: 12
+	die5:
+		Start: 324
+		Length: 18
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die7:
+		Start: 288
+		Length: 8
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die11:
+		Filename: frozen.shp
+	die-crushed:
+		Filename: corpse1.tem
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: sbhicon.shp
+
+e1:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n1.shp
+		Facings: 8
+	stand2:
+		Filename: n1.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n1.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n1.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Filename: n1.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n1.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n1.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Filename: n1.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n1.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: n1.shp
+		Start: 192
+		Length: 8
+		Facings: 8
+	idle1:
+		Filename: n1.shp
+		Start: 257
+		Length: 15
+		Tick: 120
+	idle2:
+		Filename: n1.shp
+		Start: 272
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: n1.shp
+		Start: 289
+		Length: 22
+		Tick: 120
+	cheer:
+		Filename: n1.shp
+		Start: 460
+		Length: 3
+		Facings: 8
+		Tick: 120
+	idle4:
+		Filename: n1.shp
+		Start: 517
+		Length: 9
+		Tick: 120
+	die1:
+		Filename: n1.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n1.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n1.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n1.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n1.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n1.shp
+		Start: 366
+		Length: 11
+		Tick: 80
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e1icon.shp
+
+shot:
+	Defaults:
+		Filename: shot.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 7
+		Facings: 8
+	liedown:
+		Start: 120
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 168
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 136
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 136
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Start: 184
+		Length: 7
+		Facings: 8
+	idle1:
+		Start: 240
+		Length: 14
+		Tick: 120
+	idle2:
+		Start: 255
+		Length: 16
+		Tick: 120
+	die1:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die2:
+		Start: 280
+		Length: 8
+		Tick: 80
+	die3:
+		Start: 288
+		Length: 8
+		Tick: 80
+	die4:
+		Start: 296
+		Length: 12
+		Tick: 80
+	die5:
+		Start: 308
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 0
+		Length: 13
+		Tick: 80
+	die-crushed:
+		Filename: e3rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: shoticon.shp
+
+atgm3:
+	Defaults:
+		Filename: atgm3.shp
+	Inherits: ^CommonDeaths
+	icon:
+		Filename: atgm2.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Start: 128
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Start: 192
+		Length: 10
+		Facings: 8
+	idle1:
+		Start: 274
+		Length: 12
+		Tick: 120
+	idle2:
+		Start: 289
+		Length: 14
+		Tick: 120
+	# Shot
+	die1:
+		Start: 397
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Start: 406
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 414
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 422
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Start: 434
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 0
+		Length: 13
+		Tick: 80
+	die-crushed:
+		Filename: e3rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+
+molotovdan:
+	Inherits: ^CommonDeaths
+	idle:
+		Filename: boris2.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	stand:
+		Filename: boris2.shp
+		Facings: 8
+	run:
+		Filename: boris2.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	shoot:
+		Filename: boris2.shp
+		Start: 56
+		Length: 4
+		Facings: 8
+	shoot-laser:
+		Filename: borislaser.shp
+		Length: 1
+		Facings: 8
+	prone-stand:
+		Filename: boris2.shp
+		Start: 104
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: boris2.shp
+		Start: 104
+		Length: 4
+		Facings: 8
+	standup-0:
+		Filename: boris2.shp
+		Start: 136
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: boris2.shp
+		Start: 152
+		Length: 4
+		Facings: 8
+	prone-shoot-laser:
+		Filename: borislaser.shp
+		Length: 1
+		Facings: 8
+	idle1:
+		Filename: boris2.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	die1:
+		Filename: boris2.shp
+		Start: 210
+		Length: 8
+	die2:
+		Filename: boris2.shp
+		Start: 218
+		Length: 8
+	die3:
+		Filename: boris2.shp
+		Start: 226
+		Length: 8
+	die4:
+		Filename: boris2.shp
+		Start: 234
+		Length: 12
+	die5:
+		Filename: boris2.shp
+		Start: 246
+		Length: 18
+	die7:
+		Filename: boris2.shp
+		Start: 210
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: molotovyuriicon.shp
+
+
+e2:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n2.shp
+		Facings: 8
+	stand2:
+		Filename: n2.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n2.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Filename: n2.shp
+		Start: 64
+		Length: 20
+		Facings: 8
+	liedown:
+		Filename: n2.shp
+		Start: 224
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n2.shp
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n2.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n2.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n2.shp
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Filename: n2.shp
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Filename: n2.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: n2.shp
+		Start: 400
+		Length: 13
+		Tick: 120
+	cheer:
+		Filename: n2.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n2.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n2.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n2.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n2.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n2.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n2.shp
+		Start: 494
+		Length: 11
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e2icon.shp
+
+bhrocket:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: bhrocket.shp
+		Facings: 8
+	stand2:
+		Filename: bhrocket.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: bhrocket.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: bhrocket.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	liedown:
+		Filename: n3.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: bhrocket.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: bhrocket.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: bhrocket.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: bhrocket.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: bhrocket.shp
+		Start: 192
+		Length: 10
+		Facings: 8
+	idle1:
+		Filename: bhrocket.shp
+		Start: 274
+		Length: 12
+		Tick: 120
+	idle2:
+		Filename: bhrocket.shp
+		Start: 289
+		Length: 14
+		Tick: 120
+	cheer:
+		Filename: bhrocket.shp
+		Start: 476
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: bhrocket.shp
+		Start: 397
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: bhrocket.shp
+		Start: 406
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: bhrocket.shp
+		Start: 414
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: bhrocket.shp
+		Start: 422
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: bhrocket.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: bhrocket.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: bhrocketicon.shp
+
+e3:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n3.shp
+		Facings: 8
+	stand2:
+		Filename: n3.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n3.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n3.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	liedown:
+		Filename: n3.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n3.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n3.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n3.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n3.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: n3.shp
+		Start: 192
+		Length: 10
+		Facings: 8
+	idle1:
+		Filename: n3.shp
+		Start: 274
+		Length: 12
+		Tick: 120
+	idle2:
+		Filename: n3.shp
+		Start: 289
+		Length: 14
+		Tick: 120
+	cheer:
+		Filename: n3.shp
+		Start: 476
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n3.shp
+		Start: 397
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n3.shp
+		Start: 406
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n3.shp
+		Start: 414
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n3.shp
+		Start: 422
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e3icon.shp
+
+e4:
+	Defaults:
+		Filename: e4.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n4.shp
+		Facings: 8
+	stand2:
+		Filename: n4.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n4.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n4.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	liedown:
+		Filename: n4.shp
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n4.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n4.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n4.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n4.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: n4.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: n4.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: n4.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: n4.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n4.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n4.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n4.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n4.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n4.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n4.shp
+		Start: 494
+		Length: 10
+		Tick: 80
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 1,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 1,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e4icon.shp
+
+e6:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n6.shp
+		Facings: 8
+	stand2:
+		Filename: n6.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n6.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Filename: n6.shp
+		Start: 121
+		Length: 8
+		Tick: 120
+	idle2:
+		Filename: n6.shp
+		Start: 130
+		Length: 14
+		Tick: 120
+	die1:
+		Filename: n6.shp
+		Start: 146
+		Length: 8
+	die2:
+		Filename: n6.shp
+		Start: 154
+		Length: 8
+	die3:
+		Filename: n6.shp
+		Start: 162
+		Length: 8
+	die4:
+		Filename: n6.shp
+		Start: 170
+		Length: 12
+	die5:
+		Filename: n6.shp
+		Start: 182
+		Length: 18
+	die7:
+		Filename: n6.shp
+		Start: 130
+		Length: 4
+		Tick: 80
+	prone-stand:
+		Filename: n6.shp
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n6.shp
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n6.shp
+		Start: 82
+		Length: 4
+		Facings: 8
+		Tick: 100
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e6icon.shp
+
+e7:
+	Inherits: ^CommonDeaths
+	wake:
+		Filename: wake-infantry.shp
+		Start: 1
+		Length: *
+		Tick: 150
+		Offset: 0, -4
+	swim_idle:
+		Filename: bikinitany.shp
+		Start: 1
+		Facings: 8
+		Length: 4
+		Tick: 100
+		Transpose: True
+	swim_stand:
+		Filename: bikinitany.shp
+		Start: 1
+		Facings: 8
+		Length: 4
+		Tick: 100
+		Transpose: True	
+	swim:
+		Filename: bikinitany.shp
+		Start: 33
+		Facings: 8
+		Length: 7
+		Tick: 100
+		Transpose: True	
+	swim_shoot:
+		Filename: bikinitany.shp
+		Start: 89
+		Facings: 8
+		Length: 6
+		Tick: 100
+		Transpose: True
+	prone-swim_shoot:
+		Filename: bikinitany.shp
+		Start: 137
+		Facings: 8
+		Length: 6
+		Tick: 100
+		Transpose: True
+	prone-swim:
+		Filename: bikinitany.shp
+		Start: 217
+		Facings: 8
+		Length: 9
+		Tick: 100
+		Transpose: True
+	liedown:
+		Filename: bikinitany.shp
+		Start: 289
+		Facings: 8
+		Length: 3
+		Tick: 100
+		Transpose: True	
+	standup:
+		Filename: bikinitany.shp
+		Start: 185
+		Facings: 8
+		Length: 4
+		Tick: 100
+		Transpose: True
+	prone-swim_stand:
+		Filename: bikinitany.shp
+		Start: 313
+		Facings: 8
+		Length: 9
+		Tick: 100
+		Transpose: True
+
+	stand:
+		Filename: e7.shp
+		Facings: 8
+	run:
+		Filename: e7.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	shoot:
+		Filename: e7.shp
+		Start: 56
+		Length: 7
+		Facings: 8
+	idle1:
+		Filename: e7.shp
+		Start: 233
+		Length: 14
+		Tick: 120
+	idle2:
+		Filename: e7.shp
+		Start: 248
+		Length: 14
+		Tick: 120
+	die1:
+		Filename: e7.shp
+		Start: 262
+		Length: 8
+	die2:
+		Filename: e7.shp
+		Start: 270
+		Length: 8
+	die3:
+		Filename: e7.shp
+		Start: 278
+		Length: 8
+	die4:
+		Filename: e7.shp
+		Start: 286
+		Length: 12
+	die5:
+		Filename: e7.shp
+		Start: 298
+		Length: 18
+	die7:
+		Filename: e7.shp
+		Start: 262
+		Length: 8
+	prone-stand:
+		Filename: e7.shp
+		Start: 128
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: e7.shp
+		Start: 128
+		Length: 4
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Filename: e7.shp
+		Start: 176
+		Length: 7
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 3
+		Stride: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: e7icon.shp
+
+medi:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: medi.shp
+		Facings: 8
+	run:
+		Filename: medi.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	heal:
+		Filename: medi.shp
+		Start: 56
+		Length: 58
+		Tick: 120
+	standup:
+		Filename: medi.shp
+		Start: 114
+		Length: 2
+		Facings: 8
+	idle:
+		Filename: medi.shp
+		Start: 178
+		Length: 14
+		Tick: 120
+	die1:
+		Filename: medi.shp
+		Start: 193
+		Length: 7
+	die2:
+		Filename: medi.shp
+		Start: 201
+		Length: 8
+	die3:
+		Filename: medi.shp
+		Start: 209
+		Length: 8
+	die4:
+		Filename: medi.shp
+		Start: 217
+		Length: 12
+	die5:
+		Filename: medi.shp
+		Start: 229
+		Length: 18
+	die7:
+		Filename: medi.shp
+		Start: 193
+		Length: 7
+	prone-stand:
+		Filename: medi.shp
+		Start: 130
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: medi.shp
+		Start: 130
+		Length: 4
+		Facings: 8
+		Tick: 100
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: mediicon.shp
+
+mech:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: mech.shp
+		Facings: 8
+	run:
+		Filename: mech.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	repair:
+		Filename: mech.shp
+		Start: 56
+		Length: 58
+		Tick: 120
+	standup:
+		Filename: mech.shp
+		Start: 114
+		Length: 2
+		Facings: 8
+	idle:
+		Filename: mech.shp
+		Start: 178
+		Length: 14
+		Tick: 120
+	die1:
+		Filename: mech.shp
+		Start: 193
+		Length: 7
+	die2:
+		Filename: mech.shp
+		Start: 201
+		Length: 8
+	die3:
+		Filename: mech.shp
+		Start: 209
+		Length: 8
+	die4:
+		Filename: mech.shp
+		Start: 217
+		Length: 12
+	die5:
+		Filename: mech.shp
+		Start: 229
+		Length: 18
+	die7:
+		Filename: mech.shp
+		Start: 193
+		Length: 7
+	prone-stand:
+		Filename: mech.shp
+		Start: 130
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: mech.shp
+		Start: 130
+		Length: 4
+		Facings: 8
+		Tick: 100
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: mechicon.shp
+
+dog:
+	stand:
+		Filename: dog.shp
+		Facings: 8
+	walk:
+		Filename: dog.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	run:
+		Filename: dog.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	eat:
+		Filename: dog.shp
+		Start: 104
+		Length: 14
+		Facings: 8
+		Tick: 120
+	idle1:
+		Filename: dog.shp
+		Start: 216
+		Length: 7
+		Tick: 120
+	idle2:
+		Filename: dog.shp
+		Start: 224
+		Length: 11
+		Tick: 120
+	die1:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die2:
+		Filename: dog.shp
+		Start: 242
+		Length: 9
+	die3:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die4:
+		Filename: dog.shp
+		Start: 242
+		Length: 9
+	die5:
+		Filename: dog.shp
+		Start: 251
+		Length: 14
+	die6:
+		Filename: electdog.shp
+		Length: *
+	die7:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die10:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die11:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	jump:
+		Filename: dogbullt.shp
+		Length: 4
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	swim_idle:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim_stand:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim_eat:
+		Filename: h2o_exp2.shp
+		Start: 1
+		Facings: 1
+		Length: 4
+		Tick: 100
+		Transpose: True
+	icon:
+		Filename: dogicon.shp
+
+dognew:
+	Defaults:
+		Filename: dognew.shp
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	walk:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 120
+	idle2:
+		Start: 71
+		Length: 15
+		Tick: 120
+	cheer:
+		Start: 245
+		Length: 8
+		Tick: 120
+	shoot:
+		Filename: ra2dogp.shp
+		Length: 1
+		Facings: 32
+	die1:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die2:
+		Filename: dog.shp
+		Start: 242
+		Length: 9
+	die3:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die4:
+		Filename: dog.shp
+		Start: 242
+		Length: 9
+	die5:
+		Filename: dog.shp
+		Start: 251
+		Length: 14
+	die6:
+		Filename: electdog.shp
+		Length: *
+	die7:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die10:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die11:
+		Filename: dog.shp
+		Start: 236
+		Length: 6
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	jump:
+		Filename: dogbullt.shp
+		Length: 4
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	swim_idle:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim_stand:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim:
+		Filename: bikinidog.shp
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	swim_eat:
+		Filename: h2o_exp2.shp
+		Start: 1
+		Facings: 1
+		Length: 4
+		Tick: 100
+		Transpose: True
+	icon:
+		Filename: dogicon.shp
+
+spy:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: spy.shp
+		Facings: 8
+	stand2:
+		Filename: spy.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: spy.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: spy.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	idle1:
+		Filename: spy.shp
+		Start: 256
+		Length: 14
+		Tick: 120
+	idle2:
+		Filename: spy.shp
+		Start: 271
+		Length: 16
+		Tick: 120
+	die1:
+		Filename: spy.shp
+		Start: 288
+		Length: 8
+	die2:
+		Filename: spy.shp
+		Start: 296
+		Length: 8
+	die3:
+		Filename: spy.shp
+		Start: 304
+		Length: 8
+	die4:
+		Filename: spy.shp
+		Start: 312
+		Length: 12
+	die5:
+		Filename: spy.shp
+		Start: 324
+		Length: 18
+	die7:
+		Filename: spy.shp
+		Start: 288
+		Length: 8
+	prone-stand:
+		Filename: spy.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: spy.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: spy.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: spy.shp
+		Start: 192
+		Length: 8
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: spyicon.shp
+
+spy2:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: spy2.shp
+		Facings: 8
+	stand2:
+		Filename: spy2.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: spy2.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: spy2.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	idle1:
+		Filename: spy2.shp
+		Start: 256
+		Length: 14
+		Tick: 120
+	idle2:
+		Filename: spy2.shp
+		Start: 271
+		Length: 16
+		Tick: 120
+	die1:
+		Filename: spy2.shp
+		Start: 288
+		Length: 8
+	die2:
+		Filename: spy2.shp
+		Start: 296
+		Length: 8
+	die3:
+		Filename: spy2.shp
+		Start: 304
+		Length: 8
+	die4:
+		Filename: spy2.shp
+		Start: 312
+		Length: 12
+	die5:
+		Filename: spy2.shp
+		Start: 324
+		Length: 18
+	die7:
+		Filename: spy2.shp
+		Start: 288
+		Length: 8
+	prone-stand:
+		Filename: spy2.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: spy2.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: spy2.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: spy2.shp
+		Start: 192
+		Length: 8
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: agenticon.shp
+
+thf:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: thf.shp
+		Facings: 8
+	run:
+		Filename: thf.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle:
+		Filename: thf.shp
+		Start: 120
+		Length: 19
+		Tick: 120
+	die1:
+		Filename: thf.shp
+		Start: 139
+		Length: 8
+	die2:
+		Filename: thf.shp
+		Start: 147
+		Length: 8
+	die3:
+		Filename: thf.shp
+		Start: 155
+		Length: 8
+	die4:
+		Filename: thf.shp
+		Start: 163
+		Length: 12
+	die5:
+		Filename: thf.shp
+		Start: 175
+		Length: 18
+	die7:
+		Filename: thf.shp
+		Start: 139
+		Length: 8
+	prone-stand:
+		Filename: thf.shp
+		Start: 72
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: thf.shp
+		Start: 72
+		Length: 4
+		Facings: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: thficon.shp
+
+gnrl:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: gnrl.shp
+		Facings: 8
+	run:
+		Filename: gnrl.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	shoot:
+		Filename: gnrl.shp
+		Start: 56
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Filename: gnrl.shp
+		Start: 104
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: gnrl.shp
+		Start: 104
+		Length: 4
+		Facings: 8
+	standup-0:
+		Filename: gnrl.shp
+		Start: 136
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: gnrl.shp
+		Start: 152
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: gnrl.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	die1:
+		Filename: gnrl.shp
+		Start: 210
+		Length: 8
+	die2:
+		Filename: gnrl.shp
+		Start: 218
+		Length: 8
+	die3:
+		Filename: gnrl.shp
+		Start: 226
+		Length: 8
+	die4:
+		Filename: gnrl.shp
+		Start: 234
+		Length: 12
+	die5:
+		Filename: gnrl.shp
+		Start: 246
+		Length: 18
+	die7:
+		Filename: gnrl.shp
+		Start: 210
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: borisicon.shp
+
+shok:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: shok.shp
+		Facings: 8
+	stand2:
+		Filename: shok.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: shok.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: shok.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	stand3:
+		Filename: shok.shp
+		Start: 192
+		Length: 16
+	prone-stand:
+		Filename: shok.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: shok.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: shok.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 120
+	standup:
+		Filename: shok.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: shok.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: shok.shp
+		Start: 384
+		Length: 14
+		Tick: 120
+	idle2:
+		Filename: shok.shp
+		Start: 399
+		Length: 16
+		Tick: 120
+	die1:
+		Filename: shok.shp
+		Start: 416
+		Length: 8
+	die2:
+		Filename: shok.shp
+		Start: 424
+		Length: 8
+	die3:
+		Filename: shok.shp
+		Start: 432
+		Length: 8
+	die4:
+		Filename: shok.shp
+		Start: 440
+		Length: 12
+	die5:
+		Filename: shok.shp
+		Start: 452
+		Length: 18
+	die7:
+		Filename: shok.shp
+		Start: 416
+		Length: 8
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: shokicon.shp
+
+
+c1:
+	Defaults:
+		Filename: c1.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	panic-stand:
+		Facings: 8
+	panic-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	run:
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	shoot:
+		Start: 205
+		Length: 4
+		Facings: 8
+	cheer:
+		Start: 200
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Start: 329
+		Length: 8
+		Tick: 80
+	die2:
+		Start: 337
+		Length: 8
+		Tick: 80
+	die3:
+		Start: 337
+		Length: 8
+		Tick: 80
+	die4:
+		Start: 345
+		Length: 12
+		Tick: 80
+	die5:
+		Start: 357
+		Length: 18
+		Tick: 80
+	die7:
+		Start: 182
+		Length: 4
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+c2:
+	Inherits: c1
+
+c3:
+	Inherits: c1
+
+c4:
+	Inherits: c1
+
+c5:
+	Inherits: c1
+
+c6:
+	Inherits: c1
+
+c7:
+	Inherits: c1
+
+c8:
+	Inherits: c1
+
+c9:
+	Inherits: c1
+
+c10:
+	Inherits: c1
+
+einstein:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: einstein.shp
+		Facings: 8
+	panic-run:
+		Filename: einstein.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+	panic-stand:
+		Filename: einstein.shp
+		Facings: 8
+	run:
+		Filename: einstein.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	die1:
+		Filename: einstein.shp
+		Start: 120
+		Length: 8
+	die2:
+		Filename: einstein.shp
+		Start: 128
+		Length: 8
+	die3:
+		Filename: einstein.shp
+		Start: 136
+		Length: 12
+	die4:
+		Filename: einstein.shp
+		Start: 136
+		Length: 17
+	die5:
+		Filename: einstein.shp
+		Start: 148
+		Length: 8
+	die7:
+		Filename: einstein.shp
+		Start: 120
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: e1icon.shp
+
+delphi:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: delphi.shp
+		Facings: 8
+	panic-run:
+		Filename: delphi.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+	panic-stand:
+		Filename: delphi.shp
+		Facings: 8
+	run:
+		Filename: delphi.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	die1:
+		Filename: delphi.shp
+		Start: 329
+		Length: 8
+	die2:
+		Filename: delphi.shp
+		Start: 337
+		Length: 8
+	die3:
+		Filename: delphi.shp
+		Start: 345
+		Length: 12
+	die4:
+		Filename: delphi.shp
+		Start: 45
+		Length: 17
+	die5:
+		Filename: delphi.shp
+		Start: 357
+		Length: 8
+	die7:
+		Filename: delphi.shp
+		Start: 329
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+chan:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: chan.shp
+		Facings: 8
+	panic-run:
+		Filename: chan.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+	panic-stand:
+		Filename: chan.shp
+		Start: 8
+		Stride: 6
+		Facings: 8
+	run:
+		Filename: chan.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+		Tick: 80
+	die1:
+		Filename: chan.shp
+		Start: 120
+		Length: 8
+	die2:
+		Filename: chan.shp
+		Start: 128
+		Length: 8
+	die3:
+		Filename: chan.shp
+		Start: 136
+		Length: 12
+	die4:
+		Filename: chan.shp
+		Start: 136
+		Length: 17
+	die5:
+		Filename: chan.shp
+		Start: 148
+		Length: 8
+	die7:
+		Filename: chan.shp
+		Start: 120
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+zone2:
+	Defaults:
+		Filename: zone2.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	walk:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 120
+	idle2:
+		Start: 71
+		Length: 15
+		Tick: 120
+	liedown:
+		Start: 212
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 228
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Frames: 86, 92, 98, 104, 110, 116, 122, 128
+		Facings: 8
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 80
+	liedown:
+		Start: 260
+	standup:
+		Start: 276
+	run:
+		Tick: 120
+	shoot:
+		Start: 204
+		Length: 6
+		Facings: 8
+	prone-shoot:
+		Start: 252
+		Length: 6
+		Facings: 8
+	deployed:
+		Start: 315
+		Facings: 8
+	deploy:
+		Start: 300
+		Length: 15
+	shoot-deployed:
+		Start: 323
+		Length: 6
+		Facings: 8
+	undeploy:
+		Filename: undeploy.shp
+		Start: 180
+		Length: 2
+		Facings: 2
+	paradrop:
+		Start: 371
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	die1: 
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2: 
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3: 
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4: 
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5: 
+		Start: 546
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die7: 
+		Start: 494
+		Length: 10
+		Tick: 80
+	die-crushed:
+		Filename: e4rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: ZoneT.shp
+
+moebius:
+	Inherits: ^CommonDeaths
+	Defaults:
+		Filename: moebius.shp
+		Tick: 80
+	stand:
+		Filename: moebius.shp
+		Facings: 8
+	panic-stand:
+		Filename: moebius.shp
+		Facings: 8
+	panic-run:
+		Filename: moebius.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+	run:
+		Filename: moebius.shp
+		Start: 56
+		Length: 6
+		Facings: 8
+	idle1:
+		Filename: moebius.shp
+		Start: 104
+		Length: 15
+	die1:
+		Filename: moebius.shp
+		Start: 212
+		Length: 8
+	die2:
+		Filename: moebius.shp
+		Start: 220
+		Length: 8
+	die3:
+		Filename: moebius.shp
+		Start: 220
+		Length: 8
+	die4:
+		Filename: moebius.shp
+		Start: 228
+		Length: 12
+	die5:
+		Filename: moebius.shp
+		Start: 240
+		Length: 17
+	die7:
+		Filename: moebius.shp
+		Start: 214
+		Length: 3
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+
+rmbo:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: rmbo.shp
+		Facings: 8
+	stand2:
+		Filename: rmbo.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: rmbo.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: rmbo.shp
+		Start: 64
+		Length: 4
+		Facings: 8
+	liedown:
+		Filename: rmbo.shp
+		Start: 96
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: rmbo.shp
+		Start: 144
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: rmbo.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: rmbo.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: rmbo.shp
+		Start: 112
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: rmbo.shp
+		Start: 160
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: rmbo.shp
+		Start: 192
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: rmbo.shp
+		Start: 208
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: rmbo.shp
+		Start: 224
+		Length: 15
+		Tick: 120
+	cheer:
+		Filename: rmbo.shp
+		Start: 396
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: rmbo.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: rmbo.shp
+		Start: 326
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: rmbo.shp
+		Start: 334
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: rmbo.shp
+		Start: 342
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: rmbo.shp
+		Start: 354
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: rmbo.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: rmboicnh.shp
+
+n1:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n1.shp
+		Facings: 8
+	stand2:
+		Filename: n1.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n1.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n1.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Filename: n1.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n1.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n1.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Filename: n1.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n1.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: n1.shp
+		Start: 192
+		Length: 8
+		Facings: 8
+	idle1:
+		Filename: n1.shp
+		Start: 257
+		Length: 15
+		Tick: 120
+	idle2:
+		Filename: n1.shp
+		Start: 272
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: n1.shp
+		Start: 289
+		Length: 22
+		Tick: 120
+	cheer:
+		Filename: n1.shp
+		Start: 460
+		Length: 3
+		Facings: 8
+		Tick: 120
+	idle4:
+		Filename: n1.shp
+		Start: 517
+		Length: 9
+		Tick: 120
+	die1:
+		Filename: n1.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n1.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n1.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n1.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n1.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n1.shp
+		Start: 366
+		Length: 11
+		Tick: 80
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n1icnh.shp
+
+n1new:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n1new.shp
+		Facings: 8
+	stand2:
+		Filename: n1new.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n1new.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n1new.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Filename: n1new.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n1new.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n1new.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Filename: n1new.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n1new.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: n1new.shp
+		Start: 192
+		Length: 8
+		Facings: 8
+	idle1:
+		Filename: n1new.shp
+		Start: 257
+		Length: 15
+		Tick: 120
+	idle2:
+		Filename: n1new.shp
+		Start: 272
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: n1new.shp
+		Start: 289
+		Length: 22
+		Tick: 120
+	cheer:
+		Filename: n1.shp
+		Start: 460
+		Length: 3
+		Facings: 8
+		Tick: 120
+	idle4:
+		Filename: n1new.shp
+		Start: 517
+		Length: 9
+		Tick: 120
+	die1:
+		Filename: n1new.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n1new.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n1new.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n1new.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n1new.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n1new.shp
+		Start: 366
+		Length: 11
+		Tick: 80
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n1icnh.shp
+
+n2:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n2.shp
+		Facings: 8
+	stand2:
+		Filename: n2.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n2.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Filename: n2.shp
+		Start: 64
+		Length: 20
+		Facings: 8
+	liedown:
+		Filename: n2.shp
+		Start: 224
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n2.shp
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n2.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n2.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n2.shp
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Filename: n2.shp
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Filename: n2.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: n2.shp
+		Start: 400
+		Length: 13
+		Tick: 120
+	cheer:
+		Filename: n2.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n2.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n2.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n2.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n2.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n2.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n2.shp
+		Start: 494
+		Length: 11
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n2icnh.shp
+
+n3:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n3.shp
+		Facings: 8
+	stand2:
+		Filename: n3.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n3.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n3.shp
+		Start: 64
+		Length: 8
+		Facings: 8
+	liedown:
+		Filename: n3.shp
+		Start: 128
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n3.shp
+		Start: 176
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n3.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n3.shp
+		Start: 144
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n3.shp
+		Start: 144
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: n3.shp
+		Start: 192
+		Length: 10
+		Facings: 8
+	idle1:
+		Filename: n3.shp
+		Start: 274
+		Length: 12
+		Tick: 120
+	idle2:
+		Filename: n3.shp
+		Start: 289
+		Length: 14
+		Tick: 120
+	cheer:
+		Filename: n3.shp
+		Start: 476
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n3.shp
+		Start: 397
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n3.shp
+		Start: 406
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n3.shp
+		Start: 414
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n3.shp
+		Start: 422
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n3.shp
+		Start: 434
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n3.shp
+		Start: 382
+		Length: 11
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n3icnh.shp
+
+n4:
+	Defaults:
+		Filename: n4.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n4.shp
+		Facings: 8
+	stand2:
+		Filename: n4.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n4.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n4.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	liedown:
+		Filename: n4.shp
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n4.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n4.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n4.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n4.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: n4.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: n4.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: n4.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: n4.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n4.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n4.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n4.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n4.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n4.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n4.shp
+		Start: 494
+		Length: 10
+		Tick: 80
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 1,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 1,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n4icnh.shp
+
+n5:
+	Defaults:
+		Filename: n5.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n5.shp
+		Facings: 8
+	stand2:
+		Filename: n5.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n5.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: n5.shp
+		Start: 64
+		Length: 16
+		Facings: 8
+	liedown:
+		Filename: n5.shp
+		Start: 192
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: n5.shp
+		Start: 240
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: n5.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n5.shp
+		Start: 208
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n5.shp
+		Start: 208
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: n5.shp
+		Start: 256
+		Length: 16
+		Facings: 8
+	idle1:
+		Filename: n5.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: n5.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: n5.shp
+		Start: 588
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: n5.shp
+		Start: 509
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: n5.shp
+		Start: 518
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: n5.shp
+		Start: 526
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: n5.shp
+		Start: 534
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: n5.shp
+		Start: 546
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: n5.shp
+		Start: 494
+		Length: 10
+		Tick: 80
+	muzzle:
+		Combine:
+			0:
+				Filename: chem-n.shp
+				Length: *
+				Offset: 1,2
+			1:
+				Filename: chem-nw.shp
+				Length: *
+				Offset: 8,2
+			2:
+				Filename: chem-w.shp
+				Length: *
+				Offset: 8,-3
+			3:
+				Filename: chem-sw.shp
+				Length: *
+				Offset: 7,-6
+			4:
+				Filename: chem-s.shp
+				Length: *
+				Offset: 1,-6
+			5:
+				Filename: chem-se.shp
+				Length: *
+				Offset: -5,-6
+			6:
+				Filename: chem-e.shp
+				Length: *
+				Offset: -7,-3
+			7:
+				Filename: chem-ne.shp
+				Length: *
+				Offset: -3,2
+		Facings: 8
+		Length: 13
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Additive
+		Offset: 0, -5
+		ZOffset: 512
+	icon:
+		Filename: n5icnh.shp
+
+n6:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: n6.shp
+		Facings: 8
+	stand2:
+		Filename: n6.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: n6.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Filename: n6.shp
+		Start: 121
+		Length: 8
+		Tick: 120
+	idle2:
+		Filename: n6.shp
+		Start: 130
+		Length: 14
+		Tick: 120
+	die1:
+		Filename: n6.shp
+		Start: 146
+		Length: 8
+	die2:
+		Filename: n6.shp
+		Start: 154
+		Length: 8
+	die3:
+		Filename: n6.shp
+		Start: 162
+		Length: 8
+	die4:
+		Filename: n6.shp
+		Start: 170
+		Length: 12
+	die5:
+		Filename: n6.shp
+		Start: 182
+		Length: 18
+	die7:
+		Filename: n6.shp
+		Start: 130
+		Length: 4
+		Tick: 80
+	prone-stand:
+		Filename: n6.shp
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: n6.shp
+		Start: 82
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: n6.shp
+		Start: 82
+		Length: 4
+		Facings: 8
+		Tick: 100
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: n6icnh.shp
+
+sab:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: sab.shp
+		Facings: 8
+	run:
+		Filename: sab.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: sab.shp
+		Start: 56
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Filename: sab.shp
+		Start: 104
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: sab.shp
+		Start: 104
+		Length: 4
+		Facings: 8
+		Tick: 100
+	standup:
+		Filename: sab.shp
+		Start: 136
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: sab.shp
+		Start: 152
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: sab.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	die1:
+		Filename: sab.shp
+		Start: 210
+		Length: 8
+	die2:
+		Filename: sab.shp
+		Start: 218
+		Length: 8
+	die3:
+		Filename: sab.shp
+		Start: 226
+		Length: 8
+	die4:
+		Filename: sab.shp
+		Start: 234
+		Length: 12
+	die5:
+		Filename: sab.shp
+		Start: 246
+		Length: 18
+	die7:
+		Filename: sab.shp
+		Start: 210
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: sabicon2.shp
+
+sab2:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: sab2.shp
+		Facings: 8
+	run:
+		Filename: sab2.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: sab2.shp
+		Start: 56
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Filename: sab2.shp
+		Start: 104
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: sab2.shp
+		Start: 104
+		Length: 4
+		Facings: 8
+		Tick: 100
+	standup:
+		Filename: sab2.shp
+		Start: 136
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: sab2.shp
+		Start: 152
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: sab2.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	idle2:
+		Filename: sab2.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	die1:
+		Filename: sab2.shp
+		Start: 210
+		Length: 8
+	die2:
+		Filename: sab2.shp
+		Start: 218
+		Length: 8
+	die3:
+		Filename: sab2.shp
+		Start: 226
+		Length: 8
+	die4:
+		Filename: sab2.shp
+		Start: 234
+		Length: 12
+	die5:
+		Filename: sab2.shp
+		Start: 246
+		Length: 18
+	die7:
+		Filename: sab2.shp
+		Start: 210
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: sabicon.shp
+
+mort:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: mort.shp
+		Facings: 8
+	stand2:
+		Filename: mort.shp
+		Facings: 8
+	run:
+		Filename: mort.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Filename: mort.shp
+		Start: 64
+		Length: 20
+		Facings: 8
+	liedown:
+		Filename: mort.shp
+		Start: 224
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: mort.shp
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: mort.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: mort.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: mort.shp
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Filename: mort.shp
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Filename: mort.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: mort.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: mort.shp
+		Start: 494
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: mort.shp
+		Start: 416
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: mort.shp
+		Start: 424
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: mort.shp
+		Start: 432
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: mort.shp
+		Start: 440
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: mort.shp
+		Start: 452
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: mort.shp
+		Start: 416
+		Length: 9
+		Tick: 80
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Additive
+		Offset: 0, -5
+		ZOffset: 512
+	icon:
+		Filename: morticon.shp
+
+sniper:
+	Defaults:
+		Filename: sniper.tem
+	Inherits: ^CommonDeaths
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 80
+	liedown:
+		Start: 260
+	standup:
+		Start: 276
+	liedown:
+		Start: 212
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 228
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Frames: 86, 92, 98, 104, 110, 116, 122, 128
+		Facings: 8
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		Tick: 100
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	walk:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 120
+	idle2:
+		Start: 71
+		Length: 15
+		Tick: 120
+	die1:
+		Start: 288
+		Length: 8
+	die2:
+		Start: 296
+		Length: 8
+	die3:
+		Start: 304
+		Length: 8
+	die4:
+		Start: 312
+		Length: 12
+	die5:
+		Start: 324
+		Length: 18
+	die6:
+		Filename: electroTD.tem
+		Length: *
+	die7:
+		Start: 288
+		Length: 8
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die8:
+		Filename: chronozapTD.shp
+		Length: *
+		BlendMode: Alpha
+	die11:
+		Filename: frozen.shp
+	die-crushed:
+		Filename: corpse1.tem
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: snipericon.shp
+
+vice:
+	Defaults:
+		Filename: vice.shp
+	idle:
+		Filename: vice.shp
+		Length: *
+	muzzle:
+		Combine:
+			0:
+				Filename: chem-n.shp
+				Length: *
+				Offset: 1,2
+			1:
+				Filename: chem-nw.shp
+				Length: *
+				Offset: 8,2
+			2:
+				Filename: chem-w.shp
+				Length: *
+				Offset: 8,-3
+			3:
+				Filename: chem-sw.shp
+				Length: *
+				Offset: 7,-6
+			4:
+				Filename: chem-s.shp
+				Length: *
+				Offset: 1,-6
+			5:
+				Filename: chem-se.shp
+				Length: *
+				Offset: -5,-6
+			6:
+				Filename: chem-e.shp
+				Length: *
+				Offset: -7,-3
+			7:
+				Filename: chem-ne.shp
+				Length: *
+				Offset: -3,2
+		Facings: 8
+		Length: 13
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+boris:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: boris.shp
+		Facings: 8
+	run:
+		Filename: boris.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 80
+	shoot:
+		Filename: boris.shp
+		Start: 56
+		Length: 4
+		Facings: 8
+	shoot-laser:
+		Filename: borislaser.shp
+		Length: 1
+		Facings: 8
+	prone-stand:
+		Filename: boris.shp
+		Start: 104
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: boris.shp
+		Start: 104
+		Length: 4
+		Facings: 8
+	standup-0:
+		Filename: boris.shp
+		Start: 136
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Filename: boris.shp
+		Start: 152
+		Length: 4
+		Facings: 8
+	prone-shoot-laser:
+		Filename: borislaser.shp
+		Length: 1
+		Facings: 8
+	idle1:
+		Filename: boris.shp
+		Start: 184
+		Length: 26
+		Tick: 120
+	die1:
+		Filename: boris.shp
+		Start: 210
+		Length: 8
+	die2:
+		Filename: boris.shp
+		Start: 218
+		Length: 8
+	die3:
+		Filename: boris.shp
+		Start: 226
+		Length: 8
+	die4:
+		Filename: boris.shp
+		Start: 234
+		Length: 12
+	die5:
+		Filename: boris.shp
+		Start: 246
+		Length: 18
+	die7:
+		Filename: boris.shp
+		Start: 210
+		Length: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: borisicon.shp
+
+acol:
+	Inherits: ^CommonDeaths
+	stand:
+		Filename: acol.shp
+		Facings: 8
+	stand2:
+		Filename: acol.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: acol.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: acol.shp
+		Start: 64
+		Length: 4
+		Facings: 8
+	liedown:
+		Filename: acol.shp
+		Start: 96
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: acol.shp
+		Start: 144
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: acol.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: acol.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: acol.shp
+		Start: 112
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: acol.shp
+		Start: 160
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: acol.shp
+		Start: 192
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: acol.shp
+		Start: 208
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: acol.shp
+		Start: 224
+		Length: 15
+		Tick: 120
+	cheer:
+		Filename: acol.shp
+		Start: 396
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: acol.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: acol.shp
+		Start: 326
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: acol.shp
+		Start: 334
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: acol.shp
+		Start: 342
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: acol.shp
+		Start: 354
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: acol.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: acolicnh.shp
+
+jjet:
+	Inherits: ^CommonDeaths
+	Defaults:
+		Tick: 80
+	idle:
+		Filename: jjet.shp
+		Facings: 8
+		Length: 6
+		Start: 310
+	stand:
+		Filename: jjet.shp
+		Facings: 8
+	run:
+		Filename: jjet.shp
+		Start: 8
+		Length: 6
+		Facings: 8
+	idle1:
+		Filename: jjet.shp
+		Start: 56
+		Length: 15
+	idle2:
+		Filename: jjet.shp
+		Start: 71
+		Length: 15
+	prone-run:
+		Filename: jjet.shp
+		Start: 86
+		Length: 6
+		Facings: 8
+	prone-stand:
+		Filename: jjet.shp
+		Facings: 8
+	flying:
+		Filename: jjet.shp
+		Facings: 8
+		Length: 6
+		Start: 262
+	hover:
+		Filename: jjet.shp
+		Facings: 8
+		Length: 6
+		Start: 310
+	die-twirling:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+	die-falling:
+		Filename: jjet.shp
+		Start: 406
+		Length: 9
+	die-flying:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+	attack:
+		Filename: jjet.shp
+		Start: 182
+		Length: 6
+		Facings: 8
+	flying-attack:
+		Filename: jjet.shp
+		Start: 358
+		Facings: 8
+		Length: 6
+	prone-attack:
+		Filename: jjet.shp
+		Start: 212
+		Length: 6
+		Facings: 8
+	standup:
+		Filename: jjet.shp
+		Start: 230
+		Length: 2
+		Facings: 8
+	die1:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+		Tick: 80
+	die2:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+		Tick: 80
+	die3:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+		Tick: 80
+	die4:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+		Tick: 80
+	die5:
+		Filename: jjet.shp
+		Start: 414
+		Length: 6
+		Tick: 80
+	die7:
+		Filename: jjet.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	die-splash:
+		Filename: h2o_exp1.shp
+		Length: *
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: jjeticnh.shp
+
+rocketeer:
+	Defaults:
+		Filename: rocketeer.shp
+	Inherits: ^CommonDeaths
+	idle:
+		Start: 292
+		Facings: 8
+		Length: 6
+	shoot:
+		Start: 370
+		Length: 6
+		Facings: 8
+	die1:
+		Start: 414
+		Length: 6
+		Tick: 80
+	die2:
+		Start: 414
+		Length: 6
+		Tick: 80
+	die3:
+		Start: 414
+		Length: 6
+		Tick: 80
+	die4:
+		Start: 414
+		Length: 6
+		Tick: 80
+	die5:
+		Start: 414
+		Length: 6
+		Tick: 80
+	die7:
+		Start: 318
+		Length: 8
+		Tick: 80
+	die-splash:
+		Filename: h2o_exp1.shp
+		Length: *
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: rocketeericon.shp
+
+e8:
+	Defaults:
+		Filename: e8.shp
+	Inherits: ^CommonDeaths
+	run:
+		Tick: 120
+	deploy:
+		Start: 299
+		Length: 15
+		Tick: 80
+	deployed:
+		Start: 293
+	deployed-fire:
+		Start: 292
+		Length: 7
+		Tick: 80
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 80
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 80
+	liedown:
+		Start: 260
+	standup:
+		Start: 276
+	liedown:
+		Start: 212
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 228
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Frames: 86, 92, 98, 104, 110, 116, 122, 128
+		Facings: 8
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		Tick: 100
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	walk:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		Tick: 120
+	idle2:
+		Start: 71
+		Length: 15
+		Tick: 120
+	die1:
+		Filename: e8.shp
+		Start: 415
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: e8.shp
+		Start: 424
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: e8.shp
+		Start: 432
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: e8.shp
+		Start: 440
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: e8.shp
+		Start: 452
+		Length: 18
+		Tick: 80
+	die7:
+		Filename: e8.shp
+		Start: 415
+		Length: 9
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: desoicon.shp
+
+n1c:
+	Inherits: ^CommonDeaths
+	Inherits: ^RA2ArmedInfantry
+	Defaults:
+		Filename: n1c.shp
+	run:
+		Tick: 120
+	paradrop:
+		Start: 363
+	cheer:
+		Start: 364
+	idle4:
+		Start: 72
+		Length: 3
+		Facings: 8
+		Tick: 120
+	# Shot
+	die1:
+		Filename: e1.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Filename: e1.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Filename: e1.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Filename: e1.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: e1.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		AddExtension: True
+		Length: *
+	# Electro
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: n1cicnh.shp
+
+n1cold:
+	Defaults:
+		Filename: n1cold.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	idle1:
+		Facings: 8
+	idle2:
+		Facings: 8
+	idle3:
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 72
+		Length: 3
+		Facings: 8
+		Tick: 120
+	# Shot
+	die1:
+		Filename: e1.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Filename: e1.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Filename: e1.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Filename: e1.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: e1.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		AddExtension: True
+		Length: *
+	# Electro
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: n1cicnh.shp
+
+n3c:
+	Defaults:
+		Filename: n3c.shp
+	Inherits: ^CommonDeaths
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 16
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 16
+	idle1:
+		Facings: 8
+	idle2:
+		Facings: 8
+	idle3:
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 88
+		Length: 11
+		Tick: 120
+	# Shot
+	die1:
+		Filename: e1.shp
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Filename: e1.shp
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Filename: e1.shp
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Filename: e1.shp
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Filename: e1.shp
+		Start: 418
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		AddExtension: True
+		Length: *
+	# Electro
+	die7:
+		Filename: electro.shp
+		Length: *
+	die-crushed:
+		Filename: e1rot.shp
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	emp-overlay:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: n3cicnh.shp
+
+cycom:
+	Defaults:
+		Filename: DATA.R8.shp
+		AddExtension: False
+	stand:
+		Start: 930
+		Facings: -8
+		Transpose: true
+	idle1:
+		Frames: 1111, 1118, 1125, 1132, 1139, 1146, 1153, 1160
+		Length: 8
+		Tick: 80
+		Offset: -1,0
+	idle2:
+		Frames: 1112, 1119, 1126, 1133, 1140, 1147, 1154, 1161
+		Length: 8
+		Tick: 80
+		Offset: -1,0
+	run:
+		Start: 938
+		Length: 6
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	shoot:
+		Start: 978
+		Length: 6
+		Facings: -8
+		Transpose: true
+	prone-stand:
+		Start: 1034
+		Facings: -8
+		Transpose: true
+	prone-run:
+		Start: 1042
+		Length: 3
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	standup:
+		Start: 1026
+		Facings: -8
+		Transpose: true
+		Tick: 120
+	prone-shoot:
+		Start: 1058
+		Length: 6
+		Facings: -8
+		Transpose: true
+	die1:
+		Frames: 1106, 1113, 1120, 1127, 1134, 1141, 1148, 1155, 1162, 1163, 1164, 1165
+		Length: 12
+		Tick: 80
+	die2:
+		Frames: 1107, 1114, 1121, 1128, 1135, 1142, 1149, 1156
+		Length: 8
+		Tick: 80
+	die3:
+		Frames: 1108, 1115, 1122, 1129, 1136, 1143, 1150, 1157
+		Length: 8
+		Tick: 80
+	die4:
+		Frames: 1109, 1116, 1123, 1130, 1137, 1144, 1151, 1158
+		Length: 8
+		Tick: 80
+	die5:
+		Frames: 1109, 1116, 1123, 1130, 1137, 1144, 1151, 1158
+		Length: 8
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		AddExtension: True
+		Length: *
+	die7:
+		Frames: 1109, 1116, 1123, 1130, 1137, 1144, 1151, 1158
+		Length: 8
+		Tick: 80
+	die8:
+		Filename: chronozapTD.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: poisonTD.shp
+		AddExtension: True
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		AddExtension: True
+		Length: *
+	die11:
+		Filename: frozen.shp
+		AddExtension: True
+		Length: *
+	die-crushed:
+		Frames: 1110, 1117, 1124, 1131, 1138, 1145, 1152, 1159
+		Length: 8
+		Tick: 800
+		ZOffset: -511
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+		AddExtension: True
+	emp-overlay:
+		Filename: emp_fx02.shp
+		AddExtension: True
+		Length: *
+		BlendMode: Additive
+		Offset: 0, -5
+		ZOffset: 512
+	icon:
+		Filename: rmbocicnh.shp.shp

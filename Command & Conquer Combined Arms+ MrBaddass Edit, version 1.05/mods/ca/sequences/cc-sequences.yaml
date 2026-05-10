@@ -1,0 +1,2643 @@
+afpower:
+	idle:
+		Filename: afpower.shp
+		Start: 1
+		Length: 7
+		Tick: 500
+	damaged-idle:
+		Filename: afpower.shp
+		Start: 1
+		Length: 7
+		Tick: 1000
+	dead:
+		Filename: afpower.shp
+		Start: 1
+	make:
+		Filename: nodnukemake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: nukeicnh.shp
+	
+ncom:
+	idle:
+		Filename: ncom.shp
+	damaged-idle:
+		Filename: ncom.shp
+		Start: 1
+	make:
+		Filename: fcommake.shp
+		Length: *
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: ntekicon.shp
+
+nodspen:
+	idle:
+		Filename: spennod.shp
+	damaged-idle:
+		Filename: spennod.shp
+		Start: 1
+	make:
+		Filename: spennodmake.shp
+		Length: *
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: spennodicnh.shp
+
+ribs:
+	idle:
+		Filename: ribs.shp
+		Length: 15
+		Tick: 100
+	damaged-idle:
+		Filename: ribs.shp
+		Start: 16
+		Length: 16
+		Tick: 100
+	dead:
+		Filename: ribs.shp
+		Start: 32
+	make:
+		Filename: eyemake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: piticon.shp
+
+eyedar:
+	idle:
+		Filename: eyedar.shp
+		Start: 0
+		Length: 32
+		Tick: 100
+	damaged-idle:
+		Filename: eyedar.shp
+		Start: 0
+		Length: 32
+		Tick: 100
+	dead:
+		Filename: eyedar.shp
+		Start: 31
+	make:
+		Filename: eyemake.shp
+		Length: *
+		Tick: 8
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: eyedaricon.shp
+
+meatweap:
+	idle:
+		Filename: meatweap.shp
+		Start: 1
+		Length: 17
+		Tick: 100
+	damaged-idle:
+		Filename: meatweap.shp
+		Start: 1
+		Length: 16
+		Tick: 100
+	dead:
+		Filename: meatweap.shp
+		Start: 20
+	make:
+		Filename: meatweapmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: meatweapicon.shp
+
+fusion:
+	idle:
+		Filename: fusion.shp
+		Start:1
+	damaged-idle:
+		Filename: fusion.shp
+		Start: 1
+		Offset: 0,-10
+	make:
+		Filename: apwrmake.shp
+		Length: *
+		Offset: 0,-10
+	dead:
+		Filename: apwrdead.shp
+		Tick: 800
+		Offset: 0,-10
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: fusionicon.shp
+
+fuze:
+	idle:
+		Filename: fuze.shp
+	make:
+		Filename: gtwrmake.shp
+		Length: *
+	icon:
+		Filename: gtwricnh.shp
+	damaged-idle:
+		Filename: fuze.shp
+		Start: 1
+	dead:
+		Filename: gtwrmake.shp
+		Start: 2
+	bib:
+		Filename: mbFTUR.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbFTUR.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+turb:
+	idle:
+		Filename: turb.shp
+		Start: 1
+		Length: 7
+		Tick: 100
+	damaged-idle:
+		Filename: turb.shp
+		Start: 1
+		Length: 7
+		Tick: 150
+	dead:
+		Filename: turb.shp
+		Start: 9
+	make:
+		Filename: meatweapmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: turbicon.shp
+
+themaw:
+	idle:
+		Filename: themaw.shp
+		Start: 1
+		Length: 1
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-4
+	damaged-idle:
+		Filename: themaw.shp
+		Start: 2
+		Length: 1
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,4
+	active:
+		Filename: themaw.shp
+		Start: 1
+		Length: 1
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,4
+	damaged-active:
+		Filename: themaw.shp
+		Start: 2
+		Length: 1
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,4
+	make:
+		Filename: afldmake.shp
+		Length: *
+		Offset: 0,4
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+		ZOffset: -1024
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: mawicon.shp
+
+portal:
+	idle:
+		Filename: portal.shp
+		Length: 1
+		Tick: 100
+	damaged-idle:
+		Filename: portal.shp
+		Start: 1
+		Length: 1
+		Tick: 100
+	build-top:
+		Filename: portal.shp
+		Length: 22
+		ZOffset: 511
+	damaged-build-top:
+		Filename: portal.shp
+		Start: 1
+		Length: 22
+		ZOffset: 511
+	dead:
+		Filename: portal.shp
+		Start: 1
+	make:
+		Filename: eyemake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: portalicon.shp
+
+fleshpeeler:
+	idle:
+		Filename: fleshpeeler.shp
+		Length: 36
+		Tick: 60
+	damaged-idle:
+		Filename: fleshpeeler.shp
+		Length: 36
+		Tick: 90
+	dead:
+		Filename: fleshpeeler.shp
+		Start: 32
+	make:
+		Filename: eyemake.shp
+		Length: *
+		Tick: 8
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: fleshpeelericon.shp
+
+toothturret:
+	idle:
+		Filename: toothturret.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 0,-13
+	make:
+		Filename: crammake.shp
+		Length: *
+		Offset: 0,-13
+	damaged-idle:
+		Filename: toothturret.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 0,-13
+	muzzle:
+		Filename: gunfire2.shp
+		Start: 1
+		Length: 4
+	bib:
+		Filename: mbAGUN.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbAGUN.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: toothturreticon.shp
+
+boneworks:
+	idle:
+		Filename: boneworks.shp
+		Offset: 0,-1
+	damaged-idle:
+		Filename: boneworks.shp
+		Offset: 0,-1
+	dead:
+		Filename: boneworks.shp
+		Offset: 0,-1
+	stages:
+		Filename: boneworks.shp
+		Offset: 0,-1
+	damaged-stages:
+		Filename: boneworks.shp
+		Offset: 0,-1
+	make:
+		Filename: silo2make.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib:
+		Filename: mbSILO.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbSILO.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: boneworksicon.shp
+
+pool:
+	idle:
+		Filename: pool.shp
+		Length: 8
+		Tick: 60
+		Offset: 0,-1
+	damaged-idle:
+		Filename: pool.shp
+		Length: 8
+		Tick: 30
+		Offset: 0,-1
+	dead:
+		Filename: pool.shp
+		Length: 4
+		Tick: 10
+		Offset: 0,-1
+	stages:
+		Filename: pool.shp
+		Length: 8
+		Tick: 80
+		Offset: 0,-1
+	damaged-stages:
+		Filename: pool.shp
+		Length: 8
+		Offset: 0,-1
+	make:
+		Filename: silo2make.shp
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib:
+		Filename: mbSILO.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbSILO.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: poolicon.shp
+
+glatower:
+	Defaults:
+		Offset: 0,-30
+	idle:
+		Filename: glatower.shp
+	damaged-idle:
+		Filename: glatower.shp
+		Start: 1
+	dead:
+		Filename: glatower.shp
+		Start: 1
+	make:
+		Filename: atwrmake.shp
+		Length: *
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: atwricnh.shp
+		Offset: 0,0
+	bib:
+		Filename: mbFTUR.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbFTUR.sno
+		Offset: -3,0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+camonet:
+	Defaults:
+		Offset: 0,-1
+	idle:
+		Filename: camonet.shp
+	damaged-idle:
+		Filename: camonet.shp
+		Start: 0
+	dead:
+		Filename: camonet.shp
+		Start: 0
+	make:
+		Filename: atwrmake.shp
+		Length: *
+		Tick: 1
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: atwricnh.shp
+		Offset: 0,0
+	bib:
+		Filename: mbFTUR.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mbFTUR.sno
+		Offset: -3,0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+glatent:
+	Defaults:
+		Offset: 0,-1
+	idle:
+		Filename: glatent.shp
+	damaged-idle:
+		Filename: glatent.shp
+		Start: 1
+	dead:
+		Filename: glatent.shp
+		Start: 1
+	make:
+		Filename: atwrmake.shp
+		Length: *
+		Tick: 1
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: atwricnh.shp
+		Offset: 0,0
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+			BARREN: TEMPERAT
+		Offset: -3,0
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+armsdealer:
+	idle:
+		Filename: armsdealer.shp
+	damaged-idle:
+		Filename: armsdealer.shp
+		Start: 1
+	make:
+		Filename: weapmake.shp
+		Length: *
+	build-top:
+		Filename: armsdealer.shp
+		Length: 10
+		ZOffset: 511
+	damaged-build-top:
+		Filename: armsdealer.shp
+		Start: 4
+		Length: 4
+		ZOffset: 511
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 1536
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: weapicon.shp
+	fake-icon:
+		Filename: weaficon.shp
+
+stache:
+	idle:
+		Filename: stache.shp
+		ZOffset: -1c511
+	damaged-idle:
+		Filename: stache.shp
+		Start: 1
+		ZOffset: -1c511
+	idle-top:
+		Filename: proctop.shp
+		ZOffset: 0
+	damaged-idle-top:
+		Filename: proctop.shp
+		Start: 1
+		ZOffset: 0
+	make:
+		Filename: procmake.shp
+		Length: *
+	dead:
+		Filename: stache.shp
+		Start: 1
+		Tick: 800
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: procicon.shp
+
+mechlab:
+	idle:
+		Filename: mechlab.shp
+	damaged-idle:
+		Filename: mechlab.shp
+		Start: 1
+	make:
+		Filename: weapmake.shp
+		Length: *
+	build-top:
+		Filename: mechlab.shp
+		Length: 10
+		ZOffset: 511
+	damaged-build-top:
+		Filename: mechlab.shp
+		Start: 4
+		Length: 4
+		ZOffset: 511
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 1536
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: weapicon.shp
+	fake-icon:
+		Filename: weaficon.shp
+
+digga:
+	idle:
+		Filename: digga.shp
+		Length: 30
+		Tick: 60
+	damaged-idle:
+		Filename: digga.shp
+		Length: 30
+		Tick: 90
+	dead:
+		Filename: digga.shp
+		Start: 32
+	make:
+		Filename: eyemake.shp
+		Length: *
+		Tick: 8
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: digga.shp
+
+raftfact:
+	idle:
+		Filename: raftfact.shp
+	damaged-idle:
+		Filename: raftfact.shp
+		Start: 1
+	make:
+		Filename: raftfact.shp
+		Length: *
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: spenicon.shp
+
+worldcenter:
+	idle:
+		Filename: worldcenter.shp
+	damaged-idle:
+		Filename: worldcenter.shp
+		Start: 1
+	dead:
+		Filename: worldcenter.shp
+		Start: 1
+	make:
+		Filename: worldcenter.shp
+		Length: *
+	bib:
+		Filename: mwbib2.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib2.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 2048
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 2048
+	icon:
+		Filename: awepicnh.shp
+
+skdstorm:
+	idle:
+		Filename: skdstorm.shp
+	damaged-idle:
+		Filename: skdstorm.shp
+		Start: 1
+	make:
+		Filename: skdstorm.shp
+		Length: *
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	bib:
+		Filename: mbPBOX.tem
+		Length: *
+		Offset: 0,-2
+		TilesetFilenames:
+			SNOW: mbPBOX.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: skdstorm.shp
+
+tunnel:
+	idle:
+		Filename: tunnel.shp
+	damaged-idle:
+		Filename: tunnel.shp
+		Start: 0
+	make:
+		Filename: pboxmake.shp
+		Length: *
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	bib:
+		Filename: mbPBOX.tem
+		Length: *
+		Offset: 0,-2
+		TilesetFilenames:
+			SNOW: mbPBOX.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: tunnel.shp
+
+glatech:
+	idle:
+		Filename: glatech.shp
+	damaged-idle:
+		Filename: glatech.shp
+		Start: 1
+	make:
+		Filename: glatech.shp
+		Length: *
+	active:
+		Filename: sputdoor.shp
+		Length: *
+		Offset: -4,0
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: glatech.shp
+	fake-icon:
+		Filename: glatech.shp
+
+soul:
+	idle:
+		Filename: soul.shp
+		Start: 1
+		Length: 7
+		Tick: 3
+	damaged-idle:
+		Filename: soul.shp
+		Start: 1
+		Length: 7
+		Tick: 6
+	dead:
+		Filename: soul.shp
+		Start: 1
+	make:
+		Filename: soul.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: soulicon.shp
+
+tanks:
+	idle:
+		Filename: tanks.shp
+		Start: 0
+	damaged-idle:
+		Filename: tanks.shp
+		Start: 0
+	dead:
+		Filename: tanks.shp
+		Start: 0
+	make:
+		Filename: tanks.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: mwbib3.tem
+		Length: *
+		TilesetFilenames:
+			SNOW: mwbib3.sno
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: soulicon.shp
+
+
+mutquad:
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	idle:
+		Filename: mutquad.shp
+		Facings: -32
+		ShadowStart: 64
+	stand:
+		Filename: mutquad.shp
+		Facings: -32
+		ShadowStart: 64
+	turret:
+		Filename: mutquad.shp
+		Start: 32
+		Facings: -32
+	turret1:
+		Filename: mutquad.shp
+		Start: 32
+		Facings: -32
+	turret0:
+		Filename: mutquad.shp
+		Start: 32
+		Facings: -32
+	muzzle:
+		Filename: flakmuzzle.shp
+		Length: *
+	icon:
+		Filename: mutquad.shp
+		Start: 0
+		Facings: 1
+
+1tnk:
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: 1tnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 1tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 1tnkicon.shp
+
+1tnk.destroyed:
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 1tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+2tnk:
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 2tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 2tnkicon.shp
+
+2tnk.destroyed:
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 2tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+3tnk:
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 3tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 3tnkicon.shp
+
+3tnk.destroyed:
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 3tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+4tnk:
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 4tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 4tnkicon.shp
+
+4tnk.destroyed:
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 4tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mtnknod:
+	idle:
+		Filename: mtnknod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mtnknod.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: mtnknodicnh.shp
+
+stnknod:
+	idle:
+		Filename: stnknod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: stnkicnh.shp
+	
+maa:
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ftrk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: magunicon.shp
+
+maa.destroyed:
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: ftrk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+msamtruck:
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: samtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: samfire.shp
+		Length: 18
+		Facings: 8
+		Offset: -2,-2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: msamtruckicon.shp
+
+msamtruck.destroyed:
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: samtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+
+gcan:
+	idle:
+		Filename: gcan.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: gcanicon.shp
+
+titan:
+	stand:
+		Filename: titan.shp
+		Facings: 16
+	run:
+		Filename: titan.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 100
+	shoot:
+		Filename: titan.shp
+		Length: 1
+		Facings: 16
+		Tick: 100
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: titanicnh.shp
+
+titan.destroyed:
+	idle:
+		Filename: titan.shp
+		Start: 96
+		Facings: -8
+		ZOffset: -512
+
+tankd:
+	idle:
+		Filename: tankd.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: tankd.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: tankdicon.shp
+	
+tankd.destroyed:
+	idle:
+		Filename: tankd.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: tankd.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	
+slugbeast:
+	idle:
+		Filename: slugbeast.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: slugbeasticon.shp
+
+meatwalker:
+	stand:
+		Filename: meatwalker.shp
+		Facings: 16
+	run:
+		Filename: meatwalker.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 100
+	shoot:
+		Filename: meatwalker.shp
+		Length: 1
+		Facings: 16
+		Tick: 100
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: meatwalkericon.shp
+
+chunky:
+	stand:
+		Filename: chunky.shp
+		Facings: 8
+	run:
+		Filename: chunky.shp
+		Start: 16
+		Tick: 60
+		Length: 5
+		Facings: 8
+	bite:
+		Filename: chunky.shp
+		Facings: 8
+	die1:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die2:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die3:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die4:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die5:
+		Filename: chunky.shp
+		Start: 1
+		Length: 18
+	die9:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+
+	die10:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die11:
+		Filename: chunky.shp
+		Start: 1
+		Length: 7
+	die6:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+		TilesetFilenames:
+			SNOW: corpse1.sno
+			BARREN: corpse1.bar
+	icon:
+		Filename: chunkyicon.shp
+
+deathclaw:
+	stand:
+		Filename: deathclaw.shp
+		Facings: 8
+		ShadowStart: 281
+	run:
+		Filename: deathclaw.shp
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 288
+	shoot:
+		Filename: deathclaw.shp
+		Start: 127
+		Length: 12
+		Facings: 8
+		Tick: 30
+		ShadowStart: 407
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 1414icon.shp
+
+livingtnk:
+	idle:
+		Filename: livingtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: livingtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: 2tnkicon.shp
+
+emptylegs:
+	stand:
+		Filename: emptylegs.shp
+		Facings: 16
+	run:
+		Filename: emptylegs.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 100
+	shoot:
+		Filename: emptylegs.shp
+		Length: 1
+		Facings: 16
+		Tick: 100
+	turret:
+		Filename: meataa.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: pectineusicon.shp
+
+scpshp:
+	idle:
+		Filename: scpshp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: scpshp.shp
+		Start: 32
+		Length: 1
+	unload:
+		Filename: scpshp.shp
+		Start: 32
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: apcicon.shp
+
+hibagon:
+	stand:
+		Filename: hibagon.shp
+		Facings: 16
+	run:
+		Filename: hibagon.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 100
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	shoot:
+		Filename: hibagon.shp
+		Length: 1
+		Facings: 16
+		Tick: 100
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: titanicnh.shp
+
+ifv2:
+	idle:
+		Filename: ifv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ltnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: ifvicon2.shp
+
+truckplatform:
+	idle:
+		Filename: truckplatform.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: e3.shp
+		Start: 8
+		Facings: 8
+		LocalOffset: -299,0,179
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: technicalicon2.shp
+
+technical:
+	idle:
+		Filename: truckplatform.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: e1.shp
+		Start: 8
+		Facings: 8
+		LocalOffset: -299,0,179
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: technicalicon.shp
+
+smechnod:
+	stand:
+		Filename: smechnod.shp
+		Start: 96
+		Facings: -8
+	run:
+		Filename: smechnod.shp
+		Facings: -8
+		Length: 12
+		Tick: 100
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	shoot:
+		Filename: smechnod.shp
+		Start: 104
+		Length: 4
+		Facings: -8
+		Tick: 100
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: titanicnh.shp
+
+chindrone:
+	stand:
+		Filename: chindrone.shp
+		Start: 0
+	run:
+		Filename: chindrone.shp
+		Start: 0
+	shoot:
+		Filename: chindrone.shp
+		Start: 1
+	die1:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die2:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die3:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die4:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die5:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die9:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+
+	die10:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die11:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die6:
+		Filename: chindrone.shp
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	die-crushed:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+		Tick: 1000
+		ZOffset: -511
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	icon:
+		Filename: droneicon.shp
+
+fchindrone:
+	stand:
+		Filename: chindrone.shp
+		Start: 0
+	run:
+		Filename: chindrone.shp
+		Start: 0
+	shoot:
+		Filename: chindrone.shp
+		Start: 1
+	die1:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die2:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die3:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die4:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die5:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die9:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+
+	die10:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die11:
+		Filename: chindrone.shp
+		Start: 2
+		Length: 1
+	die6:
+		Filename: chindrone.shp
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	die-crushed:
+		Filename: chindrone.shp
+		Start: 1
+		Length: 1
+		Tick: 1000
+		ZOffset: -511
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	icon:
+		Filename: firedroneicon.shp
+
+greatone:
+	stand:
+		Filename: greatone.shp
+		Start: 0
+		Length: 8
+	run:
+		Filename: greatone.shp
+		Start: 9
+		Length: 4
+	shoot:
+		Filename: greatone.shp
+		Start: 14
+		Length: 5
+		Tick: 30
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: greatoneicon.shp
+
+ugando:
+	stand:
+		Filename: ugando.shp
+		Facings: 8
+	stand2:
+		Filename: ugando.shp
+		Start: 8
+		Facings: 8
+	run:
+		Filename: ugando.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Filename: ugando.shp
+		Start: 64
+		Length: 4
+		Facings: 8
+	liedown:
+		Filename: ugando.shp
+		Start: 96
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: ugando.shp
+		Start: 144
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: ugando.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: ugando.shp
+		Start: 112
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: ugando.shp
+		Start: 112
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Filename: ugando.shp
+		Start: 160
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: ugando.shp
+		Start: 192
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: ugando.shp
+		Start: 208
+		Length: 16
+		Tick: 120
+	idle3:
+		Filename: ugando.shp
+		Start: 224
+		Length: 15
+		Tick: 120
+	cheer:
+		Filename: ugando.shp
+		Start: 396
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: ugando.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: ugando.shp
+		Start: 326
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: ugando.shp
+		Start: 334
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: ugando.shp
+		Start: 342
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: ugando.shp
+		Start: 354
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT
+			WINTER: TEMPERAT
+			DUNE: TEMPERAT
+	die7:
+		Filename: ugando.shp
+		Start: 318
+		Length: 8
+		Tick: 80
+	die8:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT
+			WINTER: TEMPERAT
+			DUNE: TEMPERAT
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+		TilesetFilenames:
+			SNOW: corpse1.sno
+			BARREN: corpse1.bar
+			WINTER: TEMPERAT
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: rmboicnh.shp
+
+mort:
+	stand:
+		Filename: mort.shp
+		Facings: 8
+	stand2:
+		Filename: mort.shp
+		Facings: 8
+	run:
+		Filename: mort.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Filename: mort.shp
+		Start: 64
+		Length: 20
+		Facings: 8
+	liedown:
+		Filename: mort.shp
+		Start: 224
+		Length: 2
+		Facings: 8
+	standup:
+		Filename: mort.shp
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Filename: mort.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Filename: mort.shp
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Filename: mort.shp
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Filename: mort.shp
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Filename: mort.shp
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Filename: mort.shp
+		Start: 400
+		Length: 16
+		Tick: 120
+	cheer:
+		Filename: mort.shp
+		Start: 494
+		Length: 3
+		Facings: 8
+		Tick: 120
+	die1:
+		Filename: mort.shp
+		Start: 416
+		Length: 9
+		Tick: 80
+	die2:
+		Filename: mort.shp
+		Start: 424
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: mort.shp
+		Start: 432
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: mort.shp
+		Start: 440
+		Length: 12
+		Tick: 80
+	die5:
+		Filename: mort.shp
+		Start: 452
+		Length: 18
+		Tick: 80
+	die6:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT
+			WINTER: TEMPERAT
+			DUNE: TEMPERAT
+	die7:
+		Filename: mort.shp
+		Start: 416
+		Length: 9
+		Tick: 80
+	die9:
+		Filename: poisonTD.shp
+		Length: *
+	die10:
+		Filename: poisonTD.shp
+		Length: *
+	die8:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT
+			WINTER: TEMPERAT
+			DUNE: TEMPERAT
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+		TilesetFilenames:
+			SNOW: corpse1.sno
+			BARREN: corpse1.bar
+			WINTER: TEMPERAT
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: morticon.shp
+	
+zombie:
+	stand:
+		Filename: zombie.shp
+		Facings: 8
+	run:
+		Filename: zombie.shp
+		Start: 16
+		Length: 6
+		Facings: 8
+	bite:
+		Filename: zombie.shp
+		Start: 64
+		Length: 4
+		Facings: 8
+	die1:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die8:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die9:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+
+	die10:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die11:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die2:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die3:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die4:
+		Filename: zombie.shp
+		Start: 106
+		Length: 7
+	die5:
+		Filename: zombie.shp
+		Start: 114
+		Length: 18
+	die6:
+		Filename: electroTD.tem
+		Length: *
+		TilesetFilenames:
+			BARREN: electroTD.bar
+	die-crushed:
+		Filename: corpse1.tem
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+		TilesetFilenames:
+			SNOW: corpse1.sno
+			BARREN: corpse1.bar
+	icon:
+		Filename: zombicon.shp
+skyterror:
+	idle:
+		Filename: skyterror.shp
+		Facings: 16
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: yakicon.shp
+
+hindoriginal:
+	idle:
+		Filename: hindoriginal.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotorlg.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotorlg.shp
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: hindicon.shp
+	
+tran4:
+	idle:
+		Filename: tran3.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: tran3.shp
+		Start: 32
+		Length: 4
+	unload:
+		Filename: tran3.shp
+		Start: 35
+	icon:
+		Filename: tranicnh.shp
+	
+frog:
+	idle:
+		Filename: frog.shp
+		Facings: 16
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: frogicon.shp
+	
+mother:
+	idle:
+		Filename: mother.shp
+		Facings: 1
+		Length: 11
+		UseClassicFacingFudge: False
+	turret:
+		Filename: ssam.shp
+		Facings: 32
+	turret2:
+		Filename: 2tnk.shp
+		Start: 32
+		Facings: 32
+	muzzle:
+		Filename: samfire.shp
+		Length: 18
+		Facings: 8
+		Offset: -2,-2
+	muzzle2:
+		Filename: gunfire2.shp
+		Length: 5
+	rotor:
+		Filename: krotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: krotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: kirovicon.shp
+
+wasp:
+	idle:
+		Filename: wasp.shp
+		Facings: -8
+		Length: 14
+		UseClassicFacingFudge: False
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: samfire.shp
+		Length: 18
+		Facings: 8
+		Offset: -2,-2
+	rotor:
+		Filename: krotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: krotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: kirovicon.shp
+
+icbmsub:
+	idle:
+		Filename: nmsub.shp
+		Facings: 16
+	icon:
+		Filename: icbmsubicon.shp
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+carr:
+	idle:
+		Filename: carr.shp
+		Facings: 16
+	spinner:
+		Filename: mrj.shp
+		Start: 32
+		Length: 32
+	icon:
+		Filename: carricon.shp
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+
+raft:
+	idle:
+		Filename: raft.shp
+		Facings: 16
+	turret:
+		Filename: e3.shp
+		Start: 8
+		Facings: 8
+		LocalOffset: 0,0,0
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: rafticon.shp
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512

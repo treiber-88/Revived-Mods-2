@@ -1,0 +1,136 @@
+# MW Kingdom Voices
+
+CommandoVoice:
+	Voices:
+		Select: yeah1,yes1,yo1
+		Move: cmon1,onit1,gotit1
+		Attack: onit1,gotit1,noprblm1
+		Die: ramyell1
+		Burned: ramyell1
+		Zapped: ramyell1
+		Poisoned: ramyell1
+		Build: rokroll1
+		Kill: keepem1,laugh1,lefty1,tuffguy1
+		Action: onit1,gotit1
+
+GDIArcherVoice:
+	Voices:
+		Select: gdi_archer_select1,gdi_archer_select2,gdi_archer_select3,gdi_archer_select5
+		Move: gdi_archer_order1,gdi_archer_order2,gdi_archer_order3,gdi_archer_order4
+		Action: gdi_archer_order1,gdi_archer_order2,gdi_archer_order3,gdi_archer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+NodArcherVoice:
+	Voices:
+		Select: nod_archer_select1,nod_archer_select2,nod_archer_select3,nod_archer_select4
+		Move: nod_archer_order1,nod_archer_order2,nod_archer_order3,nod_archer_order4
+		Action: nod_archer_order1,nod_archer_order2,nod_archer_order3,nod_archer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+GDIKnightVoice:
+	Voices:
+		Select: gdi_knight_select1,gdi_knight_select2,gdi_knight_select3,gdi_knight_select4
+		Move: gdi_knight_order1,gdi_knight_order2,gdi_knight_order3,gdi_knight_order4
+		Action: gdi_knight_order1,gdi_knight_order2,gdi_knight_order3,gdi_knight_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+NodKnightVoice:
+	Voices:
+		Select: nod_knight_select1,nod_knight_select2,nod_knight_select3,nod_knight_select4
+		Move: nod_knight_order1,nod_knight_order2,nod_knight_order3,nod_knight_order4
+		Action: nod_knight_order1,nod_knight_order2,nod_knight_order3,nod_knight_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+GDIPikeVoice:
+	Voices:
+		Select: gdi_pike_select1,gdi_pike_select2,gdi_pike_select3,gdi_pike_select4
+		Move: gdi_pike_order1,gdi_pike_order2,gdi_pike_order3,gdi_pike_order4
+		Action: gdi_pike_order1,gdi_pike_order2,gdi_pike_order3,gdi_pike_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+NodPikeVoice:
+	Voices:
+		Select: nod_pike_select1,nod_pike_select2,nod_pike_select3,nod_pike_select4
+		Move: nod_pike_order1,nod_pike_order2,nod_pike_order3,nod_pike_order4
+		Action: nod_pike_order1,nod_pike_order2,nod_pike_order3,nod_pike_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+NodMageVoice:
+	Voices:
+		Select: nod_mage_select1,nod_mage_select2,nod_mage_select3,nod_mage_select4
+		Move: nod_mage_order1,nod_mage_order2,nod_mage_order3,nod_mage_order4
+		Action: nod_mage_order1,nod_mage_order2,nod_mage_order3,nod_mage_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+HeavyCavalVoice:
+	Voices:
+		Select: 14-i000,14-i002,14-i004
+		Move: 14-i008,14-i010,14-i012,14-i016
+		Action: 14-i008,14-i010,14-i012,14-i016
+		Die: horsedead02,horsedead03
+		Burned: horsedead02,horsedead03
+		Zapped: horsedead02,horsedead03
+		Poisoned: horsedead02,horsedead03
+
+GenericHorseOnly:
+	Voices:
+		Select: await1,ready,report1,yessir1
+		Move: ackno,affirm1,noprob,ritaway,roger,ugotit
+		Action: ackno,affirm1,noprob,ritaway,roger,ugotit
+		Die: horsedead01
+		Burned: horsedead01
+		Zapped: horsedead01
+		Poisoned: horsedead01
+
+EngineerVoice:
+	Voices:
+		Select: engineer_select1,engineer_select2,engineer_select3
+		Move: engineer_order1,engineer_order2,engineer_order3,engineer_order4
+		Action: engineer_order1,engineer_order2,engineer_order3,engineer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+JuggernautVoice:
+	Voices:
+		Select: jugg-i005,jugg-i006,jugg-i007
+		Move: jugg-i000,jugg-i001,jugg-i002
+		Action: jugg-i000,jugg-i001,jugg-i002
+		Die: jugg-i020
+		Burned: jugg-i020
+		Zapped: jugg-i020
+		Poisoned: jugg-i020
+		Build: jugg-i021
+		Kill: jugg-i010,jugg-i011,jugg-i012,jugg-i013
+
+SiegeVoice:
+	Voices:
+		Select: guyyeah1
+		Move: guyokay1
+		Action: guyokay1
+		Die: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2

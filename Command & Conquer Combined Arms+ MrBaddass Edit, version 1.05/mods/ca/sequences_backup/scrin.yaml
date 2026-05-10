@@ -1,0 +1,2044 @@
+^ScrinCommonDeaths:
+	die5:
+		Filename: scrininfdeaths.shp
+		Length: 19
+		Tick: 80
+	die6:
+		Filename: scrininfdeaths.shp
+		Length: 14
+		Start: 19
+	die8:
+		Filename: chronozap.shp
+		Length: *
+		BlendMode: Alpha
+	die9:
+		Filename: scrininfdeaths.shp
+		Start: 33
+		Length: 15
+		Tick: 80
+	die10:
+		Filename: scrininfdeaths.shp
+		Start: 33
+		Length: 15
+		Tick: 80
+	die11:
+		Filename: scrininfdeaths.shp
+		Start: 48
+		Length: 13
+		Tick: 80
+	die-crushed:
+		Filename: scrininfdeaths.shp
+		Start: 61
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+atmzbolt:
+	idle:
+		Filename: atmzbolt.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 40
+
+atmzbolttrail:
+	idle:
+		Filename: atmzbolttrail.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 2047
+
+atmzbolthit:
+	idle:
+		Filename: atmzbolthit.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 2047
+
+atmz:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: atmz.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: atmz.shp
+		Facings: 32
+		Start: 32
+		UseClassicFacings: True
+	icon:
+		Filename: atmzicon.shp
+
+mshp:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mshp.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 2049
+	ring:
+		Filename: mshpring.shp
+		Length: *
+		Tick: 200
+		ZOffset: 2050
+	wormholebeam:
+		Filename: wormholebeam.shp
+		Length: *
+		Tick: 40
+		Offset: 0, 40, 0
+		BlendMode: Additive
+	shield:
+		Filename: mshpshield.shp
+		Facings: 1
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: mshpicon.shp
+
+enrvbolt:
+	idle:
+		Filename: enrvbolt.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 40
+
+enrvbolthit:
+	idle:
+		Filename: enrvbolthit.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 2047
+
+enrv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: enrv.shp
+		Facings: 32
+		UseClassicFacings: True
+	shield:
+		Filename: scrinshield.shp
+		Facings: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: enrvicon.shp
+
+smedi:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: smedi.shp
+		Facings: 8
+	stand2:
+		Filename: smedi.shp
+		Facings: 8
+	heal:
+		Filename: smedi.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	run:
+		Filename: smedi.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle1:
+		Filename: smedi.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: smedi.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: smedi.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: smedi.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: smedi.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: smedi.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: smedi.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: smedi.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: smedi.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: smediicon.shp
+
+s1:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: s1.shp
+		Facings: 8
+	stand2:
+		Filename: s1.shp
+		Facings: 8
+	run:
+		Filename: s1.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: s1.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: s1.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: s1.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: s1.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: s1.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: s1.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: s1.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: s1.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: s1.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: s1.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: scrinmuzz1.shp
+		Length: 4
+		Facings: 8
+		Tick: 80
+	garrison-muzzle:
+		Filename: scrinmuzz1.shp
+		Length: 4
+		Facings: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: s1icon.shp
+
+s2:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: s2.shp
+		Facings: 8
+	stand2:
+		Filename: s2.shp
+		Facings: 8
+	run:
+		Filename: s2.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: s2.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+		Tick: 80
+	idle1:
+		Filename: s2.shp
+		Start: 1
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: s2.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: s2.shp
+		Start: 5
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: s2.shp
+		Start: 7
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: s2.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: s2.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: s2.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: s2.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: s2.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 2
+		Tick: 80
+	garrison-muzzle:
+		Filename: scrinmuzz1.shp
+		Length: 4
+		Facings: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: s2icon.shp
+
+s3:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: s3.shp
+		Facings: 8
+	stand2:
+		Filename: s3.shp
+		Facings: 8
+	run:
+		Filename: s3.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: s3.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: s3.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: s3.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: s3.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: s3.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: s3.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: s3.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: s3.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: s3.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: s3.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: s3icon.shp
+
+s4:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: s4.shp
+		Facings: 8
+	stand2:
+		Filename: s4.shp
+		Facings: 8
+	run:
+		Filename: s4.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: s4.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: s4.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: s4.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: s4.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: s4.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: s4.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: s4.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: s4.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: s4.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: s4.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: s4icon.shp
+
+s6:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: s6.shp
+		Facings: 8
+	stand2:
+		Filename: s6.shp
+		Facings: 8
+	run:
+		Filename: s6.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle1:
+		Filename: s6.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: s6.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: s6.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: s6.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: s6.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: s6.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: s6.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: s6.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: s6.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: s6icon.shp
+
+mast:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: mast.shp
+		Facings: 8
+	stand2:
+		Filename: mast.shp
+		Facings: 8
+	run:
+		Filename: mast.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: mast.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: mast.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: mast.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: mast.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: mast.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: mast.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: mast.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: mast.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: mast.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: mast.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: masticon.shp
+
+cult:
+	Inherits: ^ScrinCommonDeaths
+	stand:
+		Filename: cult.shp
+		Facings: 8
+	stand2:
+		Filename: cult.shp
+		Facings: 8
+	run:
+		Filename: cult.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	shoot:
+		Filename: cult.shp
+		Start: 40
+		Length: 4
+		Facings: 8
+	idle1:
+		Filename: cult.shp
+		Length: 1
+		Tick: 120
+	idle2:
+		Filename: cult.shp
+		Start: 2
+		Length: 1
+		Tick: 120
+	idle3:
+		Filename: cult.shp
+		Start: 3
+		Length: 1
+		Tick: 120
+	idle4:
+		Filename: cult.shp
+		Start: 4
+		Length: 1
+		Tick: 120
+	die1:
+		Filename: cult.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	die2:
+		Filename: cult.shp
+		Start: 80
+		Length: 8
+		Tick: 80
+	die3:
+		Filename: cult.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die4:
+		Filename: cult.shp
+		Start: 88
+		Length: 8
+		Tick: 80
+	die7:
+		Filename: cult.shp
+		Start: 72
+		Length: 8
+		Tick: 80
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mc:
+		Filename: mindcontroller.shp
+		Length: *
+		Tick: 120
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: culticon.shp
+
+harv.scrin:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harvscrin.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	harvest:
+		Filename: scrinharvest.shp
+		Length: *
+		ZOffset: -128
+		BlendMode: Additive
+	shield:
+		Filename: scrinshieldsmall.shp
+		Facings: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: harvscrinicon.shp
+
+harv.scrin.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harvscrin.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+gunw:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: gunw.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: gunw.shp
+		Start: 32
+		Facings: 32
+		Length: 2
+		Tick: 80
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz1.shp
+		Length: 4
+		Facings: 8
+		Tick: 80
+	icon:
+		Filename: gunwicon.shp
+
+gunw.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: gunw.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+seek:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: seek.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: seek.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: seekicon.shp
+
+seek.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: seek.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: seek.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+lace:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: lace.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: lace.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: laceicon.shp
+
+lace.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: lace.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: lace.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+intl:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: intl.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 2
+	icon:
+		Filename: intlicon.shp
+
+intl.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: intl.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+corr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: corr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: corr.shp
+		Start: 32
+		Facings: 32
+		Length: 2
+		Tick: 150
+		UseClassicFacingFudge: True
+	icon:
+		Filename: corricon.shp
+
+corr.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: corr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+stcr
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stcr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz2.shp
+		Length: 2
+	icon:
+		Filename: stcricon.shp
+
+devo:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: devo.shp
+		Facings: 1
+		Start: 32
+	turret:
+		Filename: devo.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 5
+	icon:
+		Filename: devoicon.shp
+
+devo.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: devo.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+dark:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: dark.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: dark.shp
+		Facings: 32
+		Start: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 5
+		BlendMode: Subtractive
+	icon:
+		Filename: darkicon.shp
+
+dark.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: dark.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: dark.shp
+		Facings: 32
+		Start: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 5
+		BlendMode: Subtractive
+
+ruin:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ruin.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 5
+	icon:
+		Filename: ruinicon.shp
+
+ruin.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ruin.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+tpod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tpod.shp
+		Facings: 1
+		Start: 32
+	turret:
+		Filename: tpod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: rptp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 0,-25
+	move:
+		Filename: tpod.shp
+		Start: 33
+		Facings: 8
+		Length: 14
+		Tick: 60
+	shield:
+		Filename: scrinshieldtripod.shp
+		BlendMode: Additive
+	muzzle:
+		Filename: scrinmuzz2.shp
+		Length: 5
+	muzzle2:
+		Filename: scrinmuzz3.shp
+		Length: 5
+	icon:
+		Filename: tpodicon.shp
+
+tpod.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tpod.shp
+		Facings: 1
+		Start: 32
+		ZOffset: -512
+	turret:
+		Filename: tpod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+rptp:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tpod.shp
+		Facings: 1
+		Start: 32
+	turret:
+		Filename: rptp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 0,-25
+	turret2:
+		Filename: rptp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 0,-25
+	move:
+		Filename: tpod.shp
+		Start: 33
+		Facings: 8
+		Length: 14
+		Tick: 60
+	shield:
+		Filename: scrinshieldtripod.shp
+		BlendMode: Additive
+	muzzle:
+		Filename: scrinmuzz3.shp
+		Length: 5
+	muzzle2:
+		Filename: scrinmuzz3.shp
+		Length: 5
+	icon:
+		Filename: rptpicon.shp
+
+rptp.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tpod.shp
+		Facings: 1
+		Start: 32
+		ZOffset: -512
+	turret:
+		Filename: rptp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+smcv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: smcv.shp
+		Facings: 1
+		Offset: 0, -4
+	icon:
+		Filename: smcvicon.shp
+
+smcv.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: smcv.shp
+		Facings: 1
+		ZOffset: -512
+
+smov:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: smcv.shp
+		Facings: 1
+		Offset: 0, -4
+	icon:
+		Filename: exploericon.shp
+
+smov.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: smcv.shp
+		Facings: 1
+		ZOffset: -512
+
+stmr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stmr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	shield:
+		Filename: scrinshieldsmall.shp
+		Facings: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: stmricon.shp
+
+deva:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: deva.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	shield:
+		Filename: scrinshield.shp
+		Facings: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: devaicon.shp
+
+pac:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: pac.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	half-deployed:
+		Filename: pac.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	fully-deployed:
+		Filename: pac.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	shield:
+		Filename: scrinshield.shp
+		Facings: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: pacicon.shp
+
+inva:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: inva.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: wipicon.shp
+
+#
+# ---- buildings
+#
+
+swal:
+	idle:
+		Filename: swal.shp
+		Length: 16
+	scratched-idle:
+		Filename: swal.shp
+		Start: 16
+		Length: 16
+	damaged-idle:
+		Filename: swal.shp
+		Start: 32
+		Length: 16
+	icon:
+		Filename: swalicon.shp
+
+outpostscrin:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	build:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	pdox:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-idle:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-build:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-pdox:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	make:
+		Filename: sfacmake.shp
+		Length: *
+		Tick: 80
+		Offset: 0, -13
+	bib:
+		Filename: bib2.tem
+		Length: *
+	icon:
+		Filename: afacicon.shp
+
+
+sfac:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	build:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	pdox:
+		Filename: sfac.shp
+		Length: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-idle:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-build:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	damaged-pdox:
+		Filename: sfac.shp
+		Length: 1
+		Start: 1
+		Tick: 160
+		Offset: 0, -13
+	make:
+		Filename: sfacmake.shp
+		Length: *
+		Tick: 80
+		Offset: 0, -13
+	bib:
+		Filename: bib2.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: afacicon.shp
+
+reac:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: reac.shp
+	damaged-idle:
+		Filename: reac.shp
+		Start: 1
+	make:
+		Filename: reacmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: bib3.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: reacicon.shp
+
+proc.scrin:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: procscrin.shp
+		Offset: -2,0
+	damaged-idle:
+		Filename: procscrin.shp
+		Start: 1
+		Offset: -2,0
+	make:
+		Filename: procscrinmake.shp
+		Length: *
+		Tick: 80
+		Offset: -2,0
+	bib:
+		Filename: bib2.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: procscrinicon.shp
+
+port:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: port.shp
+		Length: 1
+	idle-overlay:
+		Filename: port.shp
+		Start: 2
+		Length: 13
+		BlendMode: Additive
+		ZOffset: -512
+	damaged-idle:
+		Filename: port.shp
+		Start: 1
+		Length: 1
+	make:
+		Filename: portmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: bib3.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: porticon.shp
+
+wsph:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: wsph.shp
+		ZOffset: -512
+	idle-overlay:
+		Filename: wsph.shp
+		Start: 2
+		Length: 13
+		BlendMode: Additive
+		ZOffset: -256
+	emp-overlay:
+		Filename: emp_fx01.shp
+		ZOffset: 2048
+	chrono-overlay:
+		Filename: chronofade.shp
+		ZOffset: 2048
+	damaged-idle:
+		Filename: wsph.shp
+		Start: 1
+		ZOffset: -512
+	make:
+		Filename: wsphmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: bib2.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: wsphicon.shp
+
+grav:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: grav.shp
+		ZOffset: -512
+	idle-overlay:
+		Filename: grav.shp
+		Start: 3
+		Length: 13
+		BlendMode: Additive
+		Offset: 0,-1
+		ZOffset: -256
+	idle-pylon:
+		Filename: grav.shp
+		Start: 2
+		Length: 1
+		ZOffset: 2048
+	damaged-idle:
+		Filename: grav.shp
+		Start: 1
+		ZOffset: -512
+	make:
+		Filename: gravmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: bib2.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: gravicon.shp
+
+nerv:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: nerv.shp
+	damaged-idle:
+		Filename: nerv.shp
+		Start: 1
+	make:
+		Filename: nervmake.shp
+		Length: *
+		Tick: 80
+	bib:
+		Filename: bib3.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: nervicon.shp
+
+srep:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: srep.shp
+		Offset: 0,4
+		ZOffset: -1c511
+	damaged-idle:
+		Filename: srep.shp
+		Start: 10
+		Offset: 0,4
+		ZOffset: -1c511
+	active:
+		Filename: srep.shp
+		Length: 10
+		Offset: 0,4
+		Tick: 80
+		ZOffset: -1c511
+	damaged-active:
+		Filename: srep.shp
+		Length: 10
+		Start: 10
+		Offset: 0,4
+		Tick: 80
+		ZOffset: -1c511
+	make:
+		Filename: srepmake.shp
+		Length: *
+		Offset: 0,4
+		Tick: 80
+	bib:
+		Filename: mbFIX.tem
+		Length: *
+		ZOffset: -1c511
+		Offset: 0,-4
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: srepicon.shp
+
+rea2:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: rea2.shp
+		Offset: 2,0
+	damaged-idle:
+		Filename: rea2.shp
+		Start: 1
+		Offset: 2,0
+	make:
+		Filename: rea2make.shp
+		Length: *
+		Offset: 2,0
+		Tick: 80
+	bib:
+		Filename: bib2.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: rea2icon.shp
+
+scrt:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: scrt.shp
+		Offset: 3,0
+	damaged-idle:
+		Filename: scrt.shp
+		Offset: 3,0
+		Start: 1
+	make:
+		Filename: scrtmake.shp
+		Length: *
+		Offset: 3,0
+		Tick: 80
+	bib:
+		Filename: bib3.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: scrticon.shp
+
+silo.scrin:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: siloscrin.shp
+		Offset: 0,-1
+	damaged-idle:
+		Filename: siloscrin.shp
+		Offset: 0,-1
+		Start: 5
+	stages:
+		Filename: siloscrin.shp
+		Length: 5
+		Offset: 0,-1
+	damaged-stages:
+		Filename: siloscrin.shp
+		Start: 5
+		Length: 5
+		Offset: 0,-1
+	make:
+		Filename: siloscrinmake.shp
+		Length: *
+		Offset: 0,-1
+	bib:
+		Filename: mbSILO.tem
+		Length: *
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: siloscrinicon.shp
+
+sign:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: sign.shp
+	damaged-idle:
+		Filename: sign.shp
+		Start: 1
+	bib:
+		Filename: bib2.tem
+		Length: *
+	make:
+		Filename: signmake.shp
+		Length: *
+		Tick: 80
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: signicon.shp
+
+clone:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: clone.shp
+	damaged-idle:
+		Filename: clone.shp
+		Start: 1
+	bib:
+		Filename: bib3.tem
+		Length: *
+	idle-overlay:
+		Filename: clone.shp
+		Start: 2
+		Length: 15
+		Tick: 40
+		BlendMode: Additive
+		ZOffset: -256
+	emp-overlay:
+		Filename: emp_fx01.shp
+		ZOffset: 2048
+	chrono-overlay:
+		Filename: chronofade.shp
+		ZOffset: 2048
+	make:
+		Filename: clonemake.shp
+		Length: 10
+		Tick: 80
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: cloneicon.shp
+
+mani:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: mani.shp
+	damaged-idle:
+		Filename: mani.shp
+		Start: 1
+	bib:
+		Filename: bib3.tem
+		Length: *
+	make:
+		Filename: manimake.shp
+		Length: *
+		Tick: 80
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: maniicon.shp
+
+rift:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: rift.shp
+	damaged-idle:
+		Filename: rift.shp
+		Start: 1
+	active:
+		Filename: rift.shp
+	damaged-active:
+		Filename: rift.shp
+		Start: 1
+	make:
+		Filename: riftmake.shp
+		Length: *
+		Tick: 80
+	active-overlay:
+		Filename: rift.shp
+		Start: 2
+		Length: 13
+		BlendMode: Subtractive
+		ZOffset: 511
+		Offset: 0,-30
+	bib:
+		Filename: mbIRON.tem
+		Length: *
+		Offset: 0,2
+	shield:
+		Filename: nshieldbig.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: rifticon.shp
+
+ptur:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: ptur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 1,-6
+	make:
+		Filename: pturmake.shp
+		Length: *
+		Offset: 1,-6
+	damaged-idle:
+		Filename: ptur.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 1,-6
+	muzzle:
+		Filename: scrinmuzz1.shp
+		Length: 4
+		Facings: 8
+		Tick: 80
+	bib:
+		Filename: mbGUN.tem
+		Length: *
+		Offset: -1,-1
+	shield:
+		Filename: nshield.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: pturicon.shp
+
+shar:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: shar.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 1,-11
+	make:
+		Filename: sharmake.shp
+		Length: *
+		Offset: 1,-11
+	damaged-idle:
+		Filename: shar.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		Offset: 1,-11
+	bib:
+		Filename: mbTSLA.tem
+		Length: *
+	shield:
+		Filename: nshield.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	icon:
+		Filename: sharicon.shp
+
+scol:
+	Inherits: ^StructureOverlays
+	idle:
+		Filename: scol.shp
+		Start: 1
+		Length: 7
+		Tick: 300
+		Offset: 0,-12
+	damaged-idle:
+		Filename: scol.shp
+		Start: 8
+		Length: 5
+		Tick: 300
+		Offset: 0,-12
+	disabled:
+		Filename: scol.shp
+		Start: 0
+		Length: 1
+	idle-offline:
+		Filename: scol.shp
+		Start: 0
+		Length: 1
+	damaged-idle-offline:
+		Filename: scol.shp
+		Start: 14
+		Length: 1
+	make:
+		Filename: scolmake.shp
+		Length: *
+		Offset: 0,-12
+	shield:
+		Filename: nshield.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: 1022
+		BlendMode: Additive
+	bib:
+		Filename: mbSAM.tem
+		Length: *
+		Offset: 0,1
+	icon:
+		Filename: scolicon.shp
+
+#
+# ---- animations
+#
+
+plasdiscsm:
+	idle:
+		Filename: plasdiscsm.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 50
+
+plasdiscmd:
+	idle:
+		Filename: plasdiscmd.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 50
+
+plasdisclg:
+	idle:
+		Filename: plasdisclg.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 50
+
+tibglob:
+	idle:
+		Filename: tibglob.shp
+		BlendMode: Additive
+		Length: *
+		ZOffset: 1023
+		Tick: 40
+
+tibexplode:
+	idle:
+		Filename: tibexplode.shp
+		Length: *
+		ZOffset: 2047
+
+scrinzap:
+	idle:
+		Filename: scrinzap.shp
+		ZOffset: 1023
+		Facings: 32
+
+scrinzapdown:
+	idle:
+		Filename: scrinzapdown.shp
+		ZOffset: 1023
+		Facings: 32
+
+scrinzapup:
+	idle:
+		Filename: scrinzapup.shp
+		ZOffset: 1023
+		Facings: 32
+
+scrinzaphit:
+	idle:
+		Filename: scrinmuzz2.shp
+		ZOffset: 1023
+		Length: 5
+
+scrinzaphitsm:
+	idle:
+		Filename: scrinzaphitsm.shp
+		ZOffset: 1023
+		Length: 3
+
+shardhit:
+	idle:
+		Filename: shardhit.shp
+		Length: 3
+		ZOffset: 1023
+	idle2:
+		Filename: shardhit.shp
+		Start: 3
+		Length: 3
+		ZOffset: 1023
+	idle3:
+		Filename: shardhit.shp
+		Start: 6
+		Length: 3
+		ZOffset: 1023
+	idle4:
+		Filename: shardhit.shp
+		Start: 9
+		Length: 3
+		ZOffset: 1023
+
+shard:
+	idle:
+		Filename: shard.shp
+		Facings: 32
+		ZOffset: 1023
+
+bshardhit:
+	idle:
+		Filename: bshardhit.shp
+		Length: 3
+		ZOffset: 1023
+	idle2:
+		Filename: bshardhit.shp
+		Start: 3
+		Length: 3
+		ZOffset: 1023
+	idle3:
+		Filename: bshardhit.shp
+		Start: 6
+		Length: 3
+		ZOffset: 1023
+	idle4:
+		Filename: bshardhit.shp
+		Start: 9
+		Length: 3
+		ZOffset: 1023
+
+bshard:
+	idle:
+		Filename: bshard.shp
+		Facings: 32
+		ZOffset: 1023
+
+mindcontrol:
+	idle:
+		Filename: mindcontrol.shp
+		Tick: 40
+		ZOffset: 2048
+		Length: *
+		Offset: 0,-4
+
+riftanim:
+	idle:
+		Filename: riftloop.shp
+		Tick: 40
+		Length: *
+		ZOffset: 2048
+		BlendMode: Subtractive
+	spawn:
+		Filename: riftstart.shp
+		Tick: 40
+		Length: *
+		ZOffset: 2048
+		BlendMode: Subtractive
+	fade:
+		Filename: riftend.shp
+		Tick: 40
+		Length: *
+		ZOffset: 2048
+		BlendMode: Subtractive
+
+miniriftanim:
+	idle:
+		Filename: miniriftloop.shp
+		Tick: 40
+		Length: *
+		ZOffset: 2048
+		BlendMode: Subtractive
+
+buzz:
+	idle:
+		Filename: buzz.shp
+		Tick: 60
+		Length: *
+		ZOffset: 2048
+		BlendMode: Additive
+
+ionsurge:
+	idle:
+		Filename: ionsurgeloop.shp
+		Tick: 40
+		Length: *
+		ZOffset: 2048
+		BlendMode: Additive
+
+scrinwipicon:
+	icon:
+		Filename: wipicon.shp

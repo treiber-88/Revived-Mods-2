@@ -1,0 +1,439 @@
+# MW Kingdom Infantry - rewritten for CA edit engine
+
+KING:
+	Inherits: ^MWInfantry
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation:
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	RenderSprites:
+		Image: koenig
+		Palette: mwbase
+	Mobile:
+		Locomotor: foot
+		Speed: 55
+		Voice: Move
+	GivesBountyCA:
+		Percentage: 50
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Your Highness
+		GenericName: King
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+		Description: The ruler over your Kingdom!\n  Very strong against Infantry and Cavalry\n  Cannot attack Buildings\n  Detects cloaked units
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+		BuildLimit: 1
+	Health:
+		HP: 35000
+	Armor:
+		Type: Knight
+	Armament:
+		Weapon: KingsSword
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	AttackFrontal:
+		Voice: Attack
+	DetectCloaked:
+	CaptureManager:
+	Captures:
+		CaptureTypes: horse
+	-Crushable:
+	Voiced:
+		VoiceSet: CommandoVoice
+	AnnounceOnKill:
+
+E1NEW:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e1new
+		Palette: mwbase
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Farmer
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 101
+		Prerequisites: mwbarr
+		Description: Basic farmer militia. Cheap but weak.\n  Anti-infantry pitchfork attack.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: Fork
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+E2NEW:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e2new
+		Palette: mwbase
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Pike Guard
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 102
+		Prerequisites: mwbarr
+		Description: Anti-cavalry spearman. Strong against horses.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: Pike
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+E2NEWV2:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e2new
+		Palette: mwbase
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Halberd Guard
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 103
+		Prerequisites: mwbarr
+		Description: Halberdier with area attack. Effective against cavalry.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: PikeSpread
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+E3NEW:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e3new
+		Palette: mwbase
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Knight
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 104
+		Prerequisites: mwbarr
+		Description: Armored swordsman. Well-rounded fighter.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Knight
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+E3NEWV2:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e3new
+		Palette: mwbase
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Footman
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 105
+		Prerequisites: mwbarr
+		Description: Lightly armored swordsman. Fast and expendable.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+FRMGE:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e3new
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+	Valued:
+		Cost: 375
+	Tooltip:
+		Name: Fire Mage
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 106
+		Prerequisites: mwbarr
+		Description: Magical fire attack. Burns through most armor.\n  Detects cloaked units.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament@Ground:
+		Weapon: MageFire
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+E4NEW:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e4new
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Archer
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 107
+		Prerequisites: mwbarr
+		Description: Archer with long range. Can engage air targets.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: BowNArrow
+	Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+	Armament@Air:
+		Weapon: BowNArrowAir
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+
+E4NEWV2:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: e4newv2
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Archer
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 108
+		Prerequisites: mwbarr
+		Description: Veteran archer. More accurate than standard archers.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Leather
+	Armament:
+		Weapon: BowNArrow
+	Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+	Armament@Air:
+		Weapon: BowNArrowAir
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+
+RMBONEW:
+	Inherits: ^MWInfantry
+	RenderSprites:
+		Image: rmbonew
+		Palette: mwbase
+	RevealsShroud:
+		Range: 7c0
+	Valued:
+		Cost: 475
+	Tooltip:
+		Name: Paladin
+		GenericName: Soldier
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 109
+		Prerequisites: mwbarr
+		Description: Holy warrior with ranged crossbow attack.\n  Reveals shroud at long range.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 8000
+	Armor:
+		Type: Knight
+	Armament:
+		Weapon: paladingun
+	Armament@visual:
+		Weapon: paladingunvisual
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	WithMuzzleOverlay:
+
+NEWCOMM:
+	Inherits: ^MWInfantry
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithMoveAnimation:
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	-Crushable:
+	RenderSprites:
+		Image: newcomm
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Juggernaut
+		GenericName: Hero
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 110
+		Prerequisites: mwbarr
+		Description: Massive armored warrior. Devastating area attack.\n  Cannot be crushed.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 80000
+	Armor:
+		Type: Knight
+	Armament@1:
+		Weapon: Sledgehammer
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AnnounceOnKill:
+
+ENGENEER:
+	Inherits: ^MWInfantry
+	-WithDeathAnimation:
+	RenderSprites:
+		Image: e1new
+		Palette: mwbase
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Engineer
+		GenericName: Engineer
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 115
+		Prerequisites: mwbarr
+		Description: Captures enemy buildings and repairs siege engines.
+		Queue: MWInfantry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 4000
+	Armor:
+		Type: Leather
+	CaptureManager:
+	Captures:
+		CaptureTypes: building, husk
+	Armament@Build:
+		Weapon: MWRepair
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 3
+		InitialStance: AttackAnything
+	Passenger:
+		PipType: Green
+		Voice: Move
+
+# King husk (spawns on death, allows respawn after delay)
+Husk.KING:
+	Inherits: ^ExistsInWorld
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+		Image: koenig
+		Palette: mwbase
+	WithSpriteBody:
+		Sequence: stand-dead
+	Health:
+		HP: 1
+	Armor:
+	HitShape:
+	Tooltip:
+		Name: Surrendered
+	Mobile:
+		Locomotor: foot
+		Speed: 0
+	Selectable:
+		Bounds: 768, 768, 0, -256
+	SelectionDecorations:
+	HiddenUnderFog:
+	SpawnActorOnDeath:
+		Actor: KING
+	ProvidesPrerequisite:

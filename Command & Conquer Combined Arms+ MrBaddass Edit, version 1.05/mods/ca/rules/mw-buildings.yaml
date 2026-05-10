@@ -1,0 +1,455 @@
+# MW Kingdom Buildings - rewritten for CA edit engine
+
+MWFACT:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: newfact
+		Palette: mwbase
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 3072, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -36,-36
+			BottomRight: 36,36
+	Health:
+		HP: 500000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 10c0
+	Exit@1:
+		SpawnOffset: -18,18,0
+		ExitCell: -1,1
+	Exit@2:
+		SpawnOffset: 18,18,0
+		ExitCell: 0,1
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Keep
+		GenericName: Construction Yard
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 10
+		Prerequisites: ~disabled
+		Description: The heart of your Kingdom. Constructs all buildings.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	Production:
+		Produces: MWBuilding
+	CashTrickler:
+		Interval: 300
+		Amount: 50
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite:
+		Prerequisite: mwfact
+	WithIdleOverlay:
+		Sequence: active
+		RequiresCondition: production
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 3000
+		PlayerExperience: 15
+
+MWBARR:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: barrnew
+		Palette: mwbase
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 2048, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -24,-36
+			BottomRight: 24,36
+	Health:
+		HP: 50000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: -12,36,0
+		ExitCell: -1,1
+	Exit@2:
+		SpawnOffset: 12,36,0
+		ExitCell: 0,1
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Barracks
+		GenericName: Barracks
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 11
+		Prerequisites: mwfact
+		Description: Trains infantry units.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	Production:
+		Produces: MWInfantry
+	ProvidesPrerequisite:
+		Prerequisite: mwbarr
+	WithIdleOverlay:
+		Sequence: idle
+		RequiresCondition: production
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWSTALL:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: stall
+		Palette: mwbase
+	Building:
+		Footprint: xxx xx= ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 3072, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -36,-36
+			BottomRight: 36,36
+	Health:
+		HP: 100000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	Exit@1:
+		SpawnOffset: 24,28,0
+		ExitCell: 0,1
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Stables
+		GenericName: Stables
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 12
+		Prerequisites: mwfact
+		Description: Trains cavalry units.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	Production:
+		Produces: MWCavalry
+	ProvidesPrerequisite:
+		Prerequisite: mwstall
+	WithSpriteBody:
+		Sequence: idle
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 2000
+		PlayerExperience: 15
+
+MWWORKSHOP:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: gdifix
+		Palette: mwbase
+	Building:
+		Footprint: xxx xx= ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 3072, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -36,-36
+			BottomRight: 36,36
+	Health:
+		HP: 75000
+	Armor:
+		Type: HeavyBuilding
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: -8,8,0
+		ExitCell: -1,1
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Siege Workshop
+		GenericName: Workshop
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 13
+		Prerequisites: mwfact
+		Description: Constructs siege weapons.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	Production:
+		Produces: MWSiege
+	ProvidesPrerequisite:
+		Prerequisite: mwworkshop
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1500
+		PlayerExperience: 15
+
+MWHQ:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: obs
+		Palette: mwbase
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 2048, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -24,-36
+			BottomRight: 24,36
+	Health:
+		HP: 70000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 14c0
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Observatory
+		GenericName: Observatory
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 14
+		Prerequisites: mwfact
+		Description: Reveals large area. Unlocks advanced units.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	ProvidesPrerequisite:
+		Prerequisite: mwhq
+	WithIdleOverlay:
+		Sequence: active
+		Condition: powered
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWCASTLE:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: castle2
+		Palette: mwbase
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 3072, 4096
+	HitShape:
+		Type: Rectangle
+			TopLeft: -36,-48
+			BottomRight: 36,48
+	Health:
+		HP: 180000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Castle
+		GenericName: Castle
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 15
+		Prerequisites: mwhq
+		Description: Powerful fortification. Unlocks elite units.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	ProvidesPrerequisite:
+		Prerequisite: mwcastle
+	WithIdleOverlay:
+		Sequence: active
+		Condition: powered
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 3000
+		PlayerExperience: 15
+
+MWWINDMILL:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: mwwindmill
+		Palette: mwbase
+	Building:
+		Footprint: __ xx x= ==
+		Dimensions: 2,4
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 2048, 4096
+	HitShape:
+		Type: Rectangle
+			TopLeft: -24,-48
+			BottomRight: 24,48
+	Health:
+		HP: 80000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 3c0
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Windmill
+		GenericName: Power Plant
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 16
+		BuildDurationModifier: 50
+		Prerequisites: mwfact
+		Description: Provides power for other structures.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	Power:
+		Amount: 100
+	CashTrickler:
+		Interval: 200
+		Amount: 150
+	ProvidesPrerequisite:
+		Prerequisite: mwproc
+	WithIdleOverlay:
+		Sequence: idle
+		Condition: powered
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1500
+		PlayerExperience: 15
+
+MWNUKESMALL:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: nukenew
+		Palette: mwbase
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 2048, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -24,-36
+			BottomRight: 24,36
+	Health:
+		HP: 50000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Small Hut
+		GenericName: Hut
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 17
+		Prerequisites: mwfact
+		Description: Expands base radius.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	ProvidesPrerequisite:
+		Prerequisite: mwnuke
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWNUKELARGE:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: nuk2new
+		Palette: mwbase
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 2048, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -24,-36
+			BottomRight: 24,36
+	Health:
+		HP: 70000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Large Hut
+		GenericName: Hut
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 18
+		Prerequisites: mwfact
+		Description: Expands base radius. More durable than the Small Hut.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	ProvidesPrerequisite:
+		Prerequisite: mwnuke
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWNUKEXL:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: nukxl
+		Palette: mwbase
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 3072, 3072
+	HitShape:
+		Type: Rectangle
+			TopLeft: -36,-36
+			BottomRight: 36,36
+	Health:
+		HP: 120000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Extra Large Hut
+		GenericName: Hut
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 19
+		Prerequisites: mwfact
+		Description: Large fortified hut. Greatly expands base radius.
+		Queue: MWBuilding
+		Factions: kingdom, baron, sultanate, undead
+	ProvidesPrerequisite:
+		Prerequisite: mwnuke
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 2000
+		PlayerExperience: 15

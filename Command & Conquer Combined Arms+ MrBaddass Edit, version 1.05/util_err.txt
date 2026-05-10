@@ -1,0 +1,7 @@
+Unhandled exception. OpenRA.YamlException: Error parsing GameSpeeds: Missing Speeds node!
+   at OpenRA.GameSpeeds.LoadSpeeds(MiniYaml y)
+   at OpenRA.FieldLoader.Load(Object self, MiniYaml my)
+   at OpenRA.Manifest.LoadCustomData(ObjectCreator oc)
+   at OpenRA.ModData..ctor(Manifest mod, InstalledMods mods, Boolean useLoadScreen)
+   at OpenRA.Program.Run(String[] args)
+   at OpenRA.Program.Main(String[] args)

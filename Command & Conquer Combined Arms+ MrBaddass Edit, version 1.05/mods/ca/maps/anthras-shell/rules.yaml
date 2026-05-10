@@ -1,0 +1,245 @@
+^Palettes:
+	PaletteFromFile@terrain-temperat:
+		Filename: lush.pal
+	GlobalLightingPaletteEffect:
+		Red: 1.00
+		Green: 1.00
+		Blue: 1.05
+		Ambient: 0.8
+
+World:
+	-CrateSpawner:
+	-StartGameNotification:
+	MusicPlaylist:
+		BackgroundMusic: moi2
+		AllowMuteBackgroundMusic: true
+		DisableWorldSounds: true
+	LuaScript:
+		Scripts: shellmap.lua
+	WeatherOverlay@RAIN:
+		WindTick: 150, 550
+		UseSquares: false
+		ScatterDirection: 0, 0
+		Gravity: 20, 25
+		SwingOffset: 0, 0
+		SwingSpeed: 0, 0
+		SwingAmplitude: 0, 0
+		ParticleColors: 72aaae, 72aea6, 5caea3, 6da69f
+		LineTailAlphaValue: 30
+		ParticleSize: 1, 1
+		ParticleDensityFactor: 5
+
+SPLIT2:
+	TerrainLightSource:
+		Range: 6c0
+		Intensity: 0.1
+		GreenTint: 0.3
+	SeedsResourceCA:
+		Interval: 35
+
+SPLIT3:
+	TerrainLightSource:
+		Range: 6c0
+		Intensity: 0.1
+		GreenTint: 0.3
+	SeedsResourceCA:
+		Interval: 35
+
+SPLITBLUE:
+	TerrainLightSource:
+		Range: 6c0
+		Intensity: 0.1
+		BlueTint: 0.3
+	SeedsResourceCA:
+		Interval: 35
+
+UPGC:
+	GrantCondition@RADAR:
+		Condition: tower.radar
+
+AIRS:
+	ProductionAirdropCA@SQVEH:
+		ProportionalSpeed: false
+	ProductionAirdropCA@MQVEH:
+		ProportionalSpeed: false
+
+powerproxy.paratroopers.xo:
+	Inherits: ^InvisibleDummy
+	ParatroopersPower:
+		UnitType: ocar.xo
+		DisplayBeacon: false
+		SquadSize: 1
+		DropItems: XO,XO,XO
+
+AURO:
+	GrantCondition@ABUR:
+		Condition: afterburner
+	SpeedMultiplier@AFTERBURNER:
+		Modifier: 250
+
+A10:
+	SpeedMultiplier@SPEEDBOOST:
+		Modifier: 155
+		RequiresCondition: speed-boost
+	ExternalCondition@SPEEDBOOST:
+		Condition: speed-boost
+
+SUK:
+	Aircraft:
+		Speed: 250
+
+NUKC:
+	GrantCondition@BotOwner:
+		Condition: botowner
+
+# attack everything
+
+^AutoTargetGround:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetAll:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+# hide icons, income text etc.
+
+^Building:
+	WithBuildingRepairDecoration:
+		Image: empty
+		Sequence: idle
+
+^GainsExperience:
+	GrantCondition@Shell:
+		Condition: shellmap
+	WithDecoration@RANK-1:
+		RequiresCondition: rank-veteran == 1 && !shellmap
+	WithDecoration@RANK-2:
+		RequiresCondition: rank-veteran == 2 && !shellmap
+	WithDecoration@RANK-ELITE:
+		RequiresCondition: rank-elite && !shellmap
+	GrantConditionOnPrerequisite@NODRANK:
+		Prerequisites: disabled
+	GrantConditionOnPrerequisite@SCRINRANK:
+		Prerequisites: disabled
+
+OILB:
+	CashTrickler:
+		ShowTicks: false
+
+PROC:
+	Refinery:
+		ShowTicks: false
+		UseStorage: false
+
+PROC.TD:
+	Refinery:
+		ShowTicks: false
+		UseStorage: false
+
+^GlobalBounty:
+	GivesBountyCA:
+		ShowBounty: false
+
+^Concussion:
+	WithDecoration@Concussion:
+		RequiresSelection: True
+
+^AuraHealable:
+	WithDecoration@REDCROSS:
+		Image: empty
+		Sequence: idle
+
+^TNTPlantable:
+	WithDecoration@tnt:
+		RequiresSelection: True
+
+^Veil:
+	-RenderShroudCircleCA:
+
+CVAT:
+	-LinkedProducerTarget:
+
+RMBO:
+	WithDecoration@COMMANDOSKULL:
+		Image: empty
+		Sequence: idle
+
+SEAL:
+	WithDecoration@COMMANDOSKULL:
+		Image: empty
+		Sequence: idle
+
+SS2:
+	-WithColoredSelectionBox@INVIS:
+	AutoTarget:
+		InitialStance: Defend
+
+STNK.Nod:
+	-WithColoredSelectionBox@INVIS:
+
+RAH:
+	-WithColoredSelectionBox@INVIS:
+
+MACS:
+	-GrantConditionOnPrerequisite@OwnedByAi:
+	-PeriodicProducerCA@MECHANIC:
+	-PeriodicProducerCA@ARTIFICER:
+	-GrantConditionIfOwnerIsNeutral:
+	-GrantConditionOnPrerequisite@SCRIN:
+
+MINV:
+	-WithColoredSelectionBox@PlayerColorBox:
+
+# defense buffs
+
+BRIK:
+	DamageMultiplier:
+		Modifier: 10
+
+ATWR:
+	DamageMultiplier:
+		Modifier: 5
+
+STWR:
+	DamageMultiplier:
+		Modifier: 5
+
+OBLI:
+	DamageMultiplier:
+		Modifier: 5
+
+SCOL:
+	DamageMultiplier:
+		Modifier: 5
+
+PTUR:
+	DamageMultiplier:
+		Modifier: 5
+
+GUN.Nod:
+	DamageMultiplier:
+		Modifier: 5
+
+TSLA:
+	DamageMultiplier:
+		Modifier: 5
+
+FTUR:
+	DamageMultiplier:
+		Modifier: 5
+
+# Hunt() requires only 1 AttackBase
+
+BATF.AI:
+	-AttackFrontal:
+
+DEVA:
+	-AttackFrontalCharged:
+	-Armament@PRIMARYUPG:
+	-AmbientSound@CHARGE:
+	-WithIdleOverlay@CHARGE1:
+	-WithIdleOverlay@CHARGE2:
+	-WithIdleOverlay@CHARGE3:

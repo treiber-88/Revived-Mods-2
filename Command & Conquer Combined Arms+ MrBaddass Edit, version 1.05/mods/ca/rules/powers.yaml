@@ -1,0 +1,2430 @@
+^ForceShieldPower:
+	GrantExternalConditionPowerCA@FSHIELD:
+		OrderName: fshield
+		Icon: forceshield
+		ChargeInterval: 7500
+		Condition: forceshield
+		ValidTargets: Structure
+		Duration: 250
+		Prerequisites: ~forceshield.enabled
+		ExplosionWeapon: ForceShield
+		ExplosionDelay: 5
+		AllowMultiple: false
+		Name: Force Shield
+		Description: Makes selected friendly structures temporarily invulnerable.\n\nWarning: Causes power failure.
+		OnFireSound: forceon.aud
+		DisplayTimerRelationships: Ally
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: ForceShieldReady
+		EndChargeTextNotification: Force Shield ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: disabled || empdisable ||  being-warped
+		SupportPowerPaletteOrder: 40
+		ShowSelectionBoxes: true
+		SelectionBoxColor: 0066ff
+		TargetTintColor: 0066ff40
+		ShowTargetCircle: true
+		TargetCircleColor: 0066ff
+		Range: 3c0
+
+^TimeSkipPower:
+	ProduceActorPowerCA@TimeSkip:
+		OrderName: timeskip
+		Prerequisites: ~player.allies, ~!influence.level3
+		Icon: timeskip
+		Type: TimeSkip
+		ChargeInterval: 125
+		StartFullyCharged: true
+		Name: Time Skip
+		Description: Allocate funding for precise temporal manipulation to progress Allied technological and organizational advancement.\n\nAdvances influence progress by 1:00.
+		Actors: timeskip
+		SupportPowerPaletteOrder: 0
+		SelectProducer: false
+		Cost: 800
+		LaunchSound: timeskip.aud
+
+^VeilOfWarPower:
+	SpawnActorPowerCA@VeilOfWar:
+		Actor: veilofwar1
+		OrderName: veilofwar
+		Icon: veilofwar
+		IconPalette: chrometd
+		Prerequisites: ~radar.england
+		ChargeInterval: 7500
+		LifeTime: -1
+		Name: Veil of War
+		Description: Creates an expanding area of shroud, reducing the vision and weapon range of enemy units and defenses.
+		LaunchSound: sscrambl.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: VeilOfWarReady
+		EndChargeTextNotification: Veil of War ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		Cursor: ability
+		AllowMultiple: false
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		TargetCircleRange: 7c512
+		TargetCircleColor: 999999AA
+		SupportPowerPaletteOrder: 50
+
+^ClusterMinesPower:
+	AirstrikePowerCA@clustermines:
+		ChargeInterval: 6750
+		Prerequisites: ~radar.france
+		Name: Cluster Mines
+		Description: Sends a cargo plane to drop a minefield at the target location.
+		OrderName: clustermine
+		UnitType: c17.clustermines
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		QuantizedFacings: 8
+		SquadSize: 1
+		DisplayBeacon: true
+		BeaconPoster: cmineicon
+		Icon: cmines
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ClusterMinesReady
+		EndChargeTextNotification: Cluster Mines ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 50
+
+^TemporalIncursionPower:
+	DetonateWeaponPower@TEMPINC:
+		OrderName: tempinc
+		Prerequisites: atek.germany
+		Icon: tempinc
+		Cursor: ability
+		ChargeInterval: 7500
+		Name: Temporal Incursion
+		ActivationDelay: 25
+		Description: Summons reinforcements from the future. Units return to their origin time after a short time.
+		Weapon: TemporalIncursion
+		AirburstAltitude: 0c0
+		AllowMultiple: false
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 375
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: TemporalIncursionReady
+		EndChargeTextNotification: Temporal Incursion ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		Sequence: idle
+		SupportPowerPaletteOrder: 40
+
+^StrafingRunPower:
+	ClassicAirstrikePower@Strafe:
+		OrderName: strafe
+		Squad:
+			1:
+				UnitType: p51
+				SpawnDelay: 20
+				SpawnOffset: -1536,1024,0
+				TargetOffset: -536,0,0
+			2:
+				UnitType: p51
+				SpawnDelay: 0
+				SpawnOffset: 0,0,0
+				TargetOffset: 0,0,0
+			3:
+				UnitType: p51
+				SpawnDelay: 20
+				SpawnOffset: -1536,-1024,0
+				TargetOffset: 536,0,0
+		Prerequisites: ~aircraft.usa
+		Icon: strafe
+		ChargeInterval: 7500
+		Name: Strafing Run
+		Description: Calls in P51 ground attack planes to perform strafing runs on the target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: StrafingRunReady
+		EndChargeTextNotification: Strafing Run ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: strafe
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		Strikes: 3
+		CircleDelay: 40
+		SupportPowerPaletteOrder: 45
+
+^GpsPower:
+	DummyGpsPower@NOFOG:
+		PauseOnCondition: disabled || empdisable  || being-warped
+		RequiresCondition: !gps-launched && !fogenabled
+		Delay: 12000
+		AnimationDuration: 375
+		LaunchSpeechNotification: SatelliteLaunched
+		Condition: gps-launched
+	DummyGpsPower@FOG:
+		PauseOnCondition: disabled || empdisable  || being-warped
+		RequiresCondition: !gps-launched && fogenabled
+		Delay: 3000
+		AnimationDuration: 375
+		LaunchSpeechNotification: SatelliteLaunched
+		Condition: gps-launched
+	ProduceActorPowerCA@SatelliteLaunched:
+		Actors: gps.satellite
+		Type: SpySatellite
+		ChargeInterval: 0
+		OneShot: true
+		OrderName: ProduceActorSat
+		AutoFire: True
+		RequiresCondition: gps-launched && fogenabled
+		SupportPowerPaletteOrder: 35
+	ProduceActorPowerCA@InitialSatelliteScan:
+		PauseOnCondition: disabled || empdisable || being-warped
+		Prerequisites: anyradar, ~!gps.satellite.firstscan, ~fogenabled
+		Name: Spy Satellite
+		Description: Periodically reveals the entire map for a short time (activated automatically).
+		Icon: gps
+		Actors: camera.satscan, gps.satellite.firstscan
+		Type: SpySatellite
+		ChargeInterval: 8250
+		OrderName: InitialSatelliteScanPower
+		AutoFire: True
+		OneShot: True
+		DisplayTimerRelationships: Ally
+		SupportPowerPaletteOrder: 35
+	ProduceActorPowerCA@SatelliteScan:
+		PauseOnCondition: disabled || empdisable || being-warped
+		Prerequisites: anyradar, ~gps.satellite, ~gps.satellite.firstscan, ~fogenabled
+		Name: Spy Satellite
+		Description: Periodically reveals the entire map for a short time (activated automatically).
+		Icon: gps
+		Actors: camera.satscan
+		Type: SpySatellite
+		ChargeInterval: 5250
+		OrderName: SatelliteScanPower
+		AutoFire: True
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 35
+	ProduceActorPowerCA@SatelliteScanNoFog:
+		PauseOnCondition: disabled || empdisable || being-warped
+		Prerequisites: anyradar, ~!fogenabled
+		Name: Spy Satellite
+		Description: Permanently reveals the entire map (activated automatically).
+		Icon: gps
+		Actors: camera.satscan.oneshot
+		Type: SpySatellite
+		ChargeInterval: 12000
+		OneShot: True
+		OrderName: SatelliteScanNoFogPower
+		AutoFire: True
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 35
+
+^TimeWarpPower:
+	GrantExternalConditionPowerCA@TimeWarp:
+		OrderName: TimeWarp
+		Icon: timewarp
+		Prerequisites: pdox.germany
+		Cursor: ability
+		ChargeInterval: 4500
+		Name: Time Warp
+		Description: Disrupts time and space at the target location. Affected units & structures are frozen in time, unable to act, but immune to damage.
+		ExplosionWeapon: TimeWarp
+		Condition: being-warped
+		Duration: 375
+		Range: 1c512
+		ValidRelationships: Ally, Enemy, Neutral
+		AllowMultiple: false
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: TimeWarpReady
+		EndChargeTextNotification: Time Warp ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		BeaconPoster: timewarpicon
+		DisplayRadarPing: True
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		SupportPowerPaletteOrder: 25
+		ShowSelectionBoxes: true
+		SelectionBoxColor: b6f4ff
+		ShowTargetCircle: true
+		TargetCircleColor: b6f4ff
+
+^CryostormPower:
+	SpawnActorPowerCA@Cryostorm:
+		Actor: cryostorm.init
+		OrderName: cryostorm
+		Icon: cryostorm
+		Prerequisites: ~sweden.coalition, ~alhq
+		ChargeInterval: 8250
+		LifeTime: -1
+		Name: Cryostorm
+		Description: Creates a turbulent area of extreme cold, reducing movement speed and increasing damage taken.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: CryostormReady
+		EndChargeTextNotification: Cryostorm ready.
+		IncomingSpeechNotification: CryostormWarning
+		IncomingTextNotification: Cryostorm approaching.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		Cursor: ability
+		AllowMultiple: false
+		TargetCircleRange: 4c682
+		TargetCircleColor: 5bbde9cc
+		SupportPowerPaletteOrder: 25
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: effect
+		DisplayBeacon: true
+		BeaconDuration: 125
+		BeaconPoster: cryostorm
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+
+^HeliosBombPower:
+	AirstrikePowerCA@HeliosBomb:
+		OrderName: heliosbomb
+		Prerequisites: ~greece.coalition, ~alhq
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: heliosbomb
+		IconPalette: caneon
+		ChargeInterval: 10500
+		Name: Helios Bomb
+		Description: Calls in a bomber which drops a Helios bomb, blinding units in a large area.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: HeliosBombReady
+		EndChargeTextNotification: Helios bomb ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: galx.helios
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: a10airstrike
+		BeaconPosterPalette: temptd
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 25
+		TargetCircleRange: 8c0
+		TargetCircleColor: ffff00AA
+
+^BlackSkyStrikePower:
+	MissileStrikePower@BlackSkyStrike:
+		MissileActor: bsky
+		Range: 6c0
+		OrderName: blackskystrike
+		Prerequisites: ~korea.coalition, ~alhq
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: bsky
+		IconPalette: chrome
+		ChargeInterval: 9000
+		Name: Black Sky Strike
+		Description: Fires long range guided missiles at multiple ground targets prioritized by value. Tracking can be lost if targets move far enough from their initial location.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: BlackSkyStrikeReady
+		EndChargeTextNotification: Black Sky Strike ready.
+		IncomingSpeechNotification: BlackSkyStrikeWarning
+		IncomingTextNotification: Black Sky missiles approaching.
+		DisplayBeacon: true
+		SupportPowerPaletteOrder: 25
+		ShowSelectionBoxes: true
+		SelectionBoxColor: ffffff
+		ShowTargetCircle: true
+		TargetCircleColor: ffffff
+		TargetTintColor: ffffff44
+		ValidRelationships: Enemy, Neutral
+		LaunchSounds: bsky-fire.aud
+		MissileCount: 4
+		MissilesPerLaunch: 1
+		MaxTargets: 4
+		ValidTargets: Vehicle, Infantry, Defense
+		SpawnFromDirection: Launcher
+		SpawnDistance: 96c0
+		LaunchAltitude: 10c0
+		PrioritizeTargetsBy: Value
+
+^ChronoshiftPower:
+	ChronoshiftPowerCA@chronoshift:
+		OrderName: Chronoshift
+		Prerequisites: !botplayer
+		PauseOnCondition: disabled || empdisable || being-warped
+		Duration: 600
+		EnemyDuration: 400
+		Icon: chrono
+		ChargeInterval: 4500
+		Name: Chronoshift
+		Description: Teleports up to 9 selected vehicles to a targeted location, returning them to their original location after a short time.\n\n• If killed, units are returned with 20% health\n• Units with larger health pools take additional damage\n• Passengers cannot be unloaded\n• Enemy units are teleported for reduced duration
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: ChronosphereReady
+		EndChargeTextNotification: Chronosphere ready.
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		KillCargo: false
+		DisplayRadarPing: True
+		Range: 4c512
+		MaxTargets: 9
+		InvalidTargetTypes: Husk, ChronoshiftImmune
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 20
+		ShowSelectionBoxes: true
+		HoverSelectionBoxColor: b6f4ff
+		ShowTargetCircle: true
+		TargetCircleColor: b6f4ff
+		TargetTintColor: b6f4ff33
+		ShowDestinationCircle: true
+		WarpFromImage: chronobubble
+		WarpFromSequence: warpin
+		WarpToImage: chronobubble
+		WarpToSequence: warpout
+		WarpEffectPalette: ra2effect-ignore-lighting-alpha75
+	DetonateWeaponPower@ChronoAI:
+		OrderName: Chronoshiftai
+		Prerequisites: botplayer
+		Icon: chrono
+		Cursor: ability
+		ChargeInterval: 7000
+		Name: Chronoshift
+		ActivationDelay: 25
+		Description: Teleports up to 9 selected vehicles to a targeted location, returning them to their original location after a short time.\n\n• If killed, units are returned with 20% health\n• Units with larger health pools take additional damage\n• Passengers cannot be unloaded\n• Enemy units are teleported for reduced duration
+		Weapon: ChronoAI
+		AirburstAltitude: 0c0
+		AllowMultiple: false
+		CameraActor: camera
+		CameraRemoveDelay: 375
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: ChronosphereReady
+		EndChargeTextNotification: Chronosphere ready.
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		LaunchSound: chrono2.aud
+		IncomingSound: chrono2.aud
+		SupportPowerPaletteOrder: 20
+
+^LightningStormPower:
+	DetonateWeaponPower@LightningStorm:
+		OrderName: storm
+		Icon: storm
+		Cursor: ability
+		ChargeInterval: 13500
+		Name: Lightning Storm
+		ActivationDelay: 50
+		Description: Initiate a Lightning Storm which deals heavy damage over a large area.
+		Weapon: WeatherStormInit
+		AirburstAltitude: 5c768
+		AllowMultiple: false
+		CameraActor: camera
+		CameraRemoveDelay: 425
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: StormReady
+		EndChargeTextNotification: Lightning Storm ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: StormApproach
+		IncomingTextNotification: Lightning Storm approaching.
+		IncomingSound: sweaintr.aud
+		LaunchSound: sweaintr.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		BeaconPoster: stormicon
+		TargetCircleRange: 6c512
+		TargetCircleColor: 0000FF90
+		ActiveCondition: active
+		PaletteEffectType: LightningStorm
+		SupportPowerPaletteOrder: 10
+
+^SpyPlanePower:
+	AirstrikePowerCA@spyplane:
+		OrderName: spyplane
+		Icon: spyplane
+		Prerequisites: ~radar.soviet
+		PauseOnCondition: disabled || empdisable || being-warped
+		ChargeInterval: 3000
+		Name: Spy Plane
+		Description: Dispatches a spy plane that reveals the target location for a limited time.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: SpyPlaneReady
+		EndChargeTextNotification: Spy Plane ready.
+		LaunchSound: spyplane.aud
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 150
+		UnitType: u2
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: camicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: true
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+		TargetCircleRange: 9c0
+		TargetCircleColor: 999999AA
+
+^ParatroopersPower:
+	ParatroopersPowerCA@paratroopers:
+		OrderName: paratroopers
+		UnitType: halo.paradrop
+		Prerequisites: ~support.paratroopers
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: paratroopers
+		ChargeInterval: 7500
+		Name: Paratroopers
+		Description: Dispatches a Halo transport to drop a squad of infantry anywhere on the map.
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		DropItems: E1,E1,E2,E3,E3,E1,E1,E1
+		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ParatroopersReady
+		EndChargeTextNotification: Paratroopers ready.
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: pinficon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+		PrerequisiteDropItems:
+			imppara.upgrade: E1,E1,E1,E1,E2,E4,E3,E3,E3,E1,E1,E1,E1
+		PrerequisiteSquadSizes:
+			imppara.upgrade: 2
+
+^StormTroopersPower:
+	ParatroopersPowerCA@Russianparatroopers:
+		OrderName: stormtroopers
+		UnitType: halo.paradrop
+		Prerequisites: ~radar.russia
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: stormtroopers
+		ChargeInterval: 9000
+		Name: Storm-troopers
+		Description: Dispatches a Halo transport to drop a squad of Shock Troopers anywhere on the map.
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		DropItems: SHOK,SHOK,SHOK,SHOK,SHOK
+		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: StormtroopersReady
+		EndChargeTextNotification: Stormtroopers ready.
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: pinficon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+		PrerequisiteGroupings:
+			ImprovedTeslaTroopers: impstorm.upgrade, ttrp.upgrade
+		PrerequisiteDropItems:
+			ImprovedTeslaTroopers: TTRP,TTRP,TTRP,TTRP,TTRP,TTRP,TTRP
+			impstorm.upgrade: SHOK,SHOK,SHOK,SHOK,SHOK,SHOK,SHOK,SHOK
+			ttrp.upgrade: TTRP,TTRP,TTRP,TTRP
+		PrerequisiteSquadSizes:
+			ImprovedTeslaTroopers: 2
+			impstorm.upgrade: 2
+
+^ParabombsPower:
+	AirstrikePowerCA@Russianparabombs:
+		OrderName: parabombs
+		Prerequisites: ~support.parabombs
+		PauseOnCondition: empdisable || being-warped
+		Icon: parabombs
+		ChargeInterval: 7500
+		Name: Parabombs
+		Description: Calls in a Badger bomber which drops parachuted bombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ParabombsReady
+		EndChargeTextNotification: Parabombs ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 45
+
+^CarpetBombPower:
+	AirstrikePowerCA@CarpetBomb:
+		OrderName: carpetbomb
+		Prerequisites: ~aircraft.ukraine
+		PauseOnCondition: empdisable || being-warped
+		Icon: carpetbomb
+		ChargeInterval: 10500
+		Name: Carpet Bomb
+		Description: Calls in a squad of Badgers which drop bombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: CarpetBombReady
+		EndChargeTextNotification: Carpet bombing ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: badr.cbomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: a10airstrike
+		BeaconPosterPalette: temptd
+		SquadSize: 3
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 45
+
+^AtomBombPower:
+	AirstrikePowerCA@Iraqiparabombs:
+		OrderName: atombomb
+		Prerequisites: ~aircraft.iraq
+		PauseOnCondition: empdisable || being-warped
+		Icon: abombair
+		ChargeInterval: 10500
+		Name: Atomic Bomb
+		Description: Calls in a Badger bomber which drops an atom bomb on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: AtomicBombReady
+		EndChargeTextNotification: Atomic bomb ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: badr.nbomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: nukeicon
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 45
+
+^MutaBombPower:
+	AirstrikePowerCA@MutaBomb:
+		OrderName: mutabomb
+		Prerequisites: ~radar.yuri
+		PauseOnCondition: empdisable || being-warped
+		Icon: mutabomb
+		IconPalette: chromes
+		ChargeInterval: 6750
+		Name: Genetic Mutation Bomb
+		Description: Calls in a Badger bomber which drops a genetic mutation bomb on your target, transforming infantry into Brutes under your control.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: GeneticMutationBombReady
+		EndChargeTextNotification: Genetic Mutation Bomb ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: badr.mbomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: gmutation
+		BeaconPosterPalette: chromes
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+
+^ChaosBombsPower:
+	AirstrikePowerCA@ChaosBombs:
+		OrderName: chaosbombs
+		Prerequisites: ~aircraft.yuri
+		PauseOnCondition: empdisable || being-warped
+		Icon: chaosbombs
+		ChargeInterval: 8250
+		Name: Chaos Bombs
+		Description: Calls in a Badger bomber which drops parachuted chaos bombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ChaosBombsReady
+		EndChargeTextNotification: Chaos bombs ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: badr.chaosbomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 45
+
+^SovietRadarPowers:
+	Inherits@SPYPLANEPOWER: ^SpyPlanePower
+	Inherits@PARATROOPERSPOWER: ^ParatroopersPower
+	Inherits@STORMTROOPERSPOWER: ^StormTroopersPower
+	Inherits@MUTABOMBPOWER: ^MutaBombPower
+	ProvidesPrerequisiteValidatedFaction@paratroopers:
+		Factions: soviet, ukraine, iraq
+		Prerequisite: support.paratroopers
+
+^SovietBombingPowers:
+	Inherits@PARABOMBSPOWER: ^ParabombsPower
+	Inherits@CARPETBOMBPOWER: ^CarpetBombPower
+	Inherits@ATOMBOMBPOWER: ^AtomBombPower
+	Inherits@CHAOSBOMBPOWER: ^ChaosBombsPower
+	ProvidesPrerequisiteValidatedFaction@parabombs:
+		Factions: soviet, russia
+		Prerequisite: support.parabombs
+
+^AtomicAmmoPower:
+	GrantExternalConditionPowerCA@ATOMICAMMO:
+		Prerequisites: ~!player.iraq
+		OrderName: atomicammo
+		Icon: atomicammo
+		ChargeInterval: 4500
+		Name: Atomic Shells
+		Condition: atomic-ammo
+		Range: 4c0
+		MaxTargets: 5
+		ShowTargetCount: true
+		ValidTargets: Vehicle
+		Duration: 1
+		AllowMultiple: false
+		Description: Grants tanks a limited supply of atomic shells (also for a limited duration).\n\nAffects Soviet tanks only (Heavy/Rhino Tank, Lasher/Thrasher Tank, Siege Tank, Mammoth Tank, Overlord Tank, Apocalypse Tank, Nuke Cannon)\n\nNuke Cannon gains a neutron shell that kills vehicle crews.
+		OnFireSound: atomshell.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: AtomicShellsReady
+		EndChargeTextNotification: Atomic Shells ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: empdisable || being-warped
+		ActiveSequence: idle
+		SupportPowerPaletteOrder: 30
+		ShowSelectionBoxes: true
+		SelectionBoxColor: ffee00
+		ShowTargetCircle: true
+		TargetCircleColor: ffee00
+		TargetTintColor: ffee0033
+		PrioritizeByValue: true
+	GrantExternalConditionPowerCA@ATOMICAMMOIRAQ:
+		Prerequisites: ~player.iraq
+		OrderName: atomicammoiraq
+		Icon: atomicammo
+		ChargeInterval: 4500
+		Name: Atomic Shells
+		Condition: atomic-ammo
+		Range: 4c0
+		MaxTargets: 5
+		ShowTargetCount: true
+		ValidTargets: Vehicle
+		Duration: 1
+		AllowMultiple: false
+		Description: Grants tanks a limited supply of atomic shells (also for a limited duration).\n\nAffects Soviet tanks only (Heavy/Rhino Tank, Lasher/Thrasher Tank, Siege Tank, Mammoth Tank, Overlord Tank, Apocalypse Tank, Nuke Cannon)\n\nNuke Cannon gains a neutron shell that kills vehicle crews.
+		OnFireSound: atomshell.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: AtomicShellsReady
+		EndChargeTextNotification: Atomic Shells ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: empdisable || being-warped
+		ActiveSequence: idle
+		SupportPowerPaletteOrder: 30
+		ShowSelectionBoxes: true
+		SelectionBoxColor: ffee00
+		ShowTargetCircle: true
+		TargetCircleColor: ffee00
+		TargetTintColor: ffee0033
+		PrioritizeByValue: true
+
+^HeroesOfTheUnionPower:
+	GrantExternalConditionPowerCA@HEROESOFUNION:
+		OrderName: heroesofunion
+		Icon: heroes
+		ChargeInterval: 6000
+		Name: Heroes of the Union
+		Condition: herooftheunion
+		Range: 3c512
+		MaxTargets: 5
+		ShowTargetCount: true
+		ValidTargets: HeroOfUnionTargetable
+		Duration: 0
+		AllowMultiple: false
+		Description: Targeted basic infantry units become Heroes of the Union, significantly increasing their damage, speed, range and resilience.\n\nCan affect Rifle Infantry, Rocket Soldiers, Grenadiers and Flamethrowers.
+		Prerequisites: ~infantry.doctrine, playerxp.level2
+		OnFireSound: heroes.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: HeroesOfTheUnionReady
+		EndChargeTextNotification: Heroes of the Union ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		ActiveSequence: idle
+		SupportPowerPaletteOrder: 30
+		ShowSelectionBoxes: true
+		SelectionBoxColor: ff0000
+		TargetTintColor: ff000040
+		ShowTargetCircle: true
+		TargetCircleColor: cc0000cc
+
+^TankDropPower:
+	ParatroopersPowerCA@TankDrop:
+		OrderName: tankdrop
+		SquadSize: 3
+		UnitType: anto
+		Icon: tankdrop
+		ChargeInterval: 13500
+		Name: Tank Drop
+		Description: Dispatches cargo planes to air drop tanks at the target location.
+		DropItems: 3tnk, 3tnk, 3tnk
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		AllowImpassableCells: false
+		EndChargeSpeechNotification: TankDropReady
+		EndChargeTextNotification: Tank Drop ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		IncomingTextNotification: Enemy air drop detected.
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: lrairdropicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		Prerequisites: ~armor.doctrine, playerxp.level2
+		SupportPowerPaletteOrder: 30
+		PrerequisiteGroupings:
+			AtomicThrasher: armor.doctrine, lasher.upgrade, atomicengines.upgrade
+			Thrasher: armor.doctrine, lasher.upgrade
+			AtomicRhino: armor.doctrine, atomicengines.upgrade
+			Rhino: armor.doctrine
+			AtomicLasher: lasher.upgrade, atomicengines.upgrade
+			Lasher: lasher.upgrade
+			Atomic: atomicengines.upgrade
+		PrerequisiteDropItems:
+			AtomicThrasher: 3tnk.rhino.atomicyuri, 3tnk.rhino.atomicyuri, 3tnk.rhino.atomicyuri
+			Thrasher: 3tnk.rhino.yuri, 3tnk.rhino.yuri, 3tnk.rhino.yuri
+			AtomicRhino: 3tnk.rhino.atomic, 3tnk.rhino.atomic, 3tnk.rhino.atomic
+			Rhino: 3tnk.rhino, 3tnk.rhino, 3tnk.rhino
+			AtomicLasher: 3tnk.atomicyuri, 3tnk.atomicyuri, 3tnk.atomicyuri
+			Lasher: 3tnk.yuri, 3tnk.yuri, 3tnk.yuri
+			Atomic: 3tnk.atomic, 3tnk.atomic, 3tnk.atomic
+
+^KillZonePower:
+	AirstrikePowerCA@KillZone:
+		OrderName: killzone
+		Prerequisites: ~arty.doctrine, playerxp.level2
+		Icon: killzone
+		ChargeInterval: 4500
+		Name: Kill Zone
+		Description: Calls in a Spy Plane which marks a target area. Any enemy units within it take increased damage.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: KillZoneReady
+		EndChargeTextNotification: Kill Zone ready.
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		UnitType: u2.killzone
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: killzone
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 30
+		TargetCircleRange: 8c0
+		TargetCircleColor: cc0000cc
+
+^IronCurtainPower:
+	GrantExternalConditionPowerCA@IRONCURTAIN:
+		OrderName: ironcurtain
+		Icon: invuln
+		ChargeInterval: 4500
+		ExplosionWeapon: IronCurtain
+		Name: supportpower-ironcurtain.name
+		Condition: invulnerability
+		Range: 4c0
+		MaxTargets: 5
+		MinTargets: 0
+		ShowTargetCount: true
+		ValidTargets: Vehicle, Ship, Structure
+		InvalidTargets: IronCurtainImmune
+		Duration: 600
+		AllowMultiple: false
+		Description: supportpower-ironcurtain.desc
+		OnFireSound: ironcur9.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: IronCurtainReady
+		EndChargeTextNotification: Iron Curtain ready.
+		BeginChargeSpeechNotification: IronCurtainCharging
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 20
+		ShowTargetCircle: true
+		ShowSelectionBoxes: true
+		TargetTintColor: ff000033
+
+^ABombPower:
+	NukePower@ABomb:
+		PauseOnCondition: disabled || empdisable || being-warped
+		Cursor: nuke
+		Icon: abomb
+		ChargeInterval: 13500
+		Name: Atom Bomb
+		Description: Launches a devastating atomic bomb at the target location, dealing heavy damage over a large area.
+		BeginChargeSpeechNotification: AbombPrepping
+		EndChargeSpeechNotification: AbombReady
+		EndChargeTextNotification: A-bomb ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSound: nukelaunch.aud
+		IncomingSpeechNotification: AbombLaunchDetected
+		IncomingTextNotification: Atom Bomb launch detected.
+		LaunchSound: nukelaunch.aud
+		MissileWeapon: atomic
+		MissileImage: atomic
+		MissileDelay: 5
+		SpawnOffset: 1c0,427,0
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster: atomicon
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		TrailImage: smokey2
+		TrailSequences: idle
+		TrailPalette: tseffect-ignore-lighting-alpha75
+		CircleRanges: 6c512
+		CircleColor: BB0000AA
+		CircleBorderColor: 770000AA
+		SupportPowerPaletteOrder: 10
+
+^ReconDronePower:
+	AirstrikePowerCA@uav:
+		OrderName: gdiuav
+		Prerequisites: ~radar.gdi, ~!player.arc
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: uavicon
+		ChargeInterval: 3750
+		Name: Recon Drone
+		Description: A drone flies across the map, revealing the area as it passes.\n\nDetects cloaked units.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ReconDroneReady
+		EndChargeTextNotification: Recon Drone ready.
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 0
+		UnitType: uav
+		QuantizedFacings: 32
+		DisplayBeacon: true
+		BeaconPoster: lruavicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+	AirstrikePowerCA@uavST:
+		OrderName: gdiuavarc
+		Prerequisites: ~radar.gdi, ~player.arc
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: uavicon
+		ChargeInterval: 3000
+		Name: Recon Drone
+		Description: A drone flies across the map, revealing the area as it passes.\n\nDetects cloaked units.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ReconDroneReady
+		EndChargeTextNotification: Recon Drone ready.
+		CameraActor: camera.spyplane
+		CameraRemoveDelay: 0
+		UnitType: uav
+		QuantizedFacings: 32
+		DisplayBeacon: true
+		BeaconPoster: lruavicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+
+^XODropPower:
+	ParatroopersPowerCA@xodrop:
+		OrderName: xodrop
+		Prerequisites: ~radar.talon
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: xodrop
+		ChargeInterval: 9750
+		Name: X-O Drop
+		UnitType: ocar.xo
+		Description: An Orca transport drops a squad of X-O Powersuits at the target location.
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		DropItems: XO,XO,XO
+		ReinforcementsArrivedSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: XODropAvailable
+		EndChargeTextNotification: X-O Drop ready.
+		AllowImpassableCells: false
+		QuantizedFacings: 8
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: xodrop
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		SupportPowerPaletteOrder: 50
+
+^DropPodsPower:
+	DropPodsPowerCA@Zocom:
+		OrderName: droppods
+		Cursor: ability
+		Prerequisites: ~radar.zocom
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: droppods
+		IconPalette: chrometd
+		Name: Drop Pods
+		Description: Instantly deploys a small team of elite soldiers at the target location via orbital drop pods.
+		EndChargeSpeechNotification: DropPodsAvailable
+		EndChargeTextNotification: Drop Pods ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		DisplayRadarPing: True
+		ChargeInterval: 4500
+		Weapon: DropPodArrive
+		UnitTypes: POD, POD, POD, POD, POD2, POD2, POD3
+		ExactUnits: true
+		PodScatter: 3
+		EntryEffect: explosion
+		EntryEffectSequence: shock_wave
+		EntryEffectPalette: tseffect-ignore-lighting-alpha75
+		SupportPowerPaletteOrder: 50
+
+^ReinforcementsPower:
+	SpawnActorPower@GDIEagleDropzone:
+		Actor: FLARE.dropzone
+		Prerequisites: ~radar.eagle
+		PauseOnCondition: disabled || empdisable || being-warped
+		LifeTime: 280
+		OrderName: dropzoneeagle
+		Icon: orcaca
+		IconPalette: chrometd
+		ChargeInterval: 6000
+		Name: Reinforcements
+		Description: An Orca Carryall drops an APC containing an infantry squad at the target location.
+		EndChargeSpeechNotification: Reinforce
+		EndChargeTextNotification: Reinforcements ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: effect
+		SupportPowerPaletteOrder: 50
+		BlockedCursor: move-blocked
+
+^GDIRadarPowers:
+	Inherits@RECONDRONEPOWER: ^ReconDronePower
+	Inherits@XODROPPOWER: ^XODropPower
+	Inherits@DROPPODSPOWER: ^DropPodsPower
+	Inherits@REINFORCEMENTSPOWER: ^ReinforcementsPower
+
+^InterceptorsPower:
+	InterceptorPower@AirDef:
+		OrderName: interceptors
+		Prerequisites: ~aircraft.gdi, techlevel.medium
+		PauseOnCondition: empdisable || being-warped
+		Icon: airsupport
+		ChargeInterval: 10500
+		Name: Interceptors
+		Description: A squadron of Interceptors provides air cover over the target area, engaging any enemy aircraft within range.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: InterceptorsReady
+		EndChargeTextNotification: Interceptors ready.
+		CameraActor: camera
+		CameraRemoveDelay: 450
+		UnitType: yf23.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: airsupport
+		SquadSize: 3
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		GuardDuration: 500
+		GuardRadius: 12c0
+		TargetCircleColor: 99999988
+		SupportPowerPaletteOrder: 45
+		LaunchSound: interceptors.aud
+		IncomingSound: interceptors.aud
+
+^NaniteRepairPower:
+	GrantExternalConditionPowerCA@NREPAIR:
+		OrderName: nrepair
+		Icon: nrepair
+		ChargeInterval: 6750
+		Condition: nrepair
+		Range: 4c512
+		MaxTargets: 10
+		ShowTargetCount: true
+		Duration: 625
+		Prerequisites: ~gtek.arc
+		ExplosionWeapon: RepairFlash
+		ExplosionDelay: 5
+		AllowMultiple: false
+		Name: Nanite Repair
+		Description: Repairs selected damaged vehicles over time.
+		OnFireSound: srepaira.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: NaniteRepairReady
+		EndChargeTextNotification: Nanite Repair ready.
+		DisplayRadarPing: True
+		Cursor: repair
+		PauseOnCondition: disabled || empdisable ||  being-warped
+		SupportPowerPaletteOrder: 40
+		ShowSelectionBoxes: true
+		SelectionBoxColor: 00ddbb
+		ShowTargetCircle: true
+		TargetCircleColor: 00ddbb
+		TargetTintColor: 00ddbb40
+
+^FirestormPower:
+	AttackOrderPowerCA@ROCKET:
+		OrderName: rocketbarrage
+		PauseOnCondition: empdisable || disabled || being-warped
+		Cursor: ability
+		Icon: fstorm
+		IconPalette: chrometd
+		ChargeInterval: 7500
+		Name: Firestorm
+		Description: Fires a barrage of rockets at the target area.
+		BeginChargeSpeechNotification: FireStormOffline
+		EndChargeSpeechNotification: FireStormReady
+		EndChargeTextNotification: Firestorm Missiles ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		RequiresCondition: tower-rocket
+		Prerequisites: ~techlevel.high
+		SupportPowerPaletteOrder: 30
+		TargetCircleRadius: 4c512
+		TargetCircleColor: ff660088
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		BeaconAssumedLaunchDelay: 45
+		BeaconRemoveAdvance: 25
+		BeaconAssumedProjectileSpeed: 220
+		BeaconPoster: firestorm
+		BeaconPosterPalette: temptd
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		CameraSpawnAdvance: 25
+
+^AdvancedRadarPower:
+	GrantPrerequisiteChargeDrainPowerCA@RADAR:
+		OrderName: advradarorder
+		DischargeModifier: 600
+		Prerequisite: scan-active
+		ChargeInterval: 4500
+		Icon: arscan
+		IconPalette: chrometd
+		Name: Advanced Radar Scan
+		Description: Reveals the location of enemy structures & units through the fog of war.
+		RequiresCondition: tower-radar
+		PauseOnCondition: !radar-active || disabled || being-warped
+		LaunchSound: gradarup.aud
+		BeginChargeSound: gradardn.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeTextNotification: Advanced Radar Scan ready.
+		Prerequisites: ~techlevel.high
+		EarlyDeactivationPenalty: 1500
+		SupportPowerPaletteOrder: 30
+
+^NaniteShieldPower:
+	SpawnActorPowerCA@NSHIELD:
+		Actor: nshield
+		OrderName: nshieldorder
+		Icon: nshield
+		Prerequisites: ~techlevel.high
+		ChargeInterval: 6000
+		LifeTime: 375
+		Name: Nanite Shield
+		Description: Reduces the damage taken by all vehicles in the target area.
+		LaunchSound: srepaira.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: NaniteShieldCharging
+		EndChargeSpeechNotification: NaniteShieldReady
+		EndChargeTextNotification: Nanite Shield ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		Cursor: ability
+		AllowMultiple: false
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		RequiresCondition: tower-shield
+		TargetCircleRange: 6c0
+		TargetCircleColor: 64a5dcbb
+		SupportPowerPaletteOrder: 30
+
+^EmpMissilePower:
+	AttackOrderPowerCA@EMPMISSILE:
+		OrderName: empmissile
+		PauseOnCondition: empdisable || disabled || being-warped
+		Cursor: empmissile
+		Icon: empmissile
+		ChargeInterval: 4500
+		Name: E.M. Missile
+		Description: Fires a Tomahawk missile which disables all mechanical units and structures on impact.
+		BeginChargeSpeechNotification: EMMissilePrepping
+		EndChargeSpeechNotification: EMMissileReady
+		EndChargeTextNotification: E.M. Missile ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		SupportPowerPaletteOrder: 20
+		TargetCircleRadius: 4c512
+		TargetCircleColor: b2b2e888
+		DisplayBeacon: True
+		BeaconAssumedLaunchDelay: 35
+		BeaconRemoveAdvance: 25
+		BeaconAssumedProjectileSpeed: 300
+		BeaconPoster: emp
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		CameraSpawnAdvance: 25
+
+^SurgicalStrikePower:
+	IonCannonPower@SurgicalStrike:
+		OrderName: surgicalstrike
+		Prerequisites: ~eye.zocom
+		Icon: surgicalstrike
+		IconPalette: chrometd
+		ChargeInterval: 6000
+		WeaponDelay: 3
+		Name: Surgical Strike
+		EffectPalette: tdeffect-ignore-lighting-alpha85
+		Description: Initiate an precision Ion Cannon strike which deals instant damage to a small area.
+		EndChargeSpeechNotification: SurgicalStrikeReady
+		EndChargeTextNotification: Surgical Strike ready.
+		IncomingSound: ion2.aud
+		LaunchSound: ion2.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayRadarPing: True
+		DisplayTimerRelationships: Ally
+		DisplayBeacon: True
+		CameraActor: camera.paradrop
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		Cursor: ioncannon
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 15
+
+^IonCannonPower:
+	DetonateWeaponPower@IonStorm:
+		OrderName: ioncannon
+		Icon: ioncannon
+		Cursor: ioncannon
+		ChargeInterval: 13500
+		Name: Ion Cannon
+		ActivationDelay: 50
+		Description: Initiate an Ion Cannon strike which deals heavy damage over a large area.
+		Weapon: IonStormInit
+		AirburstAltitude: 4c512
+		AllowMultiple: false
+		CameraActor: camera
+		CameraRemoveDelay: 375
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		BeginChargeSpeechNotification: IonCannonCharging
+		EndChargeSpeechNotification: IonCannonReady
+		EndChargeTextNotification: Ion Cannon ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: IonCannonApproach
+		IncomingTextNotification: Ion cannon activated.
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		BeaconPoster: ioncannon
+		BeaconPosterPalette: temptd
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		TargetCircleRange: 6c512
+		TargetCircleColor: 4fff3390
+		SupportPowerPaletteOrder: 10
+
+^NodAirdropPowers:
+	ParatroopersPowerCA@NodAirDrop:
+		OrderName: nodairdrop
+		SquadSize: 3
+		UnitType: c17
+		Icon: airdropicon
+		ChargeInterval: 13500
+		Name: Air Drop
+		Description: Dispatches cargo planes to air drop tanks at the target location.
+		DropItems: ltnk, ftnk, ltnk
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		AllowImpassableCells: false
+		EndChargeSpeechNotification: Reinforce
+		EndChargeTextNotification: Air Drop ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		IncomingTextNotification: Enemy air drop detected.
+		PauseOnCondition: empdisable || being-warped
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: lrairdropicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		Prerequisites: vehicles.nod, !vehicles.blackh, !vehicles.marked, !vehicles.legion, !vehicles.shadow
+		SupportPowerPaletteOrder: 60
+	ParatroopersPowerCA@blackhairdrop:
+		OrderName: blackhairdrop
+		SquadSize: 2
+		UnitType: c17
+		Icon: airdropicon
+		ChargeInterval: 13500
+		Name: Air Drop
+		Description: Dispatches cargo planes to air drop flame tanks at the target location.
+		DropItems: hftk, hftk
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		AllowImpassableCells: false
+		EndChargeSpeechNotification: Reinforce
+		EndChargeTextNotification: Air Drop ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		IncomingTextNotification: Enemy air drop detected.
+		PauseOnCondition: empdisable || being-warped
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: lrairdropicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		Prerequisites: vehicles.blackh
+		SupportPowerPaletteOrder: 60
+	DetonateWeaponPower@SubterraneanStrike:
+		OrderName: substrike
+		Icon: substrike
+		Prerequisites: vehicles.marked
+		Cursor: ability
+		ChargeInterval: 12000
+		Name: Subterranean Strike
+		ActivationDelay: 250
+		Description: Deploys a squad of Acolytes/Templar via Subterranean APC.
+		LaunchSound: subrumble.aud
+		Weapon: SubterraneanStrikeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: Reinforce
+		EndChargeTextNotification: Subterranean Strike ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		IncomingTextNotification: Enemy subterranean units detected.
+		PauseOnCondition: empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayBeacon: True
+		BeaconPoster: substrike
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 60
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	ParatroopersPowerCA@shadowairdrop:
+		OrderName: shadowairdrop
+		SquadSize: 2
+		UnitType: c17
+		Icon: airdropicon
+		ChargeInterval: 13500
+		Name: Air Drop
+		Description: Dispatches cargo planes to air drop stealth tanks at the target location.
+		DropItems: stnk.nod, stnk.nod
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		AllowImpassableCells: false
+		EndChargeSpeechNotification: Reinforce
+		EndChargeTextNotification: Air Drop ready.
+		LaunchSpeechNotification: ReinforcementsArrived
+		IncomingSpeechNotification: EnemyUnitsApproaching
+		IncomingTextNotification: Enemy air drop detected.
+		PauseOnCondition: empdisable || being-warped
+		CameraActor: camera.paradrop
+		DisplayBeacon: true
+		BeaconPoster: lrairdropicon
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		Prerequisites: vehicles.shadow
+		SupportPowerPaletteOrder: 60
+		PrerequisiteDropItems:
+			hstk.upgrade: hstk, hstk
+
+^SatHackPower:
+	SpawnActorPowerCA@sathack:
+		Actor: camera.sathack
+		Prerequisites: ~radar.nod, ~!player.legion
+		LifeTime: 120
+		OrderName: sathack
+		Icon: hacksat
+		ChargeInterval: 4500
+		Name: Hack Satellite Uplink
+		Description: Reveals the targeted area for a short time.
+		LaunchSound: hacksat.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: SatelliteHackReady
+		EndChargeTextNotification: Satellite Hack ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		TargetCircleRange: 9c512
+		TargetCircleColor: 999999AA
+		SupportPowerPaletteOrder: 50
+	SpawnActorPowerCA@sathacklegion:
+		Actor: camera.sathack
+		Prerequisites: ~radar.nod, ~player.legion
+		LifeTime: 120
+		OrderName: sathacklegion
+		Icon: hacksat
+		ChargeInterval: 3000
+		Name: Hack Satellite Uplink
+		Description: Reveals the targeted area for a short time.
+		LaunchSound: hacksat.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: SatelliteHackReady
+		EndChargeTextNotification: Satellite Hack ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		TargetCircleRange: 9c512
+		TargetCircleColor: 999999AA
+		SupportPowerPaletteOrder: 50
+
+^InfernoBombPower:
+	AirstrikePowerCA@BlackhandFirebomb:
+		OrderName: infernobomb
+		Prerequisites: ~radar.blackh
+		Icon: infbomb
+		IconPalette: chrometd
+		ChargeInterval: 9750
+		Name: Inferno Bomb
+		Description: A B2 Stealth Bomber drops inferno bombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: InfernoBombReady
+		EndChargeTextNotification: Inferno Bomb ready.
+		CameraActor: camera.paradrop
+		CameraRemoveDelay: 150
+		UnitType: b2b
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: a10airstrike
+		BeaconPosterPalette: temptd
+		SquadSize: 1
+		SquadOffset: 0,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 50
+
+^CashHackPower:
+	CashHackPower@Legion:
+		OrderName: cashhack
+		Icon: chack
+		ChargeInterval: 6000
+		Minimum: 750
+		Maximum: 2000
+		Prerequisites: ~radar.legion
+		AllowMultiple: false
+		Name: Cash Hack
+		Description: Steal up to $2000 credits from a targeted enemy Refinery.
+		OnFireSound: scashhac.aud
+		Notification: CreditsStolen
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: CashHackReady
+		EndChargeTextNotification: Cash Hack ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 50
+
+^ShadowTeamPower:
+	AirReinforcementsPower@ShadowTeam:
+		OrderName: shadowteam
+		Prerequisites: ~radar.shadow
+		Icon: shadteam
+		ChargeInterval: 6750
+		Name: Shadow Team
+		Description: Calls for a Shadow Team; three stealth infantry that arrive via glider armed with grenades and a machine pistol.\n\nOperatives can be ordered to land via the deploy command.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		LaunchSpeechNotification: ReinforcementsArrived
+		EndChargeSpeechNotification: ShadowTeamReady
+		EndChargeTextNotification: Shadow Team ready.
+		UnitType: sgli
+		QuantizedFacings: 8
+		DisplayBeacon: false
+		SquadSize: 3
+		SquadOffset: -1024,1024,0
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: paradirection
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 50
+
+^ClusterMissilePower:
+	NukePower@Cluster:
+		OrderName: clustermissile
+		Icon: clustermissile
+		IconPalette: chrometd
+		Prerequisites: ~techlevel.high
+		Cursor: ability
+		ChargeInterval: 10500
+		Name: Cluster Missile
+		Description: Launches a Cluster Missile which deals heavy damage at the target location.
+		EndChargeSpeechNotification: ClusMissileReady
+		EndChargeTextNotification: Cluster Missile ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: ClusMissileWarning
+		IncomingTextNotification: Cluster Missile launch detected.
+		MissileWeapon: deathhand
+		MissileImage: deathhand
+		MissilePalette: temptd
+		LaunchSound: icbm1.aud
+		IncomingSound: icbm1.aud
+		SpawnOffset: 1024,80,0
+		DetonationAltitude: 3c0
+		RemoveMissileOnDetonation: True
+		FlightDelay: 225
+		FlightVelocity: 0c624
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		ArrowSequence: arrow
+		ClockSequence: clockTD
+		CircleSequence: circles
+		PauseOnCondition: disabled || empdisable || being-warped
+		TrailImage: smokey2
+		TrailSequences: idle
+		TrailPalette: tseffect-ignore-lighting-alpha75
+		DisplayBeacon: True
+		BeaconPoster: clustermissile
+		BeaconPosterPalette: temptd
+		DisplayTimerRelationships: Ally
+		CircleRanges: 3c0
+		CircleColor: BB0000AA
+		CircleBorderColor: 770000AA
+		SupportPowerPaletteOrder: 40
+
+^FrenzyPower:
+	GrantExternalConditionPowerCA@Frenzy:
+		OrderName: frenzy
+		Icon: frenzy
+		Prerequisites: ~tmpl.marked
+		ChargeInterval: 6750
+		ExplosionWeapon: Frenzy
+		Name: Frenzy
+		Condition: frenzyinit
+		Range: 2c512
+		ValidRelationships: Ally
+		Duration: 750
+		ActiveSequence: false-active
+		AllowMultiple: false
+		Description: Increases the movement speed and rate of fire of targeted units for a limited time.\n\nWarning: Units are weakened for a short time after frenzy wears off.
+		OnFireSound: nodfrenzy.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: FrenzyReady
+		EndChargeTextNotification: Frenzy ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		PauseOnCondition: disabled || empdisable || being-warped
+		SupportPowerPaletteOrder: 40
+		ShowTargetCircle: true
+		TargetCircleColor: ff7700
+		TargetTintColor: ff770033
+
+^TechnologyHackPower:
+	InfiltratePower@TechnologyHack:
+		Prerequisites: ~tmpl.legion
+		OrderName: techhack
+		Icon: techhack
+		ChargeInterval: 18000
+		Name: Technology Hack
+		Description: Hack the targeted enemy production structure, providing access to a unit developed using enemy technology.\n\nFor infantry, vehicle and air production respectively: \n\n• Allies: Cryo Mortar, Reckoner, Phantom\n• Soviets: Cyberdog, Cyclops, Kamov\n• GDI: Sonic Mortar, Basilisk, Shade\n• Nod: Chem Mortar, Mantis, Vertigo\n• Scrin: Cyberscrin, Viper, Manticore
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: TechHackReady
+		EndChargeTextNotification: Technology Hack ready.
+		LaunchSound: techhack.aud
+		SupportPowerPaletteOrder: 50
+		Types: StealTechInfiltrate
+		StartFullyCharged: true
+
+^AssassinSquadPower:
+	ProduceActorPowerCA@AssassinSquad:
+		OrderName: assassinsquad
+		Prerequisites: wrath.covenant, ~!botplayer
+		Icon: assassinsquad
+		IconPalette: chrometd
+		Type: ParadropInfantry
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		ChargeInterval: 6000
+		Name: Assassin Squad
+		Description: Deploy a squad of Assassins that can snipe infantry from long range and destroy buildings with C4.\n\nTarget infantry production structure to deploy.
+		Actors: assa, assa, assa
+		LaunchSpeechNotification: ReinforcementsArrived
+		EndChargeSpeechNotification: AssassinSquadReady
+		EndChargeTextNotification: Assassin Squad ready.
+		SupportPowerPaletteOrder: 50
+	ProduceActorPowerCA@AssassinSquadAI:
+		OrderName: assassinsquadai
+		Prerequisites: wrath.covenant, ~botplayer
+		Icon: assassinsquad
+		IconPalette: chrometd
+		Type: ParadropInfantry
+		ChargeInterval: 6000
+		Name: Assassin Squad (AI)
+		Description: Deploy a squad of Assassins that can destroy buildings and salvage technology.
+		Actors: assa, assa, assa
+		SupportPowerPaletteOrder: 50
+
+^HackerCellPower:
+	ProduceActorPowerCA@HackerCell:
+		OrderName: hackercell
+		Prerequisites: unity.covenant, ~!botplayer
+		Icon: hackercell
+		Type: ParadropInfantry
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		ChargeInterval: 6000
+		Name: Hacker Cell
+		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.\n\nTarget infantry production structure to deploy.
+		Actors: hack, hack, hack
+		LaunchSpeechNotification: ReinforcementsArrived
+		EndChargeSpeechNotification: HackerCellReady
+		EndChargeTextNotification: Hacker Cell ready.
+		SupportPowerPaletteOrder: 50
+	ProduceActorPowerCA@HackerCellAI:
+		OrderName: hackercellai
+		Prerequisites: unity.covenant, ~botplayer
+		Icon: hackercell
+		Type: ParadropInfantry
+		ChargeInterval: 6000
+		Name: Hacker Cell (AI)
+		Description: Deploy a squad of Hackers that can remotely capture buildings and take control of defenses.
+		Actors: hack, hack, hack
+		SupportPowerPaletteOrder: 50
+		SelectProducer: false
+
+^ConfessorCabalPower:
+	ProduceActorPowerCA@ConfessorCabal:
+		OrderName: confessorcabal
+		Prerequisites: zeal.covenant, ~!botplayer
+		Icon: confessorcabal
+		IconPalette: chrometd
+		Type: ParadropInfantry
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		ChargeInterval: 6000
+		Name: Confessor Cabal
+		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.\n\nTarget infantry production structure to deploy.
+		Actors: conf, conf, conf
+		LaunchSound: conf-create.aud
+		EndChargeSpeechNotification: ConfessorCabalReady
+		EndChargeTextNotification: Confessor Cabal ready.
+		SupportPowerPaletteOrder: 50
+	ProduceActorPowerCA@ConfessorCabalAI:
+		OrderName: confessorcabalai
+		Prerequisites: zeal.covenant, ~botplayer
+		Icon: confessorcabal
+		IconPalette: chrometd
+		Type: ParadropInfantry
+		ChargeInterval: 6000
+		Name: Confessor Cabal (AI)
+		Description: Deploy a Confessor Cabal which is able to construct Idols of Kane that buffs allies and debuffs enemies.
+		Actors: conf, conf, conf
+		SupportPowerPaletteOrder: 50
+		SelectProducer: false
+
+^TibStealthPower:
+	GrantExternalConditionPowerCA@SGEN:
+		OrderName: stealthgen
+		Icon: invis
+		IconPalette: chrometd
+		ChargeInterval: 4500
+		ExplosionWeapon: StealthBubble
+		Name: Tiberium Stealth
+		Condition: tibstealth
+		ValidRelationships: Ally, Neutral, Enemy
+		Range: 3c512
+		Duration: 600
+		MaxAltitude: 1
+		AllowMultiple: false
+		Description: Makes selected vehicles and structures temporarily invisible.\n\nWarning: Harmful to non-cyborg infantry.\n\nHazmat Suits upgrade makes allies immune to damage and enemies take 50% damage.
+		OnFireSound: cloak6.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: ChemStealthCharging
+		EndChargeSpeechNotification: ChemStealthReady
+		EndChargeTextNotification: Stealth Generator ready.
+		DisplayRadarPing: True
+		Cursor: chemmissile
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		ActiveCondition: active
+		SupportPowerPaletteOrder: 20
+		ShowTargetCircle: true
+		TargetCircleColor: 00ff11
+		TargetTintColor: 00ff1133
+
+^ChemicalMissilePower:
+	NukePower@Chemmiss:
+		OrderName: chemmissile
+		Icon: chemmissile
+		IconPalette: chrometd
+		Cursor: chemmissile
+		ChargeInterval: 13500
+		Name: Chemical Missile
+		Description: Launches an deadly Chemical Missile. Deals heavy damage and creates toxic clouds which are extremely harmful to infantry.\n
+		EndChargeSpeechNotification: ChemMissileReady
+		EndChargeTextNotification: Chemical Missile ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: ChemMissileWarning
+		IncomingTextNotification: Chemical Missile launch detected.
+		MissileWeapon: Chemicbm
+		MissileImage: Chemicbm
+		MissileDelay: 5
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		MissilePalette: temptd
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster: cmissile
+		SpawnOffset: 1000, 0, 0
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		PauseOnCondition: disabled || empdisable || being-warped
+		TrailImage: smokey2
+		TrailSequences: idle
+		TrailPalette: tseffect-ignore-lighting-alpha75
+		DetonationAltitude: 0
+		CircleRanges: 6c512
+		CircleColor: 00BB00AA
+		CircleBorderColor: 007700AA
+		SupportPowerPaletteOrder: 10
+
+^IchorSpikePower:
+	DetonateWeaponPower@IchorSpike:
+		OrderName: ichorspike
+		Icon: ichorspike
+		IconPalette: chromes
+		Prerequisites: loyalist.allegiance
+		Cursor: ability
+		ChargeInterval: 6000
+		Name: Ichor Spike
+		ActivationDelay: 1
+		Description: Creates an Ichor Spike at the target location. Resources within its area of influence grow and spread faster.\n\nAlso empowers units with Resource Conversion upgrade.
+		LaunchSound: scrinbuild.aud
+		Weapon: IchorSpikeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: IchorSpikeReady
+		EndChargeTextNotification: Ichor Spike ready.
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+		TargetCircleRange: 8c0
+		TargetCircleColor: 00ff00aa
+
+^ColonySpikePower:
+	DetonateWeaponPower@ColonySpike:
+		OrderName: colonyspike
+		Icon: colonyspike
+		IconPalette: chromes
+		Prerequisites: rebel.allegiance
+		Cursor: ability
+		ChargeInterval: 7500
+		Name: Colony Spike
+		ActivationDelay: 1
+		Description: Creates a Colony Spike at the target location. Provides production of non-defensive structures.\n\nMust be built within range of a Colony Platform.
+		LaunchSound: cspk.aud
+		IncomingSound: cspk.aud
+		Weapon: ColonySpikeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: ColonySpikeReady
+		EndChargeTextNotification: Colony Spike ready.
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+		TargetMustBeInBuildRadius: true
+
+^VoidSpikePower:
+	DetonateWeaponPower@VoidSpike:
+		OrderName: voidspike
+		Icon: voidspike
+		IconPalette: chromes
+		Prerequisites: malefic.allegiance
+		Cursor: ability
+		ChargeInterval: 6000
+		Name: Voidspike
+		ActivationDelay: 1
+		Description: Creates a Voidspike at the target location. Gradually transforms nearby resources into Black Tiberium which is devoid of most of its useful properties.\n\nDamages nearby enemy units.
+		LaunchSound: scrinbuild.aud
+		Weapon: VoidSpikeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: VoidSpikeReady
+		EndChargeTextNotification: Voidspike ready.
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+		TargetCircleRange: 7c511
+		TargetCircleColor: 471f8c90
+		IncomingSound: malefic.aud
+
+^ResourceScanPower:
+	RevealActorsPower@RESOURCESCAN:
+		CameraActor: camera.resourcescan
+		TargetActors: mine, gmine, split2, split3, splitblue, proc, proc.td, proc.scrin
+		LifeTime: 250
+		OrderName: resourcescan
+		Icon: rescanpower
+		ChargeInterval: 7500
+		Name: Resource Scan
+		Description: Reveals the area surrounding all resources on the map.
+		LaunchSound: tibscan.aud
+		PauseOnCondition: disabled || empdisable || being-warped
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		SupportPowerPaletteOrder: 50
+		EndChargeSpeechNotification: ResourceScanReady
+		EndChargeTextNotification: Resource Scan ready.
+
+^StormSpikePower:
+	DetonateWeaponPower@STORMSPIKE:
+		OrderName: stormspike
+		Icon: stormspikepower
+		IconPalette: chromes
+		Prerequisites: radar.reaper
+		Cursor: ability
+		ChargeInterval: 7500
+		Name: Storm Spike
+		ActivationDelay: 1
+		Description: Creates a temporary Storm Column defensive structure at the target location.
+		LaunchSound: scrinbuild.aud
+		Weapon: StormSpikeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: StormSpikeReady
+		EndChargeTextNotification: Storm Spike ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+		TargetCircleRange: 7c511
+		TargetCircleColor: b070ff90
+
+^BuzzerSwarmPower:
+	DetonateWeaponPower@BUZZERSWARM:
+		OrderName: buzzerswarm
+		Icon: buzzpower
+		IconPalette: chromes
+		Prerequisites: radar.harbinger, !botplayer
+		Cursor: ability
+		ChargeInterval: 7500
+		Name: Buzzer Swarm
+		ActivationDelay: 1
+		Description: Spawns a controllable swarm which blinds and damages anything nearby; particularly harmful to infantry.
+		LaunchSound: buzzers-create.aud
+		Weapon: BuzzerSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: BuzzerSwarmReady
+		EndChargeTextNotification: Buzzer Swarm ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+	DetonateWeaponPower@BUZZERSWARMAI:
+		OrderName: buzzerswarmai
+		Icon: buzzpower
+		IconPalette: chromes
+		Prerequisites: radar.harbinger, botplayer
+		Cursor: ability
+		ChargeInterval: 7500
+		Name: Buzzer Swarm (AI)
+		ActivationDelay: 1
+		Description: Spawns a controllable swarm which damages anything nearby; particularly harmful to infantry.
+		LaunchSound: buzzers-create.aud
+		Weapon: BuzzerSpawnerAI
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: BuzzerSwarmReady
+		EndChargeTextNotification: Buzzer Swarm ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 50
+
+^IonSurgePower:
+	DetonateWeaponPower@IONSURGE:
+		OrderName: ionsurge
+		Icon: ionsurgepower
+		IconPalette: chromes
+		Prerequisites: radar.traveler
+		Cursor: ability
+		ChargeInterval: 6750
+		Name: Ion Surge
+		ActivationDelay: 1
+		Description: Increases the movement speed of all friendly units passing through the target area.
+		LaunchSound: ionsurge.aud
+		Weapon: IonSurgeSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: IonSurgeReady
+		EndChargeTextNotification: Ion Surge ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayRadarPing: True
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		TargetCircleRange: 5c0
+		TargetCircleColor: b070ff90
+		SupportPowerPaletteOrder: 50
+
+^IchorSeedPower:
+	SpawnActorPower@ICHORSEED:
+		OrderName: ichorseed
+		Icon: ichorpower
+		Actor: ichorseeder
+		Prerequisites: ~!player.reaper
+		ChargeInterval: 6000
+		Name: Ichor Seed
+		LifeTime: -1
+		AllowMultiple: false
+		Description: Grows Tiberium at selected location.
+		LaunchSound: ichorseed.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: IchorSeedReady
+		EndChargeTextNotification: Ichor Seed ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		SupportPowerPaletteOrder: 40
+		BlockedCursor: move-blocked
+	SpawnActorPower@ICHORSEEDREAPER:
+		OrderName: ichorseedreaper
+		Icon: ichorpower
+		Actor: ichorseeder
+		Prerequisites: ~player.reaper
+		ChargeInterval: 4800
+		Name: Ichor Seed
+		LifeTime: -1
+		AllowMultiple: false
+		Description: Grows Tiberium at selected location.
+		LaunchSound: ichorseed.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: IchorSeedReady
+		EndChargeTextNotification: Ichor Seed ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		EffectImage: empty
+		EffectSequence: idle
+		EffectPalette: tseffect-ignore-lighting-alpha75
+		SupportPowerPaletteOrder: 40
+		BlockedCursor: move-blocked
+
+^GreaterCoalescencePower:
+	DetonateWeaponPower@GREATERCOALESCENCE:
+		OrderName: greatercoalescence
+		Icon: grclpower
+		IconPalette: chromes
+		Prerequisites: scrt.collector
+		Cursor: ability
+		ChargeInterval: 6000
+		Name: Greater Coalescence
+		ActivationDelay: 1
+		Description: Spawns a controllable biomass which heals nearby allies and sustains itself by feeding off enemies.\n\nFeeding from power plants will shut them down temporarily.
+		LaunchSound: grcl-spawn.aud
+		Weapon: GreaterCoalescenceSpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: GreaterCoalescenceReady
+		EndChargeTextNotification: Greater Coalescence ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 40
+		TargetCircleRange: 4c512
+		TargetCircleColor: ff000099
+
+^OverlordsWrathPower:
+	MeteorPower@OverlordsWrath:
+		OrderName: overlordswrath
+		Icon: owrath
+		IconPalette: chromes
+		Prerequisites: ~loyalist.allegiance, ~techlevel.high
+		Cursor: ability
+		ChargeInterval: 10500
+		Name: Overlord's Wrath
+		Description: A Tiberium meteor strikes the target location dealing heavy damage and creating a patch of Tiberium.
+		EndChargeSpeechNotification: OverlordsWrathReady
+		EndChargeTextNotification: Overlord's Wrath ready.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: OverlordsWrathWarning
+		IncomingTextNotification: Tiberium meteor approaching.
+		ImpactWeapon: OverlordsWrath
+		MeteorImage: tibmeteor
+		MeteorPalette: scrin
+		LaunchSound: owrath-launch.aud
+		IncomingSound: owrath-launch.aud
+		FlightDelay: 225
+		FlightVelocity: 0c624
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		CameraRemoveDelay: 50
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		BeaconPoster: owrath
+		DisplayTimerRelationships: Ally
+		CircleRanges: 3c0
+		CircleColor: 00FF00AA
+		CircleBorderColor: 003300AA
+		SupportPowerPaletteOrder: 30
+
+^GatewayPower:
+	DetonateWeaponPower@Gateway:
+		OrderName: gateway
+		Icon: gateway
+		IconPalette: chromes
+		Prerequisites: ~rebel.allegiance, ~techlevel.high
+		Cursor: ability
+		ChargeInterval: 6000
+		Name: Gateway
+		ActivationDelay: 1
+		Description: Creates a Gateway at the target location. Acts as the exit for any\n   targeted infantry or vehicle production structure.\n\nRequires target location to be within vision.
+		LaunchSound: wormhole-open.aud
+		IncomingSound: wormhole-open.aud
+		Weapon: GatewaySpawner
+		AirburstAltitude: 0c0
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: GatewayReady
+		EndChargeTextNotification: Gateway ready.
+		PauseOnCondition: disabled || empdisable || being-warped
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 1
+		DisplayRadarPing: True
+		SupportPowerPaletteOrder: 30
+		TargetMustBeVisible: true
+
+^AnathemaPower:
+	GrantExternalConditionPowerCA@Anathema:
+		OrderName: anathema
+		Icon: anathema
+		IconPalette: chromes
+		ChargeInterval: 3000
+		Name: Anathema
+		Condition: anathema
+		Range: 2c0
+		MaxTargets: 1
+		ValidTargets: AnathemaTargetable
+		Duration: 0
+		AllowMultiple: false
+		Description: Targeted vehicle greatly increases in power over time. After 30 seconds the unit explodes.
+		Prerequisites: ~malefic.allegiance, ~techlevel.high
+		OnFireSound: anathema.aud
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: AnathemaReady
+		EndChargeTextNotification: Anathema ready.
+		DisplayRadarPing: True
+		Cursor: ability
+		ActiveSequence: idle
+		SupportPowerPaletteOrder: 30
+		ShowSelectionBoxes: true
+		SelectionBoxColor: 7e00f1
+		TargetTintColor: 7e00f140
+
+^SuppressionPower:
+	GrantExternalConditionPowerCA@SUPPRESSION:
+		PauseOnCondition: disabled || empdisable || being-warped
+		OrderName: suppression
+		Icon: spresspower
+		ChargeInterval: 4500
+		Name: Suppression Field
+		Description: Applies a suppression field to the target area, slowing unit movement and rate of fire.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: SuppressionCharging
+		EndChargeSpeechNotification: SuppressionReady
+		EndChargeTextNotification: Suppression Field ready.
+		DisplayRadarPing: True
+		Range: 3c0
+		ShowTargetCircle: true
+		TargetTintColor: ff55ff33
+		TargetCircleColor: ff55ffcc
+		OnFireSound: suppression.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		Prerequisites: ~!player.collector
+		SupportPowerPaletteOrder: 20
+		Condition: suppression
+		MaxAltitude: 4096
+		MinTargets: 1
+		ValidTargets: Ground, Air, AirSmall, Ship
+		ValidRelationships: Ally, Enemy, Neutral
+		Duration: 600
+		AllowMultiple: false
+		Cursor: ability
+		ExplosionWeapon: SuppressionField
+	GrantExternalConditionPowerCA@SUPPRESSIONSIPHON:
+		PauseOnCondition: disabled || empdisable || being-warped
+		OrderName: suppressionsiphon
+		Icon: spresspower
+		ChargeInterval: 3750
+		Name: Suppression Field
+		Description: Applies a suppression field to the target area, slowing unit movement and rate of fire.
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: SuppressionCharging
+		EndChargeSpeechNotification: SuppressionReady
+		EndChargeTextNotification: Suppression Field ready.
+		DisplayRadarPing: True
+		Range: 3c0
+		ShowTargetCircle: true
+		TargetTintColor: ff55ff33
+		TargetCircleColor: ff55ffcc
+		OnFireSound: suppression.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		Prerequisites: ~player.collector
+		SupportPowerPaletteOrder: 20
+		Condition: suppression
+		MaxAltitude: 4096
+		MinTargets: 1
+		ValidTargets: Ground, Air, AirSmall, Ship
+		ValidRelationships: Ally, Enemy, Neutral
+		Duration: 660
+		AllowMultiple: false
+		Cursor: ability
+		ExplosionWeapon: SuppressionField
+
+^RiftPower:
+	DetonateWeaponPower@RiftGenerator:
+		OrderName: rift
+		Icon: riftpower
+		Cursor: ability
+		ChargeInterval: 13500
+		Name: Rift
+		ActivationDelay: 75
+		Description: Initiate a Rift which deals heavy damage over time to a large area.
+		Weapon: RiftInit
+		AllowMultiple: false
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 375
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: RiftReady
+		EndChargeTextNotification: Rift Generator ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: RiftWarning
+		IncomingTextNotification: Rift Generator activated.
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		BeaconPoster: riftpower
+		TargetCircleRange: 6c512
+		TargetCircleColor: 0000FF90
+		ActiveCondition: active
+		PaletteEffectType: Rift
+		SupportPowerPaletteOrder: 10
+
+^FleetRecallPower:
+	RecallPower@Recall:
+		OrderName: Recall
+		PauseOnCondition: disabled || empdisable || being-warped
+		Icon: fleetrecall
+		IconPalette: chromes
+		ChargeInterval: 5250
+		Name: Fleet Recall
+		KeepFormation: true
+		Description: Recalls all selected Scrin fleet vessels back to the Signal Transmitter.\n\nApplies to: Mothership, Planetary Assault Carrier, Devastator
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		EndChargeSpeechNotification: FleetRecallReady
+		EndChargeTextNotification: Fleet Recall ready.
+		LaunchSound: fleetrecall.aud
+		IncomingSound: fleetrecall.aud
+		KillCargo: false
+		DisplayRadarPing: True
+		Range: 10c0
+		ValidTargetTypes: FleetRecallable
+		InvalidTargetTypes: Husk
+		SupportPowerPaletteOrder: 30
+		ShowSelectionBoxes: true
+		SelectionBoxColor: 9500ff
+		ShowTargetCircle: true
+		TargetCircleColor: 9500ff
+		TargetTintColor: 9500ff33
+		WarpFromImage: fleetrecall
+		WarpFromSequence: idle
+		WarpToImage: fleetrecall
+		WarpToSequence: idle
+		WarpEffectPalette: scrineffect
+
+# Providers
+
+assassinsquad.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@AssassinSquad: ^AssassinSquadPower
+	UpdatesSupportPowerTimer:
+		OrderName: assassinsquad
+		InitialOnly: true
+		Ticks: 3750
+
+hackercell.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@HackerCell: ^HackerCellPower
+	UpdatesSupportPowerTimer:
+		OrderName: hackercell
+		InitialOnly: true
+		Ticks: 3750
+
+confessorcabal.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@ConfessorCabal: ^ConfessorCabalPower
+	UpdatesSupportPowerTimer:
+		OrderName: confessorcabal
+		InitialOnly: true
+		Ticks: 3750
+
+ichorspike.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@IchorSpike: ^IchorSpikePower
+	UpdatesSupportPowerTimer:
+		OrderName: ichorspike
+		InitialOnly: true
+		Ticks: 75
+
+colonyspike.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@ColonySpike: ^ColonySpikePower
+	UpdatesSupportPowerTimer:
+		OrderName: colonyspike
+		InitialOnly: true
+		Ticks: 750
+
+voidspike.provider:
+	Inherits@DUMMY: ^InvisibleDummy
+	Inherits@VoidSpike: ^VoidSpikePower
+	UpdatesSupportPowerTimer:
+		OrderName: voidspike
+		InitialOnly: true
+		Ticks: 750
+
+^RiftPower:
+	DetonateWeaponPower@RiftGenerator:
+		OrderName: rift
+		Icon: riftpower
+		Cursor: ability
+		ChargeInterval: 13500
+		Name: Rift
+		ActivationDelay: 75
+		Description: Initiate a Rift which deals heavy damage over time to a large area.
+		Weapon: RiftInit
+		AllowMultiple: false
+		CameraActor: camera.dummy
+		CameraRemoveDelay: 375
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: Select target.
+		EndChargeSpeechNotification: RiftReady
+		EndChargeTextNotification: Rift Generator ready.
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: RiftWarning
+		IncomingTextNotification: Rift Generator activated.
+		IncomingSound: nukelaunch.aud
+		LaunchSound: nukelaunch.aud
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		PauseOnCondition: disabled || empdisable || being-warped
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		BeaconPoster: riftpower
+		TargetCircleRange: 6c512
+		TargetCircleColor: 0000FF90
+		ActiveCondition: active
+		PaletteEffectType: Rift
+		SupportPowerPaletteOrder: 10

@@ -1,0 +1,447 @@
+^BasePlayer:
+	AlwaysVisible:
+	Shroud:
+	PlayerResources:
+		ResourceValues:
+			Ore: 25
+			Gems: 38
+			Tiberium: 25
+			BlueTiberium: 38
+			BlackTiberium: 8
+
+EditorPlayer:
+	Inherits: ^BasePlayer
+
+Player:
+	Inherits: ^BasePlayer
+	Inherits@TimeSkip: ^TimeSkipPower
+	Inherits@HeroesOfTheUnion: ^HeroesOfTheUnionPower
+	Inherits@TankDrop: ^TankDropPower
+	Inherits@KillZone: ^KillZonePower
+	TechTree:
+	ClassicProductionQueueCA@Building:
+		Type: BuildingSQ
+		Group: Building
+		DisplayOrder: 0
+		LowPowerModifier: 250
+		ReadyAudio: ConstructionComplete
+		ReadyTextNotification: Construction complete.
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+		BuildSpeedReductionExcludedTypes: cspk
+	ClassicProductionQueue@Defense:
+		Type: DefenseSQ
+		Group: Defense
+		DisplayOrder: 1
+		LowPowerModifier: 250
+		ReadyAudio: ConstructionComplete
+		ReadyTextNotification: Construction complete.
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+	ClassicProductionQueueCA@Vehicle:
+		Type: VehicleSQ
+		Group: Vehicle
+		DisplayOrder: 3
+		LowPowerModifier: 250
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+	ClassicProductionQueueCA@Infantry:
+		Type: InfantrySQ
+		Group: Infantry
+		DisplayOrder: 2
+		LowPowerModifier: 250
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 80, 67, 57, 50
+	ClassicProductionQueue@Ship:
+		Type: ShipSQ
+		Group: Ship
+		DisplayOrder: 5
+		LowPowerModifier: 250
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+	ClassicProductionQueueCA@Aircraft:
+		Type: AircraftSQ
+		Group: Aircraft
+		DisplayOrder: 4
+		LowPowerModifier: 250
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 80, 67, 57, 50
+		CombinedBuildSpeedReduction: true
+	ClassicProductionQueue@Upgrade:
+		Type: Upgrade
+		Group: Upgrade
+		DisplayOrder: 6
+		LowPowerModifier: 250
+		ReadyAudio: UpgradeComplete
+		ReadyTextNotification: Upgrade complete.
+		BlockedAudio: NoBuild
+		BlockedTextNotification: Unable to build more.
+		LimitedAudio: BuildingInProgress
+		LimitedTextNotification: Unable to comply. Building in progress.
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: False
+	Production@Upgrade:
+		Produces: Upgrade
+		RequiresCondition: upgrades-available
+	Production@TimeSkip:
+		Produces: TimeSkip
+	GrantConditionOnPrerequisite@UpgradesAvailable:
+		Prerequisites: upgrades.producer
+		Condition: upgrades-available
+	GrantConditionOnPrerequisite@PoliciesAvailable:
+		Prerequisites: influence.level1
+		Condition: upgrades-available
+	GrantConditionOnPrerequisite@DoctrinesAvailable:
+		Prerequisites: playerxp.level1
+		Condition: upgrades-available
+	GrantConditionOnPrerequisite@CovenantsAvailable:
+		Prerequisites: covenant.level1
+		Condition: upgrades-available
+	GrantConditionOnPrerequisite@AllegiancesAvailable:
+		Prerequisites: scrin.allegiances.available
+		Condition: upgrades-available
+	PlaceBuilding:
+		NewOptionsNotification: NewOptions
+		CannotPlaceNotification: BuildingCannotPlaceAudio
+		NewOptionsTextNotification: New construction options.
+		CannotPlaceTextNotification: Cannot deploy here.
+	SupportPowerManager:
+	SupportPowerInstanceManager:
+	ScriptTriggers:
+	MissionObjectives:
+		WinNotification: Win
+		LoseNotification: Lose
+		LeaveNotification: Leave
+	ConquestVictoryConditions:
+	PowerManager:
+		SpeechNotification: LowPower
+		TextNotification: Low power.
+		AdviceInterval: 15000
+	AllyRepair:
+	PlayerResources:
+		InsufficientFundsNotification: InsufficientFunds
+		InsufficientFundsTextNotification: Insufficient funds.
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown
+		SelectableCash: 2500, 5000, 6000, 8000, 10000, 20000
+		DefaultCash: 6000
+		DefaultCashDropdownDisplayOrder: 1
+	DeveloperMode:
+		CheckboxDisplayOrder: 14
+	Shroud:
+		FogCheckboxEnabled: True
+		FogCheckboxLocked: False
+		FogCheckboxDisplayOrder: 3
+		ExploredMapCheckboxEnabled: True
+	LobbyPrerequisiteCheckbox@GLOBALBOUNTY:
+		ID: bounty
+		Label: checkbox-kill-bounties.label
+		Description: checkbox-kill-bounties.description
+		Enabled: True
+		DisplayOrder: 2
+		Prerequisites: global-bounty
+	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
+		ID: factundeploy
+		Label: checkbox-redeployable-mcvs.label
+		Description: checkbox-redeployable-mcvs.description
+		Enabled: True
+		DisplayOrder: 7
+		Prerequisites: global-factundeploy
+	LobbyPrerequisiteCheckbox@FORCESHIELD:
+		ID: forceshield
+		Label: checkbox-force-shield.label
+		Description: checkbox-force-shield.description
+		Enabled: True
+		DisplayOrder: 10
+		Prerequisites: forceshield.enabled
+	LobbyPrerequisiteCheckbox@NAVY:
+		ID: navy
+		Label: checkbox-naval-units.label
+		Description: checkbox-naval-units.description
+		Enabled: True
+		DisplayOrder: 13
+		Prerequisites: techlevel.navy
+	LobbyPrerequisiteCheckbox@REVEALONFIRE:
+		ID: revealonfire
+		Label: checkbox-reveal-on-fire.label
+		Description: checkbox-reveal-on-fire.description
+		Enabled: False
+		DisplayOrder: 11
+		Prerequisites: global.revealonfire
+	LobbyPrerequisiteCheckbox@BALANCEDHARVESTING:
+		ID: balancedharvesting
+		Label: checkbox-balanced-harvesting.label
+		Description: checkbox-balanced-harvesting.description
+		Enabled: True
+		DisplayOrder: 4
+		Prerequisites: global.balancedharvesting
+	LobbyPrerequisiteCheckbox@FASTREGROWTH:
+		ID: fastregrowth
+		Label: checkbox-fast-regrowth.label
+		Description: checkbox-fast-regrowth.description
+		Enabled: False
+		DisplayOrder: 8
+		Prerequisites: global.fastregrowth
+	LobbyPrerequisiteDropdown@QUEUETYPE:
+		ID: queuetype
+		Label: dropdown-queuetype.label
+		Description: dropdown-queuetype.description
+		DisplayOrder: 3
+		Default: global.singlequeue
+		Values:
+			global.singlequeue: options-queuetype.singlequeue
+			global.multiqueuefull: options-queuetype.multiqueuefull
+			global.multiqueuescaled: options-queuetype.multiqueuescaled
+	FrozenActorLayer:
+	BaseAttackNotifier:
+		TextNotification: Base under attack.
+		AllyTextNotification: Our ally is under attack.
+	NotificationManager:
+	PlayerStatistics:
+	PlaceBeacon:
+	ProvidesTechPrerequisite@infonly:
+		Name: options-tech-level.infantry-only
+		Prerequisites: techlevel.infonly
+		Id: infantryonly
+	ProvidesTechPrerequisite@low:
+		Name: options-tech-level.low
+		Prerequisites: techlevel.infonly, techlevel.low
+		Id: low
+	ProvidesTechPrerequisite@medium:
+		Name: options-tech-level.medium
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
+		Id: medium
+	ProvidesTechPrerequisite@high:
+		Name: options-tech-level.high
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
+		Id: high
+	ProvidesTechPrerequisite@unrestricted:
+		Name: options-tech-level.unrestricted
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
+		Id: unrestricted
+	ProvidesPrerequisite@allies:
+		Prerequisite: player.allies
+		Factions: allies, england, france, germany, usa, m.b, s.korea
+	ProvidesPrerequisite@england:
+		Prerequisite: player.england
+		Factions: england
+	ProvidesPrerequisite@france:
+		Prerequisite: player.france
+		Factions: france
+	ProvidesPrerequisite@germany:
+		Prerequisite: player.germany
+		Factions: germany
+	ProvidesPrerequisite@usa:
+		Prerequisite: player.usa
+		Factions: usa
+	ProvidesPrerequisite@soviet:
+		Prerequisite: player.soviet
+		Factions: soviet, russia, ukraine, iraq, yuri, n.korea, rameus
+	ProvidesPrerequisite@russia:
+		Prerequisite: player.russia
+		Factions: russia
+	ProvidesPrerequisite@ukraine:
+		Prerequisite: player.ukraine
+		Factions: ukraine
+	ProvidesPrerequisite@iraq:
+		Prerequisite: player.iraq
+		Factions: iraq
+	ProvidesPrerequisite@yuri:
+		Prerequisite: player.yuri
+		Factions: yuri
+	ProvidesPrerequisite@gdi:
+		Prerequisite: player.gdi
+		Factions: gdi, talon, zocom, eagle, arc, glastrikers, glaexp
+	ProvidesPrerequisite@talon:
+		Prerequisite: player.talon
+		Factions: talon
+	ProvidesPrerequisite@zocom:
+		Prerequisite: player.zocom
+		Factions: zocom
+	ProvidesPrerequisite@eagle:
+		Prerequisite: player.eagle
+		Factions: eagle
+	ProvidesPrerequisite@arc:
+		Prerequisite: player.arc
+		Factions: arc
+	ProvidesPrerequisite@glastrikers:
+		Prerequisite: player.talon
+		Factions: glastrikers
+	ProvidesPrerequisite@glaexp:
+		Prerequisite: player.zocom
+		Factions: glaexp
+	ProvidesPrerequisite@nod:
+		Prerequisite: player.nod
+		Factions: nod, blackh, marked, legion, shadow, fangs, eyesdoom, circle
+	ProvidesPrerequisite@blackh:
+		Prerequisite: player.blackh
+		Factions: blackh
+	ProvidesPrerequisite@marked:
+		Prerequisite: player.marked
+		Factions: marked
+	ProvidesPrerequisite@fangs:
+		Prerequisite: player.blackh
+		Factions: fangs
+	ProvidesPrerequisite@eyesdoom:
+		Prerequisite: player.marked
+		Factions: eyesdoom
+	ProvidesPrerequisite@m.b:
+		Prerequisite: player.allies
+		Factions: m.b
+	ProvidesPrerequisite@s.korea:
+		Prerequisite: player.allies
+		Factions: s.korea
+	ProvidesPrerequisite@n.korea:
+		Prerequisite: player.soviet
+		Factions: n.korea
+	ProvidesPrerequisite@rameus:
+		Prerequisite: player.soviet
+		Factions: rameus
+	ProvidesPrerequisite@ships.rameus:
+		Prerequisite: ships.rameus
+		Factions: rameus
+	ProvidesPrerequisite@circle:
+		Prerequisite: player.nod
+		Factions: circle
+	ProvidesPrerequisite@foreman:
+		Prerequisite: player.scrin
+		Factions: foreman
+	ProvidesPrerequisite@legion:
+		Prerequisite: player.legion
+		Factions: legion
+	ProvidesPrerequisite@shadow:
+		Prerequisite: player.shadow
+		Factions: shadow
+	ProvidesPrerequisite@scrin:
+		Prerequisite: player.scrin
+		Factions: scrin, reaper, traveler, harbinger, collector, foreman
+	ProvidesPrerequisite@reaper:
+		Prerequisite: player.reaper
+		Factions: reaper
+	ProvidesPrerequisite@traveler:
+		Prerequisite: player.traveler
+		Factions: traveler
+	ProvidesPrerequisite@harbinger:
+		Prerequisite: player.harbinger
+		Factions: harbinger
+	ProvidesPrerequisite@collector:
+		Prerequisite: player.collector
+		Factions: collector
+	ProvidesPrerequisite@eastsarconi:
+		Prerequisite: player.eastsarconi
+		factions: eastsarconi
+	ProvidesPrerequisite@westsarconi:
+		Prerequisite: player.westsarconi
+		factions: westsarconi
+	ProvidesPrerequisite@BotPlayer:
+		Prerequisite: botplayer
+		RequiresCondition: botplayer
+	GrantConditionOnBotOwner@BotPlayer:
+		Condition: botplayer
+		Bots: brutal, vhard, hard, normal, easy, naval, campaign, dormant
+	ProvidesPrerequisite@GDIORPUPGC:
+		Prerequisite: gdiorupgc
+		Factions: gdi
+	GrantConditionOnPrerequisiteManager:
+	GrantConditionOnPrerequisiteManagerCA:
+	EnemyWatcher:
+	ProductionIconOverlayManager:
+		Type: Veterancy
+		Image: iconchevrons
+		Sequence: veteran
+	ProductionIconOverlayManager@Upgrades:
+		Type: Upgrade
+		Image: upgradeiconoverlays
+		Sequence: complete
+		Palette: effect
+	ResourceStorageWarning:
+		TextNotification: Silos needed.
+		AdviceInterval: 40000
+	GameSaveViewportManager:
+	PlayerRadarTerrain:
+	GpsRadarWatcher:
+	TeleportNetworkManager:
+		Type: Wormhole
+		RandomExit: true
+	AutoDeployManager:
+	CapturedFactionsManager:
+	UpgradesManager:
+	ProductionTracker:
+	PopController:
+	PlayerBountyPool:
+	PlayerExperience:
+	PlayerExperienceLevels:
+		Factions: soviet, russia, ukraine, iraq, yuri
+		LevelXpRequirements: 75, 250, 425
+		LevelPrerequisites: playerxp.level1, playerxp.level2, playerxp.level3
+		LevelUpTextNotification: You have gained a rank! You are now rank {0}.
+		LevelUpNotification: Promoted
+		LevelUpSound: PlayerRankUp
+		DummyActor: QueueUpdaterDummy
+	CountManager:
+		MaxCounts:
+			NodCovenant: 3
+			ScrinAllegiance: 4
+	ProvidesPrerequisitesOnTimeline:
+		Type: AlliedInfluence
+		Factions: allies, england, france, germany, usa
+		Prerequisites:
+			4500: influence.level1
+			12000: influence.level2
+			22500: influence.level3
+		PrerequisiteGrantedNotifications:
+			4500: InfluenceLevel1
+			12000: InfluenceLevel2
+		DummyActor: QueueUpdaterDummy
+		PrerequisiteGrantedSound: PlayerRankUp
+	ProvidesPrerequisite@FreeChronoMiner:
+		Prerequisite: charv.upgrade
+		RequiresPrerequisites: influence.level3, economy.policy

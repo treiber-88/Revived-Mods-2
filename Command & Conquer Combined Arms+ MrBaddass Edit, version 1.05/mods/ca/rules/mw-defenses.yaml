@@ -1,0 +1,406 @@
+# MW Kingdom Defenses - rewritten for CA edit engine
+
+MWGTW:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: gtwnew
+		Palette: mwbase
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 22,48,0,-10
+	HitShape:
+		Type: Rectangle
+			TopLeft: -11,-24
+			BottomRight: 11,24
+	Health:
+		HP: 40000
+	Armor:
+		Type: HeavyBuilding
+	RevealsShroud:
+		Range: 7c0
+	DetectCloaked:
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Guard Tower
+		GenericName: Tower
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 401
+		Prerequisites: mwbarr
+		Description: Dual archer tower. Detects cloaked units.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	AttackTurreted:
+		Voice: Attack
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 8
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: -7,-7,21
+	Turreted@2:
+		Turret: secondary
+		TurnSpeed: 100
+		Offset: 7,7,21
+	Armament@1:
+		Weapon: BowNArrowTower
+		LocalOffset: 0,0,18
+		Turret: primary
+	Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,18
+		Turret: primary
+	Armament@2:
+		Weapon: BowNArrowTower
+		LocalOffset: 0,0,18
+		Turret: secondary
+		FireDelay: 12
+	Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,18
+		Turret: secondary
+		FireDelay: 12
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	WithIdleOverlay:
+		Sequence: idle-overlay
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWSAM:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: gtairwnew
+		Palette: mwbase
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Selectable:
+		Bounds: 50,50,0,-10
+	HitShape:
+		Type: Rectangle
+			TopLeft: -25,-25
+			BottomRight: 25,25
+	Health:
+		HP: 40000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 8c0
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Anti-Aircraft Ballista
+		GenericName: AA Defense
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 402
+		Prerequisites: mwbarr
+		Description: Anti-aircraft ballista. Can only target flying units.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	AttackTurreted:
+		Voice: Attack
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: 8,0,39
+	Armament@1:
+		Weapon: SamBallista
+		LocalOffset: 8,0,9
+		Turret: primary
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWTRIBU:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: tribu
+		Palette: mwbase
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 30,52,0,-12
+	HitShape:
+		Type: Rectangle
+			TopLeft: -15,-26
+			BottomRight: 15,26
+	Health:
+		HP: 60000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 8c0
+	DetectCloaked:
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Trebuchet
+		GenericName: Siege Defense
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 403
+		Prerequisites: mwhq
+		Description: Powerful trebuchet with massive range. Detects cloaked units.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 2
+	WithAttackAnimation:
+		AttackSequence: turretanim
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	Armament:
+		Weapon: TribuchetBoulder
+		LocalOffset: 0,0,88
+	AutoTarget:
+		ScanRadius: 12
+		InitialStance: AttackAnything
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1500
+		PlayerExperience: 15
+
+MWBATO:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: batowgun
+		Palette: mwbase
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 30,40,0,-12
+	HitShape:
+		Type: Rectangle
+			TopLeft: -15,-20
+			BottomRight: 15,20
+	Health:
+		HP: 60000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 8c0
+	DetectCloaked:
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Tower with Ballista
+		GenericName: Tower Defense
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 404
+		Prerequisites: mwhq
+		Description: Tower with dual ballista. Attacks ground and air. Detects cloaked.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 2
+	WithAttackAnimation@1:
+		AttackSequence: turretanim
+		Armament: Ground
+	WithAttackAnimation@2:
+		AttackSequence: turretanim
+		Armament: Air
+	WithIdleOverlay:
+		Sequence: overlay
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	Armament@Ground:
+		Weapon: StationBalistaAG
+		LocalOffset: 15,0,34
+		Name: Ground
+	Armament@Air:
+		Weapon: StationBalistaAA
+		LocalOffset: 15,0,34
+		Name: Air
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1500
+		PlayerExperience: 15
+
+MWGUNNEW:
+	Inherits: ^MWBuilding
+	RenderSprites:
+		Image: gunnew
+		Palette: mwbase
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 25,25,0,0
+	HitShape:
+		Type: Rectangle
+			TopLeft: -12,-12
+			BottomRight: 12,12
+	Health:
+		HP: 40000
+	Armor:
+		Type: HeavyBuilding
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Gunpowder Cannon
+		GenericName: Cannon
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 405
+		Prerequisites: mwcastle
+		Description: Rotating cannon. Powerful blast with area damage. Detects cloaked.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+	WithMuzzleOverlay:
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	Armament:
+		Weapon: CannonBoulder
+		LocalOffset: 21,0,9
+		MuzzleSequence: muzzle
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+
+MWCSTLWLL:
+	Inherits: ^ExistsInWorld
+	Interactable:
+		Bounds: 24,24
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+		Image: cstlwll
+		Palette: mwwall
+	HitShape:
+		Type: Rectangle
+			TopLeft: -12,-12
+			BottomRight: 12,12
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		TerrainTypes: Clear,Road
+		BuildSounds: placbldg.aud
+	Selectable:
+		Bounds: 24,24,0,0
+	SelectionDecorations:
+	HiddenUnderFog:
+	Health:
+		HP: 65000
+	Armor:
+		Type: Concrete
+	Targetable:
+		TargetTypes: Ground, Structure, Wall
+	WithWallSpriteBody:
+		Type: concrete
+	LineBuild:
+		NodeTypes: concrete
+	LineBuildNode:
+		Types: concrete
+	Crushable:
+		CrushClasses: heavywall
+	BlocksProjectiles:
+	SoundOnDamageTransition:
+		DestroyedSounds: crumble.aud
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Castle Wall
+		GenericName: Wall
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 406
+		Prerequisites: mwbarr
+		Description: Sturdy stone castle wall. Blocks projectiles.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	RevealsShroud:
+		Range: 2c0
+
+MWWDWLL:
+	Inherits: ^ExistsInWorld
+	Interactable:
+		Bounds: 24,24
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+		Image: wdwll
+		Palette: mwwall
+	HitShape:
+		Type: Rectangle
+			TopLeft: -12,-12
+			BottomRight: 12,12
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		TerrainTypes: Clear,Road
+		BuildSounds: placbldg.aud
+	Selectable:
+		Bounds: 24,24,0,0
+	SelectionDecorations:
+	HiddenUnderFog:
+	Health:
+		HP: 30000
+	Armor:
+		Type: HeavyBuilding
+	Targetable:
+		TargetTypes: Ground, Structure, Wall
+	WithWallSpriteBody:
+		Type: wood
+	LineBuild:
+		Range: 11
+		NodeTypes: Wood
+	LineBuildNode:
+		Types: Wood
+	Crushable:
+		CrushClasses: wall
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Palisades
+		GenericName: Wall
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 407
+		Prerequisites: mwfact
+		Description: Cheap wooden palisade fence.
+		Queue: MWDefense
+		Factions: kingdom, baron, sultanate, undead
+	RevealsShroud:
+		Range: 2c0

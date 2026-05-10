@@ -1,0 +1,235 @@
+MapFormat: 12
+
+RequiresMod: ca
+
+Title: Docklands Mk2
+
+Author: Westwood Studios Edit MrBaddass91
+
+Tileset: SNOW
+
+MapSize: 128,128
+
+Bounds: 1,32,126,64
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+		Enemies: Multi0, Multi1, Multi2, Multi3, Multi4, Multi5, Multi6, Multi7
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi4:
+		Name: Multi4
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi5:
+		Name: Multi5
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi6:
+		Name: Multi6
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi7:
+		Name: Multi7
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: t05
+		Location: 115,81
+		Owner: Neutral
+	Actor1: t05
+		Location: 111,81
+		Owner: Neutral
+	Actor2: t05
+		Location: 116,81
+		Owner: Neutral
+	Actor3: t05
+		Location: 110,81
+		Owner: Neutral
+	Actor4: mine
+		Location: 25,35
+		Owner: Neutral
+	Actor5: mine
+		Location: 25,47
+		Owner: Neutral
+	Actor6: mine
+		Location: 124,84
+		Owner: Neutral
+	Actor7: t02
+		Location: 15,53
+		Owner: Neutral
+	Actor8: t02
+		Location: 12,53
+		Owner: Neutral
+	Actor9: t02
+		Location: 12,49
+		Owner: Neutral
+	Actor10: t02
+		Location: 15,49
+		Owner: Neutral
+	Actor12: t02
+		Location: 37,46
+		Owner: Neutral
+	Actor15: t02
+		Location: 39,54
+		Owner: Neutral
+	Actor16: tc04
+		Location: 37,56
+		Owner: Neutral
+	Actor17: tc04
+		Location: 37,62
+		Owner: Neutral
+	Actor18: tc05
+		Location: 35,79
+		Owner: Neutral
+	Actor19: tc05
+		Location: 84,68
+		Owner: Neutral
+	Actor20: tc05
+		Location: 117,74
+		Owner: Neutral
+	Actor21: tc02
+		Location: 94,69
+		Owner: Neutral
+	Actor22: tc04
+		Location: 87,68
+		Owner: Neutral
+	Actor23: mine
+		Location: 91,53
+		Owner: Neutral
+	Actor24: mine
+		Location: 112,51
+		Owner: Neutral
+	Actor25: mine
+		Location: 107,34
+		Owner: Neutral
+	Actor26: mine
+		Location: 49,35
+		Owner: Neutral
+	Actor27: mine
+		Location: 20,88
+		Owner: Neutral
+	Actor28: mine
+		Location: 25,88
+		Owner: Neutral
+	Actor29: mine
+		Location: 56,85
+		Owner: Neutral
+	Actor33: mpspawn
+		Location: 89,59
+		Owner: Neutral
+	Actor34: mpspawn
+		Location: 121,37
+		Owner: Neutral
+	Actor35: mpspawn
+		Location: 112,58
+		Owner: Neutral
+	Actor36: mpspawn
+		Location: 57,78
+		Owner: Neutral
+	Actor38: t16
+		Owner: Neutral
+		Location: 43,36
+	Actor39: tc05
+		Owner: Neutral
+		Location: 37,47
+	Actor40: mpspawn
+		Owner: Neutral
+		Location: 35,38
+	Actor41: mpspawn
+		Owner: Neutral
+		Location: 5,37
+	Actor42: mpspawn
+		Owner: Neutral
+		Location: 22,79
+	Actor43: tc05
+		Owner: Neutral
+		Location: 115,66
+	Actor45: tc01
+		Owner: Neutral
+		Location: 114,64
+	Actor46: tc01
+		Owner: Neutral
+		Location: 120,67
+	Actor44: mpspawn
+		Owner: Neutral
+		Location: 110,88
+	Actor48: gtur
+		Owner: Neutral
+		Location: 38,60
+		TurretFacing: 194
+	Actor51: oilb
+		Owner: Neutral
+		Location: 98,33
+	Actor50: oilb
+		Owner: Neutral
+		Location: 4,57
+	Actor52: gtur
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 107,62
+	Actor54: oilb
+		Owner: Neutral
+		Location: 124,93
+	Actor57: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 50,33
+	Actor58: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 95,33
+	Actor59: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 90,77
+	Actor55: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 63,77
+	Actor56: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 82,54
+	Actor60: oilb
+		Owner: Neutral
+		Location: 54,53
+	Actor61: ra2ctbunk01
+		Owner: Neutral
+		TurretFacing: 96
+		Location: 57,54

@@ -1,0 +1,95 @@
+Testing mod: Combined Arms
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: HealUnitsCrateActionInfo.
+OpenRA.Utility(1,1): Error: Missing Type: GiveMcvCrateActionInfo.
+OpenRA.Utility(1,1): Error: Missing Type: GiveMcvCrateActionInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: HealUnitsCrateActionInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: EngineerRepairableInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: SupportPowerBotModuleCAInfo.
+OpenRA.Utility(1,1): Error: Missing Type: VeteranProductionIconOverlayInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: PlayerHighlightPaletteInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: DomainIndexInfo.
+OpenRA.Utility(1,1): Error: Missing Type: CreateMPPlayersInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartLocationsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: SpawnMPUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: MPStartUnitsInfo.
+OpenRA.Utility(1,1): Error: Missing Type: PlayerHighlightPaletteInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: FlickeringPaletteEffectInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ResourceTypeInfo.
+OpenRA.Utility(1,1): Error: Missing Type: ConditionManagerInfo.
+OpenRA.Utility(1,1): Error: Missing Type: SelfHealingInfo.
+OpenRA.Utility(1,1): Error: Missing Type: SelfHealingInfo.
+OpenRA.Utility(1,1): Error: Failed with exception: System.AggregateException: One or more errors occurred. (Actor type mov: Trait name MindControllable: Required property missing: ControlType)
+ ---> OpenRA.YamlException: Actor type mov: Trait name MindControllable: Required property missing: ControlType
+   at OpenRA.ActorInfo..ctor(ObjectCreator creator, String name, MiniYaml node)
+   at OpenRA.Ruleset.<>c__DisplayClass11_0.<LoadDefaults>b__1(MiniYamlNode k)
+   at OpenRA.Exts.ToDictionaryWithConflictLog[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, String debugName, Func`2 logKey, Func`2 logValue)
+   at OpenRA.Ruleset.MergeOrDefault[T](String name, IReadOnlyFileSystem fileSystem, IEnumerable`1 files, MiniYaml additional, IReadOnlyDictionary`2 defaults, Func`2 makeObject, Func`2 filterNode)
+   at OpenRA.Ruleset.<>c__DisplayClass11_0.<LoadDefaults>g__LoadRuleset|0()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at OpenRA.Ruleset.LoadDefaults(ModData modData)
+   at OpenRA.ModData.<.ctor>b__28_2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at OpenRA.Mods.Common.UtilityCommands.CheckYaml.OpenRA.IUtilityCommand.Run(Utility utility, String[] args)

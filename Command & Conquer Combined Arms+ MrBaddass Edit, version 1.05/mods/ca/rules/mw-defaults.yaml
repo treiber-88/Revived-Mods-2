@@ -1,0 +1,215 @@
+# MW Base Templates for CA edit
+# All MW units inherit from these instead of CA's ^Infantry/^Building etc.
+# Inherits from ^ExistsInWorld only (safe - no Tiberium, warp, mind control, force shields)
+
+^MWInfantry:
+	Inherits: ^ExistsInWorld
+	ClassicFacingBodyOrientation:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	RenderSprites:
+		Palette: mwbase
+	HitShape:
+	Selectable:
+		Bounds: 768, 768, 0, -256
+		DecorationBounds: 512, 725, 0, -256
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	HiddenUnderFog:
+	Mobile:
+		Locomotor: foot
+		Speed: 55
+		Voice: Move
+	Guard:
+		Voice: Move
+	Guardable:
+	AttackMove:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	DrawLineToTarget:
+	ActorLostNotification:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+	WithDeathAnimation:
+		DeathSequencePalette: player
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+			BurnToDeath: 5
+			SkeletonDeath: 5
+		CrushedSequence: die-crushed
+	Crushable:
+		WarnProbability: 75
+		CrushSound: squishy2.aud
+	Targetable:
+		TargetTypes: Ground, Infantry
+	Targetable@HEAL:
+		RequiresCondition: damaged
+		TargetTypes: Heal
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Valued:
+	Tooltip:
+		GenericName: Soldier
+	Health:
+		HP: 40000
+	Armor:
+		Type: Leather
+	RevealsShroud:
+		Range: 5c0
+
+^MWCavalry:
+	Inherits: ^ExistsInWorld
+	ClassicFacingBodyOrientation:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	RenderSprites:
+		Palette: mwbase
+	HitShape:
+	Selectable:
+		Bounds: 768, 768, 0, -256
+		DecorationBounds: 512, 725, 0, -256
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	HiddenUnderFog:
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Guard:
+		Voice: Move
+	Guardable:
+	AttackMove:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	DrawLineToTarget:
+	ActorLostNotification:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+	WithDeathAnimation:
+		DeathSequencePalette: player
+		DeathTypes:
+			DefaultDeath: 1
+			BurnToDeath: 2
+			RippedApartDeath: 1
+			BallistaDeath: 1
+			PoisonDeath: 1
+	Crushable:
+		WarnProbability: 75
+		CrushClass: cavalry
+	Targetable:
+		TargetTypes: Ground, Cavalry
+	Targetable@HEAL:
+		RequiresCondition: damaged
+		TargetTypes: Heal
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Valued:
+	Tooltip:
+		GenericName: Cavalry
+	Health:
+		HP: 75000
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 5c0
+
+^MWSiege:
+	Inherits: ^ExistsInWorld
+	ClassicFacingBodyOrientation:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	RenderSprites:
+		Palette: mwbase
+	HitShape:
+	Selectable:
+		Bounds: 1024, 1024, 0, -256
+		DecorationBounds: 768, 900, 0, -256
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	HiddenUnderFog:
+	Mobile:
+		Locomotor: mwsiege
+		Speed: 35
+		Voice: Move
+	Guard:
+		Voice: Move
+	AttackMove:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	DrawLineToTarget:
+	ActorLostNotification:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: stand
+		StandSequences: stand
+	WithDeathAnimation:
+		DeathSequencePalette: player
+		DeathTypes:
+			DefaultDeath: 1
+			BurnToDeath: 2
+			BallistaDeath: 1
+		CrushedSequence: die1
+	Targetable:
+		TargetTypes: Ground, Siege
+	Targetable@HEAL:
+		RequiresCondition: damaged
+		TargetTypes: Heal
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Valued:
+	Tooltip:
+		GenericName: Siege Weapon
+	Health:
+		HP: 100000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+
+^MWBuilding:
+	Inherits: ^ExistsInWorld
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+		Palette: mwbase
+	HitShape:
+	Selectable:
+	SelectionDecorations:
+	HiddenUnderFog:
+	Building:
+		TerrainTypes: Clear, Road
+	ActorPreviewPlaceBuildingPreview:
+		OverridePalette: placebuilding
+	GivesBuildableArea:
+		AreaTypes: building
+	Health:
+	Armor:
+		Type: HeavyBuilding
+	Targetable:
+		TargetTypes: Ground, Structure, C4
+	WithSpriteBody:
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+	PrimaryBuilding:
+	Valued:
+	Tooltip:
+	RevealsShroud:
+		Range: 4c0

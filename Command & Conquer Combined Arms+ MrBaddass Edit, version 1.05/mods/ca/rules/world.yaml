@@ -1,0 +1,949 @@
+^BaseWorld:
+	Inherits: ^Palettes
+	AlwaysVisible:
+	ActorMap:
+	ScreenMap:
+	Selection:
+	ControlGroups:
+	MusicPlaylist:
+		VictoryMusic: slavesys
+		DefeatMusic: fsmenu
+	TerrainGeometryOverlay:
+	DebugVisualizations:
+	Locomotor@FOOT:
+		Name: foot
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 90
+			Road: 110
+			Bridge: 100
+			Ford: 90
+			Ore: 80
+			Gems: 80
+			Tiberium: 70
+			BlueTiberium: 70
+			Beach: 80
+	Locomotor@JUMPJET:
+		Name: jumpjet
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 100
+			Road: 100
+			Bridge: 100
+			Ford: 100
+			Ore: 100
+			Gems: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Beach: 100
+			Water: 100
+			River: 100
+			Rock: 100
+			Tunnel: 100
+			Wall: 100
+			Tree: 100
+	Locomotor@WHEELED:
+		Name: wheeled
+		Crushes: mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 75
+			Road: 125
+			Bridge: 125
+			Ford: 75
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 50
+	Locomotor@HEAVYWHEELED:
+		Name: heavywheeled
+		Crushes: wall, mine, crate, infantry, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 120
+			Bridge: 110
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 45
+	Locomotor@LIGHTTRACKED:
+		Name: lighttracked
+		Crushes: wall, mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+	Locomotor@TRACKED:
+		Name: tracked
+		Crushes: wall, infantry, mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+	Locomotor@HEAVYTRACKED:
+		Name: heavytracked
+		Crushes: wall, infantry, heavyinfantry, mine, crate, heavywall, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+	Locomotor@SHEAVYTRACKED:
+		Name: sheavytracked
+		Crushes: wall, infantry, heavyinfantry, tank, mine, crate, heavywall, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+	Locomotor@NAVAL:
+		Name: naval
+		Crushes: crate, mine
+		TerrainSpeeds:
+			Water: 100
+			Ford: 70
+			Bridge: 100
+			Tunnel: 100
+	Locomotor@LANDINGCRAFT:
+		Name: lcraft
+		Crushes: crate, mine
+		TerrainSpeeds:
+			Water: 100
+			Beach: 70
+			Ford: 70
+			Bridge: 100
+			Tunnel: 100
+	Locomotor@HOVER:
+		Name: hover
+		Crushes: wall, infantry, mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+			Water: 100
+			Tunnel: 100
+	Locomotor@LIGHTHOVER:
+		Name: lighthover
+		Crushes: mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+			Water: 70
+			Tunnel: 100
+	Locomotor@Amphibious:
+		Name: Amphibious
+		Crushes: wall, infantry, mine, crate, beacon
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 88
+			Road: 125
+			Bridge: 125
+			Ford: 88
+			Ore: 88
+			Gems: 88
+			Tiberium: 88
+			BlueTiberium: 88
+			Beach: 88
+			Water: 35
+	Locomotor@CLOUD:
+		Name: cloud
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 100
+			Road: 100
+			Bridge: 100
+			Ford: 100
+			Ore: 100
+			Gems: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Beach: 100
+			Tunnel: 100
+			Water: 100
+			River: 100
+			Rock: 100
+			Wall: 100
+			Tree: 100
+	Locomotor@IMMOBILE:
+		Name: immobile
+		TerrainSpeeds:
+	Locomotor@SEAL:
+		Name: seal
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 90
+			Road: 110
+			Bridge: 100
+			Ford: 90
+			Ore: 80
+			Gems: 80
+			Tiberium: 70
+			BlueTiberium: 70
+			Beach: 80
+			Water: 50
+	TerrainRenderer:
+	ShroudRenderer:
+		FogVariants: shroud
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: true
+	Faction@random:
+		Name: Random
+		InternalName: Random
+		RandomFactionMembers: RandomAllies, RandomSoviet, RandomGDI, RandomNOD, RandomScrin, RandomAfrica
+		Description: faction-random.description
+	Faction@0:
+		Name: Allies
+		InternalName: allies
+		Side: Allies
+		Selectable: False
+	Faction@1:
+		Name: England
+		InternalName: england
+		Side: Allies
+		Description: faction-england.description
+	Faction@2:
+		Name: France
+		InternalName: france
+		Side: Allies
+		Description: faction-france.description
+	Faction@3:
+		Name: Germany
+		InternalName: germany
+		Side: Allies
+		Description: faction-germany.description
+	Faction@USA:
+		Name: USA
+		InternalName: usa
+		Side: Allies
+		Description: faction-usa.description
+	Faction@4:
+		Name: Soviets
+		InternalName: soviet
+		Side: Soviet
+		Selectable: False
+	Faction@5:
+		Name: Russia
+		InternalName: russia
+		Side: Soviet
+		Description: faction-russia.description
+	Faction@6:
+		Name: Ukraine
+		InternalName: ukraine
+		Side: Soviet
+		Description: faction-ukraine.description
+	Faction@7:
+		Name: Iraq
+		InternalName: iraq
+		Side: Soviet
+		Description: faction-iraq.description
+	Faction@YURI:
+		Name: Yuri
+		InternalName: yuri
+		Side: Soviet
+		Description: faction-yuri.description
+	Faction@8:
+		Name: GDI
+		InternalName: gdi
+		Side: GDI
+		Selectable: False
+	Faction@9:
+		Name: Talon
+		InternalName: talon
+		Side: GDI
+		Description: faction-talon.description
+	Faction@10:
+		Name: ZOCOM
+		InternalName: zocom
+		Side: GDI
+		Description: faction-zocom.description
+	Faction@11:
+		Name: Eagle
+		InternalName: eagle
+		Side: GDI
+		Description: faction-eagle.description
+	Faction@ARC:
+		Name: ARC
+		InternalName: arc
+		Side: GDI
+		Description: faction-arc.description
+	Faction@12:
+		Name: Nod
+		InternalName: nod
+		Side: Nod
+		Selectable: False
+	Faction@13:
+		Name: Black Hand
+		InternalName: blackh
+		Side: Nod
+		Description: faction-blackh.description
+	Faction@14:
+		Name: Marked of Kane
+		InternalName: marked
+		Side: Nod
+		Description: faction-marked.description
+	Faction@15:
+		Name: Legion
+		InternalName: legion
+		Side: Nod
+		Description: faction-legion.description
+	Faction@shadow:
+		Name: Shadow
+		InternalName: shadow
+		Side: Nod
+		Description: faction-shadow.description
+	Faction@16:
+		Name: Scrin
+		InternalName: scrin
+		Side: Scrin
+		Selectable: False
+	Faction@17:
+		Name: Reaper-17
+		InternalName: reaper
+		Side: Scrin
+		Description: faction-reaper.description
+	Faction@18:
+		Name: Traveler
+		InternalName: traveler
+		Side: Scrin
+		Description: faction-traveler.description
+	Faction@19:
+		Name: Harbinger
+		InternalName: harbinger
+		Side: Scrin
+		Description: faction-harbinger.description
+	Faction@20:
+		Name: Collector
+		InternalName: collector
+		Side: Scrin
+		Description: faction-collector.description
+	Faction@21:
+		Name: East Sarconi
+		InternalName: eastsarconi
+		Side: Sarconi
+		Description: faction-eastsarconi.description
+	Faction@22:
+		Name: West Sarconi
+		InternalName: westsarconi
+		Side: Sarconi
+		Description: faction-westsarconi.description
+	Faction@randomallies:
+		Name: Random Allies
+		InternalName: RandomAllies
+		RandomFactionMembers: england, france, germany, usa
+		Side: Random
+		Description: faction-randomallies.description
+	Faction@randomsoviet:
+		Name: Random Soviets
+		InternalName: RandomSoviet
+		RandomFactionMembers: russia, ukraine, iraq, yuri
+		Side: Random
+		Description: faction-randomsoviet.description
+	Faction@randomgdi:
+		Name: Random GDI
+		InternalName: RandomGDI
+		RandomFactionMembers: talon, zocom, eagle, arc
+		Side: Random
+		Description: faction-randomgdi.description
+	Faction@randomnod:
+		Name: Random Nod
+		InternalName: RandomNOD
+		RandomFactionMembers: blackh, marked, legion, shadow
+		Side: Random
+		Description: faction-randomnod.description
+	Faction@randomsarconi:
+		Name: Random Sarconi
+		InternalName: RandomSarconi
+		RandomFactionMembers: eastsarconi, westsarconi
+		Side: Random
+		Description: faction-randomsarconi.description
+	Faction@randomscrin:
+		Name: Random Scrin
+		InternalName: RandomScrin
+		RandomFactionMembers: reaper, traveler, harbinger, collector
+		Side: Random
+		Description: faction-randomscrin.description
+
+	# ==================== CRIMSON CONFLICT FACTIONS ====================
+
+	Faction@cc-allies-ext:
+		Name: Allies
+		InternalName: cc-allies-ext
+		Side: Allies
+		Selectable: False
+	Faction@kazakhstan:
+		Name: Kazakhstan
+		InternalName: kazakhstan
+		Side: Allies
+		Description: faction-kazakhstan.description
+	Faction@impjap:
+		Name: Imperial Japan
+		InternalName: impjap
+		Side: Allies
+		Description: faction-impjap.description
+	Faction@china:
+		Name: China
+		InternalName: china
+		Side: Allies
+		Description: faction-china.description
+	Faction@israel:
+		Name: Israel
+		InternalName: israel
+		Side: Allies
+		Description: faction-israel.description
+	Faction@africa:
+		Name: Africa
+		InternalName: africa
+		Side: Africa
+		Selectable: False
+	Faction@chad:
+		Name: Chad
+		InternalName: chad
+		Side: Africa
+		Description: faction-chad.description
+	Faction@angola:
+		Name: Angola
+		InternalName: angola
+		Side: Africa
+		Description: faction-angola.description
+	Faction@uganda:
+		Name: Uganda
+		InternalName: uganda
+		Side: Africa
+		Description: faction-uganda.description
+	Faction@randomafrica:
+		Name: Random Africa
+		InternalName: RandomAfrica
+		RandomFactionMembers: chad, angola, uganda
+		Side: Random
+		Description: faction-randomafrica.description
+
+	ResourceRenderer:
+		ResourceTypes:
+			Ore:
+				Sequences: gold01, gold02, gold03, gold04
+				Palette: player
+				Name: Valuable Minerals
+			Gems:
+				Sequences: gem01, gem02, gem03, gem04
+				Palette: player
+				Name: Valuable Minerals
+			Tiberium:
+				Sequences: ti1,ti2,ti3,ti4,ti5,ti6,ti7,ti8,ti9,ti10,ti11,ti12
+				Palette: tiberiumpalette
+				Name: Tiberium
+			BlueTiberium:
+				Sequences: bti1,bti2,bti3,bti4,bti5,bti6,bti7,bti8,bti9,bti10,bti11,bti12
+				Palette: bluetiberium
+				Name: Azure Tiberium
+			BlackTiberium:
+				Sequences: bti1,bti2,bti3,bti4,bti5,bti6,bti7,bti8,bti9,bti10,bti11,bti12
+				Palette: blacktiberium
+				Name: Black Tiberium
+
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	HierarchicalPathFinderOverlay:
+	PathFinderOverlay:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelectionCA:
+		ProductionTabsWidget: PRODUCTION_TABS
+	LegacyBridgeLayer:
+		Bridges: bridge1, bridge2, br1, br2, br3, sbridge1, sbridge2, sbridge3, sbridge4, sbridge5, sbridge6, sbridge7, brg1, brg2, brg3, brv1, brv2, brv3, brh1, brh2, brh3
+	CustomTerrainDebugOverlay:
+	CrateSpawner:
+		DeliveryAircraft: c17
+		QuantizedFacings: 16
+		Minimum: 1
+		Maximum: 3
+		SpawnInterval: 3000
+		WaterChance: 20
+		InitialSpawnDelay: 1500
+		CheckboxDisplayOrder: 5
+		CheckboxEnabled: false
+	SmudgeLayer@SCORCH:
+		Type: Scorch
+		Sequence: scorches
+		SmokeChance: 35
+		SmokeImage: scorch_flames
+		SmokeSequences: medium_flame, small_flame, smoke
+		MaxSmokeOffsetDistance: 213
+	SmudgeLayer@SCORCHNF:
+		Type: Scorch-NoFlame
+		Sequence: scorches
+		SmokeChance: 35
+		SmokeImage: scorch_flames
+		SmokeSequences: smoke
+		MaxSmokeOffsetDistance: 213
+	SmudgeLayer@SCORCHBLACK:
+		Type: Scorch-Black
+		Sequence: scorches
+		SmokeChance: 35
+		SmokeImage: scorch_flames
+		SmokeSequences: medium_flame_black, small_flame_black, smoke
+		MaxSmokeOffsetDistance: 213
+		SmokePalette: scrineffect
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+		SmokeChance: 25
+		SmokeImage: smoke_m
+		SmokeSequences: idle
+		MaxSmokeOffsetDistance: 213
+	ResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Ore:
+				ResourceIndex: 1
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+			Gems:
+				ResourceIndex: 2
+				TerrainType: Gems
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 8
+			Tiberium:
+				ResourceIndex: 3
+				TerrainType: Tiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+			BlueTiberium:
+				ResourceIndex: 4
+				TerrainType: BlueTiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 8
+			BlackTiberium:
+				ResourceIndex: 5
+				TerrainType: Tiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+	ResourceClaimLayer:
+	TintedCellsLayer@RADSTRONG:
+		Color: 00FF00
+		Brightest: 54
+		FadeoutDelay: 400
+		ZOffset: 0
+		Name: radioactivity.strong
+	TintedCellsLayer@RADMED:
+		Color: 00FF00
+		Brightest: 54
+		FadeoutDelay: 300
+		ZOffset: 0
+		Name: radioactivity.medium
+	TintedCellsLayer@RADWEAK:
+		Color: 00FF00
+		Brightest: 54
+		FadeoutDelay: 200
+		ZOffset: 0
+		Name: radioactivity.weak
+	TintedCellsLayer@cryoresidue:
+		Color: 51aed9
+		Brightest: 54
+		FadeoutDelay: 100
+		ZOffset: 0
+		Name: cryoresidue
+	WarheadDebugOverlay:
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 9
+		BuildRadiusCheckboxDisplayOrder: 6
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 1
+		TechLevelDropdownDisplayOrder: 4
+		GameSpeedDropdownDisplayOrder: 2
+	CreateMapPlayers:
+	StartingUnits@mcvonly:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: allies, england, france, germany, usa, soviet, russia, ukraine, iraq, yuri
+		BaseActor: mcv
+	StartingUnits@lightallies:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: allies, england, france, germany, usa
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@lightsoviet:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: soviet, russia, ukraine, iraq, yuri
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavyallies:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: allies, england, france, germany, usa
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavysoviet:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: soviet, russia, ukraine, iraq, yuri
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonly2:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: gdi, talon, zocom, eagle, arc, nod, blackh, marked, legion, shadow
+		BaseActor: amcv
+	StartingUnits@defaultgdia:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: gdi, talon, zocom, eagle, arc
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@defaultnoda:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: nod, blackh, marked, legion, shadow
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavynoda:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: nod, blackh, marked, legion, shadow
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavygdia:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: gdi, talon, zocom, eagle, arc
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonlysarconi:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: eastsarconi, westsarconi
+		BaseActor: samcv
+	StartingUnits@lightsarconi:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: eastsarconi, westsarconi
+		BaseActor: samcv
+		SupportActors: sa1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavysarconi:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: eastsarconi, westsarconi
+		BaseActor: samcv
+		SupportActors: sa1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonlyscrin:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: scrin, reaper, traveler, harbinger, collector
+		BaseActor: smcv
+	StartingUnits@lightscrin:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: scrin, reaper, traveler, harbinger, collector
+		BaseActor: smcv
+		SupportActors: s1,s1,s1,s3,s3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavyscrin:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: scrin, reaper, traveler, harbinger, collector
+		BaseActor: smcv
+		SupportActors: s1,s1,s1,s3,s3,seek,gunw
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavyallies:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: allies, england, france, germany, usa
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavysoviet:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: soviet, russia, ukraine, iraq, yuri
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavygdi:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: gdi, talon, zocom, eagle, arc
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavynod:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: nod, blackh, marked, legion, shadow
+		BaseActor: amcv
+		SupportActors: n1,n1,n1,n3,n3,mtnk,mtnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavyscrin:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: scrin, reaper, traveler, harbinger, collector
+		BaseActor: smcv
+		SupportActors: s1,s1,s1,s3,s3,seek,gunw
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavysarconi:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: eastsarconi, westsarconi
+		BaseActor: samcv
+		SupportActors: sa1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+	# ==================== CRIMSON CONFLICT STARTING UNITS ====================
+
+	StartingUnits@mcvonlycc-ext-allies:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+	StartingUnits@lightcc-ext-allies:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavycc-ext-allies:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavycc-ext-allies:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: kazakhstan, impjap, china, israel
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,e3,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@mcvonlyafrica:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: africa, chad, angola, uganda
+		BaseActor: mcv
+	StartingUnits@lightafrica:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: africa, chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavyafrica:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: africa, chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavyafrica:
+		Class: sheavy
+		ClassName: options-starting-units.heavy-support
+		Factions: africa, chad, angola, uganda
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 12
+	SpawnStartingUnits:
+		DropdownDisplayOrder: 5
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	RadarPings:
+	StartGameNotification:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+	ScriptTriggers:
+	TimeLimitManager:
+		TimeLimitDisplayOrder: 6
+		TimeLimitWarnings:
+			40: FourtyMinutesRemaining
+			30: ThirtyMinutesRemaining
+			20: TwentyMinutesRemaining
+			10: TenMinutesRemaining
+			5: WarningFiveMinutesRemaining
+			4: WarningFourMinutesRemaining
+			3: WarningThreeMinutesRemaining
+			2: WarningTwoMinutesRemaining
+			1: WarningOneMinuteRemaining
+	ColorPickerManager:
+		PreviewActor: fact.colorpicker
+		FactionPreviewActors:
+			england: fact.colorpicker
+			france: fact.colorpicker
+			germany: fact.colorpicker
+			usa: fact.colorpicker
+			russia: fact.colorpicker
+			ukraine: fact.colorpicker
+			iraq: fact.colorpicker
+			yuri: fact.colorpicker
+			marked: afac.colorpicker
+			legion: afac.colorpicker
+			blackh: afac.colorpicker
+			shadow: afac.colorpicker
+			talon: afac.colorpicker
+			eagle: afac.colorpicker
+			zocom: afac.colorpicker
+			arc: afac.colorpicker
+			reaper: sfac.colorpicker
+			harbinger: sfac.colorpicker
+			traveler: sfac.colorpicker
+			collector: sfac.colorpicker
+			eastsarconi: safac.colorpicker
+			westsarconi: safac.colorpicker
+			Random: fact.colorpicker
+			RandomAllies: fact.colorpicker
+			RandomSoviet: fact.colorpicker
+			RandomNod: afac.colorpicker
+			RandomGdi: afac.colorpicker
+			RandomSarconi: safac.colorpicker
+			RandomScrin: sfac.colorpicker
+			m.b: fact.colorpicker
+			s.korea: fact.colorpicker
+			n.korea: fact.colorpicker
+			rameus: fact.colorpicker
+			circle: afac.colorpicker
+			foreman: sfac.colorpicker
+		HsvSaturationRange: 0.22, 0.97
+		HsvValueRange: 0.41, 0.95
+		PresetColors: F20C0C, F26A07, F2DB07, 18F221, 0790F2, 242DF2, 7818F2, F218EA, D68181, BFA995, F2CF74, 9DF2BF, 1DF2E5, 99ACF2, C39DF2, F299D9, 731C1C, 734B2F, 6F7322, 0B7310, 048282, 293F78, 574173, 712A73
+		SimilarityThreshold: 2
+	OrderEffects:
+		TerrainFlashImage: moveflsh
+		TerrainFlashSequence: idle
+		TerrainFlashPalette: moveflash
+		ActorFlashType: Tint
+	RevealedPlayersManager:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorCursorLayer:
+	EditorResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Ore:
+				ResourceIndex: 1
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+			Gems:
+				ResourceIndex: 2
+				TerrainType: Gems
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 8
+			Tiberium:
+				ResourceIndex: 3
+				TerrainType: Tiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+			BlueTiberium:
+				ResourceIndex: 4
+				TerrainType: BlueTiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 8
+			BlackTiberium:
+				ResourceIndex: 5
+				TerrainType: Tiberium
+				AllowedTerrainTypes: Clear, Road
+				MaxDensity: 12
+	LoadWidgetAtGameStart:
+	EditorActionManager:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Clear, Road

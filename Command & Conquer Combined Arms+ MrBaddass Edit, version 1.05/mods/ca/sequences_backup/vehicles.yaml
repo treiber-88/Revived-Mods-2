@@ -1,0 +1,3064 @@
+robottank:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: robottank.shp
+		Facings: 32
+	turret:
+		Filename: robottank_turret.shp
+		Facings: -32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: robottank_icon.shp
+
+shatterer:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: shatterer.shp
+		Facings: -32
+	icon:
+		Filename: shatterer_icon.shp
+
+shatterer.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: slingshot.shp
+		Facings: -32
+	icon:
+		Filename: shatterer_icon.shp
+
+mov:
+	Defaults:
+		Filename: mov.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: outposticon.shp
+
+mov.destroyed:
+	idle:
+		Filename: mov.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mag:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mag.shp
+		Facings: -32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mag.shp
+		Start: 32
+		Facings: -32
+		UseClassicFacings: True
+	icon:
+		Filename: magicon.shp
+
+mag.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mag.shp
+		Facings: -32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mag.shp
+
+gdrn:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: gdrn.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: gdrn.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	turretpd:
+		Filename: gdrn.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun16.shp
+		Length: 6
+		Facings: 16
+	icon:
+		Filename: gdrnicon.shp
+
+xo:
+	Inherits: ^VehicleOverlays
+	Defaults:
+		Filename: xo.shp
+		Offset: 0, 0
+	idle:
+		Filename: xo.shp
+		Facings: 8
+	move:
+		Filename: xo.shp
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 200
+	shoot:
+		Filename: xo.shp
+		Start: 40
+		Length: 2
+		Facings: 8
+		Tick: 40
+	descend:
+		Filename: xo.shp
+		Start: 56
+		Facings: 8
+		Length: 3
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		ZOffset: 512
+		Tick: 80
+	icon:
+		Filename: xoicon.shp
+
+^VehicleOverlays:
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	chrono-overlay:
+		Filename: chronofade.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+
+msg:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msg.shp
+		Facings: 32
+		UseClassicFacings: True
+	make:
+		Filename: msg.shp
+		Start: 32
+		Length: 10
+		Tick: 80
+	idle-deployed:
+		Filename: msg.shp
+		Frames: 33,34,35,36,37,38,39,40,41,42,43,44,45,46
+		Length: 14
+		Tick: 120
+	icon:
+		Filename: msgicon.shp
+
+msg.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msg.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+hftk:
+	Defaults:
+		Filename: hftk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hftk.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: hftk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: hftkicnh.shp
+
+ttnk.ra2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttnk.ra2.shp
+		Facings: 32
+		UseClassicFacings: True
+	idle-water:
+		Filename: ttnk.ra2water.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ttnk.ra2.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: litningmuzzle.shp
+		Length: 8
+	icon:
+		Filename: ttnk2icon.shp
+	
+ttnk.ra2.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttnk.ra2.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: ttnk.ra2.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+htnx:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnx.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: htnx.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: *
+	icon:
+		Filename: htnxicon2.shp
+ 
+slingshot:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: slingshot.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: slingshottur.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: slingshoticon.shp
+
+slingshot.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: slingshot.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: slingshottur.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: slingshoticon.shp
+
+drtank:
+	Defaults:
+		Filename: drtank.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: dragontank.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: dragontank.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: dragontankicon.shp
+
+rec:
+	Defaults:
+		Filename: rec.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: recicon.shp
+
+brdm:
+	Defaults:
+		Filename: brdm.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret-mg:
+		Filename: btr-tur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: 1tnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-float:
+		Filename: 1tnk-float.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: brdmicon.shp
+	scout-icon:
+		Filename: brdmicon.shp
+
+atnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: atnk-tur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	idle-water:
+		Filename: 1tnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-float:
+		Filename: 1tnk-float.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: aatankicon.shp
+
+atnk.destroyed:
+	Defaults:
+		Filename: atnk.destroyed.shp
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: atnk-tur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mss:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ssam.shp
+		Facings: 32
+		UseClassicFacingFudge: False
+	muzzle:
+		Filename: mgg.shp
+		Length: 2
+	icon:
+		Filename: mssicon.shp
+
+fist:
+	Defaults:
+		Filename: fist.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: fisticon.shp
+
+fist.destroyed:
+	idle:
+		Filename: fist.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+apoc:
+	Defaults:
+		Filename: apoc.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apoc.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: 5tnk-tur.shp
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: apocicon.shp
+
+apoc.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apoc.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: apoctur.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+stnk2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2S.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: hmlrstSTNK.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: apc2S.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc2S.shp
+		Start: 32
+	icon:
+		Filename: stnk2icon.shp
+
+stnk2.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2S.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: hmlrstSTNK.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: apc2S.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc2S.shp
+		Start: 32
+
+htnk.hover:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnkhover.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: htnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	turret2:
+		Filename: htnktion.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: htnkhovericnh.shp
+
+htnk.hover.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnkhover.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: htnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	turret2:
+		Filename: htnktion.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: htnkhovericnh.shp
+
+mcv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mcv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: ramcvw.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: mcvicon.shp
+
+mcvhusk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mcvhusk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -1023
+
+truk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: truk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: trukicon.shp
+
+harv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	harvest:
+		Filename: harv.shp
+		Start: 32
+		Length: 8
+		Facings: 8
+	dock:
+		Filename: harv.shp
+		Start: 96
+		Length: 8
+	dock-loop:
+		Filename: harv.shp
+		Start: 104
+		Length: 7
+	icon:
+		Filename: harvicon.shp
+
+
+harv.soviet:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	harvest:
+		Filename: harv.shp
+		Start: 32
+		Length: 8
+		Facings: 8
+	dock:
+		Filename: harv.shp
+		Start: 96
+		Length: 8
+	dock-loop:
+		Filename: harv.shp
+		Start: 104
+		Length: 7
+	turret:
+		Filename: btr-tur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: harvicon.shp
+
+harvempty:
+	Inherits: harv
+
+harvhalf:
+	Inherits: harv
+
+hhusk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hhusk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -1023
+
+hhusk2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hhusk2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -1023
+
+charv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: charv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	harvest:
+		Filename: charv.shp
+		Start: 32
+		Length: 8
+		Facings: 8
+	dock:
+		Filename: charv.shp
+		Start: 96
+		Length: 8
+	dock-loop:
+		Filename: charv.shp
+		Start: 104
+		Length: 7
+	icon:
+		Filename: charvicon.shp
+
+charv.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: charv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+1tnk:
+	Defaults:
+		Filename: 1tnk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: 1tnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 1tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: 1tnkicon.shp
+
+1tnk.destroyed:
+	Defaults:
+		Filename: 1tnk.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 1tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 1tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+2tnk:
+	Defaults:
+		Filename: 2tnk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 2tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 2tnkicon.shp
+	
+mtnk.gdi.chrono:
+	Defaults:
+		Filename: mtnk.gdi.chrono.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: mtnkicnh.shp
+	
+mtnk.nod.chrono:
+	Defaults:
+		Filename: mtnk.nod.chrono.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mtnknod.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: mtnkicnh.shp
+
+2tnk.destroyed:
+	Defaults:
+		Filename: 2tnk.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 2tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 2tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+3tnk:
+	Defaults:
+		Filename: 3tnk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 3tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: 3tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 3tnkicon.shp
+
+3tnki:
+	Defaults:
+		Filename: 3tnki.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 3tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 3tnkiicon.shp
+
+3tnk.m.b:
+	Defaults:
+		Filename: 3tnk.m.b.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 3tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: 3tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 3tnkicon.shp
+
+3tnki:
+	Defaults:
+		Filename: 3tnki.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 3tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 3tnkiicon.shp
+
+3tnk.destroyed:
+	Defaults:
+		Filename: 3tnk.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 3tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+3tnky:
+	Defaults:
+		Filename: 3tnky.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnky.shp
+		Facings: 32
+		UseClassicFacings: True
+	idle2:
+		Filename: 3tnky.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: 3tnky.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 3tnkyicon.shp
+
+3tnky.destroyed:
+	Defaults:
+		Filename: 3tnky.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 3tnky.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 3tnky.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+4tnk:
+	Defaults:
+		Filename: 4tnk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: apoctur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret3:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret4:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 4tnkicon.shp
+
+4tnk.tsla:
+	Defaults:
+		Filename: 4tnk.tsla.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret3:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret4:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: 4tnk-tsla-icon.shp
+
+4tnk.tsla.destroyed:
+	Defaults:
+		Filename: 4tnk.tsla.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret2:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret3:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret4:
+		Filename: 4tnk-tsla.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+4tnk.iraq.destroyed:
+	Defaults:
+		Filename: 4tnk.iraq.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret2:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret3:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret4:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+4tnk.flam:
+	Defaults:
+		Filename: 4tnk.flam.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret3:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret4:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 4tnk-flam.icon.shp
+
+
+4tnk.flam.destroyed:
+	Defaults:
+		Filename: 4tnk.flam.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk-flam.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret2:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret3:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret4:
+		Filename: 4tnk-flam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+behe:
+	Defaults:
+		Filename: behe.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Combine:
+			0:
+				Filename: behmuz-n.shp
+				Length: *
+				Offset: 0,0
+			1:
+				Filename: behmuz-nw.shp
+				Length: *
+				Offset: 0,0
+			2:
+				Filename: behmuz-w.shp
+				Length: *
+				Offset: 0,0
+			3:
+				Filename: behmuz-sw.shp
+				Length: *
+				Offset: 0,0
+			4:
+				Filename: behmuz-s.shp
+				Length: *
+				Offset: 0,0
+			5:
+				Filename: behmuz-se.shp
+				Length: *
+				Offset: 0,0
+			6:
+				Filename: behmuz-e.shp
+				Length: *
+				Offset: 0,0
+			7:
+				Filename: behmuz-ne.shp
+				Length: *
+				Offset: 0,0
+		Facings: 8
+		Length: 10
+	icon:
+		Filename: beheicon.shp
+
+behe.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: behe.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: behe.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+4tnki:
+	Defaults:
+		Filename: 4tnki.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: 4tnki.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: 4tnkiicon.shp
+
+4tnk.destroyed:
+	Defaults:
+		Filename: 4tnk.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: 4tnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 4tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+gcan.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: prsmbase.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: gacn-tur.shp
+		Start: 0
+		Facings: 32
+		UseClassicFacingFudge: True
+
+v2rl:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: v2rl.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	empty-idle:
+		Filename: v2rl.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	aim:
+		Filename: v2rl.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	empty-aim:
+		Filename: v2rl.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: v2rlicon.shp
+
+arty:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: arty.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: artyicon.shp
+
+harty1:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: howi.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 5
+        Start: 0
+	icon:
+		Filename: harty1icon.shp
+
+gcan:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: prsmbase.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: gacn-tur.shp
+		Start: 0
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: gcanicon.shp
+
+artynod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: artynod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: artyicnh.shp
+	
+howi:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: howi.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: howi.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	idle:
+		Filename: ltnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: ltnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: howiicnh.shp
+
+jeep:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: jeep.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: jeepicon.shp
+
+apc:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: apc.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc.shp
+		Start: 32
+	icon:
+		Filename: apcicon.shp
+
+apc.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+mnly:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mnly.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: mnlyicon.shp
+
+mrj:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mrj.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: mrj.shp
+		Start: 32
+		Length: 32
+	icon:
+		Filename: mrjicon.shp
+
+mrj.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mrj.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: mrj.shp
+		Start: 32
+		Length: 32
+
+mgg:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: mgg.shp
+		Start: 32
+		Length: 8
+	spinner-idle:
+		Filename: mgg.shp
+		Start: 32
+		Length: 1
+	icon:
+		Filename: mggicon.shp
+
+mgg.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mgg.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	spinner:
+		Filename: mgg.shp
+		Start: 32
+		Length: 8
+		ZOffset: -512
+	spinner-idle:
+		Filename: mgg.shp
+		Start: 32
+
+ttnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: ttnk.shp
+		Start: 32
+		Length: 32
+	icon:
+		Filename: ttnkicon.shp
+
+ttnk.m.b:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: ttnk.shp
+		Start: 32
+		Length: 32
+	icon:
+		Filename: ttnkicon.shp
+
+ttnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+dtrk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: dtrk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: dtrkicon.shp
+
+dtrk.stolen:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: dtrk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: demotsicon.shp
+
+ctnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ctnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: ctnkicon.shp
+
+ctnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ctnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+
+qtnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: qtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	piston:
+		Filename: qtnk.shp
+		Start: 32
+		Facings: 8
+		Length: 8
+	icon:
+		Filename: qtnkicon.shp
+
+apc2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: hmmv.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: vulc.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2-ground:
+		Filename: vulc.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True	
+	open:
+		Filename: apc2.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc2.shp
+		Start: 35
+		Length: 3
+	icon:
+		Filename: apc2icnh.shp
+
+apc2.nod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: hmmv.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: vulc.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2-ground:
+		Filename: vulc.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True	
+	open:
+		Filename: apc2.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc2.shp
+		Start: 35
+		Length: 3
+	icon:
+		Filename: apc2nodicnh.shp
+
+apc2.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: jeep.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+vulc:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apc2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	turret:
+		Filename: vulc.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret-ground:
+		Filename: vulc.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: apc2.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: apc2.shp
+		Start: 35
+		Length: 3
+	icon:
+		Filename: vulcicnh.shp
+
+amcv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: amcv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: tdmcvw.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: amcvicnh.shp
+
+amcv.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: amcv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -1023
+
+hmmv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hmmv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: hmmv.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	unload:
+		Filename: hmmv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: jeepicnh.shp
+
+hmmv.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hmmv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: hmmv.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+bggy:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: bggy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: bggy.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	unload:
+		Filename: bggy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: bggyicnh.shp
+
+bggy.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: bggy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: bggy.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mtnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turretpd:
+		Filename: mtnk.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: dronet.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: mtnkicnh.shp
+
+pred:
+	Defaults:
+		Filename: pred.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turretpd:
+		Filename: pred.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+        Start: 0
+	icon:
+		Filename: predicon2.shp
+
+mtnk.nod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnknod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mtnknod.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turretpd:
+		Filename: mtnk.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: dronet.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: mtnknodicnh.shp
+
+mtnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: mtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turretpd:
+		Filename: mtnk.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+drone:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: dronet.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turretpd:
+		Filename: dronet.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	spinner:
+		Filename: drad.shp
+		Length: *
+	icon:
+		Filename: droneicnh.shp
+
+drone.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: dronet.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+htnk.drone:
+	Defaults:
+		Filename: htnk.drone.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnk.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: 5tnk-tur-gdi.shp
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: dronehtnkicon.shp
+
+htnk.drone.destroyed:
+	Defaults:
+		Filename: htnk.drone.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 5tnk-tur-gdi.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+htnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: htnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: htnktion.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret3:
+		Filename: htnx.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: htnkicnh.shp
+
+htnk.ion:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: htnktion.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: htnkionicnh.shp
+
+htnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: htnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: htnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret-ion:
+		Filename: htnktion.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+msam:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msam.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	empty-aim:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	aim:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: msamicnh.shp
+
+msam.nod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msam.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	empty-aim:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	aim:
+		Filename: msam.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: msamnodicnh.shp
+
+msam.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msam.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: msam.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mlrs:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mlrs.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mlrs.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret1:
+		Filename: mlrs.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret0:
+		Filename: mlrs.shp
+		Start: 96
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: mlrsicnh.shp
+
+mlrs.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mlrs.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: mlrs.shp
+		Start: 96
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+stnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: stnk.shp
+		Start: 38
+		Facings: 32
+	icon:
+		Filename: stnkicon.shp
+
+stnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: stnk.shp
+		Start: 38
+		Facings: 32
+
+stnknod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stnknod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: stnkicnh.shp
+
+stnknod.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stnknod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: stnk.shp
+		Start: 38
+		Facings: 32
+
+stnktnod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: stnktnod.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: stnktnod.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: stnkicnh.shp
+
+bike:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: bike.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: bikeicnh.shp
+
+bike.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: bike.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+ftnk:
+	Defaults:
+		Filename: ftnk.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ftnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Combine:
+			0:
+				Filename: flame-n.shp
+				Length: *
+				Offset: 3,6
+			1:
+				Filename: flame-nw.shp
+				Length: *
+				Offset: 8,7
+			2:
+				Filename: flame-w.shp
+				Length: *
+				Offset: 8,2
+			3:
+				Filename: flame-sw.shp
+				Length: *
+				Offset: 7,-2
+			4:
+				Filename: flame-s.shp
+				Length: *
+				Offset: 3,-2
+			5:
+				Filename: flame-se.shp
+				Length: *
+				Offset: -5,-2
+			6:
+				Filename: flame-e.shp
+				Length: *
+				Offset: -7,2
+			7:
+				Filename: flame-ne.shp
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon:
+		Filename: ftnkicnh.shp
+
+ftnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ftnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+ltnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ltnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: ltnkwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ltnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ltnk2.shp
+
+ltnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ltnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: ltnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+harv2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harv2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	harvest:
+		Filename: harv2.shp
+		Start: 32
+		Length: 4
+		Facings: 8
+		Tick: 60
+	dock:
+		Filename: harv2dump.shp
+		Length: 7
+	dock-loop:
+		Filename: harv2dump.shp
+		Start: 7
+	icon:
+		Filename: harv2icnh.shp
+
+harv2.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harv2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+btr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: btr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ftrk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: btrwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: btricon.shp
+
+btr.m.b:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: btr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ftrk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	idle-water:
+		Filename: btrwater.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: btricon.shp
+
+
+btr.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: btr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: samtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+
+ifv:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ifv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	muzzle2:
+		Filename: gunfire2.shp
+		Length: 2
+	spinner:
+		Filename: mrj.shp
+		Start: 32
+		Length: 32
+	medic:
+		Filename: mouse.shp
+		Start: 194
+		Length: 1
+	tesla:
+		Filename: bttnk.shp
+		Start: 32
+		Length: 32
+	turret:
+		Filename: ifvtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2:
+		Filename: ifvtur.shp
+		Start: 320
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret3:
+		Filename: ifvtur.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret4:
+		Filename: ifvtur.shp
+		Start: 96
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret5:
+		Filename: ifvtur.shp
+		Start: 128
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret6:
+		Filename: ifvtur.shp
+		Start: 160
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret7:
+		Filename: ifvtur.shp
+		Start: 192
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret8:
+		Filename: ifvtur.shp
+		Start: 224
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret9:
+		Filename: ifvtur.shp
+		Start: 256
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret10:
+		Filename: ifvtur.shp
+		Start: 288
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret11:
+		Filename: ifvtur.shp
+		Start: 288
+		Facings: 32
+		UseClassicFacingFudge: True
+	open:
+		Filename: ifv.shp
+		Start: 32
+		Length: 3
+	unload:
+		Filename: ifv.shp
+		Start: 32
+	icon:
+		Filename: ifvicon.shp
+
+ifv.destroyed:
+	Defaults:
+		Filename: ifv.destroyed.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ifv.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: 1tnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+titan:
+	Inherits: ^VehicleOverlays
+	stand:
+		Filename: titanlegs.shp
+		Facings: 16
+	run:
+		Filename: titanlegs.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 90
+	turret:
+		Filename: titanturr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: titanicnh.shp
+
+titn.destroyed:
+	Inherits: ^VehicleOverlays
+	stand:
+		Filename: titanlegs.shp
+		Facings: 16
+	idle:
+		Filename: titanlegs.shp
+		Facings: 16
+	run:
+		Filename: titanlegs.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 90
+	turret:
+		Filename: titanturr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+
+jugg:
+	Inherits: ^VehicleOverlays
+	stand:
+		Filename: titanlegs.shp
+		Facings: 16
+	run:
+		Filename: titanlegs.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 90
+	turret:
+		Filename: juggt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: juggicnh.shp
+
+harty1.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: howi.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: harty1icon.shp
+
+jugg.destroyed:
+	Inherits: ^VehicleOverlays
+	stand:
+		Filename: titanlegs.shp
+		Facings: 16
+	idle:
+		Filename: titanlegs.shp
+		Facings: 16
+	run:
+		Filename: titanlegs.shp
+		Start: 16
+		Facings: 16
+		Length: 14
+		Tick: 90
+	turret:
+		Filename: juggt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+
+ttrk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ttrk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: ttrkicon.shp
+
+disr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: disr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: sonict.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: disricon.shp
+
+disr.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: disr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: sonict.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+hmlrs:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hvrhull.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: hvrtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: hmlrsicnh.shp
+
+hmlrs.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hvrhull.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: hvrtur.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: hmlrsicnh.shp
+
+tnkd:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tnkd.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: tnkd.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: tnkdicon.shp
+
+tnkd.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tnkd.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: tnkd.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+
+v3rl:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: v3rl.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	empty-idle:
+		Filename: v3rl.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: v3rlicon.shp
+
+rtnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: rtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: rtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: rtnkicon.shp
+
+rtnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: rtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: rtnk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+msar:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: msar.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner:
+		Filename: msarspinner.shp
+		Length: 32
+	make:
+		Filename: msarmake.shp
+		Length: *
+		Tick: 50
+	idle-static:
+		Filename: msardeployed.shp
+		Length: 14
+		Tick: 80
+	icon:
+		Filename: msaricnh.shp
+
+ptnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ptnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: ptnkt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: ptnkicon.shp
+
+ptnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ptnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: ptnkt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+mwtnk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mwtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: mwtnkt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: emp_fx02.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+	icon:
+		Filename: mwtnkicnh.shp
+
+mwtnk.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mwtnk.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: mwtnkt.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+batf:
+	Defaults:
+		Filename: batf.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: batf.shp
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Filename: 4tnkpbox.shp
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: batficon.shp
+
+batf.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: batf.shp
+		Facings: 32
+		UseClassicFacings: True
+
+
+spec:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: spec.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: specicnh.shp
+
+spec.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: spec.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: specicnh.shp
+
+memp:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: memp.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	charging:
+		Filename: memp.shp
+		Facings: 32
+	idle-overlay:
+		Filename: pulsball.shp
+		Length: 23
+		BlendMode: Additive
+		Tick: 40
+		ZOffset: 511
+	icon:
+		Filename: mempicnh.shp
+
+cdrone2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: cdrone.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: cdroneicnh.shp
+
+cdrone:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: cdrone.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: cdroneicnh.shp
+
+katy:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: katy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: katyicnh.shp
+
+katy.m.b:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: katy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: katyicnh.shp
+
+katy.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: katy.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+
+chpr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: chpr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	turretactive:
+		Filename: chpr.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret:
+		Filename: chpr.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: chpricnh.shp
+
+chpr.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: chpr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+	turret:
+		Filename: chpr.shp
+		Start: 64
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+pcan:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: pcan.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: pcanicon.shp
+
+pcan.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: pcan.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+cryo:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: cryol.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: cryolicnh.shp
+
+cryo.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: cryol.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+
+isu:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: isu.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Filename: smokeygun.shp
+		Length: 12
+		Tick: 30
+	icon:
+		Filename: isuicon.shp
+
+isu.destroyed:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: isu.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+
+want:
+	idle:
+		Filename: want.shp
+		Facings: 8
+	idle2:
+		Filename: want.shp
+		Start: 8
+		Length: 8
+	run:
+		Filename: want.shp
+		Start: 8
+		Length: 8
+		Facings: 8
+	die:
+		Filename: want.shp
+		Start: 72
+		Length: 8
+		Tick: 300
+	die-crushed:
+		Filename: want.shp
+		Start: 72
+		Length: 8
+		Tick: 400
+		ZOffset: -511
+	bite:
+		Filename: want.shp
+		Start: 72
+		Length: 4
+		Facings: 8
+	chrono-overlay:
+		Filename: chronofade_small.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512
+		Tick: 80
+	mind-overlay:
+		Filename: mindanim.shp
+		Length: *
+		Tick: 200
+		BlendMode: Alpha
+		Offset: 0, 0
+	icon:
+		Filename: waranticon.shp
+	emp-overlay:
+		Filename: emp_fx01.shp
+		Length: *
+		BlendMode: Additive
+		Offset: 0, 0
+		ZOffset: 512

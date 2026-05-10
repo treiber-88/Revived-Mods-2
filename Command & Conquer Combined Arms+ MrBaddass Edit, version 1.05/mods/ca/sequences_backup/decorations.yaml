@@ -1,0 +1,1286 @@
+tc04:
+	Defaults:
+		Filename: tc04.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+tc04.husk:
+	Defaults:
+		Filename: tc04.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+tc05:
+	Defaults:
+		Filename: tc05.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+tc05.husk:
+	Defaults:
+		Filename: tc05.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+tc03:
+	Defaults:
+		Filename: tc03.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+tc03.husk:
+	Defaults:
+		Filename: tc03.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+tc02:
+	Defaults:
+		Filename: tc02.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+tc02.husk:
+	Defaults:
+		Filename: tc02.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+tc01:
+	Defaults:
+		Filename: tc01.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+	idle:
+
+tc01.husk:
+	Defaults:
+		Filename: tc01.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+		
+t18:
+	Defaults:
+		Filename: t18.tem
+		TilesetFilenames:
+			TEMPERAT: DESERT.shp
+			INTERIOR: DESERT.shp
+			SNOW: DESERT.shp
+			WINTER: DESERT.shp
+			BARREN: DESERT.shp
+			JUNGLE: DESERT.shp
+	idle:
+
+t18.husk:
+	Defaults:
+		Filename: t18.tem
+		TilesetFilenames:
+			TEMPERAT: t18.des
+			INTERIOR: t18.des
+			SNOW: t18.des
+			WINTER: t18.des
+			BARREN: t18.des
+			JUNGLE: t18.des
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t17:
+	Defaults:
+		Filename: t17.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t17.husk:
+	Defaults:
+		Filename: t17.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t16:
+	Defaults:
+		Filename: t16.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t16.husk:
+	Defaults:
+		Filename: t16.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t15:
+	Defaults:
+		Filename: t15.tem
+	idle:
+
+t15.husk:
+	Defaults:
+		Filename: t15.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t14:
+	Defaults:
+		Filename: t14.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t14.husk:
+	Defaults:
+		Filename: t14.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t13:
+	Defaults:
+		Filename: t13.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t13.husk:
+	Defaults:
+		Filename: t13.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t12:
+	Defaults:
+		Filename: t12.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t12.husk:
+	Defaults:
+		Filename: t12.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t11:
+	Defaults:
+		Filename: t11.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t11.husk:
+	Defaults:
+		Filename: t11.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t10:
+	Defaults:
+		Filename: t10.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t10.husk:
+	Defaults:
+		Filename: t10.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+		
+t09:
+	Defaults:
+		Filename: t09.tem
+		TilesetFilenames:
+			TEMPERAT: DESERT.shp
+			INTERIOR: DESERT.shp
+			SNOW: DESERT.shp
+			WINTER: DESERT.shp
+			BARREN: DESERT.shp
+			JUNGLE: DESERT.shp
+	idle:
+
+t09.husk:
+	Defaults:
+		Filename: t09.tem
+		TilesetFilenames:
+			TEMPERAT: t09.des
+			INTERIOR: t09.des
+			SNOW: t09.des
+			WINTER: t09.des
+			BARREN: t09.des
+			JUNGLE: t09.des
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t08:
+	Defaults:
+		Filename: t08.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+	idle:
+
+t08.husk:
+	Defaults:
+		Filename: t08.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t07:
+	Defaults:
+		Filename: t07.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t07.husk:
+	Defaults:
+		Filename: t07.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t06:
+	Defaults:
+		Filename: t06.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t06.husk:
+	Defaults:
+		Filename: t06.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t05:
+	Defaults:
+		Filename: t05.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t05.husk:
+	Defaults:
+		Filename: t05.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t04:
+	Defaults:
+		Filename: t04.tem
+		TilesetFilenames:
+			TEMPERAT: DESERT.shp
+			INTERIOR: DESERT.shp
+			SNOW: DESERT.shp
+			WINTER: DESERT.shp
+			BARREN: DESERT.shp
+			JUNGLE: DESERT.shp
+	idle:
+
+t04.husk:
+	Defaults:
+		Filename: t04.tem
+		TilesetFilenames:
+			TEMPERAT: t04.des
+			INTERIOR: t04.des
+			SNOW: t04.des
+			WINTER: t04.des
+			BARREN: t04.des
+			JUNGLE: t04.des
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t03:
+	Defaults:
+		Filename: t03.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t03.husk:
+	Defaults:
+		Filename: t03.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t02:
+	Defaults:
+		Filename: t02.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t02.husk:
+	Defaults:
+		Filename: t02.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+t01:
+	Defaults:
+		Filename: t01.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+
+t01.husk:
+	Defaults:
+		Filename: t01.tem
+	idle:
+		Start: 1
+	dead:
+		Start: 2
+		Length: 8
+		Tick: 80
+
+ice01:
+	Defaults:
+		Filename: ice01.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Length: *
+
+ice02:
+	Defaults:
+		Filename: ice02.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Length: *
+
+ice03:
+	Defaults:
+		Filename: ice03.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Length: *
+
+ice04:
+	Defaults:
+		Filename: ice04.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Length: *
+
+ice05:
+	Defaults:
+		Filename: ice05.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Length: *
+
+v01:
+	Defaults:
+		Filename: v01.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v02:
+	Defaults:
+		Filename: v02.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v03:
+	Defaults:
+		Filename: v03.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v04:
+	Defaults:
+		Filename: v04.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v05:
+	Defaults:
+		Filename: v05.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v06:
+	Defaults:
+		Filename: v06.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v07:
+	Defaults:
+		Filename: v07.tem
+		TilesetFilenames:
+			INTERIOR: TEMPERAT.shp
+			DESERT: TEMPERAT.shp
+	idle:
+	damaged-idle:
+		Start: 1
+
+v08:
+	Defaults:
+		Filename: v08.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v09:
+	Defaults:
+		Filename: v09.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v10:
+	Defaults:
+		Filename: v10.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v11:
+	Defaults:
+		Filename: v11.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v12:
+	Defaults:
+		Filename: v12.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v13:
+	Defaults:
+		Filename: v13.tem
+	idle:
+	damaged-idle:
+		Start: 1
+
+v14:
+	Defaults:
+		Filename: v14.tem
+	idle:
+		ZOffset: -512
+	damaged-idle:
+		Start: 1
+		ZOffset: -512
+
+v15:
+	Defaults:
+		Filename: v15.tem
+	idle:
+		ZOffset: -512
+	damaged-idle:
+		Start: 1
+		ZOffset: -512
+
+v16:
+	Defaults:
+		Filename: v16.tem
+	idle:
+		ZOffset: -512
+	damaged-idle:
+		Start: 1
+		ZOffset: -512
+
+v17:
+	Defaults:
+		Filename: v17.tem
+	idle:
+		ZOffset: -512
+	damaged-idle:
+		Start: 1
+		ZOffset: -512
+
+v18:
+	Defaults:
+		Filename: v18.tem
+	idle:
+		ZOffset: -512
+	damaged-idle:
+		Start: 1
+		ZOffset: -512
+		
+v19:
+	idle:
+		Filename: v19.shp
+		Length: 14
+
+v19.husk:
+	idle:
+		Filename: v19.shp
+		Start: 28
+	fire-start:
+		Filename: flmspt.shp
+		Length: *
+		Offset: 7,-15
+		ZOffset: 1
+	fire-loop:
+		Filename: flmspt.shp
+		Start: 50
+		Length: *
+		Offset: 7,-15
+		ZOffset: 1
+		
+v20:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v20.des.shp
+		Length: 3
+		Tick: 120
+	damaged-idle:
+		Filename: v20.des.shp
+		Start: 3
+		Length: 3
+		Tick: 120
+
+v21:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v21.des.shp
+		Length: 3
+		Tick: 120
+	damaged-idle:
+		Filename: v21.des.shp
+		Start: 3
+		Length: 3
+		Tick: 120
+
+v22:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v22.des.shp
+		Length: 3
+		Tick: 120
+	damaged-idle:
+		Filename: v22.des.shp
+		Start: 3
+		Length: 3
+		Tick: 120
+
+v23:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v23.des.shp
+		Length: 3
+		Tick: 120
+	damaged-idle:
+		Filename: v23.des.shp
+		Start: 3
+		Length: 3
+		Tick: 120
+
+v24:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v24.des.shp
+	damaged-idle:
+		Filename: v24.des.shp
+		Start: 1
+
+v25:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v25.des.shp
+	damaged-idle:
+		Filename: v25.des.shp
+		Start: 1
+
+v26:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v26.des.shp
+	damaged-idle:
+		Filename: v26.des.shp
+		Start: 1
+
+v27:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v27.des.shp
+	damaged-idle:
+		Filename: v27.des.shp
+		Start: 1
+
+v28:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v28.des.shp
+	damaged-idle:
+		Filename: v28.des.shp
+		Start: 1
+
+v29:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v29.des.shp
+	damaged-idle:
+		Filename: v29.des.shp
+		Start: 1
+
+v30:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v30.des.shp
+	damaged-idle:
+		Filename: v30.des.shp
+		Start: 2
+
+v31:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v31.des.shp
+	damaged-idle:
+		Filename: v31.des.shp
+		Start: 1
+
+v32:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v32.des.shp
+	damaged-idle:
+		Filename: v32.des.shp
+		Start: 1
+
+v33:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v33.des.shp
+	damaged-idle:
+		Filename: v33.des.shp
+		Start: 1
+
+v34:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v34.des.shp
+	damaged-idle:
+		Filename: v34.des.shp
+		Start: 1
+
+v35:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v35.des.shp
+	damaged-idle:
+		Filename: v35.des.shp
+		Start: 1
+
+v36:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v36.des.shp
+	damaged-idle:
+		Filename: v36.des.shp
+		Start: 1
+
+v37:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: v37.des.shp
+	damaged-idle:
+		Filename: v37.des.shp
+		Start: 1
+
+rice:
+	Defaults:
+		AddExtension: false
+	idle:
+		Filename: rice.tem.shp
+		ZOffset: -512
+	damaged-idle:
+		Filename: rice.tem.shp
+		Start: 1
+		ZOffset: -512
+
+utilpol1:
+	idle:
+		Filename: utilpol1.shp
+	damaged-idle:
+		Filename: utilpol1.shp
+		Start: 1
+	dead:
+		Filename: utilpol1.shp
+		Start: 1
+
+utilpol2:
+	idle:
+		Filename: utilpol2.shp
+	damaged-idle:
+		Filename: utilpol2.shp
+		Start: 1
+	dead:
+		Filename: utilpol2.shp
+		Start: 1
+
+ammobox1:
+	idle:
+		Filename: ammobox1.shp
+
+ammobox2:
+	idle:
+		Filename: ammobox2.shp
+
+ammobox3:
+	idle:
+		Filename: ammobox3.shp
+
+tanktrap1:
+	idle:
+		Filename: tanktrap1.shp
+
+tanktrap2:
+	idle:
+		Filename: tanktrap2.shp
+
+rushouse:
+	idle:
+		Filename: rushouse.shp
+	damaged-idle:
+		Filename: rushouse.shp
+		Start: 1
+		
+rushouse2:
+	idle:
+		Filename: rushouse2.shp
+	damaged-idle:
+		Filename: rushouse.shp
+		Start: 1
+		
+rushouse3:
+	idle:
+		Filename: rushouse3.shp
+	damaged-idle:
+		Filename: rushouse.shp
+		Start: 1
+		
+rushouse4:
+	idle:
+		Filename: rushouse4.shp
+	damaged-idle:
+		Filename: rushouse.shp
+		Start: 1
+
+asianhut:
+	idle:
+		Filename: asianhut.shp
+	damaged-idle:
+		Filename: asianhut.shp
+		Start: 1
+
+barb:
+	idle:
+		Filename: barb.shp
+		Length: 16
+	damaged-idle:
+		Filename: barb.shp
+		Start: 16
+		Length: 16
+
+wood:
+	idle:
+		Filename: wood.shp
+		Length: 16
+	damaged-idle:
+		Filename: wood.shp
+		Start: 16
+		Length: 16
+
+barl:
+	idle:
+		Filename: barl.shp
+
+brl3:
+	idle:
+		Filename: brl3.shp
+
+boxes01:
+	idle:
+		Filename: boxes01.int.shp
+		AddExtension: false
+
+boxes02:
+	idle:
+		Filename: boxes02.int.shp
+		AddExtension: false
+
+boxes03:
+	idle:
+		Filename: boxes03.int.shp
+		AddExtension: false
+
+boxes04:
+	idle:
+		Filename: boxes04.int.shp
+		AddExtension: false
+
+boxes05:
+	idle:
+		Filename: boxes05.int.shp
+		AddExtension: false
+
+boxes06:
+	idle:
+		Filename: boxes06.int.shp
+		AddExtension: false
+
+boxes07:
+	idle:
+		Filename: boxes07.int.shp
+		AddExtension: false
+
+boxes08:
+	idle:
+		Filename: boxes08.int.shp
+		AddExtension: false
+
+boxes09:
+	idle:
+		Filename: boxes09.int.shp
+		AddExtension: false
+
+rock1:
+	idle:
+		Filename: rock1.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock2:
+	idle:
+		Filename: rock2.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock3:
+	idle:
+		Filename: rock3.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock4:
+	idle:
+		Filename: rock4.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock5:
+	idle:
+		Filename: rock5.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock6:
+	idle:
+		Filename: rock6.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+rock7:
+	idle:
+		Filename: rock7.shp
+		TilesetFilenames:
+			SNOW: TEMPERAT.shp
+			WINTER: TEMPERAT.shp
+			JUNGLE: TEMPERAT.shp
+			BARREN: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+
+snowhut:
+	idle:
+		Filename: snowhut.shp
+		Length: 3
+		Tick: 360
+	damaged-idle:
+		Filename: snowhut.shp
+		Start: 3
+		Tick: 120
+
+lhus:
+	Defaults:
+		Offset: 0,-16
+	idle:
+		Filename: lhus.shp
+		Length: 16
+		Tick: 180
+	damaged-idle:
+		Filename: lhus.shp
+		Start: 16
+		Tick: 180
+		Length: 8
+
+windmill:
+	Defaults:
+		Offset: 0,-16
+	idle:
+		Filename: windmill.shp
+		Length: 8
+		Tick: 80
+	damaged-idle:
+		Filename: windmill.shp
+		Start: 8
+		Length: 8
+		Tick: 80
+
+v01.husk:
+	Defaults:
+		Filename: v01.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v01.tem
+
+v02.husk:
+	Defaults:
+		Filename: v02.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v02.tem
+
+v03.husk:
+	Defaults:
+		Filename: v03.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v03.tem
+
+v04.husk:
+	Defaults:
+		Filename: v04.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v04.tem
+
+v05.husk:
+	Defaults:
+		Filename: v05.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v05.tem
+
+v06.husk:
+	Defaults:
+		Filename: v06.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v06.tem
+
+v07.husk:
+	Defaults:
+		Filename: v07.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v07.tem
+
+v08.husk:
+	Defaults:
+		Filename: v08.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v08.tem
+
+v09.husk:
+	Defaults:
+		Filename: v09.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v09.tem
+
+v10.husk:
+	Defaults:
+		Filename: v10.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v10.tem
+
+v11.husk:
+	Defaults:
+		Filename: v11.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v11.tem
+
+v12.husk:
+	Defaults:
+		Filename: v12.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v12.tem
+		ZOffset: -512
+
+v13.husk:
+	Defaults:
+		Filename: v13.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v13.tem
+		ZOffset: -512
+
+v14.husk:
+	Defaults:
+		Filename: v14.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v14.tem
+		ZOffset: -512
+
+v15.husk:
+	Defaults:
+		Filename: v15.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v15.tem
+		ZOffset: -512
+
+v16.husk:
+	Defaults:
+		Filename: v16.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v16.tem
+		ZOffset: -512
+
+v17.husk:
+	Defaults:
+		Filename: v17.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v17.tem
+		ZOffset: -512
+
+v18.husk:
+	Defaults:
+		Filename: v18.husk.tem
+		TilesetFilenames:
+			DESERT: TEMPERAT.shp
+			INTERIOR: TEMPERAT.shp
+	idle:
+		Filename: v18.tem
+		ZOffset: -512
+
+arco:
+	idle:
+		Filename: arco.shp
+	damaged-idle:
+		Filename: arco.shp
+		Start: 1
+
+arco.husk:
+	idle:
+		Filename: arco.shp
+		Start: 1

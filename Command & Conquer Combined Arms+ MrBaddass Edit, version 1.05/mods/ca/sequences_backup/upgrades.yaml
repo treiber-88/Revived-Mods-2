@@ -1,0 +1,217 @@
+bombard.strat:
+	icon:
+		Filename: strat-bombicnh.shp
+
+seek.strat:
+	icon:
+		Filename: strat-seekicnh.shp
+
+hovermam.upgrade:
+	icon:
+		Filename: upg-hovermamicnh.shp
+
+pure.upgrade:
+	icon:
+		Filename: upg-pure.shp
+
+bh.upgrade:
+	icon:
+		Filename: upg-bhicon.shp
+
+adv.upgrade:
+	icon:
+		Filename: upg-advicon.shp
+
+manipulator.upgrade
+	icon:
+		Filename: mani-upg.shp
+
+chaos.upgrade
+	icon:
+		Filename: chaos-upg.shp
+
+robottank.upgrade:
+	icon:
+		Filename: robottank.upgrade.shp
+
+shk.upgrade:
+	icon:
+		Filename: upg-teslatroop.shp
+
+hold.strat:
+	icon:
+		Filename: strat-holdicnh.shp
+
+cryr.upgrade:
+	icon:
+		Filename: upg-cryricon.shp
+
+hypersonic.upgrade:
+	icon:
+		Filename: upg-hypericnh.shp
+
+tflx.upgrade:
+	icon:
+		Filename: upg-tflxicon.shp
+
+sonic.upgrade:
+	icon:
+		Filename: upg-sonicicnh.shp
+
+drone.upgrade:
+	icon:
+		Filename: upg-droneicon.shp
+
+pointlaser.upgrade:
+	icon:
+		Filename: upg-pdlasericnh.shp
+
+pointlaser.upgradeaa:
+	icon:
+		Filename: upg-pdlasericnhaa.shp
+
+ionmam.upgrade:
+	icon:
+		Filename: upg-ionmamicnh.shp
+
+walker.upgrade:
+	icon:
+		Filename: upg-walkericnh.shp
+
+tibmis.upgrade:
+	icon:
+		Filename: tibmissile.upg.shp
+
+jam.upgrade:
+	icon:
+		Filename: upg-jamicon.shp
+
+vulcan.upgrade:
+	icon:
+		Filename: upg-vulcicnh.shp
+
+hazmat.upgrade:
+	icon:
+		Filename: upg-hazmicnh.shp
+	
+howi.upgrade:
+	icon:
+		Filename: upg-howiicnh.shp
+
+cyborg.upgrade:
+	icon:
+		Filename: upg-cyborgicnh.shp
+
+cyborgspeed.upgrade:
+	icon:
+		Filename: upg-cyborgspeedicnh.shp
+
+cyborgarmor.upgrade:
+	icon:
+		Filename: upg-cyborgarmoricnh.shp
+
+cluster.upgrade:
+	icon:
+		Filename: upg-clusicon.shp
+
+indp.upgrade:
+	icon:
+		Filename: upg-indpicon.shp
+
+v2.upgrade:
+	icon:
+		Filename: upg-v2rlicon.shp
+
+fist.upgrade:
+	icon:
+		Filename: upg-fisticon.shp
+
+iraqtank.upgrade:
+	icon:
+		Filename: upg-iraqicon.shp
+
+orep.upgrade:
+	icon:
+		Filename: upg-orepicon.shp
+
+charv.upgrade:
+	icon:
+		Filename: upg-charvicon.shp
+
+pcan.upgrade:
+	icon:
+		Filename: upg-pcanicon.shp
+
+regen.upgrade:
+	icon:
+		Filename: upg-hullregenicon.shp
+
+shields.upgrade:
+	icon:
+		Filename: upg-fleetshieldsicon.shp
+
+shields2.upgrade:
+	icon:
+		Filename: upg-fleetshieldsicon2.shp
+
+structural.upgrade:
+	icon:
+		Filename: structural.upgrade.upg.shp
+
+thrust.upgrade:
+	icon:
+		Filename: thrust.upgrade.upg.shp
+
+harv.upgrade:
+	icon:
+		Filename: harv.upgrade.upg.shp
+
+adharv.upgrade:
+	icon:
+		Filename: adharv.upgrade.upg.shp
+
+exo.upgrade:
+	icon:
+		Filename: exo.upg.shp
+
+reaper.upgrade:
+	icon:
+		Filename: reaperupgrade.shp
+
+body.upgrade:
+	icon:
+		Filename: body.upg.shp
+
+talon.upgrade:
+	icon:
+		Filename: talon.upgrade.shp
+
+sign.upgrade:
+	icon:
+		Filename: sign.upg.shp
+
+arms.upgrade:
+	icon:
+		Filename: upg-arms.shp
+
+tesla.upgrade:
+	Defaults:
+		Filename: tesla.upgrade.shp
+	icon: 4tnk-tsla-icon2
+
+flame.upgrade:
+	Defaults:
+		Filename: flame.upgrade.shp
+	icon: 4tnk-flam.icon2
+
+gap.upgrade:
+	icon:
+		Filename: upg-gap.shp
+
+turbo.upgrade:
+	icon:
+		Filename: turbo.upgrade.shp
+
+behe.upgrade:
+	icon:
+		Filename: behe-upg.shp

@@ -1,0 +1,582 @@
+osprey:
+	Defaults:
+		Filename: osprey.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: ospreyicon.shp
+
+
+black:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: black.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: blackicon.shp
+
+mig:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mig.shp
+		Facings: 16
+	icon:
+		Filename: migicon.shp
+
+
+yak:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: yak.shp
+		Facings: 16
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: yakicon.shp
+
+bulk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: ganghan.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotorlg.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotorlg.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: ganghanicon.shp
+
+heli:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: heli.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lbrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lbrotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: heliicon.shp
+
+
+hind:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hind.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotorlg.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotorlg.shp
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: hindicon.shp
+
+	
+hindoriginal:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: hindoriginal.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotorlg.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotorlg.shp
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: hindicon.shp
+
+
+tran:
+	Defaults:
+		Filename: tran.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: tran.shp
+		Start: 32
+		Length: 4
+	close:
+		Frames: 35, 34, 33, 32
+		Length: 4
+	unload:
+		Filename: tran.shp
+		Start: 35
+	icon:
+		Filename: tranicon.shp
+
+combattran:
+	Defaults:
+		Filename: combattran.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: combattran.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: combattran.shp
+		Start: 32
+		Length: 4
+	close:
+		Frames: 35, 34, 33, 32
+		Length: 4
+	unload:
+		Filename: ctran.shp
+		Start: 35
+	icon:
+		Filename: ctranicon.shp
+
+	
+tran2:
+	Defaults:
+		Filename: tran2.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran2.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: tran2.shp
+		Start: 32
+		Length: 4
+	close:
+		Frames: 35, 34, 33, 32
+		Length: 4
+	unload:
+		Filename: tran2.shp
+		Start: 35
+	icon:
+		Filename: tranicnh.shp
+
+
+tran3:
+	Defaults:
+		Filename: tran3.shp
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran3.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: tran3.shp
+		Start: 32
+		Length: 4
+	close:
+		Frames: 35, 34, 33, 32
+		Length: 4
+	unload:
+		Filename: tran3.shp
+		Start: 35
+	icon:
+		Filename: tranicon.shp
+
+
+ctran:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran3.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	rotor2:
+		Filename: rrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	slow-rotor2:
+		Filename: rrotor.shp
+		Start: 4
+		Length: 8
+	open:
+		Filename: tran3.shp
+		Start: 32
+		Length: 4
+	close:
+		Filename: tran3.shp
+		Frames: 35, 34, 33, 32
+		Length: 4
+	unload:
+		Filename: tran3.shp
+		Start: 35
+	icon:
+		Filename: ctranicnh.shp
+	
+
+tran1husk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran1husk.shp
+
+
+tran2husk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: tran2husk.shp
+
+
+u2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: u2.shp
+		Facings: 16
+
+
+badr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: badr.shp
+		Facings: 16
+
+
+b2b:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: b2b.shp
+		Facings: 32
+
+
+a10:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: a10.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: a10icnh.shp
+
+
+c17:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: c17.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+
+
+orca:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: orca.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: orca.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: orcaicnh.shp
+
+
+orcab:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: orcab.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: orcab.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: orcabicnh.shp
+
+
+orcabcha:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: orcabcha.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: orcabcha.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: orcabchaicnh.shp
+
+
+apch:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: apch.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: apchicnh.shp
+
+
+uav:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: uav.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+
+
+rah66:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: rah66.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lbrotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: lbrotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: rah66icnh.shp
+
+	
+kirov:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: kirov.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: krotor.shp
+		Length: 4
+	slow-rotor:
+		Filename: krotor.shp
+		Start: 4
+		Length: 8
+	icon:
+		Filename: kirovicon.shp
+
+	
+suk:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: suk.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sukicon.shp
+
+	
+orcaca:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: orcaca.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: orcaca.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: orcacaicnh.shp
+
+	
+harr:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: harr.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: harricon.shp
+
+		
+horn:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: horn.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: harricon.shp
+
+scrin:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: scrin.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: scrinicnh.shp
+
+yf23:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: yf23.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: a10icnh.shp
+		
+pod:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: pod.shp
+		Start: 1
+		Length: 1
+		
+pod2:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: pod.shp
+		Length: 1
+
+mh60:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: mh60.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor:
+		Filename: lrotorlg.shp
+		Length: 4
+	slow-rotor:
+		Filename: lrotorlg.shp
+		Start: 4
+		Length: 8
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: mh60icon.shp
+
+venm:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: venm.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Filename: venm.shp
+		Start: 32
+		Facings: 32
+	icon:
+		Filename: venmicnh.shp
+	
+auro:
+	Inherits: ^VehicleOverlays
+	idle:
+		Filename: auro.shp
+		Facings: 32
+		UseClassicFacingFudge: True
+	icon:
+		Filename: auroicnh.shp

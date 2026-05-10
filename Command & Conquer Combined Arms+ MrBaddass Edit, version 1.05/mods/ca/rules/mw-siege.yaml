@@ -1,0 +1,234 @@
+# MW Kingdom Siege Weapons - rewritten for CA edit engine
+
+SIEGE1:
+	Inherits: ^MWSiege
+	RenderSprites:
+		Image: siege1
+		Palette: mwbase
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Mobile:
+		Locomotor: mwsiege
+		Speed: 60
+		Voice: Move
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Siege Ballista
+		GenericName: Siege Weapon
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 301
+		Prerequisites: mwhq
+		Description: Long-range ballista. Very strong against cavalry and buildings.
+		Queue: MWSiege
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 10000
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 1024, 1024, 0, -256
+		DecorationBounds: 1024, 1024, 0, -256
+	Armament:
+		Weapon: SiegeBalista
+		LocalOffset: 30,0,4
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 11
+		InitialStance: AttackAnything
+
+SIEGE2:
+	Inherits: ^MWSiege
+	RenderSprites:
+		Image: siege2
+		Palette: mwbase
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Mobile:
+		Locomotor: mwsiege
+		Speed: 60
+		Voice: Move
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Siege Catapult
+		GenericName: Siege Weapon
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 302
+		Prerequisites: mwhq
+		Description: Catapult with area boulder attack. Strong against infantry and buildings.
+		Queue: MWSiege
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 12000
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 1024, 1024, 0, -256
+		DecorationBounds: 1024, 1024, 0, -256
+	Armament:
+		Weapon: SiegeBoulder
+		LocalOffset: 0,0,20
+	Armament@1:
+		Weapon: SiegeBoulder
+		LocalOffset: 0,0,20
+	Armament@2:
+		Weapon: SiegeBoulder
+		LocalOffset: 0,0,20
+	Armament@3:
+		Weapon: SiegeBoulder
+		LocalOffset: 0,0,20
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 12
+		InitialStance: AttackAnything
+
+SIEGE3:
+	Inherits: ^MWSiege
+	RenderSprites:
+		Image: sgtw
+		Palette: mwbase
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Mobile:
+		Locomotor: mwsiege
+		Crushes: crate, infantry
+		Speed: 55
+		Voice: Move
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Siege Tower
+		GenericName: Siege Weapon
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 303
+		Prerequisites: mwbarr
+		Description: Mobile siege tower. Transports up to 6 infantry. Can attack air.
+		Queue: MWSiege
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 1536, 2048, 0, -512
+		DecorationBounds: 1536, 2048, 0, -512
+	Cargo:
+		MaxWeight: 6
+		PipCount: 6
+		Types: Infantry
+		EjectOnDeath: true
+	AttackTurreted:
+		Voice: Attack
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 255
+		Offset: 6,-6,40
+	Turreted@2:
+		Turret: secondary
+		TurnSpeed: 255
+		Offset: -6,0,40
+	Turreted@3:
+		Turret: tertiary
+		TurnSpeed: 255
+		Offset: 6,6,40
+	WithSpriteTurret@1:
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2:
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
+	WithSpriteTurret@3:
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: tertiary
+	Armament@1:
+		Weapon: BowNArrow
+		LocalOffset: 0,0,18
+		Turret: primary
+	Armament@2:
+		Weapon: BowNArrow
+		LocalOffset: 0,0,18
+		Turret: secondary
+		FireDelay: 15
+	Armament@3:
+		Weapon: BowNArrow
+		LocalOffset: 0,0,18
+		Turret: tertiary
+		FireDelay: 30
+	Armament@1Air:
+		Weapon: BowNArrowAir
+		LocalOffset: 0,0,18
+		Turret: primary
+	Armament@2Air:
+		Weapon: BowNArrowAir
+		LocalOffset: 0,0,18
+		Turret: secondary
+		FireDelay: 15
+	Armament@3Air:
+		Weapon: BowNArrowAir
+		LocalOffset: 0,0,18
+		Turret: tertiary
+		FireDelay: 30
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
+
+SIEGE4:
+	Inherits: ^MWSiege
+	RenderSprites:
+		Image: bara
+		Palette: mwbase
+	ClassicFacingBodyOrientation:
+		QuantizedFacings: 32
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Mobile:
+		Locomotor: mwsiege
+		Crushes: crate, infantry
+		Speed: 30
+		Voice: Move
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Battering Ram
+		GenericName: Siege Weapon
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 304
+		Prerequisites: mwbarr
+		Description: Massive ram that destroys walls and buildings. Can carry 8 infantry.
+		Queue: MWSiege
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 150000
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 1536, 1024, 0, -256
+		DecorationBounds: 1536, 1024, 0, -256
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Infantry
+		EjectOnDeath: true
+	Armament:
+		Weapon: Battering
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything

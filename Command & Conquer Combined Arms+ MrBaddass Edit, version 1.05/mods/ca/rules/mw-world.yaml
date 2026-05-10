@@ -1,0 +1,197 @@
+# MW Factions: Kingdom, Baron, Sultanate, Undead
+# Adds palettes, locomotors, factions, and production queues to CA edit
+
+World:
+	Locomotor@MWCAVALRY:
+		Name: mwcavalry
+		Crushes: crate, infantry
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 70
+			Road: 110
+			Bridge: 100
+			Ford: 60
+			Ore: 70
+			Gems: 70
+			Beach: 50
+	Locomotor@MWSIEGE:
+		Name: mwsiege
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 55
+			Road: 90
+			Bridge: 75
+			Ford: 40
+			Ore: 55
+			Gems: 55
+			Beach: 30
+	Faction@kingdom:
+		Name: Kingdom
+		InternalName: kingdom
+		Side: Medieval Warfare
+		Description: The Kingdom of Dardanus. Powerful knights and cavalry.
+	Faction@baron:
+		Name: Baron
+		InternalName: baron
+		Side: Medieval Warfare
+		Description: Baron Hodsworth's forces. Heavy armor and crossbows.
+	Faction@sultanate:
+		Name: Sultanate
+		InternalName: sultanate
+		Side: Medieval Warfare
+		Description: Sultan Cem Rashid's armies. Fire and exotic weapons.
+	Faction@undead:
+		Name: Undead
+		InternalName: undead
+		Side: Medieval Warfare
+		Description: The forgotten dead, risen to fight again.
+	StartingUnits@mcvonlymw:
+		Class: none
+		ClassName: Keep Only
+		Factions: kingdom, baron, sultanate, undead
+		BaseActor: mwfact
+	StartingUnits@lightmw:
+		Class: light
+		ClassName: Light Support
+		Factions: kingdom, baron, sultanate, undead
+		BaseActor: mwfact
+		SupportActors: e1new,e1new,e1new,e4new,e4new
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavymw:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: kingdom, baron, sultanate, undead
+		BaseActor: mwfact
+		SupportActors: e1new,e1new,e1new,e4new,e4new,ross1,ross1
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@sheavymw:
+		Class: sheavy
+		ClassName: Super Heavy
+		Factions: kingdom, baron, sultanate, undead
+		BaseActor: mwfact
+		SupportActors: e1new,e1new,e1new,e4new,e4new,e4new,ross1,ross1,ross2,ross2,newcomm
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	PaletteFromFile@mwbase:
+		Name: mwbase
+		Filename: newMWPalette.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwicon:
+		Name: mwicon
+		Filename: temperatRA.pal
+		ShadowIndex: 4
+		AllowModifiers: false
+	PaletteFromFile@mwwall:
+		Name: mwwall
+		Filename: temperatRAWall.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwsultan:
+		Name: mwsultan
+		Filename: sulMWPalette.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwsulwall:
+		Name: mwsulwall
+		Filename: sulWallPalette.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwundead:
+		Name: mwundead
+		Filename: Medieval_Undead.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwcivilian:
+		Name: mwcivilian
+		Filename: Medieval_Civ_palette.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwnobles:
+		Name: mwnobles
+		Filename: Medieval_noble_palette.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromFile@mwgrimspawn:
+		Name: mwgrimspawn
+		Filename: grimspawn.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+	PaletteFromPaletteWithAlpha@mwgrimalpha:
+		Name: mwgrimalpha
+		BasePalette: mwbase
+		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@mwgrimspawnalpha:
+		Name: mwgrimspawnalpha
+		BasePalette: mwgrimspawn
+		Alpha: 0.8
+
+Player:
+	ClassicProductionQueue@MWBuilding:
+		Type: MWBuilding
+		Group: Building
+		DisplayOrder: 10
+		LowPowerModifier: 200
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 95, 90, 85
+	ClassicProductionQueue@MWInfantry:
+		Type: MWInfantry
+		Group: Infantry
+		DisplayOrder: 11
+		LowPowerModifier: 150
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 80, 60, 40, 35
+	ClassicProductionQueue@MWCavalry:
+		Type: MWCavalry
+		Group: Vehicle
+		DisplayOrder: 12
+		LowPowerModifier: 200
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 80, 60, 40, 35
+	ClassicProductionQueue@MWSiege:
+		Type: MWSiege
+		Group: Vehicle
+		DisplayOrder: 13
+		LowPowerModifier: 200
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 80, 60, 40, 35
+	ClassicProductionQueue@MWDefense:
+		Type: MWDefense
+		Group: Defense
+		DisplayOrder: 14
+		LowPowerModifier: 200
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoBuild
+		LimitedAudio: BuildingInProgress
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 95, 90, 85

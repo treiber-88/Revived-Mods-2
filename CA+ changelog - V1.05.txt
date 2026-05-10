@@ -1,0 +1,221 @@
+V1.05 Changelog:
+
+
+I am still working on the mod, focusing on scripting some special operations maps for each faction (could really do with some help :P) but this is another hotfix and balance update (thanks for the feedback)
+
+UPDATE on missions and operations, I have the maps designed and created I’m just learning/struggling to implement the scripts and the way units will spawn as reinforcements ect.... if anyone could lend a hand and offer some help I would greatly appreciate it.
+
+--------------------------------------------------------------------------------------------------------
+
+URGENT FIXES:
+
+THANKS TO EVERYONE WHO REPORTED ISSUES (YOU GUYS/GALS RULE!), THE FEEDBACK IS VERY HELPFULL!!!!
+
+-Fixed chaos drone attack still causing chaos even after the immunity upgrade has be purchased
+-Fixed the repair feature where units who were damaged could enter the healing zone of the repair facility & then exit and still maintain the effect (this is fixed for all units including: navy, air, vehicles and infantry)
+-Fixed GDI MCV not being able to be built once requirements were met
+-Fixed spy units not taking disguise from Guardians and Chronolegionaires
+-Fixed an issue with the Allied Cruiser regarding weapon function, the issue was due to incorrect weapon range
+-Fixed an oversight regarding the Advanced ore Processing upgrade not being available for South Korea
+-Fixed an error in range for the GDI AA Gun and the vulcan weapon for the GDI APC when firing at full speed
+
+--------------------------------------------------------------------------------------------------------
+Quality of Life & Additional Changes:
+-Improve the rate & amount of which the machine workshop heals damaged units
+-Added flavour text to the Reckoner telling the user how many infantry it can carry
+-Soviets gain access to a new upgrade, Tesla Trooper: Upgrades Shock Trooper to the RA2 Telsa Trooper with added benefits
+-Black Hand faction given exclusive access to the Howitzer Upgrade
+-Neutralized the "spy" unit of each factions shroud reveal range to 5 from 7
+-Aircraft now gain a greater build time reduction with additional factories, 1 Production Facility = 0% faster production. 2 Production Facility = 15% faster production. 3 Production Facility = 30% faster production. 4 Production Facility = 45% faster production. Production Facility = 55% faster production.
+
+--------------------------------------------------------------------------------------------------------
+
+Graphical updates:
+-Changed the GDI commando name to Havoc, this is to reflect the Renegade games & to also match the origins of his relationship with Nods Sakura
+-Updated the sprite of the Obelisk of Darkness
+-Updated the Nod Cyborg sprite
+-Updated the Magnetron sprite & shadows
+-Improved the Black Hand upgrade image quality
+
+--------------------------------------------------------------------------------------------------------
+
+Tech Buildings:
+
+--------------------------------------------------------------------------------------------------------
+
+NERFS:
+-All tier 4 buildings cost increased to 3000
+-All tier 1 and tier 2 defences rate of fire reworked, + 50% for slower rate of fire
+
+--------------------------------------------------------------------------------------------------------
+
+All Faction Nerfs:
+-Several units and structures have had a slight cost increase (across all factions).
+
+--------------------------------------------------------------------------------------------------------
+
+Allied Nerfs:
+-Mobile Gap Generator cost increased to 1600 from 1400
+
+South Korea Nerfs:
+-Tank Hunter hit points reduced to 29000
+-Tank Hunter movement speed reduced to 101
+-Tank Hunter weapon damage vs buildings reduced
+-Tank Hunter weapon damage vs infantry reduced
+
+Molovots Nerfs:
+-Lost access to AA tanks, the BTR now replaces the AA tank
+
+--------------------------------------------------------------------------------------------------------
+
+Soviet Nerfs:
+-BTR anti-air cannon damage reworked
+-BTR anti-air cannon range reworked
+-Increased mobile SAM sites weapon reload delay by 10%
+-Flame Tower power consumption increased to -20
+-Thruster Engines movement speed bonus reduced to 25% from 50%
+-Kirov hitpoints reduced to 242000 from 262000
+
+Iraq Nerfs:
+-Chemical Tower power consumption increased to -20
+
+--------------------------------------------------------------------------------------------------------
+
+GDI Nerfs:
+-ADV Guard Tower power consumption increased to -60
+-Warthog hit points reduced to 50000 from 62000
+-Warthog cost increased to 1600 from 1500
+-Warthog movement speed reduced to 155 from 185
+
+ARC Nerfs:
+-Guardian Scout Drone movement speed reduced to 111
+-Guardian Scout Drone cost increased to 450
+-Guardian Scout Drone power consumption increased to -2
+-Battle Drone power consumption increased to -5
+-GDI Drone Mammoth Tank power consumption increased to -15
+
+ZOCOM Nerfs:
+-Sonic Tower Defense power consumption increased to -100
+
+Eagle Nerfs:
+-Aurora cost increased to 1950 from 1900
+-Aurora hit points reduced to 15500 from 17500
+
+--------------------------------------------------------------------------------------------------------
+
+NOD Nerfs:
+-Obelisk of Light range reduced by 1, now 11
+-Obelisk of Light power consumption increased to -110
+-Gun Turret power consumption changed to -20
+-Laser Turret power consumption increased to -40
+-Laser Fence Node cost increased to 750
+
+Shadow Nerfs:
+-Stealth Turret power consumption changed to -20
+
+Black Hand Nerfs:
+-Black Hand Indoctrination upgrade cost increased to 2000 from 1500
+-Purifying Flames upgrade cost increased to 2500 from 2000
+
+Marked Nerfs:
+-Obelisk of Darkness power consumption increased to -130
+-Obelisk of Darkness range reduced by 1, now 12
+-Venom movement speed reduced to 161 from 191
+-Venom weapon damage reworked to be less effective vs heavy armor and less effective vs defences
+
+--------------------------------------------------------------------------------------------------------
+
+Scrin Nerfs:
+-Storm Column power consumption increased to -150
+-Tiberium field heal amount halved for all units
+-Plasma Turret rate of fire decreased by 10% (including upgraded version)
+-Ravager cost increased to 450 from 400
+-Ravager hit points decreased to 11000 from 12000
+-Ravager weapon damage vs buildings and defences significantly reduced
+
+Reaper Nerfs:
+-Devourer Tank hit points reduced to 50000
+-Devourer Tank weapon damage vs infantry & buildings reduced by 50%
+-Devourer Tank weapon damage vs light and heavy units reduced by 10%
+-Devourer Tank movement speed reduced by 2
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+BUFFS:
+
+--------------------------------------------------------------------------------------------------------
+
+All Faction Buffs:
+-Several units and structures have had a slight cost decrease (across all factions)
+-All tech centers cost reduced to 3000
+
+--------------------------------------------------------------------------------------------------------
+
+Allied Buffs:
+-Additional upgrade & new unit, allows for the construction of Robot Tanks (RA2 style) after the Robot Tanks Upgrade is purchased (From the Allied Tech Center, the Robot Tank will replaces the Ranger)
+
+South Korea Nerfs:
+-Tank Hunter weapon damage vs vehicles increased
+
+--------------------------------------------------------------------------------------------------------
+
+Soviet Buffs:
+-Increased damage output of mobile SAM sites by 20%
+-Increased mobile SAM site weapon volley to 4 rockets from 2
+-Increased mobile SAM site movement speed to 63
+-V3 rocket hit points increased to 19500 to match the ICBM hit points
+-SAM Site power consumption reduced to -20
+
+Russia Buffs:
+-Tesla Cruiser EMP effect duration increased by 100%
+
+--------------------------------------------------------------------------------------------------------
+
+GDI Buffs:
+-New unit, allows for the construction of Shatterer (ZOCOM Sonic Upgrade now increases the Shatterers weapon output)
+-Point Defense Lasers cost decreased to 1500 from 2000
+-Strategies cost reduced to 2500 from 3000
+
+Eagle Buffs:
+-Orca Bomber hit points increased to 50000 from 45000
+-Orca Bomber movement speed increased to 175 from 150
+-Combat Chinook cost reduced to 950 from 1100
+-Combat Chinook hit points increased to 88000 from 66000
+-Combat Chinook now comes with 2 Rocket Soldiers already in garrison
+-Eagle faction bonus of 20% discount increased to 30%
+-Eagle faction bonus of the new 30% now includes helipads and airfields
+-Aircraft Laser upgrade cost reduced to 1500 from 2000
+-Aircraft laser rate of fire increased
+
+--------------------------------------------------------------------------------------------------------
+
+NOD Buffs:
+-Nod SAM Site power consumption reduced to -20
+-Laser Fence Node hitpoints increased by 50%
+
+--------------------------------------------------------------------------------------------------------
+
+Scrin Buffs:
+-Shard Launcher power consumption decreased to -30
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+I have tested these new changes many times and have not run into any errors, will keep testing.
+
+Thanks for all the help and support, once again feedback is appreciated!!!!  
+
+Once again original mod credits go to the original OpenRA and the original Combined Arms team, 
+
+find them on moddb here: https://www.moddb.com/mods/command-conquer-combined-arms - they also have a discord that you can join.
+

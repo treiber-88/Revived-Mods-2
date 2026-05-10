@@ -1,0 +1,352 @@
+# MW Kingdom Cavalry - rewritten for CA edit engine
+
+KINGROSS:
+	Inherits: ^MWCavalry
+	-WithInfantryBody:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot2
+		AttackSequences:
+			Secondary: shoot2
+			Primary: shoot
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+	RenderSprites:
+		Image: kingross
+		Palette: mwbase
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 110
+		Voice: Move
+	RevealsShroud:
+		Range: 7c0
+	DetectCloaked:
+	GivesBountyCA:
+		Percentage: 50
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Your Highness
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+		Description: The King on horseback. Devastating crossbow and sword attack.\\n  Detects cloaked units. Cannot be built.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+		BuildLimit: 1
+	Health:
+		HP: 65000
+	Armor:
+		Type: Knight
+	Armament:
+		Weapon: KingCrossbow
+		Name: Primary
+		LocalOffset: 0,0,500
+	Armament@Air:
+		Weapon: KingCrossbowAir
+		LocalOffset: 0,0,500
+		Name: Primary
+	Armament@Ground:
+		Weapon: KingsSwordMounted
+		Name: Secondary
+		LocalOffset: 0,0,500
+	AttackFrontal:
+		Armaments: Primary, Secondary
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	Voiced:
+		VoiceSet: CommandoVoice
+	AnnounceOnKill:
+
+ROSS1:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross1
+		Palette: mwbase
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Light Cavalry
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 201
+		Prerequisites: mwstall
+		Description: Light cavalry with pike. Fast and effective against infantry.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: PikeCavalry
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+ROSS2:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross2
+		Palette: mwbase
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Medium Cavalry
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 202
+		Prerequisites: mwstall
+		Description: Armored cavalry with spiked axe. Strong all-rounder.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: PikeAxe
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+ROSS3:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross3
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Raiding Squad
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 203
+		Prerequisites: mwstall
+		Description: Mounted archers with fire arrows. Burns through most armor.\\n  Detects cloaked units.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: LongBowNArrow
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+
+ROSS4:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross4
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Javelin Cavalry
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 204
+		Prerequisites: mwstall
+		Description: Cavalry with thrown javelins. Can engage air targets.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: SpearThrow
+	Armament@Air:
+		Weapon: SpearThrowAir
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+
+ROSS4B:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross4b
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Scout
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 205
+		Prerequisites: mwstall
+		Description: Scout cavalry with flail. Devastating against Knights.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: Mace
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+ROSS4C:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: ross4c
+		Palette: mwbase
+	RevealsShroud:
+		Range: 6c0
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hussar
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 206
+		Prerequisites: mwstall
+		Description: Light hussar cavalry with saber. Fast and expendable.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 100000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: Mace
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+
+ROSS5:
+	Inherits: ^MWCavalry
+	-WithInfantryBody:
+	WithInfantryBody:
+		DefaultAttackSequence: stab
+		AttackSequences:
+			Ground: shootground
+			Air: shoot
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+	RenderSprites:
+		Image: ross5
+		Palette: mwbase
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 80
+		Voice: Move
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Heavy Cavalry
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 207
+		Prerequisites: mwstall
+		Description: Armored heavy cavalry. Devastating charge with gunlance.\\n  Can engage air targets.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 120000
+	Armor:
+		Type: Knight
+	Armament@Ground:
+		Weapon: MammothPike
+	Armament@GunlanceAir:
+		Weapon: GunlanceAir
+	Armament@GunlanceGround:
+		Weapon: GunlanceGround
+	AttackFrontal:
+		Armaments: Ground, GunlanceAir, GunlanceGround
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+
+EMPTYROSS:
+	Inherits: ^MWCavalry
+	RenderSprites:
+		Image: emptyhorse
+		Palette: mwbase
+	Mobile:
+		Locomotor: mwcavalry
+		Speed: 60
+		Voice: Move
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Horse
+		GenericName: Cavalry
+	Buildable:
+		IconPalette: mwicon
+		BuildPaletteOrder: 1001
+		Prerequisites: ~disabled
+		Description: A riderless horse.
+		Queue: MWCavalry
+		Factions: kingdom, baron, sultanate, undead
+	Health:
+		HP: 60000
+	Armor:
+		Type: LightCavalry
+	Armament:
+		Weapon: Fork
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 3
+		InitialStance: HoldFire
+	Targetable:
+		TargetTypes: Ground, Cavalry, horse

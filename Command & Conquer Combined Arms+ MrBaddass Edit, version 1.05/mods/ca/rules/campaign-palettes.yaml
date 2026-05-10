@@ -1,0 +1,10 @@
+^Palettes:
+
+	PaletteFromPlayerPaletteWithAlpha@Cloak:
+		BaseName: cloak
+		BasePalette: player
+		Alpha: 0.55
+	PaletteFromPlayerPaletteWithAlpha@Placebuilding:
+		BaseName: placebuilding
+		BasePalette: player
+		Alpha: 0.65

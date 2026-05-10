@@ -1,0 +1,3 @@
+Run `OpenRA.Utility.exe [MOD]` to see a list of available commands.
+The available mods are: 
+
